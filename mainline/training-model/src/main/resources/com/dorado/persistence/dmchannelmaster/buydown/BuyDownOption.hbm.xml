@@ -1,0 +1,109 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.buydown.BuyDownOption"
+ table="T_BUYDOWNOPTION" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_BUYDOWNOPTION"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="buyDownOptionId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="buyDownOptionId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to BuyDownContributorType -->
+<many-to-one name="buyDownContributorType" 
+class="com.dorado.generated.persistence.dmchannelmaster.buydown.BuyDownContributorType" 
+not-null="false"
+column="buydowncontributortype"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="buydowncontributortype"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to BuyDownType -->
+<many-to-one name="buyDownType" 
+class="com.dorado.generated.persistence.dmchannelmaster.buydown.BuyDownType" 
+not-null="false"
+cascade="none"
+column="buydownType"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="buydownType"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to BuyDownOptiontype -->
+<many-to-one name="buyDownOptionType" 
+class="com.dorado.generated.persistence.dmchannelmaster.buydown.BuyDownOptionType" 
+not-null="false"
+column="buydownOptionTypeCode"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="buydownOptionTypeCode"/> 
+</meta>
+</many-to-one>
+
+ <!-- bi-directional one-to-many association to LoanApplication
+<set  
+name="LoanApplication"
+table="T_LoanApplication"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="buyDownOptionId"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+</meta>
+<key column="buyDownOptionId" /> 
+<one-to-many class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+</set> 
+ -->
+</class> 
+ 
+ </hibernate-mapping> 
+

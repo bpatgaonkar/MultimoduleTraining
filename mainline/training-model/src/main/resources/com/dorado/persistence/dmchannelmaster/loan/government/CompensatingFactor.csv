@@ -1,0 +1,8 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Family','Family member purchasing another family member's primary residence','0',sysdate,'0'
+'2','Builder','Employee of builder purchasing one of the builder's new homes or models for use as their primary Residence','0',sysdate,'0'
+'3','Landlord','Current tenant purchases the property from their landlord','0',sysdate,'0'
+'4','Tenant','The tenant must have occupied the property for at least 6 months prior to purchase','0',sysdate,'0'
+'5','Lease','A copy of the current lease evidencing length of occupancy must be provided','0',sysdate,'0'
+'6','Occupancy','Verification of occupancy must be obtained (i.e. via 6 months of utility bills)','0',sysdate,'0'
+'7','Corporation','Sales by corporations that transfer employees out of an area\, purchase the transferred employee's homes and then resell to other employees','0',sysdate,'0'

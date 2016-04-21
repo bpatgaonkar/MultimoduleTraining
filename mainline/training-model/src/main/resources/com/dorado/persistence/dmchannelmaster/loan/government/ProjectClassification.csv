@@ -1,0 +1,9 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'01','A/III Condo','0',sysdate,'0'
+'02','B/II Condo','0',sysdate,'0'
+'03','C/I Condo','0',sysdate,'0'
+'04','E PUD','0',sysdate,'0'
+'05','F PUD','0',sysdate,'0'
+'06','III PUD','0',sysdate,'0'
+'07','1 CO-OP','0',sysdate,'0'
+'08','2 CO-OP','0',sysdate,'0'

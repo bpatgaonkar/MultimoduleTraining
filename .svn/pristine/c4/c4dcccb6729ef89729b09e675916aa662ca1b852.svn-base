@@ -1,0 +1,7 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+CONVENTIONAL,'1','1','Conventional Construction','0',sysdate,'0'
+SINGLEWIDE,'2','2','Singlewide M/H','0',sysdate,'0'
+DOUBLEWIDE,'3','3','Doublewide M/H','0',sysdate,'0'
+LOT_ONLY,'4','4','M/H Lot Only','0',sysdate,'0'	
+PREFAB,'5','5','Prefabricated Home','0',sysdate,'0'	
+CONDO_CONVERSION,'6','6','Condominium Conversion','0',sysdate,'0'	

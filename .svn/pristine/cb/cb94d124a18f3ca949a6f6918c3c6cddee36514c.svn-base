@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Amends','Amends','0',sysdate,'0'
+'Revokes','Revokes','0',sysdate,'0'

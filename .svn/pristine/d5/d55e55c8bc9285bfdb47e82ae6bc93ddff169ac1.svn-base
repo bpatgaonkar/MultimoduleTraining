@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'COMP','Complete','0',sysdate,'0'
+'ERR','Error','0',sysdate,'0'
+'0','Initialized','0',sysdate,'0'
+'P1','Processing','0',sysdate,'0'
+'P2','Processing 2','0',sysdate,'0'
+'PROC','In Process','0',sysdate,'0'
+'QUIK','Quick Submit','0',sysdate,'0'

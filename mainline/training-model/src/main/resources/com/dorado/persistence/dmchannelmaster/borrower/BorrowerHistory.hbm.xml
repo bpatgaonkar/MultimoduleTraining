@@ -1,0 +1,130 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerHistory"
+ table="T_BORROWERHISTORY" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_BORROWERHISTORY"> 
+ </meta>
+ <meta attribute="implements" inherit="true">com.dorado.persistence.Identifiable</meta> 
+<id 
+name="Id"  
+column="borrowerHistoryId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="borrowerHistoryId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="acctNumber" 
+type="java.lang.String" 
+column="acctNumber" 
+length="24" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="acctNumber" 
+length="24" 
+</meta> 
+</property> 
+
+<property 
+name="alternateFirstName" 
+type="java.lang.String" 
+column="alternatefirstname" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="alternatefirstname" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="alternateLastName" 
+type="java.lang.String" 
+column="alternatelastname" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="alternatelastname" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="alternateMiddleName" 
+type="java.lang.String" 
+column="alternatemiddlename" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="alternatemiddlename" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="creditorName" 
+type="java.lang.String" 
+column="creditorname" 
+length="128" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="creditorname" 
+length="128" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to BorrowerID -->
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="true"
+column="borrowerId"
+cascade="all"
+index="BorrowerHis_Borrower_Indx"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property" /> 
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+
+

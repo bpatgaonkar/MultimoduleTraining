@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteItem"
+		table="T_INCOMPLETEITEM" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_INCOMPLETEITEM"
+		</meta>
+
+		<meta attribute="implements" inherit="false">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="id" column="incompleteItemId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="incompleteItemId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+
+		<property name="name" type="java.lang.String" column="name"
+			length="1024" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="1024"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+
+		<!-- bi-directional many-to-one association to Underwriting -->
+		<many-to-one name="underwriting"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+			not-null="false" cascade="none"
+			index="IncompleteItem_UWriting_indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="falsenone"
+				cascade="none" @hibernate.column name="underwritingId"/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<column name="underwritingId" />
+		</many-to-one>
+
+
+		<!-- uni-directional many-to-one association to NOI IncompleteStatusType -->
+		<many-to-one name="itemStatus"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteItemStatusType"
+			cascade="none" column="incompleteStatusType">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="none" @hibernate.column
+				name="incompleteStatusType"
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to NOI IncompleteItemType -->
+		<many-to-one name="incompleteItemType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteItemType"
+			cascade="none" column="incompleteItemTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="none" @hibernate.column
+				name="incompleteItemTypeCode"
+			</meta>
+		</many-to-one>
+		<!-- uni-directional many-to-one association to DocGroup -->
+		<many-to-one name="docGroup"
+			class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup"
+			cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="all" @hibernate.column
+				name="docGroupId"/>
+			</meta>
+			<column name="docGroupId" />
+		</many-to-one>
+
+		<!-- uni-directional one-to-many association to IncompleteNote -->
+
+		<set name="incompleteNotes" table="T_INCOMPLETENOTE" lazy="true"
+			cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" cascade="all"
+				@hibernate.collection-key column="incompleteItemId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteNote"
+				/>
+			</meta>
+			<key column="incompleteItemId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteNote" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>
+
+

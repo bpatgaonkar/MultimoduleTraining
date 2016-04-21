@@ -1,0 +1,75 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.QualifierType"
+ table="T_QUALIFIERTYPE" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_QUALIFIERTYPE"> 
+ </meta>
+    <meta attribute="implement-equals">true</meta>
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+    <meta attribute="implements">com.dorado.persistence.Described</meta>
+<id 
+name="typeCode"  
+column="qualifierTypeCode"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="qualifierTypeCode"  
+</meta>
+<meta attribute="use-in-equals">true</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- bi-directional one-to-many association to AmountQualifierType -->
+<set  
+name="AmountQualifierTypes"
+table="T_Amountqualifiertype"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="qualifierTypeCode"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.borrower.AmountQualifierType" />
+</meta>
+<key column="qualifierTypeCode" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.borrower.AmountQualifierType" />
+</set> 
+</class> 
+ 
+ </hibernate-mapping> 
+

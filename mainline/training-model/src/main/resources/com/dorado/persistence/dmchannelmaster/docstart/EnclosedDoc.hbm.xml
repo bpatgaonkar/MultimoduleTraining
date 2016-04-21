@@ -1,0 +1,86 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.EnclosedDoc"
+ table="T_EnclosedDoc" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_EnclosedDoc"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="enclosedDocId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="enclosedDocId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="enclosedDocFlag" 
+type="java.lang.Boolean" 
+column="enclosedDocFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="enclosedDocFlag" 
+length="1" 
+</meta> 
+</property> 
+
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to closingAgentType-->
+<many-to-one name="enclosedDocType" 
+class="com.dorado.generated.persistence.dmchannelmaster.docstart.EnclosedDocType" 
+not-null="false"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="enclosedDocTypeCode"/> 
+</meta>
+<column name ="enclosedDocTypeCode"/> 
+</many-to-one>
+
+<!-- Associations -->
+
+ <!-- uni-directional many-to-one association to ClosingDetail-->
+   <many-to-one name="borrower"
+    class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingDetail"
+    not-null="false"
+    cascade="all"
+     index="EncDoc_Clos_Indx">
+   <meta attribute="field-description">
+   @hibernate.many-to-one
+   not-null="false"
+   cascade="all"
+   @hibernate.column name="closingDetailId"/>
+    </meta>
+      <column name="closingDetailId"/>
+   </many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

@@ -1,0 +1,7 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'STANDARD','Standard','0',sysdate,'0'
+'SELECTED','Selected loan product','0',sysdate,'0'
+'LOCKED','Locked loan product','0',sysdate,'0'
+'IMPORTED','Imported Loan Product','0',sysdate,'0'
+'HISTORICAL','Pricing History','0',sysdate,'0'
+'SCENARIO','Scenario Loan Product', '0',sysdate,'0'

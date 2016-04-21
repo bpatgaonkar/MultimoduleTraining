@@ -1,0 +1,68 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loan.government.RiskClassType"
+	table="T_RiskClassType" 
+	lazy="true" > 
+
+	<meta attribute="class-description" inherit="false">
+		FHA Risk Class; Currently "AA" or "Refer"
+		@hibernate.class
+		table="T_RISKCLASSTYPE"
+	</meta>
+	<meta attribute="generate-unidentifiable-transferobject"/>
+	<meta attribute="implement-equals">true</meta>
+	<meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+	<meta attribute="implements">com.dorado.persistence.Described</meta>
+	
+	<id 
+		name="typeCode"  
+		column="RiskClassTypeCode"  
+		type="java.lang.String" 
+		> 
+		<meta attribute="field-description">
+			@hibernate.id
+			generator-class="native"
+			type="java.lang.String" 
+			column="RiskClassTypeCode"  
+		</meta>
+		<meta attribute="use-in-equals">true</meta>
+		<generator class="native">
+		</generator> 
+	</id> 
+
+	<property 
+		name="displayOrder" 
+		type="java.lang.Integer" 
+		column="displayOrder" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-description"> 
+			@hibernate.property 
+			column="displayOrder" 
+			length="22" 
+		</meta> 
+	</property> 
+
+	<property 
+		name="description" 
+		type="java.lang.String" 
+		column="description" 
+		length="256" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-description"> 
+			@hibernate.property 
+			column="description" 
+			length="256" 
+		</meta> 
+	</property> 
+</class> 
+</hibernate-mapping> 

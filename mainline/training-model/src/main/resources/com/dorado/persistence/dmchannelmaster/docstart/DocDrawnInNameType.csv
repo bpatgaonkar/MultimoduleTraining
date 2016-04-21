@@ -1,0 +1,4 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+Broker,'Broker','Broker','0',sysdate,'0'
+Lender,'Lender','Lender','0',sysdate,'0'
+Investor,'Investor','Investor','0',sysdate,'0'

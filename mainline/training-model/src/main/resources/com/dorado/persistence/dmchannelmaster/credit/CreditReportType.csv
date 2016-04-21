@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'01','3 file merge','0',sysdate,'0'
+'02','Equifax','0',sysdate,'0'
+'03','Experian','0',sysdate,'0'
+'04','Trans-Union','0',sysdate,'0'
+'05','Equifax/ Experian','0',sysdate,'0'
+'06','Equifax/Trans-Union','0',sysdate,'0'
+'07','Experian/Trans-Union','0',sysdate,'0'

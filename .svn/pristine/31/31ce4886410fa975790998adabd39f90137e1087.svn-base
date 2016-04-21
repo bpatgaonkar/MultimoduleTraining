@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.Expense"
+		table="T_EXPENSE" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_EXPENSE">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+		
+		<id name="Id" column="expenseId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="expenseId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="monthlyAmount" type="java.lang.Double"
+			column="monthlyAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="monthlyAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="monthsLeftToPay" type="java.lang.Integer"
+			column="monthsLeftToPay" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="monthsLeftToPay" length="22"
+			</meta>
+		</property>
+
+		<property name="currentOutsBalance" type="java.lang.Double"
+			column="currentOutsBalance" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="currentOutsBalance" length="22"
+			</meta>
+		</property>
+
+		<property name="jointFlag" type="java.lang.Boolean"
+			column="jointFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="jointFlag" length="1"
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</property>
+
+		<property name="description" type="java.lang.String"
+			column="description" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="description" length="80"
+			</meta>
+		</property>
+
+		<!--
+			position of expense in the combined list of borrower and
+			co-borrower expenses. It is a bug if the expense has the same
+			position for the same borrower.
+		-->
+		<property name="position" type="java.lang.Integer" column="position"
+			not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="position" </meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="true" column="borrowerId" cascade="save-update" index="Expense_Borrower_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column
+				name="borrowerId"/>
+			</meta>
+			<meta attribute="runtime" inherit="false">copy-from-transfer-object-first</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Amountqualifiertype -->
+		<many-to-one name="amountQualifierType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.AmountQualifierType"
+			column="amountQualifierCode"
+			not-null="true" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="amountQualifierCode"/>
+			</meta>
+		</many-to-one>
+
+
+		<!-- bi-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+			table="T_CONDITION" cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="expenseId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+	</class>
+</hibernate-mapping>
+
+

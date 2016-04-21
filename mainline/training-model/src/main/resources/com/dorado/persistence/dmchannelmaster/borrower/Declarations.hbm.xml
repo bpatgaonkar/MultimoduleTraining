@@ -1,0 +1,264 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Declarations"
+ table="T_Declarations" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_Declarations"> 
+ </meta>
+   <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+	name="id"  
+	column="declarationsId"  
+	type="java.lang.Long" 
+	> 
+	<generator class="native"> 
+	</generator> 
+</id> 
+
+
+<property 
+name="declarationA" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationADescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+
+<property 
+name="declarationB" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationBDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationC" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationCDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationD" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationDDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationE" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationEDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationF" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationFDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationG" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationGDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationH" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationHDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+<property 
+name="declarationI" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationIDescription" 
+type="java.lang.String" 
+length="80" 
+not-null="false" 
+> 
+<meta attribute="field-description">
+Obsolete, delete for next project 
+</meta>
+</property> 
+
+
+<property 
+name="declarationJK" 
+type="java.lang.String" 
+length="2" 
+not-null="false" 
+> 
+</property> 
+
+
+<property 
+name="declarationL" 
+type="java.lang.Boolean" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationM" 
+type="java.lang.Boolean" 
+length="2" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationM1" 
+type="java.lang.String" 
+length="1" 
+not-null="false" 
+> 
+</property> 
+
+<property 
+name="declarationM2" 
+type="java.lang.String" 
+length="2" 
+not-null="false" 
+> 
+</property> 
+
+
+
+<!-- bi-directional many-to-one association to Borrower
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property" />
+<column name="borrowerId"/> 
+</many-to-one>
+-->
+
+</class> 
+ 
+ </hibernate-mapping> 
+
+

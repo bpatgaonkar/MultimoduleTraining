@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+OTHER,'1','1','Other - Not M/H','0',sysdate,'0'
+RENTED,'2','2','M/H Only (Rented Space)','0',sysdate,'0'
+VET_OWNED_LOT,'3','3','M/H Only (Veteran Owned Lot)','0',sysdate,'0'
+PERMANENT,'4','4','M/H on Permanent Foundation','0',sysdate,'0'	

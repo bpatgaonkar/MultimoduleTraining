@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'M','Married','0',sysdate,'0'
+'S','Separated','0',sysdate,'0'
+'U','Unmarried (Single-Divorced or Widowed)','0',sysdate,'0'
+'U-1','Unknown','0',sysdate,'0'

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.creditcard.CreditCardConfig"
+		table="T_CREDITCARDCONFIG" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_CREDITCARDCONFIG">
+		</meta>
+		
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="creditCardConfigId"
+			type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="creditCardConfigId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="icsAuthorization" type="java.lang.String"
+			column="icsAuthorization" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="icsAuthorization"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="icsBilling" type="java.lang.String"
+			column="icsBilling" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="icsBilling" length="80"
+			</meta>
+		</property>
+
+		<property name="merchantCertificationFile"
+			type="java.lang.String" column="merchantCertificationFile"
+			length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="merchantCertificationFile"
+				length="255"
+			</meta>
+		</property>
+
+		<property name="merchantId" type="java.lang.String"
+			column="merchantId" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="merchantId" length="255"
+			</meta>
+		</property>
+
+		<property name="privateKeyFile" type="java.lang.String"
+			column="privateKeyFile" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="privateKeyFile" length="255"
+			</meta>
+		</property>
+
+		<property name="serverCertificationFile" type="java.lang.String"
+			column="serverCertificationFile" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="serverCertificationFile"
+				length="255"
+			</meta>
+		</property>
+
+		<property name="serverId" type="java.lang.String"
+			column="serverid" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="serverid" length="255"
+			</meta>
+		</property>
+
+		<property name="serverUrl" type="java.lang.String"
+			column="serverUrl" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="serverUrl" length="255"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="none"
+			column="orgEntityId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

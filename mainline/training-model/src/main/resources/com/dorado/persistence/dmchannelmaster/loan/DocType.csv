@@ -1,0 +1,15 @@
+#NAME#,DISPLAYORDER,REQUIRESASSETSFLAG,REQUIRESEMPLOYMENTFLAG,REQUIRESINCOMEFLAG,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+STND,'1','1','1','1','STND','Standard','0',sysdate,'0'
+EZDC,'2','1','1','1','EZDC','Reduced','0',sysdate,'0'
+NOT_DETERMINED,'3','1','1','1','NDET','Not Determined','0',sysdate,'0'
+NOINCOME_NOASSET,'4','0','1','0','NINA','No Income No Asset','0',sysdate,'0'
+NOINCOME_NOEMP,'5','1','0','0','NINE','No Income/No Employment','0',sysdate,'0'
+NOEMP,'6','1','0','1','NOEM','No Employment','0',sysdate,'0'
+NONE,'7','0','0','0','NONE','No Documentation','0',sysdate,'0'
+NORATIO,'8','1','1','1','NORT','No Ratio','0',sysdate,'0'
+RELOCATION,'9','1','1','1','RLCT','Relocation','0',sysdate,'0'
+STATED,'10','1','1','1','STAT','Stated','0',sysdate,'0'
+ALTERNATIVE,'11','1','1','1','ALTD','Alternative','0',sysdate,'0'
+STREAMLINE_REFI,'12','1','1','1','STRM','Streamline Refinance','0',sysdate,'0'
+NODEPOSIT_VERIFICATION,'13','1','1','1','NDVR','No Deposit Verification','0',sysdate,'0'
+

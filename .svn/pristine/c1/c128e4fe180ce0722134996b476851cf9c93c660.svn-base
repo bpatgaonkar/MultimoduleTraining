@@ -1,0 +1,369 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.escrow.Escrow"
+        table="T_Escrow"
+        lazy="true">
+
+        <meta attribute="class-Description" inherit="false">
+  @hibernate.class
+  table="T_Escrow">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+        <id
+            name="Id"
+            column="escrowId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="escrowId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="annualPaymentAmount"
+            type="java.lang.Double"
+            column="annualPaymentAmount"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="annualPaymentAmount"
+length="22"
+            </meta>
+        </property>
+
+ <!-- is this field necessary or should we just have the annual payment amount -->
+       <property
+            name="monthlyPaymentAmt"
+            type="java.lang.Double"
+            column="monthlyPaymentAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="monthlyPaymentAmt" 
+length="22"
+            </meta>
+            <meta attribute="do-not-generate-transferobject-property" />
+        </property>
+
+        <property
+            name="amountPastDue"
+            type="java.lang.Double"
+            column="amountPastDue"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="amountPastDue" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="delinquencyFlag"
+            type="java.lang.Boolean"
+            column="delinquencyFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="delinquencyFlag" 
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="escrowFlag"
+            type="java.lang.Boolean"
+            column="escrowFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="escrowFlag" 
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="numberMonthsEscrow"
+            type="java.lang.Integer"
+            column="numberMonthsEscrow"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+     @hibernate.property 
+     column="numberMonthsEscrow"
+     length="22"
+            </meta>
+            <meta attribute="do-not-generate-transferobject-property" />
+        </property>
+
+        <property
+            name="unevenPaymentFlag"
+            type="java.lang.Boolean"
+            column="UNEVENPAYMENTFLAG"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+	@hibernate.property
+	column="UNEVENPAYMENTFLAG"
+	length="1"
+            </meta>
+        </property>
+
+        <property
+            name="lastPaymentDate"
+            type="java.sql.Timestamp"
+            column="lastPaymentDate"
+            length="7"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="lastPaymentDate" 
+length="7"
+            </meta>
+        </property>
+
+        <property
+            name="policyIdentifier"
+            type="java.lang.String"
+            column="policyIdentifier"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="policyIdentifier" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="policyExpiredDate"
+            type="java.sql.Timestamp"
+            column="policyExpiredDate"
+            length="7"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="policyExpiredDate" 
+length="7"
+            </meta>
+        </property>
+        
+<!-- Used when non-escrow -->
+        <property
+            name="nextDueDate"
+            type="java.sql.Timestamp"
+            column="nextDueDate"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="nextDueDate"
+            </meta>
+        </property>
+
+        <property
+            name="policyTermMonths"
+            type="java.lang.Integer"
+            column="policyTermMonths"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+     @hibernate.property 
+     column="policyTermMonths"
+     length="22"
+            </meta>
+        </property>
+
+        <property
+            name="coverageAmount"
+            type="java.lang.Double"
+            column="coverageAmount"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="coverageAmount"
+            </meta>
+        </property>
+
+        <property
+            name="serviceDesc"
+            type="java.lang.String"
+            column="serviceDesc"
+            length="256"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property 
+column="serviceDesc" 
+length="256"
+            </meta>
+        </property>
+ 
+<property 
+            name="contractStatus"
+            type="java.lang.String"
+            column="contractStatus"
+            length="128"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+                @hibernate.property
+                column="contractStatus"
+                length="128"
+            </meta>
+        </property>
+
+        <property
+            name="policyEffectiveDate"
+            type="java.sql.Timestamp"
+            column="policyEffectiveDate"
+            length="7"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+                @hibernate.property 
+                column="policyEffectiveDate" 
+                length="7"
+            </meta>
+        </property>
+
+        <property
+            name="deductibleAmount"
+            type="java.lang.Double"
+            column="deductibleAmount"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+                @hibernate.property
+                column="deductibleAmount"
+            </meta>
+        </property>
+        
+        <property
+            name="parcelNumber"
+            type="java.lang.String"
+            column="parcelNumber"
+            length="20"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property 
+                column="parcelNumber" 
+                length="20"
+            </meta>
+        </property>
+
+        <!-- Associations -->
+
+
+        <!-- uni-directional one-to-one association to ServicingOrg-->
+
+        <many-to-one
+            name="servicingOrg"
+            class="com.dorado.generated.persistence.dmchannelmaster.escrow.ServicingOrg"
+            not-null="false"
+            cascade="all">
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="servicingOrgId"
+            </meta>
+            <column name="servicingOrgId"/>
+        </many-to-one>
+
+         <!-- uni-directional one-to-one association to EscrowItemType-->
+
+        <many-to-one
+            name="escrowItemType"
+            class="com.dorado.generated.persistence.dmchannelmaster.escrow.EscrowItemType"
+            not-null="true"
+            cascade="none"
+            column="escrowItemTypeCode">
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" 
+            cascade="none" 
+           @hibernate.column name="escrowItemTypeCode"
+            </meta>
+        </many-to-one>
+
+        <!-- uni-directional one-to-one association to loanApplication -->
+
+        <many-to-one
+            name="loanApplication"
+            class="com.dorado.generated.persistence.model.loan.LoanApplication"
+            not-null="false"
+            cascade="all"
+            index="Escrow_Loan_Indx">
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" 
+             cascade="all" 
+           @hibernate.column name="loanApplicationId"
+            </meta>
+            <meta attribute="do-not-generate-transferobject-property"/>
+            <column name="loanApplicationId"/>
+        </many-to-one>
+
+        <set
+            name="escrowPayments"
+            table="T_EscrowPayment"
+            lazy="true"
+            cascade="all-delete-orphan"
+            inverse="true"
+            order-by="EscrowPaymentId asc"
+            >
+            <key column="escrowId"/>
+            <one-to-many class="com.dorado.generated.persistence.dmchannelmaster.escrow.EscrowPayment"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>
+
+
+

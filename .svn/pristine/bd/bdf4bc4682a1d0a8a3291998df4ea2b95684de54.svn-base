@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<subclass
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.CreditLiability"
+		extends="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.Liability"
+		discriminator-value="CREDIT"		
+		lazy="true"> 
+		  
+		<meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+		
+        <meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+		
+		<!-- bi-directional many-to-one association to Borrower -->
+		 
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" cascade="save-update" insert="false" update="false"
+			index="Liability_Borrower_Indx"
+			column="borrowerId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column
+				name="borrowerId"/>
+			</meta>
+		</many-to-one>
+		
+		
+	</subclass>
+	
+</hibernate-mapping>	

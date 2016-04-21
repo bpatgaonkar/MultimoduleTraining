@@ -1,0 +1,218 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.ProductAppliedRule"
+ table="T_PRODUCTAPPLIEDRULE" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_PRODUCTAPPLIEDRULE"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="productAppliedRuleId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="productAppliedRuleId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="feeValue" 
+type="java.lang.Double" 
+column="feeValue" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="feeValue" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="postSubsidyValue" 
+type="java.lang.Double" 
+column="postSubsidyValue" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="postSubsidyValue" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="priceValue" 
+type="java.lang.Double" 
+column="priceValue" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="priceValue" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="evalFlag" 
+type="java.lang.Boolean" 
+column="evalFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="evalFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="ruleType" 
+type="java.lang.String" 
+column="ruleType" 
+length="20" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ruleType" 
+length="20" 
+</meta> 
+</property> 
+
+<property 
+name="priceAttributeCode" 
+type="java.lang.String" 
+column="priceAttributeCode" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="priceAttributeCode" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="ruleCode" 
+type="java.lang.String" 
+column="ruleCode" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ruleCode" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="feeDesc" 
+type="java.lang.String" 
+column="feeDesc" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="feeDesc" 
+length="255" 
+</meta> 
+</property> 
+
+<property 
+name="ruleDesc" 
+type="java.lang.String" 
+column="ruleDesc" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ruleDesc" 
+length="255" 
+</meta> 
+</property> 
+
+<property 
+name="ruleGroupDesc" 
+type="java.lang.String" 
+column="ruleGroupDesc" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ruleGroupDesc" 
+length="255" 
+</meta> 
+</property> 
+
+<property 
+name="ruleSummary" 
+type="java.lang.String" 
+column="ruleSummary" 
+length="2000" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ruleSummary" 
+length="2000" 
+</meta> 
+</property> 
+
+<property 
+name="stipulation" 
+type="java.lang.String" 
+column="stipulation" 
+length="2000" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="stipulation" 
+length="2000" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+</class> 
+ 
+ </hibernate-mapping> 
+

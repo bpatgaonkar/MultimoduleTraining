@@ -1,0 +1,6 @@
+ID,TYPECODE,DESCRIPTION,INCOMPLETEITEMTYPE,SESSIONID,TIMESTAMP,VERSION
+'1','INCR','Insufficient number of credit references ','CRDT','0',sysdate,'0'
+'2','APPR','Appraisal','PPRT','0',sysdate,'0'
+'3','SRVY','Survey','PPRT','0',sysdate,'0'
+'4','PMIC','PMI Certificate','INSR','0',sysdate,'0'
+'5','MCAW','Mortgage Credit Analysis (MCAW)','CRDT','0',sysdate,'0'

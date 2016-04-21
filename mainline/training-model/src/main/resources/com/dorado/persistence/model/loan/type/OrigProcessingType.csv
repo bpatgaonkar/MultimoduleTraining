@@ -1,0 +1,5 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PREQUAL,'1','PREQUAL (No URLA)','0',sysdate,'0'
+APPLICATION,'2','APPLICATION / PROCESSING (Application has been taken)','0',sysdate,'0'
+UNDERWRITING,'3','UNDERWRITING  (Lender has verified all data sent to Loan Prospector)','0',sysdate,'0'
+POST_CLOSING,'5','POST-CLOSING QC (Loan previously closed; sending to LP for QC purposes only)','0',sysdate,'0'

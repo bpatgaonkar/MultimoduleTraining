@@ -1,0 +1,93 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.settlement.InsRating"
+        table="T_InsRating" 
+        lazy="true" > 
+
+        <meta attribute="class-description" inherit="false"> 
+            @hibernate.class
+            table="T_InsRating"> 
+        </meta>
+    
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>    
+        
+        <id 
+            name="id"  
+            column="InsRatingId"  
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+                @hibernate.id
+                generator-class="native"
+                type="java.lang.Long" 
+                column="InsRatingId"  
+            </meta>
+            <meta attribute="use-in-equals">true</meta>
+            <generator class="native">
+            </generator> 
+        </id> 
+        
+        <property 
+            name="displayOrder"
+            type="java.lang.Integer"
+            column="displayOrder"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="displayOrder"
+                length="22"
+            </meta>
+        </property>
+    
+        <property 
+            name="description" 
+            type="java.lang.String" 
+            column="description" 
+            length="128" 
+            not-null="false" 
+            unique="false"  
+            >
+            <meta attribute="field-description">
+                @hibernate.property 
+                column="description" 
+                length="128" 
+            </meta>
+        </property>
+		<!-- One-to-many replationship with InsRatingCompanyRel-->
+		<set  
+			name="InsRatingCompanyRel"
+			table="T_InsRatingCompanyRel"
+			lazy="true"
+			inverse="true"
+			cascade="none"
+		>
+		<meta attribute="field-description">
+			@hibernate.set
+			lazy="true"
+			inverse="true"
+			cascade="none"
+			@hibernate.collection-key
+			column="InsRatingId"
+			@hibernate.collection-one-to-many
+		    class="com.dorado.generated.persistence.dmchannelmaster.settlement.InsRatingCompanyRel" />
+		</meta>
+        <meta attribute="do-not-generate-transferobject-property"/>
+		<key column="InsRatingId" /> 
+		<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.settlement.InsRatingCompanyRel" />
+		</set>     
+    </class>
+
+	<query name="settlement.getInsRating" cacheable="false">
+		<![CDATA[
+			select rating from InsRating as rating inner join rating.InsRatingCompanyRel as companyRel where rating.displayOrder >= 0 and companyRel.insRatingCompany.id=?
+		]]>
+	</query>
+</hibernate-mapping>

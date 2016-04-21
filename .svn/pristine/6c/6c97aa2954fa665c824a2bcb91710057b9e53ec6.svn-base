@@ -1,0 +1,7 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','COM2','Community 2nd','0',sysdate,'0'
+'2','NONE','No secondary financing','0',sysdate,'0'
+'3','OIEQ','Other institutional equity','0',sysdate,'0'
+'4','OIF2','Other institutional fixed 2nd','0',sysdate,'0'
+'5','PEF2','Piggy Equity line/fixed 2nd','0',sysdate,'0'
+'6','SCBK','Seller Carryback','0',sysdate,'0'

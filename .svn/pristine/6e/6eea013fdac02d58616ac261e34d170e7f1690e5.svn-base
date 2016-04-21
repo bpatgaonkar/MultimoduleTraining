@@ -1,0 +1,89 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.translation.LoanAttributeType"
+ table="T_LOANAttributeType" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOANAttributeType"> 
+ </meta>
+    <meta attribute="implement-equals">true</meta>    
+
+<id
+name="typeCode"
+column="loanAttributeTypeCode"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="loanAttributeTypeCode"  
+</meta>
+    <meta attribute="use-in-equals">true</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="tableName" 
+type="java.lang.String" 
+column="tableName" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="tableName" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- bi-directional one-to-many association to LoanAttributeTypeMap -->
+<set  
+name="LoanAttributeTypeMap"
+table="T_LoanAttributeTypeMap"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="loanAttributeTypeCode"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.translation.LoanAttributeTypeMap" />
+</meta>
+<key column="loanAttributeTypeCode" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.translation.LoanAttributeTypeMap" />
+</set> 
+</class> 
+ 
+ </hibernate-mapping> 
+

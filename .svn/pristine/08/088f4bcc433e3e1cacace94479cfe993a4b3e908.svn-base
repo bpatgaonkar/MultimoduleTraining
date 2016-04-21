@@ -1,0 +1,6 @@
+INITADJPERCENT,SUBSEQADJPERCENT,BUYDOWNTERM,DISPLAYORDER,INITADJPERIOD,SUBSEQADJPERIOD,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','1','12','1','12','12','1-1','1-1','0',sysdate,'0'
+'1','1','24','2','12','12','2-1','2-1','0',sysdate,'0'
+'1','1','36','3','12','12','3-2-1','3-2-1','0',sysdate,'0'
+'1','1','48','4','12','12','4-3-2-1','4-3-2-1','0',sysdate,'0'
+'1','1','60','5','12','12','5-4-3-2-1','5-4-3-2-1','0',sysdate,'0'

@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'N','To Be Made','0',sysdate,'0'
+'U','Unknown','0',sysdate,'0'
+'Y','Made','0',sysdate,'0'

@@ -1,0 +1,4 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','YES','Yes','0',sysdate,'0'
+'2','NO','No','0',sysdate,'0'
+'3','NA','Not Applicable','0',sysdate,'0'

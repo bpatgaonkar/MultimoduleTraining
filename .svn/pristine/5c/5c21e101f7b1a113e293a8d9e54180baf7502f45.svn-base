@@ -1,0 +1,54 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.integration.LpEvaluationStatus"
+ table="T_lpEvaluationStatus" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_lpEvaluationStatus"> 
+ </meta>
+    <meta attribute="implement-equals">true</meta>
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+    <meta attribute="implements">com.dorado.persistence.Described</meta>
+<id 
+name="typeCode"  
+column="lpEvaluationStatus"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="lpEvaluationStatus"  
+</meta>
+<meta attribute="use-in-equals">true</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="80" 
+</meta> 
+</property> 
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

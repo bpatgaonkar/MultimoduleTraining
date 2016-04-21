@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.mi.MiRequest"
+		table="T_MIREQUEST" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_MIREQUEST">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="miRequestId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="miRequestId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="docGroupId" type="java.lang.Integer"
+			column="docGroupId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="docGroupId" length="22"
+			</meta>
+		</property>
+
+		<property name="miRenewalDurationMonths"
+			type="java.lang.Integer" column="miRenewalDurationMonths" length="22"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="miRenewalDurationMonths"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="freMiRenewalTypeCode" type="java.lang.String"
+			column="freMiRenewalTypeCode" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="freMiRenewalTypeCode"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="errorMessage" type="java.lang.String"
+			column="errorMessage" length="4000" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="errorMessage" length="4000"
+			</meta>
+		</property>
+
+		<property name="condToCancelMIProcedure" type="java.lang.String"
+			column="condToCancelMIProcedure" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="condToCancelMIProcedure"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="condToCancelMIDesc" type="java.lang.String"
+			column="condToCancelMIDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="condToCancelMIDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="miCertificateIdentifier" type="java.lang.String"
+			column="miCertificateIdentifier" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="miCertificateIdentifier"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="miCollectedTotalMonths" type="java.lang.Integer"
+			column="miCollectedTotalMonths" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="miCollectedTotalMonths"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="miRenewalPremPayOutsideFlag"
+			type="java.lang.Boolean" column="miRenewalPremPayOutsideFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="miRenewalPremPayOutsideFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="miLTVCutoffPercent" type="java.lang.Double"
+			column="miLTVCutoffPercent" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="miLTVCutoffPercent"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="miRenewalPremMonthlyPmt" type="java.lang.Double"
+			column="miRenewalPremMonthlyPmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="miRenewalPremMonthlyPmt"
+				length="22"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to RenewalPremPaidByType-->
+		<many-to-one name="renewalPremPaidByType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.RenewalPremPaidByType"
+			not-null="false" cascade="all">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="renewalPremPaidByTypeCode"/>
+			</meta>
+			<column name="renewalPremPaidByTypeCode" />
+		</many-to-one>
+
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="createdBy"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="all"
+			column="createdByID">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="createdByID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to LoanApplication -->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="true" cascade="all" index="MIReq_Loan_Indx"
+			column="loanApplicationId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="modifiedByOrg"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="all" column="MODIFIEDBYID">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="MODIFIEDBYID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to FreMiPremiumRatePlanType -->
+		<many-to-one name="FreMiPremiumRatePlanType"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.FreMiPremiumRatePlanType"
+			not-null="false" cascade="none"
+			column="freMiPremiumRatePlanTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="freMiPremiumRatePlanTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to MiCompanyName -->
+		<many-to-one name="miCompanyName"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiCompanyName"
+			not-null="false" cascade="none"
+			column="MICOMPANYNAME">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="MICOMPANYNAME"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to MiDurationType -->
+		<many-to-one name="miDurationType"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiDurationType"
+			not-null="false" cascade="none" column="miDurationTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="miDurationTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to MiPremiumPaymentType -->
+		<many-to-one name="miPremiumPaymentType"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiPremiumPaymentType"
+			not-null="false" cascade="none"
+			column="miPremiumPaymentTypeCode" >
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="miPremiumPaymentTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to MiPremiumRefundableType -->
+		<many-to-one name="miPremiumRefundableType"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiPremiumRefundableType"
+			not-null="false" cascade="none"
+			column="miPremiumreFundableTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="miPremiumreFundableTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to MiRenewalCalculationType -->
+		<many-to-one name="miRenewalCalculationType"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiRenewalCalculationType"
+			not-null="false" cascade="none"
+			column="miRenewalCalculationTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="miRenewalCalculationTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to UnderWritingType -->
+		<many-to-one name="underWritingType"
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.UnderWritingType"
+			not-null="false" cascade="none"
+			column="underwritingTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="underwritingTypeCode"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

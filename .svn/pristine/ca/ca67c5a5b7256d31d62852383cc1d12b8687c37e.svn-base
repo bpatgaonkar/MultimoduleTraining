@@ -1,0 +1,923 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.model.loan.LoanApplication"
+		table="T_LOANAPPLICATION" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_LOANAPPLICATION">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.dmplan.plan.PrimaryBusinessObject
+		</meta>
+		<meta attribute="root_region" />
+
+		<id name="Id" column="loanApplicationId"
+			type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="loanApplicationId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+ 		<property name="loanLanguage" type="java.lang.String"
+			column="LOANLANG" length="5" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="LOANLANG" length="5"
+			</meta>
+		</property>
+
+		<property name="archiveDate" type="java.sql.Timestamp"
+			column="archiveDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="archiveDate" length="7"
+			</meta>
+		</property>
+
+		<property name="archiveFlag" type="java.lang.Boolean"
+			column="archiveFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="archiveFlag" length="1"
+			</meta>
+			<meta attribute="scope-get">public</meta>
+		</property>
+
+		<property name="fiLoanId" type="java.lang.String"
+			column="fiLoanId" length="24" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fiLoanId" length="24"
+			</meta>
+		</property>
+		
+		<property name="loanName" type="java.lang.String"
+			column="loanName" length="64" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanName" length="64"
+			</meta>
+		</property>
+
+		<property name="actualClosingDate" type="java.sql.Timestamp"
+			column="actualClosingDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="actualClosingDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="createDate" type="java.sql.Timestamp"
+			column="createDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="createDate" length="7"
+			</meta>
+		</property>
+
+
+		<property name="loanApprovedDate" type="java.sql.Timestamp"
+			column="loanApprovedDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanApprovedDate" length="7"
+			</meta>
+		</property>
+
+		<property name="lockDate" type="java.sql.Timestamp"
+			column="lockDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockDate" length="7"
+			</meta>
+		</property>
+
+		<property name="plannedClosingDate" type="java.sql.Timestamp"
+			column="plannedClosingDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plannedClosingDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="registrationDate" type="java.sql.Timestamp"
+			column="registrationDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="registrationDate" length="7"
+			</meta>
+		</property>
+
+		<property name="submitDate" type="java.sql.Timestamp"
+			column="submitDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="submitDate" length="7"
+			</meta>
+		</property>
+
+		<property name="buyDownRate" type="java.lang.Double"
+			column="buyDownRate" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="buyDownRate" length="22"
+			</meta>
+		</property>
+
+		<property name="loanAmount" type="java.lang.Double"
+			column="loanAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="miCoverage" type="java.lang.Double"
+			column="miCoverage" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="miCoverage" length="22"
+			</meta>
+		</property>
+
+		<property name="lockPeriodDays" type="java.lang.Integer"
+			column="lockPeriodDays" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockPeriodDays" length="22"
+			</meta>
+		</property>
+
+		<property name="miPartnerId" type="java.lang.Integer"
+			column="miPartnerId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="miPartnerId" length="22"
+			</meta>
+		</property>
+
+		<property name="statusLinkId" type="java.lang.Integer"
+			column="statusLinkId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="statusLinkId" length="22"
+			</meta>
+		</property>
+
+
+		<property name="buyDownFlag" type="java.lang.Boolean"
+			column="buydownFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="buyDownFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="doNotUseSpouseIncomeFlag"
+			type="java.lang.Boolean" column="doNotUseSpouseIncomeFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="doNotUseSpouseIncomeFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="floodCertrequired" type="java.lang.Boolean"
+			column="floodCertrequired" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="floodCertrequired"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="miRequiredFlag" type="java.lang.Boolean"
+			column="mirequiredFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="mirequiredFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="retailLoanFlag" type="java.lang.Boolean"
+			column="retailLoanFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="retailLoanFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="sellerFinancingFlag" type="java.lang.Boolean"
+			column="sellerFinancingFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="sellerFinancingFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="taxWaiverFlag" type="java.lang.Boolean"
+			column="taxWaiverFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="taxWaiverFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="useOtherPersonsIncomeFlag"
+			type="java.lang.Boolean" column="useOtherPersonsIncomeFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="useOtherPersonsIncomeFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="currentAppStatus" type="java.lang.String"
+			column="currentAppStatus" length="16" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="currentAppStatus"
+				length="16"
+			</meta>
+		</property>
+
+		<property name="lenderCaseNumberInternal" type="java.lang.String"
+			column="lenderCaseNumber" length="32" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lenderCaseNumber"
+				length="32"
+			</meta>
+			<meta attribute="scope-set">protected</meta>
+			<meta attribute="scope-get">protected</meta>
+			<meta attribute="do-not-generate-transferobject-property"/>
+		</property>
+
+		<property name="referralSource" type="java.lang.String"
+			column="referralSource" length="32" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="referralSource" length="32"
+			</meta>
+		</property>
+
+		<property name="lockConfirmationNumber" type="java.lang.String"
+			column="lockConfirmationNumber" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockConfirmationNumber"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="archiveStatus" type="java.lang.String"
+			column="archiveStatus" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="archiveStatus" length="255"
+			</meta>
+		</property>
+
+		<property name="otherLoanPurposeExp" type="java.lang.String"
+			column="otherLoanPurposeExp" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherLoanPurposeExp"
+				length="255"
+			</meta>
+		</property>
+
+		<property name="referToBranchMsg" type="java.lang.String"
+			column="referToBranchMsg" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="referToBranchMsg"
+				length="255"
+			</meta>
+		</property>
+		<property name="preApprovalLoanFlag" type="java.lang.Boolean"
+			column="preApprovalLoanFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="preApprovalLoanFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="hoepaFlag" type="java.lang.Boolean"
+			column="hoepaFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hoepaFlag" length="1"
+			</meta>
+		</property>
+
+
+		<property name="upfrontDisclosedDate" type="java.sql.Timestamp"
+			column="upfrontDisclosedDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="upfrontDisclosedDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="shortFunded" type="java.lang.Boolean"
+			column="shortFunded" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="shortFunded" length="1"
+			</meta>
+		</property>
+
+		<property name="firstPaymentDate" type="java.sql.Timestamp"
+			column="firstPaymentDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstPaymentDate" length="7"
+			</meta>
+		</property>
+
+		<property name="paymentRemittanceDay" type="java.lang.String"
+			column="paymentRemittanceDay" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentRemittanceDay"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="fundingDate" type="java.sql.Timestamp"
+			column="fundingDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fundingDate" length="7"
+			</meta>
+		</property>
+
+		<property name="applicationReceivedDate"
+			type="java.sql.Timestamp" column="applicationReceivedDate" length="7"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="applicationReceivedDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="warehouseSellerFlag" type="java.lang.Boolean"
+			column="warehouseSellerFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="warehouseSellerFlag"
+				length="1"
+			</meta>
+			<meta attribute="scope-get">public</meta>
+		</property>
+
+		<property name="lockPeriodExtendedFlag" type="java.lang.Boolean"
+			column="lockPeriodExtendedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockPeriodExtendedFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="lockPeriodFloatDownFlag"
+			type="java.lang.Boolean" column="lockPeriodFloatDownFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockPeriodFloatDownFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="lockExtensionFee" type="java.lang.Double"
+			column="lockExtensionFees" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockExtensionFees"
+				length="22"
+			</meta>
+		</property>
+		<property name="brokerProcessedFlag" type="java.lang.Boolean"
+			column="brokerProcessedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="brokerProcessedFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="escrowWaiverFlag" type="java.lang.Boolean"
+			column="escrowWaiverFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowWaiverFlag" length="1"
+			</meta>
+		</property>
+
+		<!-- uni-directional many-to-one association to DocGroup (the primary docgroup for the loan)-->
+		<many-to-one name="docGroup"
+			class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup"
+			not-null="false" cascade="all" column="docGroupId" index="LoanApp_DocGroupId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="docGroupId"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to person-->
+		<many-to-one name="brokerContact"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="false" cascade="all" index="LoanApp_BrokerContact_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="brokerContactId"/>
+			</meta>
+			<column name="brokerContactId" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to OrgEntity -->
+		<many-to-one name="broker"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="broker"/>
+			</meta>
+			<column name="broker" />
+		</many-to-one>
+
+
+		<!-- uni-directional many-to-one association to LenderRefiType-->
+		<many-to-one name="lenderRefiType"
+			class="com.dorado.generated.persistence.model.loan.LenderRefiType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="lenderRefiTypeCode"/>
+			</meta>
+			<column name="lenderRefiTypeCode" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to BuyDownOption -->
+		<many-to-one name="buyDownOption"
+			class="com.dorado.generated.persistence.dmchannelmaster.buydown.BuyDownOption"
+			not-null="false" column="buyDownOptionId" cascade="all" index="LoanApp_BuyDownOption_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="buyDownOptionId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to ClosingDetail -->
+		<many-to-one name="closingDetail"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingDetail"
+			not-null="false" column="closingDetailId" cascade="all" index="LoanApp_ClosingDetailId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="closingDetailId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Extension -->
+		<many-to-one name="extension"
+			class="com.dorado.generated.persistence.model.loan.Extension"
+			not-null="false" column="extensionId" cascade="all" index="LoanApp_Extension_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="extensionId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to GovLoan -->
+		<many-to-one name="govLoan"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.GovLoan"
+			not-null="false" column="govLoanId" cascade="all" index="LoanApp_GovLoan_Indx" unique="true">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="govLoanId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Interviewer -->
+		<many-to-one name="interviewer"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Interviewer"
+			not-null="false" column="interviewerId" cascade="all" index="LoanApp_Interviewer_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="interviewerId"/>
+			</meta>
+		</many-to-one>
+		
+		<set name="glInfo" table="T_glInfo" lazy="true" cascade="all"
+			inverse="true">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.docstart.GLInfo" />
+		</set>
+
+		<set name="loanProducts" table="T_LOANPRODUCT" lazy="true"
+			cascade="all">
+
+			<meta attribute="do-not-generate-transferobject-property" />
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProduct" />
+		</set>
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" column="orgEntityId" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to LoanGroup -->
+		<many-to-one name="loanGroup"
+			class="com.dorado.generated.persistence.model.loan.relationship.LoanGroup"
+			not-null="true" column="LOANGROUPID" cascade="none" index="LoanApp_LoanGroupId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="LOANGROUPID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-one association to Transaction -->
+		<many-to-one name="transaction"
+			class="com.dorado.generated.persistence.dmchannelmaster.transaction.Transaction"
+			not-null="false" column="TRANSACTIONID" cascade="all" unique="true"
+			index="LoanApp_transactionId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="TRANSACTIONID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-one association to Underwriting -->
+		<many-to-one name="underwriting"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+			not-null="false" column="UNDERWRITINGID" cascade="all" unique="true"
+			index="LoanApp_UnderwritingId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="UNDERWRITINGID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-one association to HMDAReport -->
+		<many-to-one name="hmdaReport"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAReport"
+			not-null="false" column="HMDAREPORTID" cascade="all" unique="true"
+			index="LoanApp_hmdaReportId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="HMDAREPORTID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to Doctype -->
+		<many-to-one name="docType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.DocType"
+			not-null="false" column="docType" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="docType"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to FnmaOwnerExistingMtg -->
+		<many-to-one name="fnmaOwnerExistingMtg"
+			class="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaOwnerExistingMtg"
+			cascade="none">
+                      
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="fnmaOwnerExistingMtgCode"/>
+			</meta>
+			  <column name="fnmaOwnerExistingMtgCode" length="36" not-null="false" unique="false" default="'F1'"/>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to FormType -->
+		<many-to-one name="formType"
+			class="com.dorado.generated.persistence.model.loan.type.FormType"
+			not-null="false" column="formTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="formTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmomcmshared.loan.LoanPurposeType"
+			not-null="false" column="loanPurposeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="loanPurposeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to LockPreference-->
+		<many-to-one name="lockPreference"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockPreference"
+			not-null="false" column="lockPreference" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="lockPreference"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to MiInsurer -->
+		<many-to-one name="miInsurer"
+			class="com.dorado.generated.persistence.dmchannelmaster.mi.MiInsurer"
+			not-null="false" column="miInsurerType" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="miInsurerType"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to OriginationType -->
+		<many-to-one name="originationType"
+			class="com.dorado.generated.persistence.model.loan.OriginationType"
+			not-null="false" column="originationTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="originationTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to OrigProcessingType -->
+		<many-to-one name="origProcessingType"
+			class="com.dorado.generated.persistence.model.loan.type.OrigProcessingType"
+			not-null="false" column="origProcessTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="origProcessTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to PurposeRefinanceType -->
+		<many-to-one name="purposeRefinanceType"
+			class="com.dorado.generated.persistence.model.loan.type.PurposeRefinanceType"
+			not-null="false" column="purposeRefinanceCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="purposeRefinanceCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to PurposeHomeEquityType -->
+		<many-to-one name="purposeHomeEquityType"
+			class="com.dorado.generated.persistence.model.loan.type.PurposeHomeEquityType"
+			not-null="false" column="purposeHomeEquityTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="purposeHomeEquityTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional one-to-many association to LoanOeRel -->
+		<set name="LoanOeRels" table="T_LoanOeRel" lazy="true"
+			cascade="all-delete-orphan">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" cascade="all-delete-orphan"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanOeRel"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanOeRel" />
+		</set>
+		
+		<!-- uni-directional one-to-many association to DocGroups (all docgroups used by conditions etc...) -->
+		<set name="docGroups" table="T_DOCGROUP" lazy="true"
+			inverse="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="false" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+				/>
+			</meta>
+            <meta attribute="owning-property"/>
+			<meta attribute="do-not-generate-transferobject-collection" />			
+   			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup" />
+		</set>
+
+		<!-- bi-directional many-to-many association to Borrower -->
+		<set name="borrowers" table="T_LOANAPPLICATION_BORROWER"
+			lazy="true" inverse="true" cascade="all">
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key>
+				<column name="loanApplicationId" not-null="true"
+					index="LoanAppBr_Loan_Indx" />
+			</key>
+			<many-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower">
+				<column name="borrowerId" not-null="true"
+					index="LoanAppBr_Borrower_Indx" />
+			</many-to-many>
+		</set>
+
+		<!-- bi-directional one-to-many association to OmClientOrder -->
+		<set name="OmClientOrders" table="T_OmClientOrder" lazy="true"
+			inverse="true" cascade="all" order-by="omClientOrderId desc">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder" />
+		</set>
+
+		<!-- bi-directional one-to-many association to DenialReasons  
+			<set name="DenialReasons" table="T_DenialReasons" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+			@hibernate.set lazy="true" inverse="true" cascade="all"
+			@hibernate.collection-key column="loanApplicationId"
+			@hibernate.collection-one-to-many
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.DenialReasons"
+			/>
+			</meta>
+			<key column="loanApplicationId" />
+			<one-to-many
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.DenialReasons" />
+			</set>
+		-->
+
+		<!-- bi-directional one-to-many association to FnmaCredit -->
+		<set name="FnmaCredits" table="T_FnmaCredit" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaCredit"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaCredit" />
+		</set>
+
+		<!-- bi-directional one-to-many association to LoanAppSerialData -->
+		<set name="LoanAppSerialData" table="T_LoanAppSerialData"
+			lazy="true" inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.model.loan.LoanAppSerialData"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.LoanAppSerialData" />
+		</set>
+
+		<!-- bi-directional one-to-many association to LoanCustRel -->
+		<set name="LoanCustRels" table="T_LoanCustRel" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanCustRel"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanCustRel" />
+		</set>
+
+
+		<!-- inverse of list relationships not supported loanGroup not bidirectional-->
+
+		<!-- bi-directional one-to-many association to MiRequest -->
+		<set name="MiRequests" table="T_MiRequest" lazy="true"
+			cascade="all-delete-orphan">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true"
+				cascade="all-delete-orphan" @hibernate.collection-key
+				column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.mi.MiRequest"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.mi.MiRequest" />
+		</set>
+
+		<!-- bi-directional one-to-many association to VmpOrder -->
+		<set name="VmpOrders" table="T_VmpOrder" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="loanApplicationId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpOrder"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpOrder" />
+		</set>
+	
+		<set name="proposals" table="T_PROPOSAL" lazy="true"
+			cascade="all" inverse="true">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.lead.Proposal" />
+		</set>
+
+		<set name="closingCostValueItems" table="T_CLOSINGCOSTVALUEITEM"
+			lazy="true" cascade="all-delete-orphan" inverse="true"
+			where="typeCode='INT'"
+			sort="com.dorado.persistence.model.loan.ValueItemComparator">
+			<meta attribute="property-type">java.util.SortedSet</meta>
+			<meta attribute="discriminator">INT</meta>
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostValueItem" />
+		</set>
+
+		<set name="finalClosingCostValueItems"
+			table="T_CLOSINGCOSTVALUEITEM" lazy="true"
+			cascade="all-delete-orphan" inverse="true" where="typeCode='FNL'"
+			sort="com.dorado.persistence.model.loan.ValueItemComparator">
+			<meta attribute="property-type">java.util.SortedSet</meta>
+			<meta attribute="discriminator">FNL</meta>
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostValueItem" />
+		</set>
+
+		<set name="conditions" table="T_CONDITION" lazy="true"
+			cascade="all" inverse="true">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+
+		<set name="escrows" table="T_Escrow" lazy="true" cascade="all"
+			inverse="true" order-by="escrowId asc">
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.escrow.Escrow" />
+		</set>
+
+		<set name="disbursements" table="T_DISBURSEMENT" lazy="true"
+			cascade="all-delete-orphan" inverse="true">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.closingcost.disbursements.Disbursement" />
+		</set>
+
+		<set name="appraisals" table="T_APPRAISALDATA" lazy="true"
+			cascade="all" inverse="true" order-by="appraisalDataId asc">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.appraisal.AppraisalData" />
+		</set>
+
+		<set name="endorsements" table="T_Endorsement" lazy="true"
+			cascade="all" inverse="true" order-by="endorsementId asc">
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key column="loanApplicationId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.endorsement.Endorsement" />
+		</set>
+		
+
+	</class>
+
+</hibernate-mapping>
+
+

@@ -1,0 +1,51 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProductAttribute"
+        table="T_LOANPRODUCTATTRIBUTE"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+  @hibernate.class
+  table="T_LOANPRODUCTATTRIBUTE">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="Id"
+            column="loanProductAttributeId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="loanProductAttributeId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+        
+        <property
+            name="attributes"
+            type="com.dorado.persistence.type.OracleBlob"
+            column="attributes"
+            length="4000"
+            not-null="false"
+            unique="false"
+            lazy="true"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="attributes" 
+length="4000"
+            </meta>
+        </property>
+    </class>
+
+</hibernate-mapping>
+        

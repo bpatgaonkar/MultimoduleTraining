@@ -1,0 +1,3 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'SERVICER','1','Servicer','Servicer','0',sysdate,'0'
+'PROCESSOR','2','Processor','Processor','0',sysdate,'0'

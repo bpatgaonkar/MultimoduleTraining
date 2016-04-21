@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'ClosingAttorney','Closing Attorney','0',sysdate,'0'
+'EscrowCompany','Escrow Company','0',sysdate,'0'
+'SettlementServicesCompany','Settlement Services Company','0',sysdate,'0'
+'TitleCompany','Title Company','0',sysdate,'0'
+'TitleInsuranceCompany','Title Insurance Company','0',sysdate,'0'
+'Trustee','Trustee','0',sysdate,'0'
+'WiringBank','Wiring Bank','0',sysdate,'0'

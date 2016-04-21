@@ -1,0 +1,7 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+P_LIMITED_NEW,'1','P','P - Limited Review - New Project','0',sysdate,'0'
+Q_LIMITED_ESTABLISHED,'2','Q','Q - Limited Review - Established or 2-4 Unit Project','0',sysdate,'0'
+R_EXPEDITED_NEW,'3','R','R - Expedited Review - New Project','0',sysdate,'0'
+S_EXPEDITED_ESTABLISHED,'4','S','S - Expedited Review - Established or 2-4 Unit Project','0',sysdate,'0'
+T_FANNIE_MAE,'5','T','T - Fannie Mae Review','0',sysdate,'0'
+U_FHA,'6','U','U- FHA Approved Project','0',sysdate,'0'

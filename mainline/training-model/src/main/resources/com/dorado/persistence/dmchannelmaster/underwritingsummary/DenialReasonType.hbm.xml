@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DenialReasonType"
+        table="T_DENIALREASONTYPE"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+		  	 @hibernate.class
+		 	 table="T_DENIALREASONTYPE">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="id"
+            column="denialReasonTypeId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+            	@hibernate.id
+            	generator-class="native"
+            	type="java.lang.Long"
+            	column="denialReasonTypeId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+        
+        <property 
+            name="displayOrder"
+            type="java.lang.Integer"
+            column="displayOrder"
+            length="22" 
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="displayOrder"
+                length="22" 
+            </meta>
+        </property> 
+
+        <property
+           name="description"
+           type="java.lang.String"
+           column="description"
+           length="255"
+           not-null="false"
+           unique="false"
+           >
+          <meta attribute="field-description">
+		      @hibernate.property
+		      column="description"
+		      length="255"
+          </meta>
+        </property>
+
+        <property
+          name="displayId"
+          type="java.lang.String"
+          column="displayId"
+          length="4"
+          not-null="false"
+          unique="false"
+          >
+          <meta attribute="field-description">
+	          @hibernate.property
+	          column="displayId"
+	          length="4"
+          </meta>
+        </property>
+
+        <property
+          name="groupType"
+          type="java.lang.String"
+          column="groupType"
+          length="40"
+          not-null="false"
+          unique="false"
+          >
+          <meta attribute="field-description">
+	          @hibernate.property
+	          column="groupType"
+	          length="40"
+          </meta>
+        </property>
+
+    </class>
+    <query name="underwriting.getDenialReasonType" cacheable="false" >
+     <![CDATA[
+      select reasonType from DenialReasonType as reasonType where reasonType.displayOrder >= 0
+      ]]>
+      </query>
+	
+</hibernate-mapping>
+

@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PREAPPROVAL,'1','1','Preapproval requested','0',sysdate,'0'
+NO_PREAPPROVAL,'2','2','Preapproval not requested','0',sysdate,'0'
+NOT_APPLICABLE,'3','3','Not applicable','0',sysdate,'0'

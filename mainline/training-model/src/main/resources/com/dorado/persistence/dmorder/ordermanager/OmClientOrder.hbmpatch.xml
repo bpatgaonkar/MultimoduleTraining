@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder">
+
+		<__meta attribute="root_region" />
+
+		<!-- APR is required for Upfront and Closing docs to be displayed on UI -->		
+		<property name="apr" type="java.lang.Double" column="apr"
+			length="22" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="apr" length="22"
+			</meta>
+		</property>
+
+		<many-to-one name="activityContext"
+			class="com.dorado.generated.persistence.dmplan.plan.ActivityContext"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="activityContextId"/>
+			</meta>
+			<column name="activityContextId" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to LoanApplication -->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="false" column="loanApplicationId" index="OmClientOrder_LoanApp_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" 
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</many-to-one>
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" column="borrowerId" index="OmClientOrder_Borrower_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true"
+				@hibernate.column name="borrowerId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to Fnma1003CaseFile -->
+		<set name="Fnma1003CaseFiles" table="T_Fnma1003CaseFile"
+			lazy="true" inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="omOrderId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.integration.Fnma1003CaseFile"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="omOrderId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.integration.Fnma1003CaseFile" />
+		</set>
+		
+
+	</class>
+
+</hibernate-mapping>
+

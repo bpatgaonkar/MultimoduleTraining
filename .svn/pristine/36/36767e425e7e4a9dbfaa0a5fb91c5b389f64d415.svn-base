@@ -1,0 +1,8 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION,DISPLAYORDER
+AMERICAN_IND_OR_ALASKAN,'1','American Indian Or Alaska Native','0',sysdate,'0','1'
+ASIAN,'2','Asian','0',sysdate,'0','2'
+AFRICAN_AMERICAN,'3','Black Or African American','0',sysdate,'0','3'
+PACIFIC_ISLANDER,'4','Native Hawaiian Or Other Pacific Islander','0',sysdate,'0','4'
+WHITE,'5','White','0',sysdate,'0','5'
+NOT_PROVIDED_OR_MAIL,'6','Not provided by applicant through mail internet or telephone','0',sysdate,'0','6'
+NOT_APPLICABLE,'7','Not Applicable','0',sysdate,'0','7'

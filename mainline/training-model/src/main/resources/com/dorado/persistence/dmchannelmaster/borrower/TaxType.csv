@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'FEDE','Federal Tax','0',sysdate,'0'
+'LOCL','Local Tax','0',sysdate,'0'
+'OTHE','Other Tax','0',sysdate,'0'
+'SSTY','Social security Tax','0',sysdate,'0'
+'STAT','State Tax','0',sysdate,'0'

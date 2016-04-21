@@ -1,0 +1,189 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.TaxPayee"
+	 table="T_TAXPAYEE" 
+	 lazy="true"> 
+
+ <meta attribute="class-description" inherit="false"> 
+	  @hibernate.class
+	  table="T_TAXPAYEE"> 
+ </meta>
+ <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+    
+<id 
+name="Id"  
+type="java.lang.Long" 
+column="TAXPAYEEID"  
+> 
+	<meta attribute="field-description">
+	@hibernate.id
+	generator-class="native"
+	type="java.lang.Long" 
+	column="TAXPAYEEID"  
+	</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="payeeCode" 
+type="java.lang.String" 
+column="PAYEECODE" 
+length="8" 
+not-null="true" 
+unique="true"
+update="false"
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="PAYEECODE" 
+	length="8" 
+	</meta> 
+</property>          
+
+<property 
+name="payeeName" 
+type="java.lang.String" 
+column="PAYEENAME" 
+length="256" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="PAYEENAME" 
+	length="256" 
+	</meta> 
+</property>
+
+<!-- Associations -->
+
+        <!-- bi-directional one-to-one association to Address -->
+        <many-to-one name="payeeAddress"
+            class="com.dorado.generated.persistence.dmcommon.contact.Address"
+            not-null="true"
+            column="ADDRESSID"
+            cascade="all"
+            unique="true"
+            index="taxPayee_addrid_Indx"
+            >
+            <meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="true"
+		cascade="all"
+		@hibernate.column name="ADDRESSID"/>
+            </meta>
+        </many-to-one>
+        
+        <!-- bi-directional one-to-one association to Person -->
+	        <many-to-one name="contact"
+	            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+	            not-null="false"
+	            column="CONTACTID"
+	            cascade="all"
+	            unique="true"
+                   index="taxPayee_contact_Indx"
+	            >
+	            <meta attribute="field-description">
+			@hibernate.many-to-one
+			not-null="false"
+			cascade="all"
+			@hibernate.column name="CONTACTID"/>
+	            </meta>
+        </many-to-one>
+        
+<!-- Associations -->        
+
+<property 
+name="unevenPayementFlag" 
+type="java.lang.Boolean" 
+column="UNEVENPAYMENTFLAG" 
+length="1" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="UNEVENPAYMENTFLAG" 
+	length="1" 
+	</meta> 
+</property> 
+
+<!-- <property 
+name="contactPointType" 
+type="java.lang.String" 
+column="CONTACTPOINTTYPE" 
+length="10" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="CONTACTPOINTTYPE" 
+	length="10" 
+	</meta> 
+</property>
+
+<property 
+name="contactPointValue" 
+type="java.lang.String" 
+column="CONTACTPOINTVALUE" 
+length="30" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="CONTACTPOINTVALUE" 
+	length="30" 
+	</meta> 
+</property> 
+        -->
+<property 
+name="activeFlag" 
+type="java.lang.Boolean" 
+column="ACTIVEFLAG" 
+length="1" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="ACTIVEFLAG" 
+	length="1" 
+	</meta> 
+</property>
+
+        <!-- bi-directional one-to-many association to TaxPayment -->
+        <set
+            name="taxPayments"
+            table="T_TaxPayment"
+            lazy="true"
+            inverse="true"
+            cascade="all"
+            order-by="DATESEQUENCE asc"
+            >
+            <meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="taxpayeeid"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.TaxPayment" />
+            </meta>
+            <key column="taxpayeeId"/>
+            <one-to-many class="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.TaxPayment"/>
+        </set>
+
+
+</class> 
+</hibernate-mapping> 
+
+

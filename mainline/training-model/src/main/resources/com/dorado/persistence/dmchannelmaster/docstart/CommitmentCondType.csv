@@ -1,0 +1,9 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','SignedSalesContract','Signed Sales Contract','0',sysdate,'0'
+'2','PlatOfSurvey','Plat Of Survey','0',sysdate,'0'
+'3','TitleShowingLegalDescription','Title Showing Legal Description','0',sysdate,'0'
+'4','ListOfRepairs','List Of Repairs','0',sysdate,'0'
+'5','PayoutOnCompletionOfBuilding','Payout On Completion Of Building','0',sysdate,'0'
+'6','ContractorStatementAndSupportingWaivers','Contractor Statement And Supporting Waivers','0',sysdate,'0'
+'7','MandatoryFloodInsurance','Signed Sales Contract','0',sysdate,'0'
+'8','Other','Other','0',sysdate,'0'

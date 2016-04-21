@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'CRPULL','Pull credit report from a given reference number','0',sysdate,'0'
+'CRPULLBR','Pull credit report from a given reference number for broker','0',sysdate,'0'
+'CRPULLLD','Pull credit report from a given reference number for lender','0',sysdate,'0'
+'DUEMBED','Order credit report embedded in DU ','0',sysdate,'0'
+'MANUAL','Credit information is manually entered','0',sysdate,'0'
+'ORBFIRM','Order credit report from broker firm','0',sysdate,'0'
+'ORLENDER','Order credit report from lender','0',sysdate,'0'

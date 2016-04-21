@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PRIMARY,'1','1','Primary','0',sysdate,'0'
+SECONDARY,'2','2','Secondary','0',sysdate,'0'
+INVESTMENT_PROPERTY,'3','D','Investment','0',sysdate,'0'
+

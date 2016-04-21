@@ -1,0 +1,9 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','PurchExistHomePrevOccupied','Purchase Existing Home Previously Occupied','0',sysdate,'0'
+'2','FinImprovementsToExisting','Finance Improvements to Existing Property','0',sysdate,'0'
+'3','Refinance','Refinance','0',sysdate,'0'
+'4','PurchNewCondo','Purchase New Condo Unit','0',sysdate,'0'
+'5','PurchExistCondo','Purchase Existing Condo Unit','0',sysdate,'0'
+'6','PurchExistHomeNotPrevOccupied','Purchase Existing Home Not Previously Occupied','0',sysdate,'0'
+'7','ConstructHome','Construct Home','0',sysdate,'0'
+'8','FinanceCo-op','Finance Co-op Purchase','0',sysdate,'0'

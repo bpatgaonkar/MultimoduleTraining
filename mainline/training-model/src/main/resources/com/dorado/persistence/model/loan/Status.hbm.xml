@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.dorado.generated.persistence.model.loan.Status"
+		table="T_STATUS" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_STATUS">
+		</meta>
+		
+		<meta attribute="do-not-generate-transferobject"/>
+		<meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+		
+
+		<id name="Id" column="statusId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="statusId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="changeTimeStamp" type="java.sql.Timestamp"
+			column="timeStamp" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="TimeStamp" length="7"
+			</meta>
+		</property>
+
+		<property name="statusLinkId" type="java.lang.Integer"
+			column="statusLinkId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="statusLinkId" length="22"
+			</meta>
+		</property>
+
+		<property name="statusValue" type="java.lang.String"
+			column="statusValue" length="32" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="statusValue" length="32"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to StatusDef -->
+		<many-to-one name="statusDef"
+			class="com.dorado.generated.persistence.model.loan.StatusDef"
+			not-null="true" column="statusdefId" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="statusdefId"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

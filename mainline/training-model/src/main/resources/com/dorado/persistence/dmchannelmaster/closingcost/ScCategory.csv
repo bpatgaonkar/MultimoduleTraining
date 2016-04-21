@@ -1,0 +1,12 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Box_1','Box 1','0',sysdate,'0'
+'Box_2','Box 2','0',sysdate,'0'
+'Box_3','Box 3','0',sysdate,'0'
+'Box_4','Box 4','0',sysdate,'0'
+'Box_5','Box 5','0',sysdate,'0'
+'Box_6','Box 6','0',sysdate,'0'
+'Box_7','Box 7','0',sysdate,'0'
+'Box_8','Box 8','0',sysdate,'0'
+'Box_9','Box 9','0',sysdate,'0'
+'Box_10','Box 10','0',sysdate,'0'
+'Box_11','Box 11','0',sysdate,'0'

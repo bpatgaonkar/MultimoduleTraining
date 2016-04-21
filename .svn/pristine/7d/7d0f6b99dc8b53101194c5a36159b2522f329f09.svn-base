@@ -1,0 +1,100 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.transaction.OtherCredit"
+ table="T_OTHERCREDIT" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_OTHERCREDIT"> 
+ </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+<id 
+name="Id"  
+column="otherCreditId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="otherCreditId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="amount" 
+type="java.lang.Double" 
+column="amount" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="Amount" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Transaction -->
+<many-to-one name="transaction" 
+class="com.dorado.generated.persistence.dmchannelmaster.transaction.Transaction" 
+not-null="true"
+cascade="all"
+index="OtherCredit_Tnx_Indx"
+column="transactionId">
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="transactionId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property"/>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to FnmaOtherCreditType -->
+<many-to-one name="FnmaOtherCreditType" 
+class="com.dorado.generated.persistence.dmchannelmaster.transaction.FnmaOtherCreditType" 
+not-null="false"
+cascade="none"
+column="otherCreditTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="otherCreditTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 

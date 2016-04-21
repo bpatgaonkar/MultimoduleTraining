@@ -1,0 +1,59 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+	<class name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.PricingOverride"
+		 table="T_PRICINGOVERRIDE" 
+		 lazy="true" > 
+	
+		 <meta attribute="class-Description" inherit="false"> 
+			  @hibernate.class
+			  table="T_PRICINGOVERRIDE"> 
+		 </meta>
+	    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+		<id 
+			name="Id"  
+			column="pricingOverrideId"  
+			type="java.lang.Long" 
+		> 
+			<meta attribute="field-Description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.Long" 
+				column="pricingOverrideId"  
+			</meta>
+			<generator class="native"> 
+			</generator> 
+		</id> 
+		<property 
+			name="value"
+			type="java.lang.Double"
+			column="value"
+			not-null="false"
+			unique="false"
+			>
+			<meta attribute="field-descriptor">
+			@hibernate.property
+				column="value"
+			</meta>
+		</property>
+		
+		<!-- many to one replation -->
+		<many-to-one name="discretionaryAdjustmentType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.DiscretionaryAdjustmentType"
+			not-null="true"
+			cascade="none" 
+			column="discretionaryAdjustmentType">
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+				@hibernate.column.name="discretionaryAdjustmentType"
+			</meta>
+		</many-to-one>	
+		
+	</class>
+</hibernate-mapping> 

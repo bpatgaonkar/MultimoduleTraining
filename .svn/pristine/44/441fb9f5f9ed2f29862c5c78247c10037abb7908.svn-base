@@ -1,0 +1,10 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','LENDER_NotApplicable','Not Applicable for Lender','0',sysdate,'0'
+'2','LENDER_Application','Set by Lender at Application','0',sysdate,'0'
+'3','LENDER_Commitment','Set by Lender at Commitment','0',sysdate,'0'
+'4','LENDER_Closing','Set by Lender at Closing','0',sysdate,'0'
+'5','LENDER_Other','Set by Lender Other Time','0',sysdate,'0'
+'6','BORROWER_NotApplicable','Not Applicable for Borrower','0',sysdate,'0'
+'7','BORROWER_Application','Set by Borrower at Application','0',sysdate,'0'
+'8','BORROWER_Commitment','Set by Borrower at Commitment','0',sysdate,'0'
+'9','BORROWER_Closing','Set by Borrower at Closing','0',sysdate,'0'

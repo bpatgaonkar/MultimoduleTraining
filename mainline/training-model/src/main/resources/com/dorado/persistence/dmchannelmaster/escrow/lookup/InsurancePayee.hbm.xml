@@ -1,0 +1,121 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.InsurancePayee"
+	 table="T_INSURANCEPAYEE" 
+	 lazy="true"> 
+
+ <meta attribute="class-description" inherit="false"> 
+	  @hibernate.class
+	  table="T_INSURANCEPAYEE"> 
+ </meta>
+ <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+    
+<id 
+name="Id"  
+type="java.lang.Long" 
+column="INSURANCEPAYEEID"  
+> 
+	<meta attribute="field-description">
+	@hibernate.id
+	generator-class="native"
+	type="java.lang.Long" 
+	column="INSURANCEPAYEEID"  
+	</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="payeeNumber" 
+type="java.lang.String" 
+column="PAYEENUMBER" 
+length="5" 
+not-null="true" 
+unique="true"
+update="false"
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="PAYEENUMBER" 
+	length="5" 
+	</meta> 
+</property> 
+
+              
+
+<property 
+name="payeeName" 
+type="java.lang.String" 
+column="PAYEENAME" 
+length="30" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="PAYEENAME" 
+	length="30" 
+	</meta> 
+</property>
+
+<!-- Associations -->
+
+        <!-- bi-directional one-to-one association to Address -->
+        <many-to-one name="address"
+            class="com.dorado.generated.persistence.dmcommon.contact.Address"
+            not-null="true"
+            cascade="all"
+            unique="true"
+            index="insurPayee_addr_Indx"
+            column="ADDRID"
+            >
+            <meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="true"
+		cascade="all"
+		@hibernate.column name="ADDRID"/>
+            </meta>
+        </many-to-one>
+        
+        
+        <!-- bi-directional one-to-one association to Phone -->
+        <many-to-one name="phone"
+            class="com.dorado.generated.persistence.dmcommon.contact.Phone"
+            not-null="true"
+            cascade="all"
+            unique="true"
+           	index="InsPayee_Phone_Indx"
+           	column="PHONEID"
+            >
+            <meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="true"
+		cascade="all"
+		@hibernate.column name="PHONEID"/>
+            </meta>
+        </many-to-one>
+        
+        
+<property 
+name="activeFlag" 
+type="java.lang.Integer" 
+column="ACTIVEFLAG" 
+length="1" 
+not-null="true" 
+unique="false"  
+> 
+	<meta attribute="field-description"> 
+	@hibernate.property 
+	column="ACTIVEFLAG" 
+	length="1" 
+	</meta> 
+</property>          
+</class> 
+</hibernate-mapping> 
+
+

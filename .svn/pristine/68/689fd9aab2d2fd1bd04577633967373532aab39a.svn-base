@@ -1,0 +1,137 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+	<class name="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingLevel"
+		table="T_UNDERWRITINGLEVEL" 
+		lazy="true" > 
+
+		<meta attribute="class-description" inherit="false"> 
+			@hibernate.class
+			table="T_UNDERWRITINGLEVEL"> 
+		</meta>
+		<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+		<id 
+			name="Id"  
+			column="underwritingLevelId"  
+			type="java.lang.Long" 
+			> 
+			<meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.Long" 
+				column="underwritingLevelId"  
+			</meta>
+			<generator class="native"> 
+			</generator> 
+		</id> 
+
+	<property 
+			name="amount" 
+			type="java.lang.Double" 
+			column="AMOUNT" 
+			length="22" 
+			not-null="false" 
+			unique="false"  
+		> 
+			<meta attribute="field-description"> 
+				@hibernate.property 
+				column="amount" 
+				length="22" 
+			</meta> 
+	</property> 
+
+	<property 
+			name="isApprovalAuthority" 
+			type="java.lang.Boolean" 
+			column="approvalFlag" 
+			length="1" 
+			not-null="false" 
+			unique="false"  
+		> 
+			<meta attribute="field-description"> 
+				@hibernate.property 
+				column="approvalFlag" 
+				length="1" 
+			</meta> 
+	</property> 
+	<property 
+		name="canDecideAllLoanTypes" 
+		type="java.lang.Boolean" 
+		column="allLoanTypesFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false" 
+		> 
+		<meta attribute="field-description"> 
+		@hibernate.property 
+		column="allLoanTypesFlag" 
+		length="1" 
+		</meta> 
+	</property> 
+	<property 
+		name="canDecideAllLoanPurposes" 
+		type="java.lang.Boolean" 
+		column="allLoanPurposesFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false" 
+		> 
+		<meta attribute="field-description"> 
+		@hibernate.property 
+		column="allLoanPurposesFlag" 
+		length="1" 
+		</meta> 
+	</property>
+
+ <!-- Associations --> 
+
+		<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmomcmshared.loan.LoanPurposeType"
+			not-null="false" cascade="none" column="loanPurposeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="loanPurposeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to LoanType -->
+		<many-to-one name="loanType"
+			class="com.dorado.generated.persistence.dmomcmshared.loanproduct.LoanType"
+			not-null="false"
+			cascade="none"
+			column="loanTypeCode"
+			>
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+				@hibernate.column name="loanTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to UnderwritingAuthority -->
+		<many-to-one name="underwritingAuthority" 
+			class="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingAuthority" 
+			not-null="true"
+			cascade="none"
+			column="UnderwritingAuthorityId"
+		>
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+				@hibernate.column name="UnderwritingAuthorityId"/> 
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</many-to-one>
+
+	</class> 
+ 
+</hibernate-mapping> 
+

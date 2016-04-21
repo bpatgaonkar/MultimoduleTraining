@@ -1,0 +1,4 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+NOTICEOFINCOMPLETE,'NOTICEOFINCOMPLETE','Loan Closed as Incomplete','0',sysdate,'0'
+CANCEL,'CANCEL','Borrower Withdrew','0',sysdate,'0'
+RESCIND,'RESCIND','Borrower Exercised Right of Rescission','0',sysdate,'0'

@@ -1,0 +1,5 @@
+TYPECODE,SESSIONID,TIMESTAMP,VERSION
+'FINALFEE','0',sysdate,'0'
+'LENDERFEE','0',sysdate,'0'
+'NET','0',sysdate,'0'
+'LOANAMOUNT','0',sysdate,'0'

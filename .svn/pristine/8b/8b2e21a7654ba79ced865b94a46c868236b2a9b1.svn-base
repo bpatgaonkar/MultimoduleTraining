@@ -1,0 +1,10 @@
+TYPECODE,SHORTDESC,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'APPROVEDFLOAT','Approved','The loan has been approved and float','0',sysdate,'0'
+'APPROVEDLOCKED','Approved','The loan has been approved and locked','0',sysdate,'0'
+'APPROVEDPENDAU','Underwriting Pending','The loan has been approved pending AU','0',sysdate,'0'
+'AUCAUTION','Underwriting Caution','The loan has been approved with AU caution','0',sysdate,'0'
+'LOCKED','Locked','The loan has been locked','0',sysdate,'0'
+'NOTSUBMITTED','Not Submitted','The loan has not been submitted','0',sysdate,'0'
+'REFERTOBRANCH','Referred To Branch','The loan has been referred to branch','0',sysdate,'0'
+'SUBMITINVALID','Submit Invalid','The loan submission was invalidated','0',sysdate,'0'
+'SUBMITTED','Submitted','The loan has been submitted','0',sysdate,'0'

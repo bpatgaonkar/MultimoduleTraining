@@ -1,0 +1,365 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerTrust"
+ table="T_BorrowerTrust" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_BorrowerTrust"> 
+ </meta>
+   <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="borrowerTrustId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="borrowerTrustId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="trustDate" 
+type="java.sql.Timestamp" 
+column="trustDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="trustTerminatedFlag" 
+type="java.lang.Boolean" 
+column="trustTerminatedFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustTerminatedFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="trustBeneficiaryFlag" 
+type="java.lang.Boolean" 
+column="trustBeneficiaryFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustBeneficiaryFlag" 
+length="1" 
+</meta> 
+</property> 
+
+
+<property 
+name="trustCourtCounty"
+type="java.lang.String" 
+column="trustCourtCounty" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustCourtCounty" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="trustCourtName" 
+type="java.lang.String" 
+column="trustCourtName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustCourtName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="trustName" 
+type="java.lang.String" 
+column="trustName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="originalTrusteeName" 
+type="java.lang.String" 
+column="originalTrusteeName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="originalTrusteeName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="trustOtherProvisions" 
+type="java.lang.String" 
+column="trustOtherProvisions" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustOtherProvisions" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustBeneficiaryName" 
+type="java.lang.String" 
+column="trustBeneficiaryName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustBeneficiaryName" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustGrantorName" 
+type="java.lang.String" 
+column="trustGrantorName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustGrantorName" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustTrustorName" 
+type="java.lang.String" 
+column="trustTrustorName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustTrustorName" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustSettlorName" 
+type="java.lang.String" 
+column="trustSettlorName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustSettlorName" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustTrusteeName" 
+type="java.lang.String" 
+column="trustTrusteeName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustTrusteeName" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="trustTrusteeLimit" 
+type="java.lang.String" 
+column="trustTrusteeLimit" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="trustTrusteeLimit" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="poaSigningCapacityDesc" 
+type="java.lang.String" 
+column="poaSigningCapacityDesc" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="poaSigningCapacityDesc" 
+length="256" 
+</meta> 
+</property>
+
+<property 
+name="poaTitleDesc" 
+type="java.lang.String" 
+column="poaTitleDesc" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="poaTitleDesc" 
+length="80" 
+</meta> 
+</property>
+
+<property 
+name="poaFullName" 
+type="java.lang.String" 
+column="poaFullName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="poaFullName" 
+length="80" 
+</meta> 
+</property>
+
+
+
+ <!-- Associations --> 
+
+ <!-- uni-directional one-to-one association to Address -->
+
+    <many-to-one
+        name="trustTrusteeAddr"
+        class="com.dorado.generated.persistence.dmcommon.contact.Address"
+        not-null="false"
+        cascade="all" 
+    index="BrTrust_addrid_Indx"
+    >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="trustTrusteeAddrId"         
+        </meta>
+        <column name="trustTrusteeAddrId" />
+    </many-to-one>
+
+
+ <!-- Associations --> 
+ <!-- uni-directional one-to-one association to StateCode -->
+    <many-to-one
+        name="trustStateCode"
+        class="com.dorado.generated.persistence.dmcommon.contact.State"
+        not-null="false"
+        cascade="none" >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="none" 
+           @hibernate.column name="trustStateCode"         
+        </meta>
+        <column name="trustStateCode" />
+    </many-to-one>
+  <!-- Associations --> 
+
+ <!-- uni-directional one-to-one association to CertificateOfTrustType-->
+
+    <many-to-one
+        name="CertificateOfTrustType"
+        class="com.dorado.generated.persistence.dmchannelmaster.borrower.CertificateOfTrustType"
+        not-null="false"
+        cascade="none" >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="none" 
+           @hibernate.column name="certificateOfTrustTypeCode"         
+        </meta>
+        <column name="certificateOfTrustTypeCode" />
+    </many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Borrower-->
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="false"
+cascade="all"
+ index="BrTrust_Borrower_Indx"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property" />
+<column name="borrowerId"/> 
+</many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+
+

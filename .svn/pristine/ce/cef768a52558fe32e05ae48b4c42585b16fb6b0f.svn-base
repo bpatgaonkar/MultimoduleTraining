@@ -1,0 +1,76 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loan.government.ProjectClassification"
+ table="T_PROJECTCLASSIFICATION" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_PROJECTCLASSIFICATION"> 
+ </meta>
+    <meta attribute="implement-equals">true</meta>
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+    <meta attribute="implements">com.dorado.persistence.Described</meta>
+<id 
+name="typeCode"  
+column="projectClassificationCode"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="projectClassificationCode"  
+</meta>
+<meta attribute="use-in-equals">true</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="80" 
+</meta> 
+</property> 
+
+
+ <!-- bi-directional one-to-many association to GovLoan 
+<set  
+name="GovLoans"
+table="T_GovLoan"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="projectClassificationCode"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.loan.government.GovLoan" />
+</meta>
+<key column="projectClassificationCode" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.loan.government.GovLoan" />
+</set> 
+-->
+</class> 
+ 
+ </hibernate-mapping> 
+

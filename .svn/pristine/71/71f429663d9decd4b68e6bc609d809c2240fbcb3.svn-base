@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.dorado.generated.persistence.model.loan.Extension"
+		table="T_EXTENSION" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_EXTENSION">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="extensionId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="extensionId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Plp -->
+		<many-to-one name="plp"
+			class="com.dorado.generated.persistence.dmchannelmaster.plp.Plp"
+			not-null="true" column="plpId" cascade="all" index="Extension_PlpId_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="plpId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to LoanApplication
+			<set  
+			name="LoanApplications"
+			table="T_LoanApplication"
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			>
+			<meta attribute="field-description">
+			@hibernate.set
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			@hibernate.collection-key
+			column="extensionId"
+			@hibernate.collection-one-to-many
+			class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</meta>
+			<key column="extensionId" /> 
+			<one-to-many class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</set> 
+		-->
+	</class>
+
+</hibernate-mapping>
+

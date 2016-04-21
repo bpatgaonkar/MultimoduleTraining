@@ -1,0 +1,6 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+EXISTING,'1','4','Existing','0',sysdate,'0'
+PROPOSED,'2','1','Proposed','0',sysdate,'0'
+ALTERATION,'3','5','Alteration / improvement / repair','0',sysdate,'0'
+SUBSTANTIALLY_REHABILITATED,'4','2','Substantially rehabilitated','0',sysdate,'0'
+UNDER_CONSTRUCTION,'5','3','Under Construction','0',sysdate,'0'

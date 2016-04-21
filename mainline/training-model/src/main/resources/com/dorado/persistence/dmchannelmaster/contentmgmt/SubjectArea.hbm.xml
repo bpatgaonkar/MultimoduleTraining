@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+ PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectArea"
+		table="T_SUBJECTAREA"
+		lazy="true" >
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class
+			table="T_SUBJECTAREA">
+		</meta>
+
+		<meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+
+		<id 
+			name="Id" 
+			column="subjectAreaId" 
+			type="java.lang.Long"
+		>
+
+			<meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.Long"
+				column="subjectAreaId"
+			</meta>
+
+			<generator class="native"> 
+			</generator>
+		
+		</id>
+
+		<property name="name"
+			  type="java.lang.String"
+			  column="name"
+			  length="40"
+			  not-null="false"
+			  unique="false"
+		>
+
+			<meta attribute="field-description">
+				@hibernate.property
+				column="name"
+				length="40"
+			</meta>
+		
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one
+			name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true"
+			cascade="all"
+			column="orgEntityId"
+		>
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to SubjectItem -->
+		<set
+			name="SubjectItem"
+			table="T_SubjectItem"
+			lazy="true"
+			inverse="true"
+			cascade="all">
+
+			<meta attribute="field-description">
+				@hibernate.set
+				lazy="true"
+				inverse="true"
+				cascade="all"
+				@hibernate.collection-key
+				column="subjectAreaId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectItem" />
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+
+			<key column="subjectAreaId" />
+			<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectItem" />
+		</set>
+
+	</class>
+	
+ </hibernate-mapping>
+

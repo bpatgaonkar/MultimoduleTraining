@@ -1,0 +1,4 @@
+SERVICETYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'MSMO','MSMO','0',sysdate,'0'
+'PM','PM','0',sysdate,'0'
+'HMDA','HMDA','0',sysdate,'0'

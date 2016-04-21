@@ -1,0 +1,13 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+SINGLE_FAMILY_RESIDENCE,'1','14','Single Family Residence','0',sysdate,'0'
+TOWNHOUSE,'2','16','Townhouse','0',sysdate,'0'
+CONDO,'3','04','Condominium','0',sysdate,'0'
+COOP,'4','13','Co-Operative','0',sysdate,'0'
+TWO_TO_FOUR_UNIT,'5','15','Two-to-Four-Unit Property','0',sysdate,'0'
+MANUFACTURED_HOME,'6','08','Manufactured/Mobile Home','0',sysdate,'0'
+HOME_BUSINESS_COMBINED,'7','03','Home and Business Combined','0',sysdate,'0'
+MULTIFAMILY,'8','18','Multifamily (More than 4 units)','0',sysdate,'0'
+MIXED_USE,'9','F1','Mixed Use - Residential','0',sysdate,'0'
+COMMERCIAL,'10','02','Commercial - Non-Residential','0',sysdate,'0'
+FARM,'11','05','Farm','0',sysdate,'0'
+LAND,'12','07','Land','0',sysdate,'0'

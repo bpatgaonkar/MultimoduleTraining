@@ -1,0 +1,3 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Guaranty','Guaranty','0',sysdate,'0'
+'2','Insurance','Insurance','0',sysdate,'0'

@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.integration.Fnma1003CaseFile"
+		table="T_FNMA1003CASEFILE" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_FNMA1003CASEFILE">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="caseFileId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="caseFileId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="evaluationDate" type="java.sql.Timestamp"
+			column="evaluationDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="evaluationDate" length="7"
+			</meta>
+		</property>
+
+		<property name="submissionDate" type="java.sql.Timestamp"
+			column="submissionDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="submissionDate" length="7"
+			</meta>
+		</property>
+
+		<property name="docGroupId" type="java.lang.Integer"
+			column="docGroupId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="docGroupId" length="22"
+			</meta>
+		</property>
+
+		<property name="freAcceptPlusEligibleFlag"
+			type="java.lang.Boolean" column="freAcceptPlusEligibleFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="freAcceptPlusEligibleFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="creditRiskClass" type="java.lang.String"
+			column="creditRiskClass" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="creditRiskClass" length="40"
+			</meta>
+		</property>
+
+		<property name="documentationClass" type="java.lang.String"
+			column="documentationClass" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="documentationClass"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="fnmaCaseFileId" type="java.lang.String"
+			column="fnmaCaseFileId" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fnmaCaseFileId" length="40"
+			</meta>
+		</property>
+
+		<property name="frePurchaseEligibilityType"
+			type="java.lang.String" column="frePurchaseEligibilityType"
+			length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="frePurchaseEligibilityType"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="lpKeyIdentifier" type="java.lang.String"
+			column="lpKeyIdentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lpKeyIdentifier" length="40"
+			</meta>
+		</property>
+
+		<property name="statusCode" type="java.lang.String"
+			column="statusCode" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="statusCode" length="40"
+			</meta>
+		</property>
+
+		<property name="uwRequestNumber" type="java.lang.String"
+			column="uwRequestNumber" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="uwRequestNumber" length="40"
+			</meta>
+		</property>
+
+		<property name="errorMessage" type="java.lang.String"
+			column="errorMessage" length="4000" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="errorMessage" length="4000"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="createdByOrg"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" column="createdByID" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="createdByID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+		<!-- many-to-one association with OmClientOrder -->
+		<many-to-one name="omClientOrder"
+			class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+			not-null="true" column="omOrderId" cascade="all" index="Fnma1003CF_Client_indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="omOrderId"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="modifiedByOrg"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" column="MODIFIEDBYID" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="MODIFIEDBYID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to CaseStateType -->
+		<many-to-one name="caseStateType"
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.CaseStateType"
+			not-null="false" column="caseStateTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="caseStateTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to FreausOrderType -->
+		<many-to-one name="freausOrderType"
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.FreausOrderType"
+			not-null="false" column="freausOrderTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="freausOrderTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LpEvaluationStatus -->
+		<many-to-one name="lpEvaluationStatus"
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.LpEvaluationStatus"
+			not-null="false" column="lpEvaluationStatus" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="lpEvaluationStatus"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to UnderWritingType -->
+		<many-to-one name="underWritingType"
+			class="com.dorado.generated.persistence.dmchannelmaster.integration.UnderWritingType"
+			not-null="false" column="underwritingTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="underwritingTypeCode"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

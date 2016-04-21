@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.income.Income"
+		table="T_INCOME" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_INCOME">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+			
+		<id name="Id" column="incomeid" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="incomeid"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="amount" type="java.lang.Double" column="amount"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="amount" length="22"
+			</meta>
+		</property>
+
+		<property name="otherIncomeDescription" type="java.lang.String"
+			column="otherIncomeDescription" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherIncomeDescription"
+				length="255"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" column="borrowerId" cascade="save-update" index="Income_Borrower_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="borrowerId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Incometype -->
+		<many-to-one name="incomeType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.income.IncomeType"
+			not-null="false" column="IncomeTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="IncomeTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+			table="T_CONDITION" cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="INCOMEID" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

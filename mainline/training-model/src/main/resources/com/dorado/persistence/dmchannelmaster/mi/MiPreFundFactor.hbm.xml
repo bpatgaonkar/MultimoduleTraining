@@ -1,0 +1,103 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.mi.MiPreFundFactor"
+ table="T_MIPREFUNDFACTOR" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_MIPREFUNDFACTOR"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="miPreFundFactorId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="miPreFundFactorId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="endCloseDateRange" 
+type="java.sql.Timestamp" 
+column="endCloseDateRange" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="endCloseDateRange" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="startCloseDateRange" 
+type="java.sql.Timestamp" 
+column="startCloseDateRange" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="startCloseDateRange" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="refundFactor" 
+type="java.lang.Double" 
+column="refundFactor" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="refundFactor" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="monthsInsured" 
+type="java.lang.Integer" 
+column="monthsInsured" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="monthsInsured" 
+length="22" 
+</meta> 
+</property> 
+
+</class> 
+
+<query name="dmchannelmaster.mi.getMIPRefundFactor" cacheable="false">
+    FROM MiPreFundFactor mipRefundFactor 
+    WHERE mipRefundFactor.monthsInsured = :monthsInsured AND 
+          mipRefundFactor.startCloseDateRange &lt;= :closingDate AND 
+         (mipRefundFactor.endCloseDateRange is null OR
+             mipRefundFactor.endCloseDateRange &gt;= :closingDate)
+</query>
+
+ </hibernate-mapping> 
+

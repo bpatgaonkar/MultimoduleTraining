@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'LenderSendCheck','Lender Send Check','0',sysdate,'0'
+'LenderPayTaxYearEnd','Lender Pay Tax Year End','0',sysdate,'0'
+'LenderPayTaxDue','Lender Pay Tax Due','0',sysdate,'0'
+'PledgedTimeDeposit','Pledged Time Deposit','0',sysdate,'0'

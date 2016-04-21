@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'O','Own','0',sysdate,'0'
+'R','Rent','0',sysdate,'0'
+'W','Living with family','0',sysdate,'0'
+'X','Living Rent Free','0',sysdate,'0'

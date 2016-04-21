@@ -1,0 +1,5 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Veteran','Veteran','0',sysdate,'0'
+'2','VeteranSpouse','Veteran Spouse','0',sysdate,'0'
+'3','Other','Other','0',sysdate,'0'
+'4','JointWithTwoOrMoreVeterans','Joint With Two Or More Veterans','0',sysdate,'0'

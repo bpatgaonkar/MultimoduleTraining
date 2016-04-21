@@ -1,0 +1,5 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','MortgageTitle','Mortgage Title','0',sysdate,'0'
+'2','TorrensTitle','Torrens Title','0',sysdate,'0'
+'3','AbstractTitle','Abstract Title','0',sysdate,'0'
+'4','LawyersOpinionTitle','Lawyers Opinion Title','0',sysdate,'0'

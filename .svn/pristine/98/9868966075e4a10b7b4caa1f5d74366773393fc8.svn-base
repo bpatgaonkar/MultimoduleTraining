@@ -1,0 +1,9 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'01','GE Mortgage Ins Co','0',sysdate,'0'
+'06','Mortgage Guaranty Ins Corp','0',sysdate,'0'
+'11','PMI Mortgage Ins Co','0',sysdate,'0'
+'12','United Guaranty','0',sysdate,'0'
+'13','Republic Mortgage Ins Co','0',sysdate,'0'
+'24','Triad Guaranty Ins Corp','0',sysdate,'0'
+'33','Radian Guaranty','0',sysdate,'0'
+'38','CMG Mortgage Ins Co','0',sysdate,'0'

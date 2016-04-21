@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'DU','FNMA DU','0',sysdate,'0'
+'IPA','DU Instant Pre-Approval','0',sysdate,'0'
+'LIPA','LP Instant Pre-Approval','0',sysdate,'0'
+'LP','FHLMC LP','0',sysdate,'0'
+'MI','Mortgage Insurance','0',sysdate,'0'

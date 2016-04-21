@@ -1,0 +1,81 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.loan.government.HocVacancyFactor"
+		table="T_HOCVACANCYFACTOR" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class
+			table="T_HOCVACANCYFACTOR"
+		</meta>
+			<meta attribute="generate-unidentifiable-transferobject"/>
+	    <meta attribute="implement-equals">true</meta>
+	    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+	    <meta attribute="implements">com.dorado.persistence.Described</meta>
+
+		<id 
+		name="typeCode"  
+		column="HocVacancyFactorCode"  
+		type="java.lang.String" 
+		> 
+		<meta attribute="field-description">
+		@hibernate.id
+		generator-class="native"
+		type="java.lang.String" 
+		column="HocVacancyFactorCode"  
+		</meta>
+		<meta attribute="use-in-equals">true</meta>
+		<generator class="native">
+		</generator> 
+		</id> 
+
+		<property 
+		name="displayOrder" 
+		type="java.lang.Integer" 
+		column="displayOrder" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-description"> 
+		@hibernate.property 
+		column="displayOrder" 
+		length="22" 
+		</meta> 
+		</property> 
+		
+		<property 
+		name="description" 
+		type="java.lang.String" 
+		column="description" 
+		length="256" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-description"> 
+		@hibernate.property 
+		column="description" 
+		length="256" 
+		</meta> 
+		</property> 
+		
+		<property 
+		name="hoc" 
+		type="java.lang.Double"
+		column="hoc" 
+		length="22" 
+		not-null="false" 
+		unique="false">
+		<meta attribute="field-description">
+		@hibernate.property 
+		column="hoc" 
+		length="22"
+		</meta>
+		</property>
+	</class> 
+ </hibernate-mapping> 

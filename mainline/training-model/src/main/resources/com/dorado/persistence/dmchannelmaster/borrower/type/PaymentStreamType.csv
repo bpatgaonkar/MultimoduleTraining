@@ -1,0 +1,10 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','120 month fixed','0',sysdate,'0'
+'1','15 Year Draw and 10 Year Repay Interest Only','0',sysdate,'0'
+'2','180 month fixed','0',sysdate,'0'
+'3','3 year fixed 6 month ARM','0',sysdate,'0'
+'4','30 year fixed due in 15','0',sysdate,'0'
+'5','360 month fixed','0',sysdate,'0'
+'6','5 Year Draw and 10 Year Repay Interest Only','0',sysdate,'0'
+'7','5 year fixed 6 months ARM','0',sysdate,'0'
+'8','Balloon 30/15','0',sysdate,'0'

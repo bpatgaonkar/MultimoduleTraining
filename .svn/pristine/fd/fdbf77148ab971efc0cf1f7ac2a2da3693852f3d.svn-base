@@ -1,0 +1,5 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+UNDER_DEVELOPMENT,'1','Under development; developer still in control','0',sysdate,'0'
+CONTROLLED_LT_2YR,'2','Complete and controlled by the homeowners association for less than two years','0',sysdate,'0'
+CONTROLLED_2YR_OR_MORE,'3','Complete and controlled by the homeowners association for two years or more','0',sysdate,'0'
+APPROVED_FHA_VA,'4','Approved FHA or VA condominium project or spot lot','0',sysdate,'0'

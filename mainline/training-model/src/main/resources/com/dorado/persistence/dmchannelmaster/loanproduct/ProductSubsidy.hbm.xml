@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.ProductSubsidy"
+        table="T_PRODUCTSUBSIDY"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+          @hibernate.class
+              table="T_PRODUCTSUBSIDY"
+        </meta>
+
+
+        <id
+            name="Id"
+            column="PRODUCTSUBSIDYID"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+                @hibernate.id
+                generator-class="native"
+                type="java.lang.Long"
+                column="PRODUCTSUBSIDYID"
+            </meta>
+
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="points"
+            type="java.lang.Double"
+            column="POINTS"
+            length="22"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="rate"
+            type="java.lang.Double"
+            column="RATE"
+            length="22"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="organizationName"
+            type="java.lang.String"
+            column="ORGANIZATIONNAME"
+            length="128"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="title"
+            type="java.lang.String"
+            column="TITLE"
+            length="128"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="type"
+            type="java.lang.String"
+            column="TYPE"
+            length="128"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="summary"
+            type="java.lang.String"
+            column="SUMMARY"
+            length="2000"
+            not-null="false"
+            unique="false"
+            />
+
+    </class>
+
+</hibernate-mapping>

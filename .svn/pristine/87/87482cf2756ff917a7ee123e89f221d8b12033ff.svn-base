@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'COMPLETE','Liability satisfied','0',sysdate,'0'
+'NONE','Liability not satisfied','0',sysdate,'0'

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.model.loan.InterimInterestCredState"
+		table="T_InterimInterestCredState" lazy="true">
+		
+		<meta attribute="class-description" inherit="false">
+			List all states in which we pay interim interest credit if a loan is
+			"interest credit/short payment" (LoanApplication.shortFunded)
+			@sdk API
+			@hibernate.class
+			table="T_InterimInterestCredStat"
+		</meta>
+		    
+	    <meta attribute="implement-equals">true</meta>
+	    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+		<meta attribute="do-not-generate-transferobject-property" inherit="true"></meta>
+		
+	    <id 
+			name="typeCode"
+			type="java.lang.String"
+			column="statecode"
+			length="4"
+			>
+			<meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.String"
+				column="statecode"  
+				length="4"
+			</meta>
+			<meta attribute="use-in-equals">true</meta> 
+			<generator class="native"> </generator>
+		</id>	
+			
+	   <property 
+			name="displayOrder" 
+			type="java.lang.Integer" 
+			column="displayOrder" 
+			length="22" 
+			not-null="false" 
+			unique="false"  
+			> 
+			<meta attribute="field-description"> 
+				To disable/hide certain entries.
+				@hibernate.property 
+				column="displayOrder" 
+				length="22" 
+			</meta> 
+		</property>	
+			
+	</class>
+</hibernate-mapping>

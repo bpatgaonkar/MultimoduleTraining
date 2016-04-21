@@ -1,0 +1,10 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','001','GE','0',sysdate,'0'
+'2','006','MGIC','0',sysdate,'0'
+'3','011','PMI','0',sysdate,'0'
+'4','012','UG','0',sysdate,'0'
+'5','013','RMIC','0',sysdate,'0'
+'6','017','CMAC','0',sysdate,'0'
+'7','024','Triad','0',sysdate,'0'
+'8','033','Amerin','0',sysdate,'0'
+'9','038','CMG (Credit Unions Only)','0',sysdate,'0'

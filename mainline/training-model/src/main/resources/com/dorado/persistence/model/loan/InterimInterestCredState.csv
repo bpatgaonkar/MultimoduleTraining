@@ -1,0 +1,6 @@
+TYPECODE,displayOrder,SESSIONID,TIMESTAMP,VERSION
+'CA',0,'0',sysdate,'0'
+'ID',0,'0',sysdate,'0'
+'NV',0,'0',sysdate,'0'
+'OR',0,'0',sysdate,'0'
+'WA',0,'0',sysdate,'0'

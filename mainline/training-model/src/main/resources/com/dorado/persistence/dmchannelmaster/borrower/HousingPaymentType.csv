@@ -1,0 +1,9 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+HAZARD_INSURANCE,'01','Hazard Insurance','0',sysdate,'0'
+MORTGAGE_INSURANCE,'02','Mortgage Insurance','0',sysdate,'0'
+HOMEOWNER_ASSOCIATION_DUES,'06','Homeowner Association Dues','0',sysdate,'0'
+REAL_ESTATE_TAXES,'14','Real Estate Taxes','0',sysdate,'0'
+OTHER_FINANCING,'22','Other Financing P & I','0',sysdate,'0'
+OTHER,'23','Other','0',sysdate,'0'
+RENT,'25','Rent','0',sysdate,'0'
+FIRST_MORTGAGE,'26','First Mortgage P & I','0',sysdate,'0'

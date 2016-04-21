@@ -1,0 +1,65 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpDoc"
+ table="T_VMPDOC" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_VMPDOC"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="vmpDocId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="vmpDocId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="displayName" 
+type="java.lang.String" 
+column="displayName" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="displayName" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="vmpFileName" 
+type="java.lang.String" 
+column="vmpFileName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="vmpFileName" 
+length="80" 
+</meta> 
+</property> 
+
+</class> 
+ 
+ </hibernate-mapping> 
+

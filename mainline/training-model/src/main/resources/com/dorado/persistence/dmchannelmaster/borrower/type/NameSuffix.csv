@@ -1,0 +1,10 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','Senior','0',sysdate,'0'
+'1','Junior','0',sysdate,'0'
+'2','II','0',sysdate,'0'
+'3','III','0',sysdate,'0'
+'4','IV','0',sysdate,'0'
+'5','V','0',sysdate,'0'
+'6','VI','0',sysdate,'0'
+'7','VII','0',sysdate,'0'
+'8','Unknown','0',sysdate,'0'

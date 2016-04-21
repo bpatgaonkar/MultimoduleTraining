@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'C','Line of credit','0',sysdate,'0'
+'I','Installment','0',sysdate,'0'
+'K','Unknown','0',sysdate,'0'
+'M','Mortgage','0',sysdate,'0'
+'O','Open','0',sysdate,'0'
+'R','Revolving','0',sysdate,'0'
+'Y','Collection','0',sysdate,'0'

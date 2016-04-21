@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.WebContent"
+		table="T_WEBCONTENT" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_WEBCONTENT">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="webContentId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="webContentId"
+			</meta>
+
+			<generator class="native"></generator>
+
+		</id>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to DataBucket -->
+		<many-to-one name="dataBucket"
+			class="com.dorado.generated.persistence.dmcommon.bucket.DataBucket"
+			not-null="true" cascade="all" column="dataBucketId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="dataBucketId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to DocStorage -->
+		<many-to-one name="docStorage"
+			class="com.dorado.generated.persistence.dmcommon.docstorage.DocStorage"
+			not-null="true" cascade="all" column="docStorageId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="docStorageId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to LoanApplication -->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="true" cascade="all" column="loanApplicationId" >
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="all" column="orgEntityId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to SubjectItem -->
+		<many-to-one name="subjectItem"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectItem"
+			not-null="true" cascade="all" column="subjectItemId">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="subjectItemId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to WebContentType -->
+		<many-to-one name="webContentType"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.WebContentType"
+			not-null="true" cascade="all" column="webContentTypeCode" >
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="webContentTypeCode"/>
+			</meta>
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+

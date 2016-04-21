@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+IntendToOccupy,'1','IntendToOccupy','Intend To Occupy','0',sysdate,'0'
+OccupyWhileSpouseInMilitary,'2','OccupyWhileSpouseInMilitary','Occupy While Spouse In Military','0',sysdate,'0'
+PreviouslyOccupied_IRR,'3','PreviouslyOccupied_IRR','Previously Occupied_IRR','0',sysdate,'0'
+PreviouslyOccupiedWhileSpouseWasInMilitary_IRR,'4','PreviouslyOccupiedWhileSpouseWasInMilitary_IRR','Previously Occupied While Spouse WasIn Military_IRR','0',sysdate,'0'

@@ -1,0 +1,3 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Financed','Financed','0',sysdate,'0'
+'2','Cash','Paid in Cash','0',sysdate,'0'

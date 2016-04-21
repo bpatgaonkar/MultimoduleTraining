@@ -1,0 +1,7 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','ACTD','Active Duty','0',sysdate,'0'
+'2','VET','Veteran','0',sysdate,'0'
+'3','NTLG','National Guard','0',sysdate,'0'
+'4','RESV','Reservist','0',sysdate,'0'
+'5','MULT','Multiuser','0',sysdate,'0'
+'6','EXEM','Exempt','0',sysdate,'0'

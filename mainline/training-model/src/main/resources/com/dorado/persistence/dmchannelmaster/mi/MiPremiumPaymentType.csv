@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'BorrowerPaid','Borrower Paid','0',sysdate,'0'
+'BothBorrowerAndLenderPaid','Both Borrower And Lender Paid','0',sysdate,'0'
+'LenderPaid','Lender Paid','0',sysdate,'0'

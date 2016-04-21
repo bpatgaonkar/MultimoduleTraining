@@ -1,0 +1,3 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PRESENT_HOUSING_EXPENSE,'1','Present Housing Expense','0',sysdate,'0'
+PROPOSED_HOUSING_EXPENSE,'2','Proposed Housing Expense','0',sysdate,'0'

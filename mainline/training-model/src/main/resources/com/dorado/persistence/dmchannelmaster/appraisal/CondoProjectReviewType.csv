@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+A_LIMITED,'1','A','A - Lender-Delegated Limited Review','0',sysdate,'0'
+B_FANNIE_MAE,'2','B','B - Fannie Mae Review','0',sysdate,'0'
+C_EXPEDITED,'3','C','C - Lender-Delegated Expedited Review','0',sysdate,'0'
+D_FHA,'4','D','D - FHA Approved Project','0',sysdate,'0'

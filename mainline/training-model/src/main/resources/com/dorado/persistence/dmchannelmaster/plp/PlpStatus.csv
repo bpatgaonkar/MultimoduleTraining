@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'COMP','PLP Completion','0',sysdate,'0'
+'ERR','PLP Error','0',sysdate,'0'
+'0','Not Ready for PROLink Export','0',sysdate,'0'
+'READY','Ready for PROLink Export','0',sysdate,'0'

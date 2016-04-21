@@ -1,0 +1,8 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Fixed','Fixed','0',sysdate,'0'
+'2','OneYearARM','1 Yr ARM','0',sysdate,'0'
+'3','ThreeYearARM','3 Yr ARM','0',sysdate,'0'
+'4','FiveYearARM','5 Yr ARM','0',sysdate,'0'
+'5','SevenYearARM','7 Yr ARM','0',sysdate,'0'
+'6','TenYearARM','10 Yr ARM','0',sysdate,'0'
+'7','IntRateBuydown','Interest Rate Buydown','0',sysdate,'0'

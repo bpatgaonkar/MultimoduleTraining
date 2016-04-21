@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,DISPLAYORDER,SESSIONID,TIMESTAMP,VERSION
+'1','VACANCY','1','0',sysdate,'0'
+'2','TAX RETURN','2','0',sysdate,'0'
+'3','1007','3','0',sysdate,'0'

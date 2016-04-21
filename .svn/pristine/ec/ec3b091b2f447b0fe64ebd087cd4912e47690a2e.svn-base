@@ -1,0 +1,61 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping>
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerFhaVaClaimExcept"
+table="T_BorrowerFhaVaClaimExcept"
+lazy="true">
+<meta attribute="class-Description" inherit="false">
+@hibernate.class
+table="T_BorrowerFhaVaClaimExcept">
+</meta>
+<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+<id
+name="Id"
+column="BorrowerFhaVaClaimExceptId"
+type="java.lang.Long"
+>
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long"
+column="BorrowerFhaVaClaimExceptId"
+</meta>
+<generator class="native">
+</generator>
+</id>
+<!-- uni-directional many-to-one association to ClaimExceptionType-->
+<many-to-one name="ClaimExceptionType"
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.ClaimExceptionType"
+not-null="false"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="ClaimExceptionTypeCode"/>
+</meta>
+<column name="ClaimExceptionTypeCode"/>
+</many-to-one>
+
+<!-- Associations --> 
+<!-- bi-directional many-to-one association to BorrowerID -->
+<many-to-one name="borrowerFhaVa" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerFhaVa" 
+not-null="true"
+column="borrowerFhaVaId"
+cascade="all"
+index="BrFhaClaimExcept_BrFha_Indx">
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="BorrowerFhaVaId"/> 
+</meta>
+</many-to-one> 
+</class>
+</hibernate-mapping>

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.closingcost.disbursements.Disbursement"
+        table="T_DISBURSEMENT"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+  @hibernate.class
+  table="T_DISBURSEMENT">
+        </meta>
+
+	<!--
+        <meta attribute="implements" inherit="false">com.dorado.persistence.Identifiable</meta>
+	-->
+	
+        <id
+            name="id"
+            column="disbursementId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long"
+column="disbursementId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+<!--
+        <property
+            name="description"
+            type="java.lang.String"
+            column="description"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="description"
+length="255"
+            </meta>
+        </property>
+-->
+        <property
+            name="glNum"
+            type="java.lang.String"
+            column="description"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="glNum"
+length="255"
+            </meta>
+        </property>
+
+<!--
+        <property
+            name="total"
+            type="java.lang.Double"
+            column="total"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="total"
+length="22"
+            </meta>
+        </property>
+        <property
+            name="periodFixEscCollNumOfMonthAmt"
+            type="java.lang.Integer"
+            column="periodFixEscCollNumOfMonthAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="periodFixEscCollNumOfMonthAmt"
+length="22"
+            </meta>
+        </property>
+-->
+
+        <property
+            name="creditPayment"
+            type="java.lang.Boolean"
+            column="creditPayment"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="creditPayment"
+length="1"
+            </meta>
+			<meta attribute="scope-get">protected</meta>
+			<meta attribute="scope-set">protected</meta>
+        </property>
+
+        <property
+          name="includeInNetProceeds"
+          type="java.lang.Boolean"
+          column="includeInNetProceeds"
+          length="1"
+          not-null="false"
+          unique="false"
+          >
+          <meta attribute="field-description">
+          @hibernate.property
+          column="includeInNetProceeds"
+          length="1"
+          </meta>
+         </property> 
+         
+		<many-to-one name="disbursementType"
+			class="com.dorado.generated.persistence.dmchannelmaster.closingcost.disbursements.DisbursementType"
+			not-null="true"
+			column="disbursementTypeCode"
+			cascade="none"
+		>
+		</many-to-one>
+
+        <many-to-one name="closingCostLineItem"
+            class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostLineItem"
+            not-null="true"
+            column="closingCostLineItemCode"
+            cascade="none"
+            >
+        </many-to-one>
+
+<!-- need:  index="ClosingCostVI_LoanId_indx" -->        
+         <many-to-one name="loanApplication"
+            class="com.dorado.generated.persistence.model.loan.LoanApplication"
+            not-null="false"
+            cascade="none"
+            index="Disburse_Loan_Indx">
+			<meta attribute="do-not-generate-transferobject-property"/>
+            <column name="loanApplicationId"/>
+        </many-to-one>
+
+
+    </class>
+
+</hibernate-mapping>
+

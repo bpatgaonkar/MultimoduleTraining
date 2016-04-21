@@ -1,0 +1,12 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Purchase','Purchase','0',sysdate,'0'
+'2','NoCashOutRefinance','No Cash-Out Refinance','0',sysdate,'0'
+'3','CashOutRefinance','Cash-Out Refinance','0',sysdate,'0'
+'4','StreamlineRefinanceWAppraisal','Streamline Refinance w/ Appraisal','0',sysdate,'0'
+'5','StreamlineRefinanceWOAppraisal','Streamline Refinance w/o Appraisal','0',sysdate,'0'
+'6','ConstructionToPermanent','Construction-to-Permanent','0',sysdate,'0'
+'7','EnergyEfficientMortgage','Energy Efficient Mortgage','0',sysdate,'0'
+'8','BuildingOnOwnLand','Building on Own Land','0',sysdate,'0'
+'9','HUD_REO','HUD REO','0',sysdate,'0'
+'10','203k','203(k)','0',sysdate,'0'
+'11','Other','Other','0',sysdate,'0'

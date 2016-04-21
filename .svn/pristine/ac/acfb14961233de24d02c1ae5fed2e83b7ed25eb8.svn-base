@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+CONVENTIONAL,'1','1','Conventional','0',sysdate,'0'
+FEDERAL_HOUSING_ADMIN,'2','2','Federal Housing Administration','0',sysdate,'0'
+VETERANS,'3','3','Veterans Administration','0',sysdate,'0'
+FARMERS_HOME_ADMIN,'4','4','Farmers Home Administration','0',sysdate,'0'

@@ -1,0 +1,4 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','UnderConstruction','Under Construction','0',sysdate,'0'
+'2','ExistingLessThanOneYearOld','Existing < 1 Yr Old','0',sysdate,'0'
+'3','ProposedConstruction','Proposed Construction','0',sysdate,'0'

@@ -1,0 +1,7 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Unit1','1 unit','0',sysdate,'0'
+'2','Unit2','2 unit','0',sysdate,'0'
+'3','Unit34','3 - 4 unit','0',sysdate,'0'
+'4','Condominium','Condominium','0',sysdate,'0'
+'5','CoOp','Co-Op','0',sysdate,'0'
+'6','Manufactured','Manufactured','0',sysdate,'0'

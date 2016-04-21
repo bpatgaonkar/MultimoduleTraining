@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.CreditPublicRecord"
+		table="T_PUBLICRECORD" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_PUBLICRECORD">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+
+		<id name="id" column="creditPublicRecordId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="creditPublicRecordId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="recordType" type="java.lang.String"
+			column="recordType" length="50" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="recordType" length="50"
+			</meta>
+		</property>
+
+		<property name="dispositionType" type="java.lang.String"
+			column="dispositionType" length="50" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="dispositionType" length="50"
+			</meta>
+		</property>
+
+		<property name="dispositionDate" type="java.sql.Timestamp"
+			column="dispositionDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="dispositionDate" length="7"
+			</meta>
+		</property>
+
+		<property name="reportedDate" type="java.sql.Timestamp"
+			column="reportedDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reportedDate" length="7"
+			</meta>
+		</property>
+
+		<property name="actionAmount" type="java.lang.Double"
+			column="actionAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="actionAmount" length="22"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" column="borrowerId" cascade="save-update"
+			index="PublicRecord_Borrower_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="borrowerId"/>
+			</meta>
+		</many-to-one>
+	   <!-- uni-directional many-to-one association to omclientorderid-->
+		<many-to-one name="orderId"
+		class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+		not-null="false" cascade="all" column="omClientOrderId">
+		<meta attribute="field-description">
+		@hibernate.many-to-one not-null="false" cascade="all"
+		@hibernate.column name="omClientOrderId"
+		</meta>
+		</many-to-one>
+
+            <!-- bi-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+		table="T_CONDITION" cascade="none">
+		<meta attribute="do-not-generate-transferobject-collection" />
+		<key column="creditPublicRecordId" />
+		<one-to-many
+		class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+
+		
+		
+
+	</class>
+
+</hibernate-mapping>
+

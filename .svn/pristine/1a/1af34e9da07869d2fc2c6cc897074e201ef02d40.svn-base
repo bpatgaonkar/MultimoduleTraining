@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Constant','Constant','0',sysdate,'0'
+'Declining','Declining','0',sysdate,'0'
+'NoRenewals','NoRenewals','0',sysdate,'0'
+'NotApplicable','NotApplicable','0',sysdate,'0'

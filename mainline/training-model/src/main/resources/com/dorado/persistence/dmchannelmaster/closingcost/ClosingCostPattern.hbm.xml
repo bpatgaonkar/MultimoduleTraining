@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostPattern"
+		table="T_CLOSINGCOSTPATTERN" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_CLOSINGCOSTPATTERN">
+		</meta>
+
+		<meta attribute="implements" inherit="false">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="root_region"/>
+
+		<id name="Id" column="closingcostpatternid"
+			type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="closingcostpatternid"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="name" type="java.lang.String" column="name"
+			length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="255"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" column="orgEntityId" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to ClosingCostPatternItem -->
+		<set name="ClosingCostPatternItem"
+			table="T_CLOSINGCOSTPATTERNITEM" lazy="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" cascade="all"
+				@hibernate.collection-key column="closingcostpatternid"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostPatternItem"
+				/>
+			</meta>
+			<key column="closingcostpatternid" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostPatternItem" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>
+

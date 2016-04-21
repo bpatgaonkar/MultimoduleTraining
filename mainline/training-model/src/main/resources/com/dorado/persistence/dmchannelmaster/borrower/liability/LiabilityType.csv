@@ -1,0 +1,10 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+TAXES,'1','A','Taxes','0',sysdate,'0'
+CREDIT_LINE,'2','C','Credit Line Home Equity Line of Credit','0',sysdate,'0'
+LEASE_PAYMENTS,'3','F','Lease Payments','0',sysdate,'0'
+INSTALLMENT_LOAN,'4','I','Installment Loan','0',sysdate,'0'
+MORTGAGE,'5','M','Mortgage','0',sysdate,'0'
+LIENS,'6','N','Liens','0',sysdate,'0'
+OPEN,'7','O','Open 30 Day Charge Account','0',sysdate,'0'
+REVOLVING_CHARGE,'8','R','Revolving Charge Account','0',sysdate,'0'
+OTHER_LIABILITY,'9','Z','Other Liability','0',sysdate,'0'

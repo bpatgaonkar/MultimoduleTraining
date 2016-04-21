@@ -1,0 +1,55 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Question"
+ table="T_QUESTION" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_QUESTION"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="questionId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="questionId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="question" 
+type="java.lang.String" 
+column="question" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="question" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+
+
+</class> 
+
+ </hibernate-mapping> 
+

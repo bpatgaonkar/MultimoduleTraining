@@ -1,0 +1,7 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'RateTerm','1','2','Rate/Term','0',sysdate,'0'
+'CashOut','2','1','Cash Out','0',sysdate,'0'
+'StreamlAppraisal','3','3','Streamline with Appraisal','0',sysdate,'0'
+'StreamlWOAppraisal','4','4','Streamline w/o Appraisal','0',sysdate,'0'
+'FHASecureDelinquent','-1','5','FHA Secure Delinquent','0',sysdate,'0'
+'FHASecureCurrent','-1','6','FHA Secure Current','0',sysdate,'0'

@@ -1,0 +1,733 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.RecordableDocument"
+ table="T_RecordableDocument" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_ClosingAgent"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="recordableDocumentId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="recordableDocumentId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+
+<property 
+name="recordableOtherDocDes" 
+type="java.lang.String" 
+column="recordableOtherDocDes" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="recordableOtherDocDes" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="docPrepareByTitle" 
+type="java.lang.String" 
+column="docPrepareByTitle" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="docPrepareByTitle" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="docPrepareByCompanyName" 
+type="java.lang.String" 
+column="docPrepareByCompanyName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="docPrepareByCompanyName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="docReturnToTheAttention" 
+type="java.lang.String" 
+column="docReturnToTheAttention" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="docReturnToTheAttention" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="associatedBookNumber" 
+type="java.lang.String" 
+column="associatedBookNumber" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="associatedBookNumber" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="associatedCountyName" 
+type="java.lang.String" 
+column="associatedCountyName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="associatedCountyName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="associatedDocTypeOtherDes" 
+type="java.lang.String" 
+column="associatedDocTypeOtherDes" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="associatedDocTypeOtherDes" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="associatedPageNumber" 
+type="java.lang.String" 
+column="associatedPageNumber" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="associatedPageNumber" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="notaryCommissionCounty" 
+type="java.lang.String" 
+column="notaryCommissionCounty" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryCommissionCounty" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="notaryCommissionNumber" 
+type="java.lang.String" 
+column="notaryCommissionNumber" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryCommissionNumber" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="notaryTitleDesc" 
+type="java.lang.String" 
+column="notaryTitleDesc" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryTitleDesc" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="notaryRegion" 
+type="java.lang.String" 
+column="notaryRegion" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryRegion" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="secInsRecordReqByName" 
+type="java.lang.String" 
+column="secInsRecordReqByName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsRecordReqByName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="secInsLegalDescPreparedBy" 
+type="java.lang.String" 
+column="secInsLegalDescPreparedBy" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsLegalDescPreparedBy" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="secInsRecordReqByAddress" 
+type="java.lang.String" 
+column="secInsRecordReqByAddress" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsRecordReqByAddress" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="secInsTaxBillSentToName" 
+type="java.lang.String" 
+column="secInsTaxBillSentToName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsTaxBillSentToName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="secInsPropLongLegalPageNum" 
+type="java.lang.String" 
+column="secInsPropLongLegalPageNum" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsPropLongLegalPageNum" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="witnessFullName" 
+type="java.lang.String" 
+column="witnessFullName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="witnessFullName" 
+length="80" 
+</meta> 
+</property> 
+
+
+<property 
+name="lenderCertOfPreparedBy" 
+type="java.lang.String" 
+column="lenderCertOfPreparedBy" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="lenderCertOfPreparedBy" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="notaryAppearedBe4Names" 
+type="java.lang.String" 
+column="notaryAppearedBe4Names" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryAppearedBe4Names" 
+length="256" 
+</meta> 
+</property> 
+
+<property 
+name="ackOfNonHomesteadFlag" 
+type="java.lang.Boolean" 
+column="ackOfNonHomesteadFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="ackOfNonHomesteadFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="secInsOweltyPartitionFlag" 
+type="java.lang.Boolean" 
+column="secInsOweltyPartitionFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsOweltyPartitionFlag" 
+length="1" 
+</meta> 
+</property>
+
+<property
+name="docReturnToByMail"
+type="java.lang.Boolean"
+column="docReturnToByMail"
+length="1"
+not-null="false"
+unique="false"
+>
+<meta attribute="field-Description">
+@hibernate.property
+column="docReturnToByMail"
+length="1"
+</meta>
+</property>
+
+<property
+name="docReturnToByEMail"
+type="java.lang.Boolean"
+column="docReturnToByEMail"
+length="1"
+not-null="false"
+unique="false"
+>
+<meta attribute="field-Description">
+@hibernate.property
+column="docReturnToByEMail"
+length="1"
+</meta>
+</property>
+
+<property
+name="docReturnToByFax"
+type="java.lang.Boolean"
+column="docReturnToByFax"
+length="1"
+not-null="false"
+unique="false"
+>
+<meta attribute="field-Description">
+@hibernate.property
+column="docReturnToByFax"
+length="1"
+</meta>
+</property>
+
+<property 
+name="docReturnToByPickup"
+type="java.lang.Boolean"
+column="docReturnToByPickup"
+length="1"
+not-null="false"
+unique="false"
+>
+<meta attribute="field-Description">
+@hibernate.property
+column="docReturnToByPickup"
+length="1"
+</meta>
+</property>
+
+<property
+name="secInsPurchaseMoneyFlag" 
+type="java.lang.Boolean" 
+column="secInsPurchaseMoneyFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsPurchaseMoneyFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="secInsExtOfHmsteadFlag" 
+type="java.lang.Boolean" 
+column="secInsExtOfHmsteadFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsExtOfHmsteadFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="secInsvExhibitHeadingFlag" 
+type="java.lang.Boolean" 
+column="secInsvExhibitHeadingFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsvExhibitHeadingFlag" 
+length="1" 
+</meta> 
+</property> 
+
+
+<property 
+name="secInsAssumptionFee" 
+type="java.lang.Double" 
+column="secInsAssumptionFee" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsAssumptionFee" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="secInsAttorneyFeePercent" 
+type="java.lang.Double" 
+column="secInsAttorneyFeePercent" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsAttorneyFeePercent" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="secInsMaxPrinIndebtAmt" 
+type="java.lang.Double" 
+column="secInsMaxPrinIndebtAmt" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsMaxPrinIndebtAmt" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="secInsTrusteeFeePercent" 
+type="java.lang.Double" 
+column="secInsTrusteeFeePercent" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsTrusteeFeePercent" 
+length="22" 
+</meta> 
+</property>
+
+<property 
+name="notaryAppearanceDate" 
+type="java.sql.Timestamp" 
+column="notaryAppearanceDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryAppearanceDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="notaryCommissionExpDate" 
+type="java.sql.Timestamp" 
+column="notaryCommissionExpDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryCommissionExpDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="notaryRegisterOfDeedSignDate" 
+type="java.sql.Timestamp" 
+column="notaryRegisterOfDeedSignDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="notaryRegisterOfDeedSignDate" 
+length="7" 
+</meta> 
+</property> 
+
+
+<property 
+name="secInsAssumptionFeePercent" 
+type="java.lang.Double" 
+column="secInsAssumptionFeePercent" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="secInsAssumptionFeePercent" 
+length="22" 
+</meta> 
+</property> 
+
+ 
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to Person -->
+<many-to-one name="docPrepareBy" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="docPrepareBy"/> 
+</meta>
+<column name ="docPrepareBy"/> 
+</many-to-one>
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to Person -->
+<many-to-one name="docReturnTo" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="docReturnTo"/> 
+</meta>
+<column name ="docReturnTo"/> 
+</many-to-one>
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to Person -->
+<many-to-one name="notary" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="notary"/> 
+</meta>
+<column name ="notary"/> 
+</many-to-one>
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to Person -->
+<many-to-one name="trustee" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="trustee"/> 
+</meta>
+<column name ="trustee"/> 
+</many-to-one>
+
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to RecordableDocType-->
+<many-to-one name="recordableDocType" 
+class="com.dorado.generated.persistence.dmchannelmaster.docstart.RecordableDocType" 
+not-null="false"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="recordableDocTypeCode"/> 
+</meta>
+<column name ="recordableDocTypeCode"/> 
+</many-to-one>
+
+
+
+<!-- Associations -->
+
+<!-- uni-directional many-to-one association to AssociatedDocType-->
+<many-to-one name="associatedDocType" 
+class="com.dorado.generated.persistence.dmchannelmaster.docstart.AssociatedDocType" 
+not-null="false"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="associatedDocTypeCode"/> 
+</meta>
+<column name ="associatedDocTypeCode"/> 
+</many-to-one>
+
+<!-- Associations --> 
+ <!-- uni-directional one-to-one association to StateCode -->
+    <many-to-one
+        name="notaryCommissionState"
+        class="com.dorado.generated.persistence.dmcommon.contact.State"
+        not-null="false"
+        cascade="none" >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="none" 
+           @hibernate.column name="notaryCommissionState"         
+        </meta>
+        <column name="notaryCommissionState" />
+    </many-to-one>
+
+<!-- Associations --> 
+ <!-- uni-directional one-to-one association to Address -->
+    <many-to-one
+        name="secInsTaxBillSentToAddr"
+        class="com.dorado.generated.persistence.dmcommon.contact.Address"
+        not-null="false"
+        cascade="all" 
+        index="RecordDoc_addr_Indx"
+          >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="secInsTaxBillSentToAddrID"         
+        </meta>
+        <column name="secInsTaxBillSentToAddrID" />
+    </many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

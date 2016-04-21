@@ -1,0 +1,232 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.plp.PlpPriceAdjustment"
+ table="T_PLPPRICEADJUSTMENT" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_PLPPRICEADJUSTMENT"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="plpPriceadjustmentId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="plpPriceadjustmentId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="discountPoints" 
+type="java.lang.Double" 
+column="discountPoints" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="discountPoints" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="interestRate" 
+type="java.lang.Double" 
+column="interestRate" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="interestRate" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="interestRateCeiling" 
+type="java.lang.Double" 
+column="interestRateCeiling" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="interestRateCeiling" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="interestRateFloor" 
+type="java.lang.Double" 
+column="interestRateFloor" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="interestRateFloor" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="margin" 
+type="java.lang.Double" 
+column="margin" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="margin" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="originationPoints" 
+type="java.lang.Double" 
+column="originationPoints" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="originationPoints" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="paymentRate" 
+type="java.lang.Double" 
+column="paymentRate" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="paymentRate" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="qualifyingRate" 
+type="java.lang.Double" 
+column="qualifyingRate" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="qualifyingRate" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="serviceReleasePremium" 
+type="java.lang.Double" 
+column="serviceReleasePremium" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="serviceReleasePremium" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="adjustmentId" 
+type="java.lang.Integer" 
+column="adjustmentId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="adjustmentId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="adjustmentNumber" 
+type="java.lang.Integer" 
+column="adjustmentNumber" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="adjustmentNumber" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="80" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Plp -->
+<many-to-one name="plp" 
+class="com.dorado.generated.persistence.dmchannelmaster.plp.Plp" 
+not-null="true"
+cascade="all"
+column="plpId"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="plpId"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

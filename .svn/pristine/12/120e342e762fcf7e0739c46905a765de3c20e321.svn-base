@@ -1,0 +1,11 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+NOT_ORIGINATED,'1','0','Loan was not originated or was not sold in calendar year covered by register','0',sysdate,'0'
+FANNIE_MAE,'2','1','Fannie Mae','0',sysdate,'0'
+GINNIE_MAE,'3','2','Ginnie Mae','0',sysdate,'0'
+FREDDIE_MAC,'4','3','Freddie Mac','0',sysdate,'0'
+FARMER_MAC,'5','4','Farmer Mac','0',sysdate,'0'
+PRIVATE,'6','5','Private securitization','0',sysdate,'0'
+COMMERCIAL,'7','6','Commercial bank\, savings bank\, or savings association','0',sysdate,'0'
+INSURANCE_CREDIT,'8','7','Life insurance company\, credit union\, mortgage bank\, or finance company','0',sysdate,'0'
+AFFILIATE,'9','8','Affiliate institution','0',sysdate,'0'
+OTHER,'10','9','Other type of purchaser','0',sysdate,'0'

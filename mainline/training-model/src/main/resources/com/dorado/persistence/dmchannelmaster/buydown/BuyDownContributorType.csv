@@ -1,0 +1,11 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','1','Seller','0',sysdate,'0'
+'2','2','Builder','0',sysdate,'0'
+'3','3','Borrower','0',sysdate,'0'
+'4','4','Lender','0',sysdate,'0'
+'5','5','Unassigned','0',sysdate,'0'
+'6','6','Parent','0',sysdate,'0'
+'7','7','Non-Parent Relative','0',sysdate,'0'
+'8','8','Unrelated Friend','0',sysdate,'0'
+'9','9','Employer','0',sysdate,'0'
+'10','10','Other','init',sysdate,'0'

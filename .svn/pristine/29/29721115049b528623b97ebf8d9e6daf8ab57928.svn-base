@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'D','Subject deceased','0',sysdate,'0'
+'I','Insufficient or unknown tradeline history','0',sysdate,'0'
+'K','Unknown','0',sysdate,'0'
+'N','No tradelines','0',sysdate,'0'
+'R','No recently reported tradeline information (last 6 months)','0',sysdate,'0'
+'X','No tradelines recently reported which are undisputed','0',sysdate,'0'
+'Z','Scores not returnable due to error','0',sysdate,'0'

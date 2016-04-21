@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PURCHASE,'1','1','Home purchase','0',sysdate,'0'
+HOME_IMPROVEMENT,'2','2','Home improvement','0',sysdate,'0'
+REFI,'3','3','Refinancing','0',sysdate,'0'

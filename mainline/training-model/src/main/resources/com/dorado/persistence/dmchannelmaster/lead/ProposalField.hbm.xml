@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+ 
+<hibernate-mapping>
+
+ 	<class name="com.dorado.generated.persistence.dmchannelmaster.lead.ProposalField"
+        table="T_PROPOSALFIELD"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+			@hibernate.class
+			table="T_PROPOSALFIELD">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="id"
+            column="proposalFieldId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.Long"
+				column="proposalFieldId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property 
+        	name="checked" 
+			type="java.lang.Boolean" 
+			column="checked" 
+			length="1" 
+			not-null="false" 
+			unique="false" > 
+			<meta attribute="field-description"> 
+				@hibernate.property 
+				column="checked" 
+				length="1" 
+			</meta> 
+		</property> 
+        
+
+		<!-- Associations --> 
+		
+		<!-- bi-directional many-to-one association to Transaction -->
+		<many-to-one name="proposal" 
+			class="com.dorado.generated.persistence.dmchannelmaster.lead.Proposal" 
+			not-null="true"
+			column="proposalId"
+			cascade="all"
+			index="Proposal_Field_Indx">
+		    <meta attribute="do-not-generate-transferobject-property"/>
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="all"
+				@hibernate.column name="proposalId"/> 
+			</meta>
+		</many-to-one>	
+
+		<!-- uni-directional many-to-one association to DownPaymentSourceType -->
+		<many-to-one name="proposalFieldType" 
+			class="com.dorado.generated.persistence.dmchannelmaster.lead.ProposalFieldType" 
+			not-null="true"
+			cascade="none"
+			column="proposalFieldTypeCode"
+			>
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+			@hibernate.column name="proposalFieldTypeCode"/> 
+			</meta>
+		</many-to-one>			
+        
+    </class>    
+</hibernate-mapping>

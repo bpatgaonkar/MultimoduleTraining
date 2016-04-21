@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.lead.Scenario"
+        table="T_SCENARIO"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+            @hibernate.class
+            table="T_SCENARIO">
+        </meta>
+
+        <meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+        <meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.lead.Proposal</meta>
+        <id
+            name="id"
+            column="id"
+            type="java.lang.Long"
+            >
+            <generator class="native">
+            </generator>
+        </id>
+
+	<!-- name field is obsolete. it was used to store loanproductid so I'm leaving until the data can be copied -->
+        <property
+            name="name"
+            type="java.lang.String"
+            column="name"
+            length="64"
+            not-null="false"
+            unique="false"
+            />
+
+        <property
+            name="description"
+            type="java.lang.String"
+            column="description"
+            length="128"
+            not-null="false"
+            unique="false"
+            />
+
+        <many-to-one name="loanProduct"
+            class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProduct"
+            not-null="false"
+            cascade="none"
+            >
+            <column name="loanProductId" index="scenario_loanProd_Indx"/>
+        </many-to-one>
+
+		<many-to-one name="proposal"
+			class="com.dorado.generated.persistence.dmchannelmaster.lead.Proposal"
+			not-null="false"
+			column="proposalId"
+			cascade="none"
+			>
+			<meta attribute="do-not-generate-transferobject-property"/>
+			</many-to-one>
+
+    </class>
+
+</hibernate-mapping>

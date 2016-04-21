@@ -1,0 +1,6 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+DU,'DU','DU','0',sysdate,'0'
+LP,'LP','LP','0',sysdate,'0'
+LENDER,'LENDER','Lender','0',sysdate,'0'
+OTHER,'OTHER','Other','0',sysdate,'0'
+

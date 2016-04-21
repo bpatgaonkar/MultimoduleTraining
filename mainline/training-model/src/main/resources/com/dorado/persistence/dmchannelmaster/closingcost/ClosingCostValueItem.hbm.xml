@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostValueItem"
+		table="T_CLOSINGCOSTVALUEITEM" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_CLOSINGCOSTVALUEITEM">
+		</meta>
+
+		<meta attribute="implements" inherit="false">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="id" column="closingCostValueItemId"
+			type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="closingCostValueItemId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="description" type="java.lang.String"
+			column="description" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="description" length="255"
+			</meta>
+			<meta attribute="scope-get">public</meta>
+		</property>
+
+		<property name="escrowAnnualPaymentAmount"
+			type="java.lang.Double" column="escrowAnnualPaymentAmount"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowAnnualPaymentAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="escrowPremiumAmount" type="java.lang.Double"
+			column="escrowPremiumAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowPremiumAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="fractionFixedAmt" type="java.lang.Double"
+			column="fractionFixedAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fractionFixedAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="fractionPct" type="java.lang.Double"
+			column="fractionPct" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fractionPct" length="22"
+			</meta>
+		</property>
+
+		<property name="paymentAmountBorrower" type="java.lang.Double"
+			column="paymentAmountBorrower" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentAmountBorrower"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentAmountLender" type="java.lang.Double"
+			column="paymentAmountLender" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentAmountLender"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentAmountSeller" type="java.lang.Double"
+			column="paymentAmountSeller" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentAmountSeller"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentAmountThirdPty" type="java.lang.Double"
+			column="paymentAmountThirdPty" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentAmountThirdPty"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentPercentBorrower" type="java.lang.Double"
+			column="paymentPercentBorrower" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentPercentBorrower"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentPercentLender" type="java.lang.Double"
+			column="paymentPercentLender" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentPercentLender"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentPercentSeller" type="java.lang.Double"
+			column="paymentPercentSeller" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentPercentSeller"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="paymentPercentThirdPty" type="java.lang.Double"
+			column="paymentPercentThirdPty" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentPercentThirdPty"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="periodAmt" type="java.lang.Double"
+			column="periodAmt" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodAmt" length="22"
+			</meta>
+		</property>
+
+		<property name="periodFixedAmt" type="java.lang.Double"
+			column="periodFixedAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodFixedAmt" length="22"
+			</meta>
+		</property>
+
+		<property name="total" type="java.lang.Double" column="total"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="total" length="22"
+			</meta>
+		</property>
+
+		<property name="periodFixEscCollNumOfMonthAmt"
+			type="java.lang.Integer" column="periodFixEscCollNumOfMonthAmt"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="periodFixEscCollNumOfMonthAmt" length="22"
+			</meta>
+		</property>
+
+		<property name="extension" type="java.lang.Integer"
+			column="extension" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="extension" length="22"
+			</meta>
+		</property>
+
+		<property name="periodCnt" type="java.lang.Integer"
+			column="periodCnt" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodCnt" length="22"
+			</meta>
+		</property>
+
+		<property name="paymentFhaAllowedBorrower"
+			type="java.lang.Boolean" column="paymentFhaAllowedBorrower"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentFhaAllowedBorrower"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentFhaAllowedLender"
+			type="java.lang.Boolean" column="paymentFhaAllowedLender" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentFhaAllowedLender"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentFhaAllowedSeller"
+			type="java.lang.Boolean" column="paymentFhaAllowedSeller" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentFhaAllowedSeller"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentFhaAllowedThirdPty"
+			type="java.lang.Boolean" column="paymentFhaAllowedThirdPty"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentFhaAllowedThirdPty"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentIncludedInAprBorrower"
+			type="java.lang.Boolean" column="paymentIncludedInAprBorrower"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="paymentIncludedInAprBorrower" length="1"
+			</meta>
+		</property>
+
+		<property name="paymentIncludedInAprLender"
+			type="java.lang.Boolean" column="paymentIncludedInAprLender"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentIncludedInAprLender"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentIncludedInAprSeller"
+			type="java.lang.Boolean" column="paymentIncludedInAprSeller"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentIncludedInAprSeller"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentIncludedInAprThirdPty"
+			type="java.lang.Boolean" column="paymentIncludedInAprThirdPty"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="paymentIncludedInAprThirdPty" length="1"
+			</meta>
+		</property>
+
+		<property name="paymentOutsideClosingBorrower"
+			type="java.lang.Boolean" column="paymentOutsideClosingBorrower"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="paymentOutsideClosingBorrower" length="1"
+			</meta>
+		</property>
+
+		<property name="paymentOutsideClosingLender"
+			type="java.lang.Boolean" column="paymentOutsideClosingLender"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentOutsideClosingLender"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentOutsideClosingSeller"
+			type="java.lang.Boolean" column="paymentOutsideClosingSeller"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentOutsideClosingSeller"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentOutsideClosingThirdPty"
+			type="java.lang.Boolean" column="paymentOutsideClosingThirdPty"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="paymentOutsideClosingThirdPty" length="1"
+			</meta>
+		</property>
+
+		<property name="paymentVaAllowedBorrower"
+			type="java.lang.Boolean" column="paymentVaAllowedBorrower" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentVaAllowedBorrower"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentVaAllowedLender" type="java.lang.Boolean"
+			column="paymentVaAllowedLender" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentVaAllowedLender"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentVaAllowedSeller" type="java.lang.Boolean"
+			column="paymentVaAllowedSeller" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentVaAllowedSeller"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="paymentVaAllowedThirdPty"
+			type="java.lang.Boolean" column="paymentVaAllowedThirdPty" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paymentVaAllowedThirdPty"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="escrowPaidBy" type="java.lang.String"
+			column="escrowPaidBy" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowPaidBy" length="40"
+			</meta>
+		</property>
+
+		<property name="escrowPaymentFreqType" type="java.lang.String"
+			column="escrowPaymentFreqtype" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowPaymentFreqtype"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="escrowPremiumPaymentType"
+			type="java.lang.String" column="escrowPremiumPaymenttype" length="40"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowPremiumPaymenttype"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="fractionType" type="java.lang.String"
+			column="fractiontype" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fractiontype" length="40"
+			</meta>
+		</property>
+
+		<property name="periodType" type="java.lang.String"
+			column="periodtype" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodtype" length="40"
+			</meta>
+		</property>
+
+		<property name="escrowPaidToName" type="java.lang.String"
+			column="escrowPaidToName" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowPaidToName"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="providerName" type="java.lang.String"
+			column="providerName" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="providerName" length="80"
+			</meta>
+		</property>
+
+		<property name="providerRelationship" type="java.lang.String"
+			column="providerRelationship" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="providerRelationship"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="responsiblePartyType" type="java.lang.String"
+			column="responsiblePartyType" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="responsiblePartyType"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="paidToType" type="java.lang.String"
+			column="paidToType" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToType" length="80"
+			</meta>
+		</property>
+
+		<property name="paidToUnparsedName" type="java.lang.String"
+			column="paidToUnparsedName" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToUnparsedName"
+				length="80"
+			</meta>
+		</property>
+		<property name="paidToAddress" type="java.lang.String"
+			column="paidToAddress" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToAddress" length="80"
+			</meta>
+		</property>
+
+
+		<property name="paidToCity" type="java.lang.String"
+			column="paidToCity" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToCity" length="80"
+			</meta>
+		</property>
+		<property name="paidToState" type="java.lang.String"
+			column="paidToState" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToState" length="80"
+			</meta>
+		</property>
+		<property name="paidToZip" type="java.lang.String"
+			column="paidToZip" length="10" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="paidToZip" length="10"
+			</meta>
+		</property>
+		<!-- Associations -->
+		<many-to-one name="providerAddress"
+			class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			cascade="all" unique="true" index="ccvalueItem_Address_indx">
+			<meta attribute="field-description">
+				Postal address for the provider. @hibernate.many-to-one
+				cascade="all" unique="true" @hibernate.column
+				name="ADDRID"
+			</meta>
+			<column name="ADDRID" />
+		</many-to-one>
+		<many-to-one name="providerPhone"
+			class="com.dorado.generated.persistence.dmcommon.contact.Phone"
+			cascade="all" unique="true" index="ccvalueItem_phone_indx">
+			<meta attribute="field-description">
+				Postal address for the provider. @hibernate.many-to-one
+				cascade="all" unique="true" @hibernate.column
+				name="PHONEID"
+			</meta>
+			<column name="PHONEID" />
+		</many-to-one>
+		<many-to-one name="type"
+			class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostValueType"
+			not-null="false" cascade="none" column="typeCode">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="typeCode"
+			</meta>
+			<meta attribute="discriminator-property"/>
+		</many-to-one>
+
+		<many-to-one name="closingCostLineItem"
+			class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostLineItem"
+			not-null="true" column="code" cascade="none">
+		</many-to-one>
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="false" cascade="none" index="ClosingCostVI_LoanId_indx">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<column name="loanApplicationId" />
+		</many-to-one>
+
+
+	</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,5 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Govt','Government','0',sysdate,'0'
+'2','NP','Non-Profit','0',sysdate,'0'
+'3','Family','Family','0',sysdate,'0'
+'4','Employer','Employer','0',sysdate,'0'

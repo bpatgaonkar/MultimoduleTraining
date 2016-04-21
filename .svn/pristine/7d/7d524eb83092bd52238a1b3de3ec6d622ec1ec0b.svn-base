@@ -1,0 +1,308 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.WarehouseSeller"
+ table="T_WAREHOUSESELLER" 
+ lazy="true" > 
+
+	<meta attribute="class-Description" inherit="false"> 
+	@hibernate.class
+	table="T_WAREHOUSESELLER"> 
+	</meta>
+	
+	<meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+	
+	<id 
+		name="Id"  
+		column="WarehouseSellerId"  
+		type="java.lang.Long" 
+		> 
+		<meta attribute="field-Description">
+		@hibernate.id
+		generator-class="native"
+		type="java.lang.Long" 
+		column="WarehouseSellerId"  
+		</meta>
+		<generator class="native"> 
+		</generator> 
+	</id> 
+	
+	<property 
+		name="brokerAppRecDate" 
+		type="java.sql.Timestamp" 
+		column="brokerAppRecDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="brokerAppRecDate" 
+		length="7" 
+		</meta> 
+	</property> 
+
+	<property 
+		name="loanPurchaseDate" 
+		type="java.sql.Timestamp" 
+		column="loanPurchaseDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="loanPurchaseDate" 
+		length="7" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="firstFIPaymentDate" 
+		type="java.sql.Timestamp" 
+		column="firstFIPaymentDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="firstFIPaymentDate" 
+		length="7" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="firstNotePaymentDate" 
+		type="java.sql.Timestamp" 
+		column="firstNotePaymentDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="firstNotePaymentDate" 
+		length="7" 
+		</meta> 
+	</property> 
+		
+	<property 
+		name="closedLoanFileReceivedDate" 
+		type="java.sql.Timestamp" 
+		column="closedLoanFileReceivedDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="closedLoanFileReceivedDate" 
+		length="7" 
+		</meta> 
+	</property> 
+			
+	<property 
+		name="fundedByWhsDate" 
+		type="java.sql.Timestamp" 
+		column="fundedByWhsDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="fundedByWhsDate" 
+		length="7" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="closedByWhsDate" 
+		type="java.sql.Timestamp" 
+		column="closedByWhsDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="closedByWhsDate" 
+		length="7" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="satisfiedDate" 
+		type="java.sql.Timestamp" 
+		column="satisfiedDate" 
+		length="7" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="satisfiedDate" 
+		length="7" 
+		</meta> 
+	</property> 
+
+
+	<property 
+		name="brokerFinancedAmt" 
+		type="java.lang.Double" 
+		column="brokerFinancedAmt" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="brokerFinancedAmt" 
+		length="22" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="unpaidPrincipleAmt" 
+		type="java.lang.Double" 
+		column="unpaidPrincipleAmt" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="unpaidPrincipleAmt" 
+		length="22" 
+		</meta> 
+	</property> 	
+	
+	<property 
+		name="escrowAddDeductedAmt" 
+		type="java.lang.Double" 
+		column="escrowAddDeductedAmt" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="escrowAddDeductedAmt" 
+		length="22" 
+		</meta> 
+	</property> 
+
+	<property 
+		name="brokerAPR" 
+		type="java.lang.Double" 
+		column="brokerAPR" 
+		length="22" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="brokerAPR" 
+		length="22" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="allDocsAcceptableFlag" 
+		type="java.lang.Boolean" 
+		column="allDocsAcceptableFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="allDocsAcceptableFlag" 
+		length="1" 
+		</meta> 
+	</property> 
+	
+	<property 
+		name="allPendedSatisfiedFlag" 
+		type="java.lang.Boolean" 
+		column="allPendedSatisfiedFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="allPendedSatisfiedFlag" 
+		length="1" 
+		</meta> 
+	</property> 	
+	
+	<property 
+		name="submittingByPostClosingFlag" 
+		type="java.lang.Boolean" 
+		column="submittingByPostClosingFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="submittingByPostClosingFlag" 
+		length="1" 
+		</meta> 
+	</property> 	
+	
+	<property 
+		name="quickApprovalFlag" 
+		type="java.lang.Boolean" 
+		column="quickApprovalFlag" 
+		length="1" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="quickApprovalFlag" 
+		length="1" 
+		</meta> 
+	</property> 	
+		
+	<property 
+		name="comments" 
+		type="java.lang.String" 
+		column="comments" 
+		length="256" 
+		not-null="false" 
+		unique="false"  
+		> 
+		<meta attribute="field-Description"> 
+		@hibernate.property 
+		column="comments" 
+		length="256" 
+		</meta> 
+	</property> 
+
+	<!-- uni-directional many-to-one association to OrgEntity -->
+	<many-to-one name="satisfiedByUser" 
+		class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity" 
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="satisfiedByUser"/> 
+		</meta>
+		<column name ="satisfiedByUser"/> 
+	</many-to-one>
+
+</class> 
+ 
+ </hibernate-mapping> 
+

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.endorsement.Endorsement"
+		table="T_Endorsement" lazy="true">
+
+		<meta attribute="class-Description" inherit="false">
+			@hibernate.class table="T_Endorsement">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="endorsementId" type="java.lang.Long">
+			<meta attribute="field-Description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="endorsementId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<!-- Associations -->
+
+		<!-- uni-directional one-to-one association to EndorsementItemType-->
+
+		<many-to-one name="endorsementItemType"
+			class="com.dorado.generated.persistence.dmchannelmaster.endorsement.EndorsementItemType"
+			not-null="false" column="endorsementItemTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="endorsementItemTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional one-to-one association to loanApplication -->
+
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="loanApplicationId"
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+			<column name="loanApplicationId" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

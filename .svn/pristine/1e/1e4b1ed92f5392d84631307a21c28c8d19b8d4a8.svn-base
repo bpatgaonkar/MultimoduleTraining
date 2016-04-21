@@ -1,0 +1,12 @@
+TYPECODE,NAME,DESCRIPTION,TOLERANCE,SESSIONID,TIMESTAMP,VERSION
+'Box_1','1','Our origination charges',0,0,sysdate,'0'
+'Box_2','2','Your credit or charge (points) for the specific interest rate chosen',0,0,sysdate,'0'
+'Box_3','3','Required Services that we select',0.1,0,sysdate,'0'
+'Box_4','4','Title services and lender's title insurance',0.1,0,sysdate,'0'
+'Box_5','5','Owner's Title insurance',0.1,0,sysdate,'0'
+'Box_6','6','Required services that you can shop for',0.1,0,sysdate,'0'
+'Box_7','7','Government Recording charges',0.1,0,sysdate,'0'
+'Box_8','8','Transfer Taxes',0,0,sysdate,'0'
+'Box_9','9','Initial deposit for your escrow account',0,0,sysdate,'0'
+'Box_10','10','Daily interest charge',0,0,sysdate,'0'
+'Box_11','11','Homeowner's insurance',0,0,sysdate,'0'

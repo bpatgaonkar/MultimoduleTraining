@@ -1,0 +1,3 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','Performed','I/We choose to have a home inspection performed','0',sysdate,'0'
+'2','NotPerformed','I/We choose not to have a home inspection performed','0',sysdate,'0'

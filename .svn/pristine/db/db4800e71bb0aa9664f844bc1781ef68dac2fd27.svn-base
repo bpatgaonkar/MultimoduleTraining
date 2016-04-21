@@ -1,0 +1,85 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.income.IncomeSum"
+ table="T_IncomeSum" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_IncomeSum"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="IncomeSumId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="IncomeSumId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="incomeAmount" 
+type="java.lang.Double" 
+column="incomeAmount" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="incomeAmount" 
+length="22" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Borrower -->
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="true"
+cascade="save-update"
+column="borrowerId"
+index="IncomeSum_Borr_Indx">
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property"/>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to IncomeSumtype -->
+<many-to-one name="incomeSumtype" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.income.IncomeSumType" 
+not-null="true"
+cascade="none"
+column="IncomeSumTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="IncomeSumTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

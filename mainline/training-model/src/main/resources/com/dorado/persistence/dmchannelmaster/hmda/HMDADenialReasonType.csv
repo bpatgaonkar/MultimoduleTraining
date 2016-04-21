@@ -1,0 +1,10 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+DTI,'1','1','Debt-to-income ratio','0',sysdate,'0'
+EMPLOYMENT,'2','2','Employment history','0',sysdate,'0'
+CREDIT,'3','3','Credit history','0',sysdate,'0'
+COLLATERAL,'4','4','Collateral','0',sysdate,'0'
+CASH,'5','5','Insufficient cash','0',sysdate,'0'
+UNVERIFIABLE_INFO,'6','6','Unverifiable information','0',sysdate,'0'
+INCOMPLETE_CREDIT,'7','7','Credit application incomplete','0',sysdate,'0'
+MI_DENIED,'8','8','Mortgage insurance denied','0',sysdate,'0'
+OTHER,'9','9','Other','0',sysdate,'0'

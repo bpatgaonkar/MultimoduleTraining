@@ -1,0 +1,264 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.GLInfo"
+ table="T_GLInfo" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_GLInfo"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="glInfoId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="glInfoId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+  name="glCompanyNumberWires" 
+  type="java.lang.String" 
+  column="glCompanyNumberWires" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glCompanyNumberWires" 
+  length="80" 
+  </meta> 
+</property>
+
+<property 
+  name="glCompanyNumberDetail" 
+  type="java.lang.String" 
+  column="glCompanyNumberDetail" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glCompanyNumberDetail" 
+  length="80" 
+  </meta> 
+</property>
+
+<property 
+  name="glCompanyNumberMiCheck" 
+  type="java.lang.String" 
+  column="glCompanyNumberMiCheck" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glCompanyNumberMiCheck" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="glAccountNumber" 
+  type="java.lang.String" 
+  column="glAccountNumber" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glAccountNumber" 
+  length="80" 
+  </meta> 
+</property>   
+
+<property 
+  name="glAccountNumberMiCheck" 
+  type="java.lang.String" 
+  column="glAccountNumberMiCheck" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glAccountNumberMiCheck" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="glDollarAmount" 
+  type="java.lang.Double" 
+  column="glDollarAmount" 
+  length="22" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glDollarAmount" 
+  length="22" 
+  </meta> 
+</property> 
+
+<property 
+  name="glFeeCode" 
+  type="java.lang.String" 
+  column="glFeeCode" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glFeeCode" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="glLeadingSign" 
+  type="java.lang.String" 
+  column="glLeadingSign" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glLeadingSign" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="glLedgerLocation" 
+  type="java.lang.String" 
+  column="glLedgerLocation" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glLedgerLocation" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="glPaidByPaidToFlag" 
+  type="java.lang.Boolean" 
+  column="glPaidByPaidToFlag" 
+  length="1" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glPaidByPaidToFlag" 
+  length="1" 
+  </meta> 
+</property> 
+
+<property 
+  name="glLocationCode" 
+  type="java.lang.String" 
+  column="glLocationCode" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glLocationCode" 
+  length="80" 
+  </meta> 
+</property>
+
+<property 
+  name="glMICheckAmount" 
+  type="java.lang.Double" 
+  column="glMICheckAmount" 
+  length="22" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glMICheckAmount" 
+  length="22" 
+  </meta> 
+</property> 
+
+<property 
+  name="glMICheckNumber" 
+  type="java.lang.String" 
+  column="glMICheckNumber" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glMICheckNumber" 
+  length="80" 
+  </meta> 
+</property>
+
+<property 
+  name="glPayeeCode" 
+  type="java.lang.String" 
+  column="glPayeeCode" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="glPayeeCode" 
+  length="80" 
+  </meta> 
+</property> 
+
+   <!-- uni-directional one-to-one association to loanApplication -->
+
+       <many-to-one
+            name="loanApplication"
+            class="com.dorado.generated.persistence.model.loan.LoanApplication"
+            not-null="false"
+            cascade="all"
+            index="GLInfo_Loan_Indx">
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" 
+             cascade="all" 
+           @hibernate.column name="loanApplicationId"
+            </meta>
+            <meta attribute="do-not-generate-transferobject-property"/>
+            <column name="loanApplicationId"/>
+        </many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

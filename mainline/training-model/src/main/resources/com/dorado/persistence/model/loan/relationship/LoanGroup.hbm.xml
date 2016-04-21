@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.model.loan.relationship.LoanGroup"
+		table="T_LOANGROUP" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_LOANGROUP">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		
+		<meta attribute="root_region"/>
+
+		<id name="id" column="LOANGROUPID" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="LOANGROUPID"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<!-- uni-directional one-to-many association to LoanApplication -->
+		<list name="loanApplications" lazy="true" inverse="false"
+			table="T_LOANAPPLICATION" cascade="all">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="LOANGROUPID" />
+			<list-index column="LOANGROUPPOSITION" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+		</list>
+
+
+	</class>
+
+</hibernate-mapping>
+

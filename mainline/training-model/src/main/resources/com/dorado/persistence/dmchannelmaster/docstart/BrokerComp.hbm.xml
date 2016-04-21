@@ -1,0 +1,96 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.BrokerComp"
+ table="T_BrokerComp" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_BrokerComp"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="brokerCompId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="brokerCompId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+  name="broker1099ReportIndicator" 
+  type="java.lang.String" 
+  column="broker1099ReportIndicator" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="broker1099ReportIndicator" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="channelCode" 
+  type="java.lang.String" 
+  column="channelCode" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="channelCode" 
+  length="80" 
+  </meta> 
+</property> 
+
+<property 
+  name="checkNumber" 
+  type="java.lang.String" 
+  column="checkNumber" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="checkNumber" 
+  length="80" 
+  </meta> 
+</property> 
+<property 
+  name="dateCheckDrawn" 
+  type="java.lang.String" 
+  column="dateCheckDrawn" 
+  length="80" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="dateCheckDrawn" 
+  length="80" 
+  </meta> 
+</property> 
+
+  
+
+</class> 
+ 
+ </hibernate-mapping> 
+

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.loan.government.ThirdPartyDetail"
+		table="T_THIRDPARTYDETAIL" lazy="true">
+		
+		<meta attribute="class-Description" inherit="false"> @hibernate.class
+			table="T_THIRDPARTYDETAIL"> </meta>
+		<meta attribute="implements"> com.dorado.persistence.RegionRoot </meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.loan.government.GovLoan</meta>
+		
+		<id name="Id" column="thirdPartyDetailId" type="java.lang.Long">
+			<meta attribute="field-Description"> @hibernate.id
+				generator-class="native" type="java.lang.Long"
+				column="thirdPartyDetailId" </meta>
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="partyName" type="java.lang.String" length="128"
+			column="partyName" not-null="false" unique="false">
+			<meta attribute="field-Description"> @hibernate.property
+				column="partyName" length="128" </meta>
+		</property>
+		
+		<property name="ldp" type="java.lang.String" length="25" column="ldp"
+			not-null="false" unique="false">
+			<meta attribute="field-Description"> @hibernate.property column="ldp"
+				length="25" </meta>
+		</property>
+		
+		<property name="ldpDefault" type="java.lang.Boolean" column="ldpDefault"
+			not-null="false" unique="false">
+			<meta attribute="field-Description"> @hibernate.property
+				column="ldpDefault" </meta>
+		</property>
+		
+		<property name="gsa" type="java.lang.String" length="25" column="gsa"
+			not-null="false" unique="false">
+			<meta attribute="field-Description"> @hibernate.property column="gsa"
+				length="25" </meta>
+		</property>
+		
+		<property name="gsaDefault" type="java.lang.Boolean" column="gsaDefault"
+			not-null="false" unique="false">
+			<meta attribute="field-Description"> @hibernate.property
+				column="gsaDefault" </meta>
+		</property>
+		
+		<!-- Associations -->
+		<!-- uni-directional many-to-one association to ThirdPartyTitleType-->
+		<many-to-one name="thirdPartyTitleType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.ThirdPartyTitleType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description"> @hibernate.many-to-one
+				not-null="false" cascade="none" @hibernate.column
+				name="thirdPartyTitleTypeCode"/> </meta>
+			<column name="thirdPartyTitleTypeCode"/>
+		</many-to-one>
+		
+		<!-- Associations -->
+		<!-- Many-to-one association to GovLoan-->
+		<many-to-one name="govLoan"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.GovLoan"
+			not-null="false" cascade="all"
+			index="ThirdParty_GovLoan_Indx">
+			<meta attribute="field-description"> @hibernate.many-to-one
+				not-null="true" cascade="all" @hibernate.column name="govLoanID"/>
+				</meta>
+			<column name="govLoanID"/>
+		</many-to-one>
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.escrow.EscrowState"
+ table="T_ESCROWREQSTATE" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_ESCROWSTATE"> 
+ </meta>
+<id 
+name="typeCode"  
+column="typeCode"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="typeCode"  
+</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+        <property
+            name="escrowState"
+            type="boolean"
+            column="requiredFlag"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="requiredFlag" 
+length="1"
+            </meta>
+        </property>
+
+</class> 
+ 
+ </hibernate-mapping> 
+

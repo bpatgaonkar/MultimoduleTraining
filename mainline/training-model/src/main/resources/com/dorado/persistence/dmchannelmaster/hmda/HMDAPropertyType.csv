@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+STANDARD,'1','1','One to four-family dwelling','0',sysdate,'0'
+MANUFACTURED,'2','2','Manufactured housing','0',sysdate,'0'
+MULTIFAMILY,'3','3','Multifamily dwelling','0',sysdate,'0'

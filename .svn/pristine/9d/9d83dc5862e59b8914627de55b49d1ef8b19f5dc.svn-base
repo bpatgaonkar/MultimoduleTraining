@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'01','U.S. Citizen','0',sysdate,'0'
+'03','Permanent Resident-Alien','0',sysdate,'0'
+'05','Non-Permanent Resident-Alien','0',sysdate,'0'

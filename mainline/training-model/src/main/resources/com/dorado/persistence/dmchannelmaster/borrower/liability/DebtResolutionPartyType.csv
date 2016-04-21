@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Lender','Lender','0',sysdate,'0'
+'TitleCo','Title Company','0',sysdate,'0'

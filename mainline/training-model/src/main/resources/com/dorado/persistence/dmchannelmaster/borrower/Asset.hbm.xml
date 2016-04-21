@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Asset"
+		table="T_ASSET" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_ASSET">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+		
+		<id name="Id" column="assetId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="assetId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="amount" type="java.lang.Double" column="amount"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="amount" length="22"
+			</meta>
+		</property>
+
+		<property name="faceAmount" type="java.lang.Double"
+			column="faceAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="faceAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="reGrossRentalIncome" type="java.lang.Double"
+			column="reGrossRentalIncome" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reGrossRentalIncome"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="reInsurance" type="java.lang.Double"
+			column="reInsurance" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reInsurance" length="22"
+			</meta>
+		</property>
+
+
+
+		<property name="reMaintenance" type="java.lang.Double"
+			column="reMaintenance" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reMaintenance" length="22"
+			</meta>
+		</property>
+
+		<property name="reMiscExpense" type="java.lang.Double"
+			column="reMiscExpense" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reMiscExpense" length="22"
+			</meta>
+		</property>
+
+		<property name="reNetRentalIncome" type="java.lang.Double"
+			column="reNetRentalIncome" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reNetRentalIncome"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="rePresentValue" type="java.lang.Double"
+			column="rePresentValue" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rePresentValue" length="22"
+			</meta>
+		</property>
+
+		<property name="reTaxes" type="java.lang.Double"
+			column="reTaxes" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reTaxes" length="22"
+			</meta>
+		</property>
+		<!-- Added from Lehman project -->
+		<property name="reAdjGrossRentalIncome" type="java.lang.Double" column="reAdjGrossRentalIncome"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reAdjGrossRentalIncome" length="22"
+			</meta>
+		</property>
+		<!-- Taken from Lehman project -->
+		<property name="reVacancyFactor" type="java.lang.Double" column="reVacancyFactor"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reVacancyFactor" length="22"
+			</meta>
+		</property>
+		<!-- Taken from Lehman project -->
+		<property name="reTaxReturnYear" type="java.lang.String"
+			column="reTaxReturnYear" length="4" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reTaxReturnYear" length="4"
+			</meta>
+		</property>
+
+		<property name="autoYear" type="java.lang.Integer"
+			column="autoYear" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="autoYear" length="22"
+			</meta>
+		</property>
+
+		<property name="reFnmaSeqIncrement" type="java.lang.Integer"
+			column="reFnmaSeqIncrement" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reFnmaSeqIncrement"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="shares" type="java.lang.Integer" column="shares"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="shares" length="22"
+			</meta>
+		</property>
+
+		<property name="jointFlag" type="java.lang.Boolean"
+			column="jointFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="jointFlag" length="1"
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</property>
+
+		<property name="reCurrentResidenceFlag" type="java.lang.Boolean"
+			column="reCurrentResidenceFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reCurrentResidenceFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="reSubjectPropertyFlag" type="java.lang.Boolean"
+			column="reSubjectPropertyFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reSubjectPropertyFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="totalFlag" type="java.lang.Boolean"
+			column="totalFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totalFlag" length="1"
+			</meta>
+		</property>
+
+
+		<property name="heldBy" type="java.lang.String" column="heldBy"
+			length="35" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="heldBy" length="35"
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</property>
+
+		<property name="encryptedAccountNum" type="java.lang.String"
+			column="accountNum" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="accountNum" length="40"
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</property>
+
+		<property name="autoMake" type="java.lang.String"
+			column="autoMake" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="autoMake" length="40"
+			</meta>
+		</property>
+
+		<property name="institutionName" type="java.lang.String"
+			column="institutionName" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				If the asset is a gift, this field stores Source/EIN for FHA Loan Transmittal.
+				@hibernate.property column="institutionName" length="40"
+			</meta>
+		</property>
+
+		<property name="autoModel" type="java.lang.String"
+			column="autoModel" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				If the asset is a gift, this field stores 'Other Name' for FHA Loan Transmittal.
+				@hibernate.property column="autoModel" length="80"
+			</meta>
+		</property>
+
+		<property name="description" type="java.lang.String"
+			column="description" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="description" length="255"
+			</meta>
+		</property>
+
+		<!-- position of asset in the combined list of borrower 
+			and co-borrower assets for a particular asset type.
+			This means that it is possible for assets belonging
+			to the same borrower to have the same position but for
+			different asset types.
+			It is a bug if the asset has the same position for the same
+			borrower and for the same asset type.
+		-->
+		<property name="position" type="java.lang.Integer"
+			column="position" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="position"
+			</meta>
+		</property>
+		
+		<property name="sellerFundedGift" type="java.lang.Boolean"
+			column="sellerFundedGift" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="sellerFundedGift"
+				length="1"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Address -->
+		<many-to-one name="address"
+			class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			not-null="false" cascade="all" index="Asset_Address_Indx"
+			column="addrId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="addrId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="true" cascade="save-update" index="Asset_Borrower_Indx"
+			column="borrowerId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column
+				name="borrowerId"/>
+			</meta>
+			<meta attribute="runtime" inherit="false">copy-from-transfer-object-first</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Assettype -->
+		<many-to-one name="assetType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.AssetType"
+			not-null="false" cascade="none" column="assetTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="assetTypeCode"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to FHAAssetSourceType -->
+		<many-to-one name="fhaAssetSourceType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.FHAAssetSourceType"
+			not-null="false" cascade="none" column="fhaAssetSourceTypeCode">
+			<meta attribute="field-description">
+				for gifts, used in FHA Loan Transmittal. 
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="fhaAssetSourceTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Assettype -->
+		<many-to-one name="reDisposition"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.type.DispositionType"
+			not-null="false" cascade="none" column="reDispositionCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="reDispositionCode"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- Association -->
+		<!-- Took it from Lehman project -->
+		<many-to-one name="reValidationMethod"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.ValidationMethodType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="reValidationMethodCode"/>
+			</meta>
+			<column name="reValidationMethodCode" />
+		</many-to-one>
+		
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Assettype -->
+		<many-to-one name="reResidenceType"
+			class="com.dorado.generated.persistence.dmomcmshared.borrower.ResidenceType"
+			not-null="false" cascade="none" column="reResidenceTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="reResidenceTypeCode"/>
+			</meta>
+		</many-to-one>
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Assettype -->
+		<many-to-one name="rePropertyType"
+			class="com.dorado.generated.persistence.dmomcmshared.property.PropertyType"
+			not-null="false" cascade="none" column="rePropertyTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="rePropertyTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to Liability -->
+		<set name="Liabilities" table="T_Liability" lazy="true"
+			inverse="true" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="none"
+				@hibernate.collection-key column="assetId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.Liability"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />			
+			<meta attribute="do-not-generate-transferobject-property" />
+			<key column="assetId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.Liability" />
+		</set>
+
+		<!-- bi-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+			table="T_CONDITION" cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="ASSETID" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+FIRST,'1','1','Secured by a first lien','0',sysdate,'0'
+SUB,'2','2','Secured by a subordinate lien','0',sysdate,'0'
+NOT_SECURED,'3','3','Not secured by a lien','0',sysdate,'0'
+NOT_APPLICABLE,'4','4','Not applicable (purchased loan)','0',sysdate,'0'

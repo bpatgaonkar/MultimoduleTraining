@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'ANNUAL','Annually','0',sysdate,'0'
+'COMPRESS','Compressed','0',sysdate,'0'

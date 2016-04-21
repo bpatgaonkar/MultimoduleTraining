@@ -1,0 +1,4 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','D','Declining','0',sysdate,'0'
+'2','S','Stable','0',sysdate,'0'
+'3','SD','Severely Declining','0',sysdate,'0'

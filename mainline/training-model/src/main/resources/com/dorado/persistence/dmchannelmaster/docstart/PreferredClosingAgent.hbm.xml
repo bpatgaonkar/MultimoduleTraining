@@ -1,0 +1,120 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.docstart.PreferredClosingAgent"
+ table="T_PreferredClosingAgent" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_PreferredClosingAgent"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="preferredClosingAgentID"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="preferredClosingAgentID"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+
+<property 
+name="closingAgentName" 
+type="java.lang.String" 
+column="closingAgentName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="closingAgentName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="closingAgentTypeOtherDesc" 
+type="java.lang.String" 
+column="closingAgentTypeOtherDesc" 
+length="256" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="closingAgentTypeOtherDesc" 
+length="256" 
+</meta> 
+</property> 
+
+ <!-- Associations --> 
+
+ <!-- uni-directional one-to-one association to Address -->
+
+    <many-to-one
+        name="closingAgentAddr"
+        class="com.dorado.generated.persistence.dmcommon.contact.Address"
+        not-null="false"
+        cascade="all" 
+       index="prefClosAgent_addr_Indx"
+        >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="closingAgentAddrId"         
+        </meta>
+        <column name="closingAgentAddrId" />
+    </many-to-one>
+
+<!-- Associations -->
+
+<!-- bi-directional many-to-one association to Person -->
+<many-to-one name="closingAgentContact" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="closingAgentContact"/> 
+</meta>
+<column name ="closingAgentContact"/> 
+</many-to-one>
+
+<!-- Associations -->
+
+<!-- bi-directional many-to-one association to closingAgentType-->
+<many-to-one name="closingAgentType" 
+class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingAgentType" 
+not-null="false"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="closingAgentTypeCode"/> 
+</meta>
+<column name ="closingAgentTypeCode"/> 
+</many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

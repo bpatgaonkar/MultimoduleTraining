@@ -1,0 +1,9 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'NotApplicable','Not Applicable','0',sysdate,'0'
+'Taxes','Taxes','0',sysdate,'0'
+'Hazard','Hazard','0',sysdate,'0'
+'Flood','Flood','0',sysdate,'0'
+'TaxesHazard','Taxes Hazard','0',sysdate,'0'
+'TaxesFlood','Taxes Flood','0',sysdate,'0'
+'HazardFlood','Hazard Flood','0',sysdate,'0'
+'TaxesHazardFlood','Taxes Hazard Flood','0',sysdate,'0'

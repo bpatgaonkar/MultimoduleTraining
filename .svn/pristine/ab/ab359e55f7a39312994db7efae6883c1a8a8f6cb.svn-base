@@ -1,0 +1,4 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','NONE','None selected','0',sysdate,'0'
+'1','APPROVED','Yes','0',sysdate,'0'
+'2','NOTAPPROVED','No','0',sysdate,'0'

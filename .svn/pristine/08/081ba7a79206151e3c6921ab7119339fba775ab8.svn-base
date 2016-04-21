@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpOrder"
+		table="T_VmpOrder" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_VmpOrder">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="vmpOrderId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="vmpOrderId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="orderDate" type="java.sql.Timestamp"
+			column="orderDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="orderDate" length="7"
+			</meta>
+		</property>
+
+		<property name="docGroupId" type="java.lang.Integer"
+			column="docGroupId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="docGroupId" length="22"
+			</meta>
+		</property>
+
+		<property name="omOrderId" type="java.lang.Integer"
+			column="omOrderId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="omOrderId" length="22"
+			</meta>
+		</property>
+
+		<property name="rakisOrderId" type="java.lang.Integer"
+			column="rakisOrderId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rakisOrderId" length="22"
+			</meta>
+		</property>
+
+		<property name="vmpPackageDefId" type="java.lang.Integer"
+			column="vmpPackageDefId" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="vmpPackageDefId" length="22"
+			</meta>
+		</property>
+
+		<property name="Status" type="java.lang.String" column="Status"
+			length="20" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="Status" length="20"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="createdby"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="none" column="createdBy">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="createdBy"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to LoanApplication -->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="true" cascade="none"
+			index="VmpOrder_Loan_Indx"
+			column="loanApplicationId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="modifiedByOrg"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="none" column="MODIFIEDBY">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="MODIFIEDBY"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

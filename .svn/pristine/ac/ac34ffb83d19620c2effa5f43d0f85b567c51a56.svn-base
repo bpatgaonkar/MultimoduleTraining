@@ -1,0 +1,89 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Dependent"
+ table="T_DEPENDENT" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_DEPENDENT"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="dependentId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="dependentId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property name="position" type="java.lang.Integer" column="position"
+	not-null="false" unique="false">
+	<meta attribute="field-description"> @hibernate.property column="position" </meta>
+</property>
+
+<property 
+name="birthDate" 
+type="java.sql.Timestamp" 
+column="birthDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="birthDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="age" 
+type="java.lang.Integer" 
+column="age" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="age" 
+length="22" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Borrower -->
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="true"
+column="borrowerId"
+cascade="all"
+index="Dependent_Borrower_Indx"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property"/>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

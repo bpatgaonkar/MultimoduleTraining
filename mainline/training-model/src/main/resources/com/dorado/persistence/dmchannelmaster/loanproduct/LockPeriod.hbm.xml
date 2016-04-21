@@ -1,0 +1,65 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockPeriod"
+ table="T_LOCKPERIOD" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOCKPERIOD"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="lockPeriodId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="lockPeriodId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="lockPeriodDays" 
+type="java.lang.Integer" 
+column="lockPeriodDays" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="lockPeriodDays" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="loanPurposeRefi" 
+type="java.lang.Boolean" 
+column="loanPurposeRefi" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="loanPurposeRefi" 
+length="1" 
+</meta> 
+</property> 
+
+</class> 
+ 
+ </hibernate-mapping> 
+

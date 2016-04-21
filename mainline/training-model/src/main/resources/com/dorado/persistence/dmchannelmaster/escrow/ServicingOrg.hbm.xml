@@ -1,0 +1,180 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.escrow.ServicingOrg"
+ table="T_ServicingOrg" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_ServicingOrg"> 
+ </meta>
+	<meta attribute="extends">com.dorado.persistence.dmcommon.contact.PhonesContainer</meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+    
+<id 
+name="Id"  
+column="servicingOrgId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="servicingOrgId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="payeeCode" 
+type="java.lang.String" 
+column="payeeCode" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="payeeCode" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="servicingOrgName" 
+type="java.lang.String" 
+column="servicingOrgName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="servicingOrgName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="agentName" 
+type="java.lang.String" 
+column="agentName" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="agentName" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+    name="searchableFlag"
+    type="java.lang.Boolean" 
+    column="searchableFlag" 
+    length="1"
+    not-null="false" 
+    unique="false">
+    <meta attribute="field-description">
+        @hibernate.property 
+        column="searchableFlag"
+        length="1"
+    </meta>
+</property>
+
+<property 
+    name="editableFlag"
+    type="java.lang.Boolean" 
+    column="editableFlag" 
+    length="1"
+    not-null="false" 
+    unique="false">
+    <meta attribute="field-description">
+        @hibernate.property 
+        column="editableFlag"
+        length="1"
+    </meta>
+</property>
+
+<property
+    name="email"
+    type="java.lang.String"
+    column="EMAIL"
+    length="256"
+    >
+    <meta attribute="field-description">
+        Full email address for the agency.
+        @hibernate.property
+        column="EMAIL"
+        length="256"
+    </meta>    
+</property>
+    
+ <!-- Associations --> 
+     <!-- uni-directional one-to-one association to TaxBillReceivedByType-->
+
+        <many-to-one
+            name="taxBillReceivedByType"
+            class="com.dorado.generated.persistence.dmchannelmaster.escrow.TaxBillReceivedByType"
+            not-null="false"
+            cascade="none">
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="none" 
+           @hibernate.column name="taxBillReceivedByTypeCode"
+            </meta>
+            <column name="taxBillReceivedByTypeCode"/>
+        </many-to-one>
+
+ <!-- uni-directional one-to-one association to Address -->
+
+    <many-to-one
+        name="address"
+        class="com.dorado.generated.persistence.dmcommon.contact.Address"
+        not-null="false"
+        cascade="all"
+        index="servicingOrg_addr_Indx"
+      >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="taxReturnAddress"         
+        </meta>
+        <column name="taxReturnAddress" />
+    </many-to-one>
+
+ <!-- Associations --> 
+
+ <!-- uni-directional one-to-one association to PhoneLink-->
+
+   <many-to-one
+        name="phoneLink"
+        class="com.dorado.generated.persistence.dmcommon.contact.PhoneLink"
+        not-null="false"
+        cascade="all" >
+      <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="phoneLinkId"         
+        </meta>
+        <meta attribute="scope-get">protected</meta>
+        <meta attribute="scope-set">protected</meta>
+        <column name="phoneLinkId" />
+
+    </many-to-one>
+
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+
+

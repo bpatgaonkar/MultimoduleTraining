@@ -1,0 +1,6 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+APPROVAL, 'APPR','Approval','0',sysdate,'0'
+DOCS, 'DOCS','Docs','0',sysdate,'0'
+CLOSE, 'CLOS','Close','0',sysdate,'0'
+FUND, 'FUND','Fund','0',sysdate,'0'
+PURCHASE, 'PRCH','Purchase','0',sysdate,'0'

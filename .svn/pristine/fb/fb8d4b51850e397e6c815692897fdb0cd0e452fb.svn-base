@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.transaction.Transaction"
+		table="T_TRANSACTION" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_TRANSACTION">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="transactionId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="transactionId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="appraisedValue" type="java.lang.Double"
+			column="appraisedValue" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisedValue" length="22"
+			</meta>
+		</property>
+
+		<property name="appraisedValueReadOnly" type="java.lang.Boolean"
+			column="appraisedValueReadOnly" length="1" not-null="false"
+            unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisedValueReadOnly" length="1"
+			</meta>
+		</property>
+
+		<property name="cashDepositAmount" type="java.lang.Double"
+			column="cashDepositAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="cashDepositAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="closingCostAmount" type="java.lang.Double"
+			column="closingCostAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="closingCostAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="closingCostAmountReadOnly" type="java.lang.Boolean"
+			column="closingCostAmountReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="closingCostAmountReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="closingCostBySellerAmount"
+			type="java.lang.Double" column="closingCostBySellerAmount"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="closingCostBySellerAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="closingCostSellerReadOnly" type="java.lang.Boolean"
+			column="closingCostSellerReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="closingCostSellerReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="debtToIncome" type="java.lang.Double"
+			column="debtToIncome" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="debtToIncome" length="22"
+			</meta>
+		</property>
+
+		<property name="discountAmount" type="java.lang.Double"
+			column="discountAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="discountAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="discountAmountReadOnly" type="java.lang.Boolean"
+			column="discountAmountReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="discountAmountReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="estimatedValue" type="java.lang.Double"
+			column="estimatedValue" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="estimatedValue" length="22"
+			</meta>
+		</property>
+
+		<property name="firstMortgageLoanAmount" type="java.lang.Double"
+			column="firstMortgageLoanAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstMortgageLoanAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="fundingFeeAmount" type="java.lang.Double"
+			column="fundingFeeAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fundingFeeAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="fundingFeeAmountReadOnly" type="java.lang.Boolean"
+			column="fundingFeeAmountReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fundingFeeAmountReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="fundingFeeFinancedReadOnly" type="java.lang.Boolean"
+			column="fundingFeeFinancedReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fundingFeeFinancedReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="fundingFeeFinanced" type="java.lang.Double"
+			column="fundingFeeFinanced" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fundingFeeFinanced"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="improvementAmount" type="java.lang.Double"
+			column="improvementAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="improvementAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="landAmount" type="java.lang.Double"
+			column="landAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="landAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="otherSubFinancingAmount" type="java.lang.Double"
+			column="otherSubFinancingAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherSubFinancingAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="prepaidAmount" type="java.lang.Double"
+			column="prepaidAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="prepaidAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="prepaidAmountReadOnly" type="java.lang.Boolean"
+			column="prepaidAmountReadOnly" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="prepaidAmountReadOnly"
+                         length="1"
+			</meta>
+		</property>
+
+		<property name="purchasePrice" type="java.lang.Double"
+			column="purchasePrice" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="purchasePrice" length="22"
+			</meta>
+		</property>
+
+		<property name="refinanceAmount" type="java.lang.Double"
+			column="refinanceAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="refinanceAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="salesConcession" type="java.lang.Double"
+			column="salesConcession" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="salesConcession" length="22"
+			</meta>
+		</property>
+
+		<property name="secondTrustreFiAmount" type="java.lang.Double"
+			column="secondTrustreFiAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="secondTrustreFiAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="subordinateFinancingAmount"
+			type="java.lang.Double" column="subordinateFinancingAmount"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="subordinateFinancingAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="subordinateFinancingCreLineAmt"
+				type="java.lang.Double" column="subordinateFinancingCreLineAmt"
+				length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="subordinateFinancingCreLineAmt"
+				length="22"
+			</meta>
+		</property>
+
+	<!-- subordinate financing fields  for FHA Loan Transmittal -->
+		<property name="subordinateFinancingEIN"
+			type="java.lang.String" column="subordinateFinancingEIN"
+			length="25" not-null="false" unique="false">
+			<meta attribute="field-description">
+				For FHA Loan Transmittal - Source/EIN. EIN = Employer Identification Number.
+				@hibernate.property column="subordinateFinancingEIN"
+				length="25"
+			</meta>
+		</property>
+
+		<property name="subordinateFinancingOther"
+			type="java.lang.String" column="subordinateFinancingOther"
+			length="50" not-null="false" unique="false">
+			<meta attribute="field-description">
+				For FHA Loan Transmittal. Name of source if
+				subordinateFinanceSourceType = 'Other'
+				@hibernate.property column="subordinateFinancingOther"
+				length="50"
+			</meta>
+		</property>
+
+	<!-- end subordinate financing fields FHA Loan Transmittal  -->
+		<property name="houseHoldSize" type="java.lang.Integer"
+			column="houseHoldSize" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="houseHoldSize" length="22"
+			</meta>
+		</property>
+
+		<property name="armsLengthFlag" type="java.lang.Boolean"
+			column="armsLengthFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="armsLengthFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="equityPayOffFlag" type="java.lang.Boolean"
+			column="equityPayOffFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="equityPayOffFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="escrowWaivedFlag" type="java.lang.Boolean"
+			column="escrowWaivedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowWaivedFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="firstMortgageNegArmFlag"
+			type="java.lang.Boolean" column="firstMortgageNegArmFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstMortgageNegArmFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="secondTrustreFiFlag" type="java.lang.Boolean"
+			column="secondTrustreFiFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="secondTrustreFiFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="cashDepositHeldBy" type="java.lang.String"
+			column="cashDepositHeldBy" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="cashDepositHeldBy"
+				length="255"
+			</meta>
+		</property>
+
+		<!-- Commented following two properties after discussing with Abhijit-->
+		<!--property name="lmCreditScore" type="java.lang.Integer"
+			column="lmCreditScore" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lmCreditScore" length="22"
+			</meta>
+		</property>
+
+		<property name="hweCreditScore" type="java.lang.Integer"
+			column="hweCreditScore" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hweCreditScore" length="22"
+			</meta>
+		</property-->
+
+		<property name="piggyBackFlag" type="java.lang.Boolean"
+			column="piggyBackFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="piggyBackFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="employeeLoan" type="java.lang.Boolean"
+			column="employeeLoan" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="employeeLoan"
+                         length="1"
+			</meta>
+		</property>
+
+
+		<property name="lenderCurrentServicer" type="java.lang.Boolean"
+			column="lenderCurrentServicer" length="1" not-null="false"
+                          unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lenderCurrentServicer"
+                         length="1"
+			</meta>
+		</property>
+		
+		<property column="companyLoanOrigId" length="12" 
+			name="companyLoanOrigId" type="java.lang.String">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="companyLoanOrigId"
+				length="12"
+            </meta>
+		</property>
+		
+		<property column="branchLoanOrigId" length="12"
+			name="branchLoanOrigId" type="java.lang.String">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="branchLoanOrigId"
+				length="12"
+            </meta>
+		</property>
+		
+		<property column="loanOrigId" length="12"
+			name="loanOrigId" type="java.lang.String">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="loanOrigId"
+				length="12"
+            </meta>
+		</property>
+
+	<property column="feePrefix" length="16"
+			name="feePrefix" type="java.lang.String">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="feePrefix"
+				length="16"
+            </meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Property -->
+		<many-to-one name="property"
+			class="com.dorado.generated.persistence.dmomcmshared.property.Property"
+			not-null="true" cascade="all" index="transaction_propertyId_Indx" 
+			column="propertyId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="propertyId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to SubordinateFinanceType -->
+		<many-to-one name="subordinateFinanceType"
+			class="com.dorado.generated.persistence.dmchannelmaster.transaction.SubordinateFinanceType"
+			not-null="false" cascade="none"
+			column="subordinateFinanceType">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="subordinateFinanceType"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to FHAAssetSourceType -->
+		<many-to-one name="subordinateFinanceSrcType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.FHAAssetSourceType"
+			not-null="false" cascade="none"
+			column="subordinateFinanceSrcType">
+			<meta attribute="field-description">
+				for FHA Loan Transmittal.
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="subordinateFinanceSourceType"
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to DownPayment -->
+		<set name="DownPayments" table="T_DownPayment" lazy="true"
+			inverse="true" cascade="all" order-by="1">
+			<meta attribute="default-value"><![CDATA[ new java.util.LinkedHashSet<DownPayment>(0)]]></meta>
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="transactionId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.transaction.DownPayment"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection"/>
+			<key column="transactionId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.transaction.DownPayment" />
+		</set>
+
+		<!-- bi-directional one-to-one association to LoanApplication -->
+		<one-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			property-ref="transaction">
+			<meta attribute="field-description">
+				name="loanApplication"
+				class="com.dorado.generated.persistence.model.loan.LoanApplication"
+				property-ref="transaction" />
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</one-to-one>
+
+		<!-- bi-directional one-to-many association to OtherCredit -->
+		<set name="OtherCreditsInternal" table="T_OtherCredit"
+			lazy="true" inverse="true" cascade="all-delete-orphan" order-by="1">
+			<meta attribute="default-value"><![CDATA[ new java.util.LinkedHashSet<OtherCredit>(0)]]></meta>
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" "all-delete-orphan"
+				@hibernate.collection-key column="transactionId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.transaction.OtherCredit"
+				/>
+			</meta>
+			<meta attribute="scope-set">protected</meta>
+			<meta attribute="scope-get">protected</meta>
+			<key column="transactionId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.transaction.OtherCredit" />
+		</set>
+
+		<many-to-one name="escrowServicingOrg"
+			class="com.dorado.generated.persistence.dmchannelmaster.escrow.ServicingOrg"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="escrowServicingOrgId"
+			</meta>
+			<column name="escrowServicingOrgId" />
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+
+

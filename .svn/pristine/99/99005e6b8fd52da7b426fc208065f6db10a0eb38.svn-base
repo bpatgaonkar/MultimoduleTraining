@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+    <class
+        name="com.dorado.generated.persistence.dmchannelmaster.organization.OrgMinData"
+        table="T_ORGMINDATA"
+        lazy="true"
+        >
+        <meta attribute="class-description" inherit="false">
+       @hibernate.class
+        table="T_ORGMINDATA"
+        </meta>
+         <meta attribute="implements" inherit="true">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="Id"
+            type="java.lang.Long"
+            column="orgMinDataId"
+            >
+            <meta attribute="field-description">
+           @hibernate.id
+            generator-class="native"
+            type="java.lang.Long"
+            column="orgMinDataId"
+            </meta>
+            <generator class="native"/>
+        </id>
+        
+        <!-- a.k.a. MERS Org ID -  7 digit number used to calculate MINs. HASORGMINNUMBER -->
+        <property
+            name="orgMinId"
+            type="java.lang.String"
+            length="7"
+            column="ORGMINID"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="ORGMINID"
+            length="7"
+            </meta>
+        </property>
+        
+        <!-- for MIN info: starting sequence number. HASORGMINSEQUENCE -->
+        <property
+            name="minStartingSequenceNumber"
+            type="java.lang.String"
+            length="10"
+            column="MINSTARTINGSEQUENCENUMBER"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="MINSTARTINGSEQUENCENUMBER"
+            length=10
+            </meta>
+        </property>
+        
+        <!-- use loan id instead of sequence number. HASORGMINSEQUENCE -->
+        <property
+            name="useLoanIdFlag"
+            type="java.lang.Boolean"
+            length="1"
+            column="USELOANIDFLAG"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="USELOANIDFLAG"
+            length=1
+            </meta>
+        </property>
+        
+        <!-- name of the sequence used to generate MINs. HASORGMINSEQUENCE -->
+        <property
+            name="sequenceName"
+            type="java.lang.String"
+            length="15"
+            column="SEQUENCENAME"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="SEQUENCENAME"
+            length=15
+            </meta>
+        </property>
+        
+    </class>
+
+
+</hibernate-mapping>

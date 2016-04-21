@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Complete','Complete','0',sysdate,'0'
+'Incomplete','Incomplete','0',sysdate,'0'
+'Ineligible','Ineligible','0',sysdate,'0'
+'Invalid','Invalid','0',sysdate,'0'

@@ -1,0 +1,10 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','01','Cash Deposit on sales contract','0',sysdate,'0'
+'2','02','Seller Credit','0',sysdate,'0'
+'3','03','Lender Credit','0',sysdate,'0'
+'4','08','Borrower Paid Fees','0',sysdate,'0'
+'5','07-1','Non Parent Relative','0',sysdate,'0'
+'6','04','Relocation Funds','0',sysdate,'0'
+'7','05','Employer Assisted Housing','0',sysdate,'0'
+'8','06','Lease Purchase Fund','0',sysdate,'0'
+'9','07','Other','0',sysdate,'0'

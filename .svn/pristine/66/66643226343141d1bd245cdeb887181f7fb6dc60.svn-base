@@ -1,0 +1,89 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+	<class name="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingAuthority"
+		table="T_UNDERWRITINGAUTHORITY" 
+		lazy="true" > 
+
+		<meta attribute="class-description" inherit="false"> 
+			@hibernate.class
+			table="T_UNDERWRITINGAUTHORITY"> 
+		</meta>
+		<meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmcommon.organization.OrganizationUnit</meta>
+			
+		<id 
+			name="Id"  
+			column="UnderwritingAuthorityId"  
+			type="java.lang.Long" 
+		> 
+			<meta attribute="field-description">
+				@hibernate.id	
+				generator-class="native"
+				type="java.lang.Long" 
+				column="customerId"  
+			</meta>
+			<generator class="native"> 
+			</generator> 
+		</id> 
+
+		<property
+			name="name"
+			type="java.lang.String"
+			column="NAME"
+			length="40"
+		>
+			<meta attribute="field-description">
+				@hibernate.property
+				column="NAME"
+				length="40"
+			</meta>    
+		</property>
+
+		<!-- Associations --> 
+
+		<!-- uni-directional many-to-one association to OrganizationUnit (that this is under) -->
+		<many-to-one name="orgEntity" 
+			class="com.dorado.generated.persistence.dmcommon.organization.OrganizationUnit" 
+			not-null="true"
+			cascade="none"
+			column="orgEntityId"
+		>
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+				@hibernate.column name="orgEntityId"/> 
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to Underwriting Level-->
+		<set  
+			name="underwritingLevels"
+			table="T_UNDERWRITINGLEVEL"
+			lazy="true"
+			inverse="true"
+			cascade="all-delete-orphan"
+			order-by="underwritingLevelId asc"
+		>
+			<meta attribute="field-description">
+				@hibernate.set
+				lazy="true"
+				inverse="true"
+				cascade="all-delete-orphan"
+				@hibernate.collection-key
+				column="UnderwritingAuthorityId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingLevel" />
+			</meta>
+			<key column="UnderwritingAuthorityId" /> 
+			<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingLevel" />
+		</set> 
+	</class> 
+ 
+ </hibernate-mapping> 
+

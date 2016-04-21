@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Other','Other','0',sysdate,'0'
+'MyCommunityMortgage','My Community Mortgage','0',sysdate,'0'
+'CommunityHomeBuyerProgram','Community Home Buyer Program','0',sysdate,'0'
+'Fannie32','Fannie 3/2 Option','0',sysdate,'0'
+'Fannie97','Fannie 97','0',sysdate,'0'

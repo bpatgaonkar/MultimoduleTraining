@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','CBC Companies','0',sysdate,'0'
+'B','Land Safe','0',sysdate,'0'
+'5','Equifax Mortgage Services','0',sysdate,'0'
+'4','Fidelity National Credit','0',sysdate,'0'
+'6','Kroll Factual Data','0',sysdate,'0'
+'8','First American CREDCO','0',sysdate,'0'
+'A','LandAmerica Credit Services','0',sysdate,'0'

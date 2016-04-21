@@ -1,0 +1,4 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+FORMER_RESIDENCE,'F4','Former Residence','0',sysdate,'0'
+PRESENT_ADDRESS,'ZG','Present Address','0',sysdate,'0'
+MAILING_ADDRESS,'BH','Mailing Address','0',sysdate,'0'

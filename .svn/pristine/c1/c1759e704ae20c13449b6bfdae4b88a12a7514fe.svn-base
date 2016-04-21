@@ -1,0 +1,13 @@
+TYPECODE,DISPLAYORDER,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'210','1','Alt 97','0',sysdate,'0'
+'220','2','Freddie Mac 100','0',sysdate,'0'
+'230','3','Initial Int 10/20 FIXED','0',sysdate,'0'
+'231','4','Initial Int 15/15 FIXED','0',sysdate,'0'
+'232','5','Initial Int ARM','0',sysdate,'0'
+'233','6','Initial Int ARM 10 Yr','0',sysdate,'0'
+'240','7','Home Possible 100','0',sysdate,'0'
+'241','8','Home Possible 97','0',sysdate,'0'
+'242','9','Home Possible Neighborhood Solution 100','0',sysdate,'0'
+'243','10','Home Possible Neighborhood Solution 97','0',sysdate,'0'
+'244','11','Home Possible 3% Cash','0',sysdate,'0'
+'245','12','Home Possible Neighborhood Solution 3% Cash','0',sysdate,'0'

@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.plp.Plp"
+		table="T_PLP" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_PLP">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="plpId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="plpId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="stagedatetime" type="java.sql.Timestamp"
+			column="stagedatetime" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="stagedatetime" length="7"
+			</meta>
+		</property>
+
+		<property name="unifilockineffectiveDate"
+			type="java.sql.Timestamp" column="unifilockineffectiveDate"
+			length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="unifilockineffectiveDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="adjusteddisc" type="java.lang.Double"
+			column="adjusteddisc" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjusteddisc" length="22"
+			</meta>
+		</property>
+
+		<property name="adjustedintrate" type="java.lang.Double"
+			column="adjustedintrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustedintrate" length="22"
+			</meta>
+		</property>
+
+		<property name="adjustedmargin" type="java.lang.Double"
+			column="adjustedmargin" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustedmargin" length="22"
+			</meta>
+		</property>
+
+		<property name="adjustedorig" type="java.lang.Double"
+			column="adjustedorig" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustedorig" length="22"
+			</meta>
+		</property>
+
+		<property name="adjustedqualrate" type="java.lang.Double"
+			column="adjustedqualrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustedqualrate"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="adjustedsrp" type="java.lang.Double"
+			column="adjustedsrp" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustedsrp" length="22"
+			</meta>
+		</property>
+
+		<property name="approvedinterestrate" type="java.lang.Double"
+			column="approvedinterestrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedinterestrate"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="approvedloanAmount" type="java.lang.Double"
+			column="approvedloanAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedloanAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="approvedpoints" type="java.lang.Double"
+			column="approvedpoints" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedpoints" length="22"
+			</meta>
+		</property>
+
+		<property name="basedisc" type="java.lang.Double"
+			column="basedisc" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="basedisc" length="22"
+			</meta>
+		</property>
+
+		<property name="baseintrate" type="java.lang.Double"
+			column="baseintrate" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="baseintrate" length="22"
+			</meta>
+		</property>
+
+		<property name="basemargin" type="java.lang.Double"
+			column="basemargin" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="basemargin" length="22"
+			</meta>
+		</property>
+
+		<property name="baseorig" type="java.lang.Double"
+			column="baseorig" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="baseorig" length="22"
+			</meta>
+		</property>
+
+		<property name="basequalrate" type="java.lang.Double"
+			column="basequalrate" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="basequalrate" length="22"
+			</meta>
+		</property>
+
+		<property name="basesrp" type="java.lang.Double" column="basesrp"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="basesrp" length="22"
+			</meta>
+		</property>
+
+		<property name="escrowpayment" type="java.lang.Double"
+			column="escrowpayment" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="escrowpayment" length="22"
+			</meta>
+		</property>
+
+		<property name="mipremium" type="java.lang.Double"
+			column="mipremium" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="mipremium" length="22"
+			</meta>
+		</property>
+
+		<property name="pipayment" type="java.lang.Double"
+			column="pipayment" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="pipayment" length="22"
+			</meta>
+		</property>
+
+		<property name="plpapr" type="java.lang.Double" column="plpapr"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plpapr" length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustdisc" type="java.lang.Double"
+			column="totaladjustdisc" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustdisc" length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustintrate" type="java.lang.Double"
+			column="totaladjustintrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustintrate"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustmargin" type="java.lang.Double"
+			column="totaladjustmargin" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustmargin"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustorig" type="java.lang.Double"
+			column="totaladjustorig" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustorig" length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustpaymentrate" type="java.lang.Double"
+			column="totaladjustpaymentrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustpaymentrate"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustqualrate" type="java.lang.Double"
+			column="totaladjustqualrate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustqualrate"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totaladjustsrp" type="java.lang.Double"
+			column="totaladjustsrp" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totaladjustsrp" length="22"
+			</meta>
+		</property>
+
+		<property name="totalmonthlypayment" type="java.lang.Double"
+			column="totalmonthlypayment" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totalmonthlypayment"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totintrateceiling" type="java.lang.Double"
+			column="totintrateceiling" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totintrateceiling"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="totintratefloor" type="java.lang.Double"
+			column="totintratefloor" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="totintratefloor" length="22"
+			</meta>
+		</property>
+
+		<property name="approvedterm" type="java.lang.Integer"
+			column="approvedterm" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedterm" length="22"
+			</meta>
+		</property>
+
+		<property name="brokercanlockrate" type="java.lang.Boolean"
+			column="brokercanlockrate" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="brokercanlockrate"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="floodinsurancerequired" type="java.lang.Boolean"
+			column="floodinsurancerequired" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="floodinsurancerequired"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="loanofficerphoneext" type="java.lang.String"
+			column="loanofficerphoneext" length="8" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanofficerphoneext"
+				length="8"
+			</meta>
+		</property>
+
+		<property name="processorphoneext" type="java.lang.String"
+			column="processorphoneext" length="8" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="processorphoneext"
+				length="8"
+			</meta>
+		</property>
+
+		<property name="financetype" type="java.lang.String"
+			column="financetype" length="20" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="financetype" length="20"
+			</meta>
+		</property>
+
+		<property name="loanofficerphone" type="java.lang.String"
+			column="loanofficerphone" length="20" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanofficerphone"
+				length="20"
+			</meta>
+		</property>
+
+		<property name="processorphone" type="java.lang.String"
+			column="processorphone" length="20" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="processorphone" length="20"
+			</meta>
+		</property>
+
+		<property name="settlementagentphone" type="java.lang.String"
+			column="settlementagentphone" length="20" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="settlementagentphone"
+				length="20"
+			</meta>
+		</property>
+
+		<property name="approvedproductCode" type="java.lang.String"
+			column="approvedproductCode" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedproductCode"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="loanofficerCode" type="java.lang.String"
+			column="loanofficerCode" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanofficerCode" length="40"
+			</meta>
+		</property>
+
+		<property name="plppriceadjidentifier" type="java.lang.String"
+			column="plppriceadjidentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plppriceadjidentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="plpproductidentifier" type="java.lang.String"
+			column="plpproductidentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plpproductidentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="pricedtlrecidentifier" type="java.lang.String"
+			column="pricedtlrecidentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="pricedtlrecidentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="pricehdridentifier" type="java.lang.String"
+			column="pricehdridentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="pricehdridentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="referencenum" type="java.lang.String"
+			column="referencenum" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="referencenum" length="40"
+			</meta>
+		</property>
+
+		<property name="stage" type="java.lang.String" column="stage"
+			length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="stage" length="40"
+			</meta>
+		</property>
+
+		<property name="appraisername" type="java.lang.String"
+			column="appraisername" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisername" length="80"
+			</meta>
+		</property>
+
+		<property name="loanofficername" type="java.lang.String"
+			column="loanofficername" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanofficername" length="80"
+			</meta>
+		</property>
+
+		<property name="plppriceadjdesc" type="java.lang.String"
+			column="plppriceadjdesc" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plppriceadjdesc" length="80"
+			</meta>
+		</property>
+
+		<property name="plpproductdesc" type="java.lang.String"
+			column="plpproductdesc" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plpproductdesc" length="80"
+			</meta>
+		</property>
+
+		<property name="processorname" type="java.lang.String"
+			column="processorname" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="processorname" length="80"
+			</meta>
+		</property>
+
+		<property name="settlementagent" type="java.lang.String"
+			column="settlementagent" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="settlementagent" length="80"
+			</meta>
+		</property>
+
+		<property name="approvedproductdescription"
+			type="java.lang.String" column="approvedproductdescription"
+			length="128" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvedproductdescription"
+				length="128"
+			</meta>
+		</property>
+
+		<property name="loanofficeremail" type="java.lang.String"
+			column="loanofficeremail" length="128" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanofficeremail"
+				length="128"
+			</meta>
+		</property>
+
+		<property name="processoremail" type="java.lang.String"
+			column="processoremail" length="128" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="processoremail" length="128"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to PlpDaysColumn -->
+		<many-to-one name="plpDaysColumn"
+			class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpDaysColumn"
+			not-null="false" column="daysColumn" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="daysColumn"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to Extension -->
+		<set name="Extensions" table="T_Extension" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="plpId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.model.loan.Extension"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="plpId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.Extension" />
+		</set>
+
+		<!-- bi-directional one-to-many association to PlpOrder -->
+		<set name="PlpOrders" table="T_PlpOrder" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="plpId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpOrder"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="plpId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpOrder" />
+		</set>
+
+		<!-- bi-directional one-to-many association to PlpPriceAdjustment -->
+		<set name="PlpPriceAdjustments" table="T_PlpPriceAdjustment"
+			lazy="true" inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="plpId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpPriceAdjustment"
+				/>
+			</meta>
+			<key column="plpId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpPriceAdjustment" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

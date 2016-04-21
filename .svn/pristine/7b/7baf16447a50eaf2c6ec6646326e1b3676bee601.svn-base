@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','5 Percent Option','0',sysdate,'0'
+'2','3/2 Option','0',sysdate,'0'
+'3','Fannie 97 Option','0',sysdate,'0'

@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+UNKNOWN,'1','F1','Unknown','0',sysdate,'0'
+FANNIE_MAE,'2','01','Fannie Mae ','0',sysdate,'0'
+FREDDIE_MAC,'3','02','Freddie Mac','0',sysdate,'0'
+SELLER_OTHER,'4','03','Seller/Other','0',sysdate,'0'

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerFhaVa"
+		table="T_BorrowerFhaVa" lazy="true">
+		
+		<meta attribute="class-description" inherit="false"> @hibernate.class
+			table="T_BorrowerFhaVa"> </meta>
+		<meta attribute="implements" inherit="true">
+			com.dorado.persistence.Identifiable</meta>
+		<id name="Id" column="BorrowerFhaVaId" type="java.lang.Long">
+			<meta attribute="field-description"> @hibernate.id
+				generator-class="native" type="java.lang.Long"
+				column="BorrowerFhaVaId" </meta>
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="fhaCaivrs" type="java.lang.String" column="fhaCaivrs"
+			length="15" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaCaivrs" length="15" </meta>
+		</property>
+		
+		<property name="fhaCaivrsDefault" type="java.lang.Boolean"
+			column="fhaCaivrsDefault" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaCaivrsDefault" length="1" </meta>
+		</property>
+		
+		<property name="fhaCaivrsClaims" type="java.lang.Boolean"
+			column="fhaCaivrsClaims" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaCaivrsClaims" length="1" </meta>
+		</property>
+		
+		<property name="fhaLdp" type="java.lang.String" column="fhaLdp" length="25"
+			not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaLdp" length="25" </meta>
+		</property>
+		
+		<property name="fhaLdpDefault" type="java.lang.Boolean"
+			column="fhaLdpDefault" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaLdpDefault" length="1" </meta>
+		</property>
+		
+		<property name="fhaGsa" type="java.lang.String" column="fhaGsa" length="25"
+			not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaGsa" length="25" </meta>
+		</property>
+		
+		<property name="fhaGsaDefault" type="java.lang.Boolean"
+			column="fhaGsaDefault" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="fhaGsaDefault" length="1" </meta>
+		</property>
+		
+		<!-- Associations -->
+		<!-- uni-directional one-to-many association to ClaimException -->
+		<set name="borrowerFhaVaClaimExcepts" table="T_BorrowerFhaVaClaimExcept"
+			lazy="true" cascade="all" inverse="true">
+			<meta attribute="field-description"> @hibernate.set lazy="true"
+				cascade="all" @hibernate.collection-key column="borrowerFhaVaId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerFhaVaClaimExcept"
+				/> </meta>
+			<key column="borrowerFhaVaId"/>
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerFhaVaClaimExcept"/>
+		</set>
+		
+	</class>
+	
+</hibernate-mapping>

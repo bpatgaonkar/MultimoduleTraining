@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','Not Affordable product','0',sysdate,'0'
+'1','Affordable Gold 5','0',sysdate,'0'
+'3','Affordable Gold 97','0',sysdate,'0'

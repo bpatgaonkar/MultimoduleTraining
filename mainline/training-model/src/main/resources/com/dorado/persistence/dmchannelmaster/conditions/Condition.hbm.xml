@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.conditions.Condition"
+		table="T_CONDITION" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_CONDITION"
+		</meta>
+
+		<meta attribute="scope-class" inherit="false">
+			public abstract
+		</meta>
+		<meta attribute="implements" inherit="false">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="id" column="conditionId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="conditionId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<discriminator column="conditionClassCode" type="string"
+			length="4" />
+
+		<property name="name" type="java.lang.String" column="name"
+			length="1024" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="1024"
+			</meta>
+		</property>
+		<property name="sequenceIdentifier" type="java.lang.String"
+			column="sequenceIdentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="sequenceIdentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property 
+			name="inApprovalFlag" 
+			type="java.lang.Boolean"
+			column="inApprovalFlag" 
+			length="1" 
+			not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="inApprovalFlag"
+				length="1"
+			</meta>
+		</property>
+		<property 
+		name="inPreApprovalFlag" 
+		type="java.lang.Boolean"
+		column="inPreApprovalFlag" 
+		length="1" 
+		not-null="false"
+		unique="false">
+		<meta attribute="field-description">
+		@hibernate.property column="inPreApprovalFlag"
+		length="1"
+		</meta>
+		</property>
+		<property 
+		name="inCreditApprovalFlag" 
+		type="java.lang.Boolean"
+		column="inCreditApprovalFlag" 
+		length="1" 
+		not-null="false"
+		unique="false">
+		<meta attribute="field-description">
+		@hibernate.property column="inCreditApprovalFlag"
+		length="1"
+		</meta>
+		</property>
+
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to ConditionType -->
+		<many-to-one name="conditionType"
+			class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionType"
+			not-null="true" cascade="none" column="conditionTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="conditionTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to ConditionPriorToType -->
+		<many-to-one name="conditionPriorToType"
+			class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionPriorToType"
+			not-null="true" cascade="none" column="conditionPriorToTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="conditionPriorToTypeCode"
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to DriverType -->
+		<many-to-one name="driverType"
+			class="com.dorado.generated.persistence.dmchannelmaster.conditions.DriverType"
+			cascade="none" column="driverType">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="none"
+				@hibernate.column name="driverType"
+			</meta>
+		</many-to-one>
+
+		<subclass
+			name="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionTemplate"
+			discriminator-value="TEMP" lazy="true">
+
+			<meta attribute="implements" inherit="false">
+				com.dorado.persistence.RegionRoot
+			</meta>
+
+			<many-to-one name="owner"
+				class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+				cascade="none">
+				<meta attribute="field-description">
+					@hibernate.many-to-one cascade="none"
+					@hibernate.column name="orgEntityId"
+				</meta>
+				<column name="orgEntityId" />
+			</many-to-one>
+
+			<property name="templateNote" type="java.lang.String"
+				column="templateNote" length="255">
+				<meta attribute="field-description">
+					@hibernate.property column="templateNote"
+					length="255"
+				</meta>
+
+			</property>
+
+		</subclass>
+
+		<subclass
+			name="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue"
+			discriminator-value="VLUE" lazy="true">
+
+			<meta attribute="implements" inherit="false">
+				com.dorado.persistence.RegionRoot
+			</meta>
+
+			<property name="changeDateInternal" type="java.util.Date"
+				column="changeDate">
+				<meta attribute="field-description">
+					@hibernate.property column="changeDate"
+				</meta>
+				<meta
+					attribute="do-not-generate-transferobject-property" />
+				<meta attribute="scope-set">protected</meta>
+				<meta attribute="scope-get">protected</meta>
+			</property>
+
+           <!-- bi-directional many-to-one association to Employment -->
+			<many-to-one name="employment"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Employment"
+				not-null="false" cascade="none" index="Condition_EmploymentId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column name="employmentid"/>
+				</meta>
+				<column name="EMPLOYMENTID" />
+			</many-to-one>
+
+
+			<many-to-one name="changeEmployeeInternal"
+				class="com.dorado.generated.persistence.dmcommon.organization.Employee"
+				cascade="none" column="orgEntityId">
+				<meta
+					attribute="do-not-generate-transferobject-property" />
+				<meta attribute="scope-set">protected</meta>
+				<meta attribute="scope-get">protected</meta>
+				<meta attribute="field-description">
+					@hibernate.many-to-one cascade="none"
+					@hibernate.column name="orgEntityId"
+				</meta>
+			</many-to-one>
+
+			<!-- uni-directional many-to-one association to ConditionStatusType -->
+			<many-to-one name="statusInternal"
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionStatusType"
+				cascade="none" column="statusTypeCode">
+				<meta
+					attribute="do-not-generate-transferobject-property" />
+				<meta attribute="scope-set">protected</meta>
+				<meta attribute="scope-get">protected</meta>
+				<meta attribute="field-description">
+					@hibernate.many-to-one cascade="none"
+					@hibernate.column name="statusTypeCode"
+				</meta>
+			</many-to-one>
+
+			<!-- uni-directional many-to-one association to DocGroup -->
+			<many-to-one name="docGroup"
+				class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup"
+				cascade="all">
+				<meta attribute="field-description">
+					@hibernate.many-to-one cascade="all"
+					@hibernate.column name="docGroupId"/>
+				</meta>
+				<column name="docGroupId" />
+			</many-to-one>
+
+			<many-to-one name="loanApplication"
+				class="com.dorado.generated.persistence.model.loan.LoanApplication"
+				not-null="false" cascade="none" index="Condiction_LoanAppId_indx">
+				<meta
+					attribute="do-not-generate-transferobject-property" />
+				<column name="loanApplicationId" />
+			</many-to-one>
+	<!-- bi-directional many-to-one association to Appraisal -->
+		<many-to-one name="appraisal"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.AppraisalData"
+		not-null="false" cascade="none" index="Condition_AppraisalId_Indx">
+		<meta attribute="field-description">
+		@hibernate.many-to-one not-null="false" cascade="none"
+		@hibernate.column name="appraisalDataId"/>
+		</meta>
+		<column name="appraisalDataId" />
+		</many-to-one>
+
+			<!-- uni-directional one-to-many association to Notes -->
+			<set name="notes" table="T_NOTE" lazy="true"
+				cascade="all">
+				<meta attribute="field-description">
+					@hibernate.set lazy="true" cascade="all"
+					@hibernate.collection-key column="conditionId"
+					@hibernate.collection-one-to-many
+					class="com.dorado.generated.persistence.dmchannelmaster.conditions.Note"
+					/>
+				</meta>
+				<key column="conditionId" />
+				<one-to-many
+					class="com.dorado.generated.persistence.dmchannelmaster.conditions.Note" />
+			</set>
+
+			<!-- Bridge-table associations to Assets, Liabilities, Income and Credit -->
+
+			<!-- bi-directional many-to-one association to Asset -->
+			<many-to-one name="asset"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Asset"
+				not-null="false" cascade="none" index="Condition_AssetId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column name="assetId"/>
+				</meta>
+				<column name="ASSETID" />
+			</many-to-one>
+
+			<!-- bi-directional many-to-one association to Liability -->
+			<many-to-one name="liability"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.Liability"
+				not-null="false" cascade="none"
+				index="Condition_LiabilityId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column
+					name="liabilityId"/>
+				</meta>
+				<column name="LIABILITYID" />
+			</many-to-one>
+
+			<!-- bi-directional many-to-one association to CreditLiability -->
+			<many-to-one name="creditLiability"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.CreditLiability"
+				not-null="false" cascade="none"
+				index="Condition_CLiabilityId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column
+					name="cLiabilityId"/>
+				</meta>
+				<column name="CLIABILITYID" />
+			</many-to-one>
+
+			<!-- bi-directional many-to-one association to CreditInquiry -->
+			<many-to-one name="creditInquiry"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.CreditInquiry"
+				not-null="false" cascade="none"
+				index="Condition_CREDITINQUIRYID_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column
+					name="CREDITINQUIRYID"/>
+				</meta>
+				<column name="CREDITINQUIRYID" />
+			</many-to-one>
+
+			<!-- bi-directional many-to-one association to CreditPublicRecord -->
+			<many-to-one name="creditPublicRecord"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.CreditPublicRecord"
+				not-null="false" cascade="none"
+				index="Condition_CREDPUBRECId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column
+					name="CREDITPUBLICRECORDID"/>
+				</meta>
+				<column name="CREDITPUBLICRECORDID" />
+			</many-to-one>
+
+			<!-- bi-directional many-to-one association to Income -->
+			<many-to-one name="income"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.income.Income"
+				not-null="false" cascade="none" index="Condition_IncomeId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column name="incomeid"/>
+				</meta>
+				<column name="INCOMEID" />
+			</many-to-one>
+			<!-- bi-directional many-to-one association to Income -->
+			<many-to-one name="expense"
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Expense"
+				not-null="false" cascade="none" index="Condition_ExpenseId_Indx">
+				<meta attribute="field-description">
+					@hibernate.many-to-one not-null="false"
+					cascade="none" @hibernate.column name="expenseId"/>
+				</meta>
+				<column name="expenseId" />
+			</many-to-one>
+		</subclass>
+
+
+	</class>
+
+</hibernate-mapping>
+
+

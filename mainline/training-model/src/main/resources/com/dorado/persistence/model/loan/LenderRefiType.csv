@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+NOT_APPLICABLE,'1','NotApplicable','Not Applicable','0',sysdate,'0'
+INSIDE,'2','Inside','Inside','0',sysdate,'0'
+OUTSIDE,'3','Outside','Outside','0',sysdate,'0'

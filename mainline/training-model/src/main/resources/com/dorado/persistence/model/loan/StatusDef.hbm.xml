@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.dorado.generated.persistence.model.loan.StatusDef"
+		table="T_STATUSDEF" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_STATUSDEF">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="statusdefId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="statusdefId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="Code" type="java.lang.String" column="Code"
+			length="32" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="Code" length="32"
+			</meta>
+		</property>
+
+		<property name="name" type="java.lang.String" column="name"
+			length="32" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="32"
+			</meta>
+		</property>
+
+		<property name="assignedExternalCode" type="java.lang.String"
+			column="assignedExternalCode" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="assignedExternalCode"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="description" type="java.lang.String"
+			column="description" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="description" length="255"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="all" column="orgEntityId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to StatusDefType -->
+		<many-to-one name="StatusDefType"
+			class="com.dorado.generated.persistence.model.loan.StatusDefType"
+			not-null="true" cascade="none" column="statusDefTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="statusDefTypeCode"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

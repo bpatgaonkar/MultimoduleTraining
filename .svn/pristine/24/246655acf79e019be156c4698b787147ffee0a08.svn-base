@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmplan.plan.ActivityContext">
+
+		<!-- uni-directional one-to-many inverse association to OmClientOrder -->
+		<set name="OmClientOrders" table="T_OmClientOrder" lazy="true" inverse="true" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="none"
+				@hibernate.collection-key column="activityContextId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="activityContextId" />
+			<one-to-many class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder" />
+		</set>
+	</class>
+
+
+</hibernate-mapping>

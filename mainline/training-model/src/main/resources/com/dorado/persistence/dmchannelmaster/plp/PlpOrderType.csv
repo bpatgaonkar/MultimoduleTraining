@@ -1,0 +1,13 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'FEERETRIEVAL','PLP Fee Retrieval','0',sysdate,'0'
+'LOCKRATE','PLP Lock Rate','0',sysdate,'0'
+'MO_HTTPS_01','PROLink Export Query','0',sysdate,'0'
+'MO_HTTPS_03','PROLink Export Particular Loan','0',sysdate,'0'
+'MO_HTTPS_05','PROLink Export Loan Report','0',sysdate,'0'
+'MS_HTTPS_01','PROLink Status Update','0',sysdate,'0'
+'PRICEANDADJUSTMENTS','PLP Price And Adjustments','0',sysdate,'0'
+'PRICEOPTIONS','PLP Price Options','0',sysdate,'0'
+'PRODUCTSELECTION','PLP Production Selection','0',sysdate,'0'
+'REGISTERLOAN','PLP Register Loan','0',sysdate,'0'
+'RESETLOCKPERIOD','PLP Reset Lock Period','0',sysdate,'0'
+'SELECTPRICING','PLP Select Price','0',sysdate,'0'

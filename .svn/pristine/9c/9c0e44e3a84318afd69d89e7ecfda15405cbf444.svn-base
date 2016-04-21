@@ -1,0 +1,5 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','ReportDocs','Reported Doccuments','0',sysdate,'0'
+'2','ProprietoryLease','Proprietory Lease','0',sysdate,'0'
+'3','VofApplication','V Of Application','0',sysdate,'0'
+'4','Other','Other','0',sysdate,'0'

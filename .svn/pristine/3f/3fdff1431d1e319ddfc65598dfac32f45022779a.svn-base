@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+FIRST,'1','1','First Mortgage','0',sysdate,'0'
+SECOND,'2','2','Second Mortgage','0',sysdate,'0'
+OTHER,'3','F','Other Mortgage','0',sysdate,'0'

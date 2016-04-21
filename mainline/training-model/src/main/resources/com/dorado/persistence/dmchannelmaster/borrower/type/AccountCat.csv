@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','Joint','0',sysdate,'0'
+'1','Applicant','0',sysdate,'0'
+'2','Spouse','0',sysdate,'0'
+'3','Possible non-applicant','0',sysdate,'0'
+'4','Unknown','0',sysdate,'0'

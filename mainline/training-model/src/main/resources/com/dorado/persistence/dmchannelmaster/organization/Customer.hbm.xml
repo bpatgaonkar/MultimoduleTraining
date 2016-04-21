@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.organization.Customer"
+		table="T_CUSTOMER" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_CUSTOMER">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="customerId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="customerId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="directmarketingoptoutFlag"
+			type="java.lang.Boolean" column="directmarketingoptoutFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="directmarketingoptoutFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="disableFlag" type="java.lang.Boolean"
+			column="disableFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="disableFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="glboptoutFlag" type="java.lang.Boolean"
+			column="glboptoutFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="glboptoutFlag" length="1"
+			</meta>
+		</property>
+
+        <property
+            name="preferredLanguage"
+            type="java.lang.String"
+            column="PREFLANG"
+            length="5"
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="PREFLANG"
+            length="5"
+            </meta>
+        </property>
+        
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" column="orgEntityId" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Person -->
+		<many-to-one name="person"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="true" column="personId" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="personId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to User -->
+		<many-to-one name="useroid"
+			class="com.dorado.generated.persistence.dmcommon.organization.User"
+			not-null="true" column="useroId" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="useroId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Customertype -->
+		<many-to-one name="customertype"
+			class="com.dorado.generated.persistence.dmchannelmaster.organization.Customertype"
+			not-null="true" column="customerTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="customerTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to LoanCustRel -->
+		<set name="LoanCustRels" table="T_LoanCustRel" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="customerId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanCustRel"
+				/>
+			</meta>
+			<key column="customerId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.model.loan.relationship.LoanCustRel" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

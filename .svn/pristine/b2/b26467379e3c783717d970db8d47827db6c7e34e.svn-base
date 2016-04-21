@@ -1,0 +1,72 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAActionType"
+        table="T_HMDAACTIONTYPE"
+        lazy="true">
+		
+        <meta attribute="class-description" inherit="false">
+			@hibernate.class
+			table="T_HMDAACTIONTYPE">
+        </meta>
+          
+	    <meta attribute="implement-equals">true</meta>
+	    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+	    <meta attribute="implements">com.dorado.persistence.Described</meta>
+
+        <id
+            name="typeCode"
+            column="actionTypeCode"
+            type="java.lang.String">
+            <meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.String" 
+				column="actionTypeCode"
+            </meta>
+            <meta attribute="use-in-equals">true</meta>
+			<generator class="assigned">
+			</generator> 
+        </id>
+
+        <property
+            name="code"
+            type="java.lang.String">
+            <meta attribute="field-description">
+				@hibernate.property
+				type="java.lang.String"
+				column="code"
+            </meta>
+			<column name="code" unique-key="actioncode"/>
+        </property>
+
+        <property
+            name="action"
+            type="java.lang.String"
+			length="100">
+            <meta attribute="field-description">
+				@hibernate.property
+				type="java.lang.String"
+				column="hMDAaction"
+				length="100"				
+            </meta>
+			<column name="hMDAaction" unique-key="actioncode"/>
+        </property>     
+		
+		<property
+			name="description"
+			column="description"
+			type="java.lang.String"			
+			length="255">
+			<meta attribute="field-description">
+			   @hibernate.property
+				column="DESCRIPTION"
+				length="255"
+			</meta>    
+		</property>
+    </class>
+</hibernate-mapping>
+

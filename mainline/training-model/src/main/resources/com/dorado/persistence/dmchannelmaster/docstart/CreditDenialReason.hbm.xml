@@ -1,0 +1,202 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.docstart.CreditDenialReason"
+		table="T_CREDITDENIALREASON" lazy="true">
+		<meta attribute="class-description" inherit="false"> @hibernate.class
+			table="T_CREDITDENIALREASON"> </meta>
+		<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+		<id name="Id" column="creditDenialReasonId" type="java.lang.Long">
+			<meta attribute="field-description"> @hibernate.id generator-class="native"
+				type="java.lang.Long" column="creditDenialReasonId" </meta>
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="bankruptcyFlag" type="java.lang.Boolean"
+			column="bankruptcyFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="bankruptcyFlag"
+				length="1" </meta>
+		</property>
+		<property name="collAteralNotSuffFlag" type="java.lang.Boolean"
+			column="collAteralNotSuffFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="collAteralNotSuffFlag" length="1" </meta>
+		</property>
+		<property name="collectionOrJudgmentFlag" type="java.lang.Boolean"
+			column="collectionorjudgmentFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="collectionorjudgmentFlag" length="1" </meta>
+		</property>
+		<property name="creditAppIncompleteFlag" type="java.lang.Boolean"
+			column="creditAppIncompleteFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="creditAppIncompleteFlag" length="1" </meta>
+		</property>
+		<property name="creditDenialFlag" type="java.lang.Boolean"
+			column="creditDenialFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="creditDenialFlag"
+				length="1" </meta>
+		</property>
+		<property name="creditReportSourceFlag" type="java.lang.Boolean"
+			column="creditReportSourceFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="creditReportSourceFlag" length="1" </meta>
+		</property>
+		<property name="delinqCredObligationsFlag" type="java.lang.Boolean"
+			column="delinqCredObligationsFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="delinqCredObligationsFlag" length="1" </meta>
+		</property>
+		<property name="excObligationsIncomeFlag" type="java.lang.Boolean"
+			column="excObligationsIncomeFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="excObligationsIncomeFlag" length="1" </meta>
+		</property>
+		<property name="foreRepossessionFlag" type="java.lang.Boolean"
+			column="foreRepossessionFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="foreRepossessionFlag" length="1" </meta>
+		</property>
+		<property name="garnishmentFlag" type="java.lang.Boolean"
+			column="garnishmentFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="garnishmentFlag"
+				length="1" </meta>
+		</property>
+		<property name="insufficientCredRefsFlag" type="java.lang.Boolean"
+			column="insufficientCredRefsFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="insufficientCredRefsFlag" length="1" </meta>
+		</property>
+		<property name="insuffIncomeAmtReqFlag" type="java.lang.Boolean"
+			column="insuffIncomeAmtReqFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="insuffIncomeAmtReqFlag" length="1" </meta>
+		</property>
+		<property name="lengthOfEmpFlag" type="java.lang.Boolean"
+			column="lengthOfEmpFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="lengthOfEmpFlag"
+				length="1" </meta>
+		</property>
+		<property name="lengthOfResidenceFlag" type="java.lang.Boolean"
+			column="lengthOfResidenceFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="lengthOfResidenceFlag" length="1" </meta>
+		</property>
+		<property name="limitedCreditExperienceFlag" type="java.lang.Boolean"
+			column="limitedCreditExperienceFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="limitedCreditExperienceFlag" length="1" </meta>
+		</property>
+		<property name="nbrOfCreditReportInquiries" type="java.lang.Boolean"
+			column="nbrOfCreditReportInquiries" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="nbrOfCreditReportInquiries" length="1" </meta>
+		</property>
+		<property name="noCreditFileFlag" type="java.lang.Boolean"
+			column="noCreditFileFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="noCreditFileFlag"
+				length="1" </meta>
+		</property>
+		<property name="noticeDeliveredFlag" type="java.lang.Boolean"
+			column="noticeDeliveredFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="noticeDeliveredFlag" length="1" </meta>
+		</property>
+		<property name="noticeEmailedFlag" type="java.lang.Boolean"
+			column="noticeEmailedFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="noticeEmailedFlag"
+				length="1" </meta>
+		</property>
+		<property name="noticeMailedFlag" type="java.lang.Boolean"
+			column="noticeMailedFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="noticeMailedFlag"
+				length="1" </meta>
+		</property>
+		<property name="otherCreditDenialFlag" type="java.lang.Boolean"
+			column="otherCreditDenialFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="otherCreditDenialFlag" length="1" </meta>
+		</property>
+		<property name="poorCreditPerformanceFlag" type="java.lang.Boolean"
+			column="poorCreditPerformanceFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="poorCreditPerformanceFlag" length="1" </meta>
+		</property>
+		<property name="temporaryResidenceFlag" type="java.lang.Boolean"
+			column="temporaryResidenceFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="temporaryResidenceFlag" length="1" </meta>
+		</property>
+		<property name="tempOrIrregularEmpFlag" type="java.lang.Boolean"
+			column="tempOrIrregularEmpFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="tempOrIrregularEmpFlag" length="1" </meta>
+		</property>
+		<property name="unAcceptTypeCredRefsFlag" type="java.lang.Boolean"
+			column="unAcceptTypeCredRefsFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="unAcceptTypeCredRefsFlag" length="1" </meta>
+		</property>
+		<property name="unVerifyCreditRefsFlag" type="java.lang.Boolean"
+			column="unVerifyCreditRefsFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="unVerifyCreditRefsFlag" length="1" </meta>
+		</property>
+		<property name="unVerifyEmpFlag" type="java.lang.Boolean"
+			column="unVerifyEmpFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="unVerifyEmpFlag"
+				length="1" </meta>
+		</property>
+		<property name="unVerifyIncomeFlag" type="java.lang.Boolean"
+			column="unVerifyIncomeFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="unVerifyIncomeFlag"
+				length="1" </meta>
+		</property>
+		<property name="unVerifyResidenceFlag" type="java.lang.Boolean"
+			column="unVerifyResidenceFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="unVerifyResidenceFlag" length="1" </meta>
+		</property>
+		<property name="adverseActionTakenDes" type="java.lang.String"
+			column="adverseactiontakendes" length="256" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="adverseactiontakendes" length="256" </meta>
+		</property>
+		<property name="creditdDenialReasonDes" type="java.lang.String"
+			column="creditdenialreasondes" length="256" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="creditdenialreasondes" length="256" </meta>
+		</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Person -->
+		<many-to-one name="creditFederalAgency"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="true" column="creditFederalAgencyId" cascade="all">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="all" @hibernate.column name="CREDITFEDERALAGENCYID"/> 
+			</meta>
+		</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Person -->
+		<many-to-one name="creditReportSource"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="true" column="creditReportSourceId" cascade="all">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="all" @hibernate.column name="creditReportSourceId"/> 
+			</meta>
+		</many-to-one>
+ 		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+CREDIT, 'CRDT','Credit','0',sysdate,'0'
+PROPERTY, 'PPRT','Property','0',sysdate,'0'
+INSURANCE, 'INSR','Insurance','0',sysdate,'0'
+LOAN, 'LOAN','Loan','0',sysdate,'0'
+PRICING, 'PRCG','Pricing','0',sysdate,'0'
+SETTLEMENT, 'SLMT','Settlement','0',sysdate,'0'

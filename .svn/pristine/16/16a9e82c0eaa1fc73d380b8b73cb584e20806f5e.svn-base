@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.loan.government.FHAApplication"
+		table="T_FHAAPPLICATION" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_FHAAPPLICATION">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="fhaApplicationId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="fhaApplicationId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="hudReoFlag" type="java.lang.Boolean"
+			column="hudReoFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hudReoFlag" length="1"
+			</meta>
+		</property>
+		
+		<property name="contractDate"
+			type="java.sql.Timestamp" column="contractDate"
+			length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="contractDate"
+				length="7"
+			</meta>
+		</property>
+		
+		<property name="fhaToFhaRefinance" type="java.lang.Boolean"
+			column="fhaToFhaRefinance" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fhaToFhaRefinance" length="1"
+			</meta>
+		</property>
+
+		<property name="dateAcquired"
+			type="java.sql.Timestamp" column="dateAcquired"
+			length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="dateAcquired"
+				length="7"
+			</meta>
+		</property>
+		
+		<property name="homeInspection" type="java.lang.Boolean"
+			column="homeInspection" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="homeInspection" length="1"
+			</meta>
+		</property>
+		
+		<property name="amendatoryClauseObtained" type="java.lang.Boolean"
+			column="amendatoryClauseObtained" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="amendatoryClauseObtained" length="1"
+			</meta>
+		</property>
+		
+		<property name="realEstateCertObtained" type="java.lang.Boolean"
+			column="realEstateCertObtained" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="realEstateCertObtained" length="1"
+			</meta>
+		</property>
+		
+		<!-- This column name is misleading. firstTimeBuyerFlag might be more appropriate. 
+			True when any borrower on the loan is a first time buyer. -->
+		<property name="hudApprovedHomeBuyerCounseling" type="java.lang.Boolean"
+			column="hudApprovedHomeBuyerCounseling" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hudApprovedHomeBuyerCounseling" length="1"
+			</meta>
+		</property>
+		
+		<property name="ownSoldHudFhaMortgage" type="java.lang.Boolean"
+			column="ownSoldHudFhaMortgage" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="ownSoldHudFhaMortgage" length="1"
+			</meta>
+		</property>
+		
+		<property name="toBeSold" type="java.lang.Boolean"
+			column="toBeSold" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="toBeSold" length="1"
+			</meta>
+		</property>
+		
+		<property name="salesPrice" type="java.lang.Double"
+			column="salesPrice" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="salesPrice"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="originalAmount" type="java.lang.Double"
+			column="originalAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="originalAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="moreThanEightDwellings" type="java.lang.Boolean"
+			column="moreThanEightDwellings" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="moreThanEightDwellings" length="1"
+			</meta>
+		</property>
+		
+		<property name="eightDwellingsDetail" type="java.lang.String"
+			column="eightDwellingsDetail" length="2024" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="eightDwellingsDetail"
+				length="2024"
+			</meta>
+		</property>
+		
+		<property name="moreThanFourDwellings" type="java.lang.Boolean"
+			column="moreThanFourDwellings" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="moreThanFourDwellings" length="1"
+			</meta>
+		</property>
+		
+		<property name="awareOfValuation" type="java.lang.Integer"
+			column="awareOfValuation" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="awareOfValuation" length="1"
+			</meta>
+		</property>
+		
+		<!-- Associations -->
+		<!-- uni-directional many-to-one association to FHAAddendumLoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.FHAAddLoanPurposeType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="FHAAddLoanPurposeType"/>
+			</meta>
+			<column name="FHAAddLoanPurposeType" />
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to FHANewConstructionType -->
+		<many-to-one name="newConstructionType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.government.NewConstructionType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="NewConstructionTypeCode"/>
+			</meta>
+			<column name="NewConstructionTypeCode" />
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to BooleanValues -->
+		<many-to-one name="awareOfValuationType"
+			class="com.dorado.generated.persistence.dmchannelmaster.cmcommon.YesNoType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="awareOfValuationType"/>
+			</meta>
+			<column name="awareOfValuationType" />
+		</many-to-one>
+		
+		<!-- uni-directional one-to-one association to Address -->
+		<many-to-one
+ 		   name="hudFhaMortgageAddr"
+		    class="com.dorado.generated.persistence.dmcommon.contact.Address"
+	    not-null="false"
+	    cascade="all"
+	    unique="true"
+	    >
+	    <meta attribute="field-description">
+	    	@hibernate.many-to-one
+        not-null="false" cascade="all" 
+        @hibernate.column name="hudFhaMortgageAddr"         
+ 	    </meta>
+ 	    <column name="hudFhaMortgageAddr" />
+ 		</many-to-one>
+
+		
+		
+	</class>
+
+</hibernate-mapping>
+

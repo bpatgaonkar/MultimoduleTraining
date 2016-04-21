@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+
+<class
+    name="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostValueType"
+    table="T_CLOSINGCOSTVALUETYPE"
+>
+    <meta attribute="class-description" inherit="false">
+       @hibernate.class
+        table="T_CLOSINGCOSTVALUETYPE"
+    </meta>
+
+    <meta attribute="implement-equals">true</meta>
+
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+
+    <id
+        name="typeCode"
+        type="java.lang.String"
+        column="typeCode"
+		length="3"
+    >
+        <meta attribute="field-description">
+           @hibernate.id
+            generator-class="assigned"
+            type="java.lang.String"
+            column="typeCode"
+        </meta>
+         <meta attribute="use-in-equals">true</meta>
+        <generator class="assigned" />
+    </id>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'LP_AUS','AUS','0',sysdate,'0'
+'LP_AUSCRED','AUS and Merged Credit','0',sysdate,'0'
+'LP_AUSMI','AUS and MI','0',sysdate,'0'
+'LP_AUSMICREDIT','AUS MI and Merged Credit','0',sysdate,'0'

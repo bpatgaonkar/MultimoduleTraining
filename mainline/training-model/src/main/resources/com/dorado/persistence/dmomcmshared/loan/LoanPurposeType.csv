@@ -1,0 +1,6 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+PURCHASE,'1','16','Purchase','0',sysdate,'0'
+REFI,'2','05','Refinance','0',sysdate,'0'
+CONSTRUCTION_PERMANENT,'3','13','Construction-Permanent','0',sysdate,'0'
+CONSTRUCTION,'4','04','Construction','0',sysdate,'0'
+HOME_EQUITY,'5','50','Home Equity','0',sysdate,'0'

@@ -1,0 +1,5 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+OPEN, 'OPEN','Open','0',sysdate,'0'
+COMPLETE_AND_OPEN, 'CMLT','Marked Complete and Open','0',sysdate,'0'
+CLEARED, 'CLRD','Cleared','0',sysdate,'0'
+WAIVED, 'WAVD','Waived','0',sysdate,'0'

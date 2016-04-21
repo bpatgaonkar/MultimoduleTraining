@@ -1,0 +1,1075 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmomcmshared.property.Property"
+        table="T_PROPERTY"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+  @hibernate.class
+  table="T_PROPERTY">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="id"
+            column="propertyId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="propertyId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="leaseHoldExpirationDate"
+            type="java.sql.Timestamp"
+            column="leaseHoldExpirationDate"
+            length="7"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="leaseHoldExpirationDate" 
+length="7"
+            </meta>
+        </property>
+
+        <property
+            name="amountExistingLiens"
+            type="java.lang.Double"
+            column="amountExistingLiens"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="amountExistingLiens" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="cashOutAmount"
+            type="java.lang.Double"
+            column="cashOutAmount"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="cashOutAmount" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="costOfImprovements"
+            type="java.lang.Double"
+            column="costOfImprovements"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="costOfImprovements" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="originalCost"
+            type="java.lang.Double"
+            column="originalCost"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="originalCost" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="presentValueLot"
+            type="java.lang.Double"
+            column="presentValueLot"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="presentValueLot" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="numberOfUnits"
+            type="java.lang.Integer"
+            column="numberOfUnits"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="numberOfUnits" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="yearBuilt"
+            type="java.lang.Integer"
+            column="yearBuilt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="yearBuilt" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="yearLotAcquired"
+            type="java.lang.Integer"
+            column="yearLotAcquired"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="yearLotAcquired" 
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="condoEarthQuakeInsFlag"
+            type="java.lang.Boolean"
+            column="condoEarthQuakeInsFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="condoEarthQuakeInsFlag" 
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="condoWarrantableFlag"
+            type="java.lang.Boolean"
+            column="condoWarrantableFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="condoWarrantableFlag" 
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="plannedUnitDevelopmentFlag"
+            type="java.lang.Boolean"
+            column="plannedUnitDevelopmentFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="plannedUnitDevelopmentFlag" 
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="cityAssorParcelNum"
+            type="java.lang.String"
+            column="cityAssorParcelNum"
+            length="24"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="cityAssorParcelNum" 
+length="24"
+            </meta>
+        </property>
+
+        <property
+            name="countyAssorParcelNum"
+            type="java.lang.String"
+            column="countyAssorParcelNum"
+            length="24"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="countyAssorParcelNum" 
+length="24"
+            </meta>
+        </property>
+
+        <property
+            name="stateAssorParcelNum"
+            type="java.lang.String"
+            column="stateAssorParcelNum"
+            length="24"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="stateAssorParcelNum" 
+length="24"
+            </meta>
+        </property>
+
+        <property
+            name="apn"
+            type="java.lang.String"
+            column="apn"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="apn" 
+length="40"
+            </meta>
+        </property>
+
+        <property
+            name="condoDeveloper"
+            type="java.lang.String"
+            column="condoDeveloper"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="condoDeveloper" 
+length="40"
+            </meta>
+        </property>
+
+        <property
+            name="propertyCounty"
+            type="java.lang.String"
+            column="propertyCounty"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="propertyCounty" 
+length="40"
+            </meta>
+            <meta attribute="scope-set">public</meta>
+        </property>
+
+        <property
+            name="propertyShortDesc"
+            type="java.lang.String"
+            column="propertyShortDesc"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="propertyShortDesc" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="mannerTitleHeld"
+            type="java.lang.String"
+            column="mannerTitleHeld"
+            length="128"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="mannerTitleHeld" 
+length="128"
+            </meta>
+        </property>
+
+        <property
+            name="describeImprovements"
+            type="java.lang.String"
+            column="describeImprovements"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="describeImprovements" 
+length="255"
+            </meta>
+        </property>
+
+        <property
+            name="describeImprovementsCost"
+            type="java.lang.String"
+            column="describeImprovementsCost"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="describeImprovementsCost" 
+length="255"
+            </meta>
+        </property>
+
+        <property
+            name="legalDescription"
+            type="java.lang.String"
+            column="legalDescription"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="legalDescription" 
+length="255"
+            </meta>
+        </property>
+
+        <property
+            name="propertyDescription"
+            type="java.lang.String"
+            column="propertyDescription"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="propertyDescription" 
+length="255"
+            </meta>
+        </property>
+
+        <property
+            name="titleNames"
+            type="java.lang.String"
+            column="titleNames"
+            length="600"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="titleNames" 
+length="600"
+            </meta>
+        </property>
+
+        <property
+            name="acreageNumber"
+            type="java.lang.String"
+            column="acreageNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="acreageNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="assessorsParcelIdentifier"
+            type="java.lang.String"
+            column="assessorsParcelIdentifier"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="assessorsParcelIdentifier" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="assessorSecondParcelIdentifier"
+            type="java.lang.String"
+            column="assessorSecondParcelIdentifier"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="assessorSecondParcelIdentifier" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="recordJurisdictName"
+            type="java.lang.String"
+            column="recordJurisdictName"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="recordJurisdictName" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="recordJurisdictTypeOtherDes"
+            type="java.lang.String"
+            column="recordJurisdictTypeOtherDes"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="recordJurisdictTypeOtherDes" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="judicialDistrictName"
+            type="java.lang.String"
+            column="judicialDistrictName"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="judicialDistrictName" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="projectName"
+            type="java.lang.String"
+            column="projectName"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="projectName" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="blockNumber"
+            type="java.lang.String"
+            column="blockNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="blockNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="lotNumber"
+            type="java.lang.String"
+            column="lotNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="lotNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="quadrantNumber"
+            type="java.lang.String"
+            column="quadrantNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="quadrantNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="squareNumber"
+            type="java.lang.String"
+            column="squareNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="squareNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="suffixNumber"
+            type="java.lang.String"
+            column="suffixNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="suffixNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="unitNumber"
+            type="java.lang.String"
+            column="unitNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="unitNumber" 
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="nonApplicantTitleHolder"
+            type="java.lang.String"
+            column="nonApplicantTitleHolder"
+            length="256"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="nonApplicantTitleHolder" 
+length="256"
+            </meta>
+        </property>
+
+        <property
+            name="projectTrackingIdentifier"
+            type="java.lang.String"
+            column="projectTrackingIdentifier"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property 
+column="projectTrackingIdentifier" 
+length="40"
+            </meta>
+        </property>
+
+        <property
+            name="coopAptNumber"
+            type="java.lang.String"
+            column="coopAptNumber"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="coopAptNumber"
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="coopNumOfShares"
+            type="java.lang.Double"
+            column="coopNumOfShares"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="coopNumOfShares"
+            </meta>
+        </property>
+
+        <property
+            name="coopCorpName"
+            type="java.lang.String"
+            column="coopCorpName"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="coopCorpName"
+length="80"
+            </meta>
+        </property>
+ 
+    <property
+            name="letterOfCreditForRepairsAmt"
+            type="java.lang.Double"
+            column="letterOfCreditForRepairsAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+            @hibernate.property 
+            column="letterOfCreditForRepairsAmt" 
+             length="22"
+            </meta>
+        </property>
+
+        <property
+            name="totalRepairsAmt"
+            type="java.lang.Double"
+            column="totalRepairsAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+            @hibernate.property 
+            column="totalRepairsAmt" 
+             length="22"
+            </meta>
+        </property>
+
+        <property 
+            name="repairsCompletedFlag" 
+            type="java.lang.Boolean" 
+            column="repairsCompletedFlag" 
+            length="1" 
+            not-null="false" 
+            unique="false"  
+            > 
+            <meta attribute="field-Description"> 
+            @hibernate.property 
+            column="repairsCompletedFlag" 
+            length="1" 
+            </meta> 
+        </property> 
+
+        <property 
+            name="rentalIncomeToQualifyFlag" 
+            type="java.lang.Boolean" 
+            column="rentalIncomeToQualifyFlag" 
+            length="1" 
+            not-null="false" 
+            unique="false"  
+            > 
+            <meta attribute="field-Description"> 
+            @hibernate.property 
+            column="rentalIncomeToQualifyFlag" 
+            length="1" 
+            </meta> 
+        </property> 
+<property 
+  name="bedroomCount" 
+  type="java.lang.Integer" 
+  column="bedroomCount" 
+  length="22" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="bedroomCount" 
+  length="22" 
+  </meta> 
+</property> 
+<property 
+  name="dwellUnitEligibleRentAmt" 
+  type="java.lang.Double" 
+  column="dwellUnitEligibleRentAmt" 
+  length="22" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="dwellUnitEligibleRentAmt" 
+  length="22" 
+  </meta> 
+</property> 
+
+
+<property 
+name="communityParticipationStatus" 
+type="java.lang.String" 
+column="communityParticipationStatus" 
+not-null="false" 
+unique="false"  
+/> 
+
+<property 
+name="spFloodHazardAreaIndicator" 
+type="java.lang.Boolean" 
+column="spFloodHazardAreaIndicator" 
+not-null="false" 
+unique="false"  
+/> 
+
+<property 
+name="floodPartialIndicator" 
+type="java.lang.Boolean" 
+column="floodPartialIndicator" 
+not-null="false" 
+unique="false"  
+/> 
+
+<property 
+  name="unitInComplex" 
+  type="java.lang.Integer" 
+  column="unitInComplex" 
+  length="22" 
+  not-null="false" 
+  unique="false"  
+  > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="unitInComplex" 
+  length="22" 
+  </meta> 
+</property>   
+
+<property 
+name="censusTractNumber" 
+type="java.lang.String" 
+column="censusTractNumber" 
+length="80"
+not-null="false" 
+unique="false"  
+ > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="censusTractNumber" 
+  length="80" 
+  </meta> 
+</property>   
+  
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to RecordJurisdictType-->
+        <many-to-one name="recordJurisdictType"
+            class="com.dorado.generated.persistence.dmchannelmaster.docstart.RecordJurisdictType"
+            not-null="false"
+            cascade="all"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="recordJurisdictTypeCode"/>
+            </meta>
+            <column name="recordJurisdictTypeCode"/>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- bi-directional many-to-one association to Addr -->
+        <many-to-one name="address"
+            class="com.dorado.generated.persistence.dmcommon.contact.Address"
+            not-null="false"
+            cascade="all"
+            index="Property_addrId_Indx"
+            column="ADDRID"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="ADDRID"/>
+            </meta>
+            <meta attribute="scope-set">public</meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to DescribeImprovement -->
+        <many-to-one name="describeImprovement"
+            class="com.dorado.generated.persistence.dmomcmshared.property.DescribeImprovement"
+            not-null="false"
+            cascade="all"
+            column="describeImprovementFlag"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="describeImprovementFlag"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to BuildingStatusType -->
+        <many-to-one name="buildingStatusType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.BuildingStatusType"
+            not-null="false"
+            cascade="none"
+            column="buildingStatusCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="buildingStatusCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to CondoClassType -->
+        <many-to-one name="condoClassType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.CondoClassType"
+            not-null="false"
+            cascade="none"
+            column="condoClassTypeCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="condoClassTypeCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to propertyDescriptiontype -->
+        <many-to-one name="propertyDescriptionType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.PropertyDescriptionType"
+            not-null="false"
+            cascade="none"
+            column="propertyDescriptionCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="propertyDescriptionCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to FnmaPropertyRights -->
+        <many-to-one name="fnmaPropertyRights"
+            class="com.dorado.generated.persistence.dmomcmshared.fnma.FnmaPropertyRights"
+            not-null="false"
+            cascade="none"
+            column="propertyRightsCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="propertyRightsCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to PropertyType -->
+        <many-to-one name="propertyType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.PropertyType"
+            not-null="false"
+            cascade="none"
+            column="propertyTypeCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="propertyTypeCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to Residencetype -->
+        <many-to-one name="residenceType"
+            class="com.dorado.generated.persistence.dmomcmshared.borrower.ResidenceType"
+            not-null="false"
+            cascade="none"
+            column="ResidenceTypeCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="ResidenceTypeCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to FnmaPropertyType -->
+        <many-to-one name="fnmaPropertyType"
+            class="com.dorado.generated.persistence.dmomcmshared.fnma.FnmaPropertyType"
+            not-null="false"
+            cascade="none"
+            column="subjectPropertyTypeCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="subjectPropertyTypeCode"/>
+            </meta>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to TitleHeldType -->
+        <many-to-one name="titleHeldType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.TitleHeldType"
+            not-null="false"
+            cascade="none"
+            column="titleHeldCode"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="titleHeldCode"/>
+            </meta>
+        </many-to-one>
+
+  <!-- uni-directional many-to-one association to Person -->
+        <many-to-one name="seller"
+            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+            not-null="false"
+            cascade="all"
+            >
+            <meta attribute="field-description">
+            @hibernate.many-to-one
+            not-null="false"
+            cascade="all"
+             @hibernate.column name="seller"/>
+            </meta>
+            <column name="seller"/>
+        </many-to-one>
+
+  <!-- uni-directional many-to-one association to Person -->
+        <many-to-one name="sellingAgent"
+            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+            not-null="false"
+            cascade="all"
+            >
+            <meta attribute="field-description">
+            @hibernate.many-to-one
+            not-null="false"
+            cascade="all"
+             @hibernate.column name="sellingAgent"/>
+            </meta>
+            <column name="sellingAgent"/>
+        </many-to-one>
+
+  <!-- uni-directional many-to-one association to Person -->
+        <many-to-one name="listingAgent"
+            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+            not-null="false"
+            cascade="all"
+            >
+            <meta attribute="field-description">
+            @hibernate.many-to-one
+            not-null="false"
+            cascade="all"
+             @hibernate.column name="listingAgent"/>
+            </meta>
+            <column name="listingAgent"/>
+        </many-to-one>
+
+  <!-- uni-directional many-to-one association to MarketStatusType-->
+
+        <many-to-one name="marketStatusType"
+            class="com.dorado.generated.persistence.dmomcmshared.property.MarketStatusType"
+            not-null="false"
+            cascade="none"
+            >
+            <meta attribute="field-description">
+            @hibernate.many-to-one
+            not-null="false"
+            cascade="none"
+            @hibernate.column name="marketStatusTypeCode"/>
+            </meta>
+            <column name="marketStatusTypeCode"/>
+        </many-to-one>
+
+
+    </class>
+
+</hibernate-mapping>
+
+

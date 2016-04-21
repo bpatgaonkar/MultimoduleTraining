@@ -1,0 +1,8 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'BKER','Broker','0',sysdate,'0'
+'CONS','CONS','0',sysdate,'0'
+'CUST','Custmer','0',sysdate,'0'
+'IMPT','Imported','0',sysdate,'0'
+'LEAD','Scenario Lead','0',sysdate,'0'
+'LEND','Lender','0',sysdate,'0'
+'QUOT','Scenario Quote','0',sysdate,'0'

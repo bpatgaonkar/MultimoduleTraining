@@ -1,0 +1,82 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.model.loan.LoanAppSerialData"
+ table="T_LOANAPPSERIALDATA" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOANAPPSERIALDATA"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="loanAppSerialDataId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="loanAppSerialDataId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="serializedData" 
+type="com.dorado.persistence.type.OracleBlob"
+column="serializedData" 
+length="4000" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="serializedData" 
+length="4000" 
+</meta> 
+</property> 
+
+<property 
+name="nameSpace" 
+type="java.lang.String" 
+column="nameSpace" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="nameSpace" 
+length="40" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to LoanApplication -->
+<many-to-one name="loanApplication" 
+class="com.dorado.generated.persistence.model.loan.LoanApplication" 
+not-null="true"
+column="loanApplicationId"
+cascade="all"
+index="LoanAppSer_Loan_Indx">
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="loanApplicationId"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

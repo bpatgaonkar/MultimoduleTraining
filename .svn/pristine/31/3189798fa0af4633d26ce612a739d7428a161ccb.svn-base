@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UnderwritingNote"
+        table="T_UNDERWRITINGNOTE"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+              @hibernate.class
+              table="T_UNDERWRITINGNOTE"
+        </meta>
+
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>        
+
+        <id
+            name="id"
+            column="underwritingNoteId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+                @hibernate.id
+                generator-class="native"
+                type="java.lang.Long"
+                column="underwritingNoteId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="createdDate"
+            type="java.sql.Timestamp"
+            column="createdDate"
+            length="7"
+            not-null="true"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="createdDate"
+                length="7"
+            </meta>
+        </property>
+
+        <property
+            name="body"
+            type="java.lang.String"
+            column="body"
+            length="4000"
+            not-null="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="body"
+                length="4000"
+            </meta>
+        </property>
+   <!-- bi-directional many-to-one association to Underwriting -->
+		<many-to-one name="underwriting"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+			not-null="true" cascade="save-update" column="underwritingId">
+			<meta attribute="do-not-generate-transferobject-property"/>
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="save-update"
+				@hibernate.column name="underwritingId"/>
+			</meta>		 
+		</many-to-one>
+
+    </class>
+
+</hibernate-mapping>

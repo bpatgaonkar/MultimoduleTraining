@@ -1,0 +1,258 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.credit.CreditInfo"
+ table="T_CREDITINFO" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_CREDITINFO"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="creditInfoId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="creditInfoId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="bankruptcyDate" 
+type="java.sql.Timestamp" 
+column="bankruptcyDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="bankruptcyDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="foreclosureDate" 
+type="java.sql.Timestamp" 
+column="foreclosureDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="foreclosureDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="judgmentLienDate" 
+type="java.sql.Timestamp" 
+column="judgmentLienDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="judgmentLienDate" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="foreClosures" 
+type="java.lang.Integer" 
+column="foreClosures" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="foreClosures" 
+length="10" 
+</meta> 
+</property> 
+
+
+<property 
+name="creditReportId" 
+type="java.lang.Integer" 
+column="creditReportId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="creditReportId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="integrationAccountId" 
+type="java.lang.Integer" 
+column="integrationAccountId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="integrationAccountId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="judgementAndLiens" 
+type="java.lang.Integer" 
+column="judgementAndLiens" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="judgementAndLiens" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="mortgageLates" 
+type="java.lang.Integer" 
+column="mortgageLates" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="mortgageLates" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="creditAgencyType" 
+type="java.lang.String" 
+column="creditAgencyType" 
+length="4" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="creditAgencyType" 
+length="4" 
+</meta> 
+</property> 
+
+<property 
+name="refNumber" 
+type="java.lang.String" 
+column="refNumber" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="refNumber" 
+length="80" 
+</meta> 
+</property> 
+
+<property 
+name="creditStatus" 
+type="java.lang.String" 
+column="creditStatus" 
+length="225" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="creditStatus" 
+length="225" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to CreditBureauName -->
+<many-to-one name="creditBureauName" 
+class="com.dorado.generated.persistence.dmchannelmaster.credit.CreditBureauName" 
+not-null="false"
+cascade="all"
+column="creditBureauCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="creditBureauCode"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to OrderCreditType -->
+<many-to-one name="orderCreditType" 
+class="com.dorado.generated.persistence.dmchannelmaster.credit.OrderCreditType" 
+not-null="false"
+cascade="none"
+column="orderCreditType"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="orderCreditType"/> 
+</meta>
+</many-to-one>
+
+ <!-- bi-directional one-to-many association to Borrower 
+<set  
+name="Borrowers"
+table="T_Borrower"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="creditInfoId"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" />
+</meta>
+<key column="creditInfoId" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" />
+</set> 
+-->
+</class> 
+ 
+ </hibernate-mapping> 
+

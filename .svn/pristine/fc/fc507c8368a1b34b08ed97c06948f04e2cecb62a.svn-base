@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.appraisal.AppraisalData"
+		table="T_APPRAISALDATA" lazy="true">
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_APPRAISALDATA">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="appraisalDataId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="appraisalDataId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="appraisalCompany" type="java.lang.String"
+			column="appraisalCompany" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisalCompany" length="80"
+			</meta>
+		</property>
+
+		<property name="appraisedValue" type="java.lang.Double"
+			column="appraisedValue" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisedValue" length="22"
+			</meta>
+		</property>
+
+		<property name="appraisalDate" type="java.sql.Timestamp"
+			column="appraisalDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="appraisalDate" length="7"
+			</meta>
+		</property>
+
+		<property name="inspectorLicense" type="java.lang.String"
+			column="inspectorLicense" length="30" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="inspectorLicense" length="30"
+			</meta>
+		</property>
+
+		<property name="yearBuilt" type="java.lang.Integer"
+			column="yearBuilt" length="22" not-null="false"	unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="yearBuilt" length="22"
+			</meta>
+		</property>
+
+		<property name="effectiveAge" type="java.lang.Integer"
+			column="effectiveAge" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="effectiveAge" length="22"
+			</meta>
+		</property>
+
+		<property name="numberOfUnits" type="java.lang.Integer"
+			column="numberOfUnits" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="numberOfUnits" length="22"
+			</meta>
+		</property>
+
+		<property name="grossLivingArea" type="java.lang.Integer"
+			column="grossLivingArea" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="grossLivingArea" length="22"
+			</meta>
+		</property>
+
+		<property name="numberOfRooms" type="java.lang.Integer"
+			column="numberOfRooms" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="numberOfRooms" length="22"
+			</meta>
+		</property>
+
+		<property name="numberOfBedrooms" type="java.lang.Double"
+			column="numberOfBedrooms" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="numberOfBedrooms" length="22"
+			</meta>
+		</property>
+
+		<property name="numberOfBathrooms" type="java.lang.Double"
+			column="numberOfBathrooms" length="22" not-null="false"	unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="numberOfBathrooms" length="22"
+			</meta>
+		</property>
+
+		<property name="floodZone" type="java.lang.String"
+			column="floodZone" length="30" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="floodZone" length="30"
+			</meta>
+		</property>
+
+		<property name="reviewDate" type="java.sql.Timestamp"
+			column="reviewDate" length="7" not-null="false"	unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reviewDate" length="7"
+			</meta>
+		</property>
+
+		<property name="projectName" type="java.lang.String"
+			column="projectName" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="projectName" length="80"
+			</meta>
+		</property>
+
+		<property name="finalInspectionRequired" type="java.lang.Boolean"
+			column="finalInspectionFlag" length="1"	not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="finalInspectionFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="repairsInspectionRequired" type="java.lang.Boolean"
+			column="repairsInspectionFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="repairsInspectionFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="waterWellInspectionRequired" type="java.lang.Boolean"
+			column="waterWellInspectionFlag" length="1"	not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property	column="waterWellInspectionFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="septicInspectionRequired" type="java.lang.Boolean"
+			column="septicInspectionFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="septicInspectionFlag" length="1"
+			</meta>
+		</property>
+		
+		<!-- properties related to FHA Appraisal Report -->
+
+		<property name="consistentFairAnalysis" type="java.lang.Boolean"
+			column="fairAnalysisFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fairAnalysisFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="fairAnalysisComments" type="java.lang.String"
+			column="fairAnalysisComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fairAnalysisComments" length="400"
+			</meta>
+		</property>
+
+		<property name="reportQualityComments" type="java.lang.String"
+			column="reportQualityComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="reportQualityComments" length="400"
+			</meta>
+		</property>
+
+		<property name="comparablesAcceptable" type="java.lang.Boolean"
+			column="comparablesFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="comparablesFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="comparablesComments" type="java.lang.String"
+			column="comparablesComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="comparablesComments" length="400"
+			</meta>
+		</property>
+
+		<property name="adjustmentsAcceptable" type="java.lang.Boolean"
+			column="adjustmentsFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustmentsFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="adjustmentsComments" type="java.lang.String"
+			column="adjustmentsComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustmentsComments" length="400"
+			</meta>
+		</property>
+
+		<property name="valueAcceptable" type="java.lang.Boolean"
+			column="valueFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="valueFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="shouldBeCorrected" type="java.lang.Boolean"
+			column="correctionFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="correctionFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="valueForHUDFHAPurposes" type="java.lang.Double"
+			column="valueForHUDFHAPurposes" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="valueForHUDFHAPurposes" length="22"
+			</meta>
+		</property>
+
+		<property name="valueForHUDFHAComments" type="java.lang.String"
+			column="valueForHUDFHAComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="valueForHUDFHAComments" length="400"
+			</meta>
+		</property>
+
+		<property name="repairConditionsComments" type="java.lang.String"
+			column="repairConditionsComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="repairConditionsComments" length="400"
+			</meta>
+		</property>
+
+		<property name="otherComments" type="java.lang.String"
+			column="otherComments" length="400" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherComments" length="400"
+			</meta>
+		</property>
+
+          <property name="conditionalCommit" type="java.lang.Boolean"
+                  column="conditionalCommit" length="1" not-null="false" unique="false">
+                  <meta attribute="field-description">
+                        @hibernate.property column="conditionalCommit" length="1"
+                  </meta>
+            </property>
+            
+            <property name="conditionalCommitIssued" type="java.sql.Timestamp"
+                  column="conditionalCommitIssued" length="7" not-null="false" unique="false">
+                  <meta attribute="field-description">
+                        @hibernate.property column="conditionalCommitIssued" length="7"
+                  </meta>
+            </property>
+            
+            <property name="conditionalCommitExpir" type="java.sql.Timestamp"
+                  column="conditionalCommitExpir" length="7" not-null="false" unique="false">
+                  <meta attribute="field-description">
+                        @hibernate.property column="conditionalCommitExpir" length="7"
+                  </meta>
+            </property>
+            
+            <property name="conditionalCommitCondit" type="java.lang.String"
+                  column="conditionalCommitCondit" length="400" not-null="false" unique="false">
+                  <meta attribute="field-description">
+                        @hibernate.property column="conditionalCommitCondit" length="400"
+                  </meta>
+            </property>
+
+            <property name="maxFinancingFlag" type="java.lang.Boolean"
+		column="maxFinancingFlag" length="1"	not-null="false" unique="false">
+		<meta attribute="field-description">
+		@hibernate.property column="maxFinancingFlag" length="1"
+		</meta>
+	     </property>
+        
+             <property name="remainingEconomicYears" type="java.lang.Integer"
+			column="remainingEconomicYears" length="22" not-null="false"	unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="remainingEconomicYears" length="22"
+			</meta>
+		</property>
+
+
+
+		<!-- Associations -->
+
+		 <!-- uni-directional many-to-one association to InspectionStatusCode -->
+		<many-to-one name="inspectionStatus"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.InspectionStatus"
+		not-null="false"
+		cascade="none"
+		> 
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="inspectionStatusCode"/>
+		</meta>
+		<column name="inspectionStatusCode"/>
+		</many-to-one>
+		
+		
+		<!-- uni-directional many-to-one association to AppraisalType -->
+		<many-to-one name="appraisalType"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.AppraisalType"
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="appraisalTypeCode"/>
+		</meta>
+		<column name="appraisalTypeCode"/>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to CondoProjectReviewType -->
+		<many-to-one name="condoProjectReviewType"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.CondoProjectReviewType"
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="condoProjectReviewTypeCode"/>
+		</meta>
+		<column name="condoProjectReviewTypeCode"/>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to CondoProjAcceptReviewType-->
+		<many-to-one name="condoProjectAcceptanceReviewType"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.CondoProjAcceptReviewType"
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="condoProjAcceptReviewType"/>
+		</meta>
+		<column name="condoProjAcceptReviewType"/>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to ProjectClassification -->
+		<many-to-one name="projectClassification" 
+		class="com.dorado.generated.persistence.dmchannelmaster.loan.government.ProjectClassification" 
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="projectClassificationCode"/> 
+		</meta>
+		<column name ="projectClassificationCode"/> 
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to ConstructionType -->
+		<many-to-one name="constructionType"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.ConstructionType"
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="constructionTypeCode"/>
+		</meta>
+		<column name="constructionTypeCode"/>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to ManufacturedHomeType -->
+		<many-to-one name="manufacturedHomeType"
+		class="com.dorado.generated.persistence.dmchannelmaster.appraisal.ManufacturedHomeType"
+		not-null="false"
+		cascade="none"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="false"
+		cascade="none"
+		@hibernate.column name="manufacturedHomeType"/>
+		</meta>
+		<column name="manufacturedHomeType"/>
+		</many-to-one>
+		
+		 <!-- bi-directional many-to-one association to Person -->
+        <many-to-one
+            name="person"
+            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+		column="personId"
+            cascade="all"
+            index="Appraisal_Person_Indx"
+            not-null="true"
+           >
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+           @hibernate.column name="personId"
+            </meta>
+        </many-to-one>	
+
+		<!-- bi-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+		table="T_CONDITION" cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />			
+		<key column="appraisalDataId" />
+		<one-to-many
+		class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+		
+		<!-- uni-directional many-to-one association to FnmaPropertyRights -->
+		<many-to-one name="fnmaPropertyRights"
+		class="com.dorado.generated.persistence.dmomcmshared.fnma.FnmaPropertyRights"
+		not-null="false"
+		cascade="none"
+		column="propertyRightsCode"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="true"
+		cascade="none"
+		@hibernate.column name="propertyRightsCode"/>
+		</meta>
+		</many-to-one>
+
+         <!-- uni-directional many-to-one association to PropertyType -->
+		<many-to-one name="fnmaPropertyType"
+		class="com.dorado.generated.persistence.dmomcmshared.fnma.FnmaPropertyType"
+		not-null="false"
+		cascade="none"
+		column="fnmaPropertyTypeCode"
+		>
+		<meta attribute="field-description">
+		@hibernate.many-to-one
+		not-null="true"
+		cascade="none"
+		@hibernate.column name="fnmaPropertyTypeCode"/>
+		</meta>
+		</many-to-one>
+
+
+		<!-- uni-directional many-to-one association to omclientorderid-->
+		<many-to-one name="orderId"
+		class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+		not-null="false" cascade="none" column="omClientOrderId">
+		<meta attribute="field-description">
+		@hibernate.many-to-one not-null="false" cascade="none"
+		@hibernate.column name="omClientOrderId"
+		</meta>
+		</many-to-one>
+		
+				<!-- Associations -->
+		
+				<!-- bi-directional many-to-one association to LoanApplication-->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="false" cascade="none"
+			index="Appraisal_LoanApp_Indx"
+			column="loanApplicationId"
+			>
+			<meta attribute="do-not-generate-transferobject-property" />
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to OrgEntity for reviewer id-->
+		<!-- name should be orgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="none"
+			column="orgEntityId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to DocGroup -->
+		<many-to-one name="docGroup"
+			class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup"
+			cascade="save-update">
+			<meta attribute="field-description">
+			@hibernate.many-to-one cascade="save-update"
+			@hibernate.column name="docGroupId"/>
+			</meta>
+			<column name="docGroupId" />
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+
+

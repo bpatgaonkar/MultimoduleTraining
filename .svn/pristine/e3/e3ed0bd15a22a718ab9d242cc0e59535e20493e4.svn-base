@@ -1,0 +1,129 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Race"
+ table="T_RACE" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_RACE"> 
+ </meta>
+<!--meta attribute="implements">com.dorado.persistence.RegionRoot</meta
+<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta> -->
+<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+ 
+		 <id 
+		name="Id"  
+		column="raceId"  
+		type="java.lang.Long" 
+		> 
+		<meta attribute="field-description">
+		@hibernate.id
+		generator-class="native"
+		type="java.lang.Long" 
+		column="raceId"  
+		</meta>
+		<generator class="native"> 
+		</generator> 
+		</id> 
+
+		<property name="indianAlaskaNative" type="java.lang.Boolean"
+			column="indianAlaskaNative" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="indianAlaskaNative" length="1"
+			</meta>
+		</property>
+
+		<property name="asian" type="java.lang.Boolean"
+			column="asian" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="asian" length="1"
+			</meta>
+		</property>
+
+
+		<property name="africanAmerican" type="java.lang.Boolean"
+			column="africanAmerican" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="africanAmerican" length="1"
+			</meta>
+		</property>
+
+		<property name="hawaiianPacificIslander" type="java.lang.Boolean"
+			column="hawaiianPacificIslander" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hawaiianPacificIslander" length="1"
+			</meta>
+		</property>
+
+		<property name="white" type="java.lang.Boolean"
+			column="white" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="white" length="1"
+			</meta>
+		</property>
+
+		<property name="notProvided" type="java.lang.Boolean"
+			column="notProvided" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="notProvided" length="1"
+			</meta>
+		</property>
+
+		<property name="notApplicable" type="java.lang.Boolean"
+			column="notApplicable" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="notApplicable" length="1"
+			</meta>
+		</property>
+		
+
+<!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Borrower -->
+
+<!--
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+<meta attribute="do-not-generate-transferobject-property"/>
+<column name="borrowerId"/> 
+</many-to-one>
+-->
+
+<!-- Associations --> 
+
+<!-- We can actually remove/comment this -->
+<!-- uni-directional many-to-one association to RaceType -->
+<many-to-one name="raceType" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.RaceType" 
+not-null="false"
+cascade="none"
+column="raceCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="raceCode"/> 
+</meta>
+</many-to-one>
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

@@ -1,0 +1,4 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+OWNER_OCCUPIED,'1','1','Owner-occupied as a principal dwelling','0',sysdate,'0'
+NON_OWNER_OCCUPIED,'2','2','Not owner-occupied as a principal dwelling','0',sysdate,'0'
+NOT_APPLICABLE,'3','3','Not applicable','0',sysdate,'0'

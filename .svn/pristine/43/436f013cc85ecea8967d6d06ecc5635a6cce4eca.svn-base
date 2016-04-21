@@ -1,0 +1,9 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'O','Open','0',sysdate,'0'
+'C','Closed','0',sysdate,'0'
+'F','Frozen','0',sysdate,'0'
+'K','Unknown','0',sysdate,'0'
+'P','Paid','0',sysdate,'0'
+'R','Refi','0',sysdate,'0'
+'S','Last Pd.','0',sysdate,'0'
+'T','Tran','0',sysdate,'0'

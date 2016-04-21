@@ -1,0 +1,127 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loan.government.VaFundingFeePercentage"
+ table="T_vaFundingFeePercentage" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_vaFundingFeePercentage"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="vaFundingFeePercentageId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="vaFundingFeePercentageId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="downPaymentHighPercentage" 
+type="java.lang.Double" 
+column="downPaymentHighPercentage" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="downPaymentHighPercentage" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="downPaymentLowPercentage" 
+type="java.lang.Double" 
+column="downPaymentLowPercentage" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="downPaymentLowPercentage" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="vaFundingFeePercentage" 
+type="java.lang.Double" 
+column="vaFundingFeePercentage" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="vaFundingFeePercentage" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="loanPurposeCode" 
+type="java.lang.String" 
+column="loanPurposeCode" 
+length="4" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="loanPurposeCode" 
+length="4" 
+</meta> 
+</property> 
+
+<property 
+name="refinancepurposeCode" 
+type="java.lang.String" 
+column="refinancePurposeCode" 
+length="4" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="refinancePurposeCode" 
+length="4" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to VaFundingType -->
+<many-to-one name="vaFundingType" 
+class="com.dorado.generated.persistence.dmchannelmaster.loan.government.VaFundingType" 
+not-null="true"
+column="FUNDINGTYPECODE"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="FUNDINGTYPECODE"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

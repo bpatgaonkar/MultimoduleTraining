@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'FLOA','Floating Rate','0',sysdate,'0'
+'LOCK','Locked Rate','0',sysdate,'0'
+'RCAP','Rate Cap Base','0',sysdate,'0'

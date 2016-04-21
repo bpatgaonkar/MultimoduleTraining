@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Application','Application','0',sysdate,'0'
+'FinalDisposition','Final Disposition','0',sysdate,'0'
+'PostClosingQualityControl','Post Closing Quality Control','0',sysdate,'0'
+'Prequalification','Pre-qualification','0',sysdate,'0'
+'Underwriting','Underwriting','0',sysdate,'0'

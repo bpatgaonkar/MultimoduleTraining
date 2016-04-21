@@ -1,0 +1,5 @@
+DESCRIPTION,TYPECODE,SESSIONID,TIMESTAMP,VERSION,DISPLAYORDER
+'Hispanic or Latino','1','0',sysdate,'0','1'
+'Not Hispanic or Latino','2','0',sysdate,'0','2'
+'Not provided by applicant','3','0',sysdate,'0','3'
+'Not Applicable','4','0',sysdate,'0','4'

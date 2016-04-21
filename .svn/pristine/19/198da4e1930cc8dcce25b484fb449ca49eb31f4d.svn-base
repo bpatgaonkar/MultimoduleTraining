@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+
+<class 
+    name="com.dorado.generated.persistence.dmchannelmaster.closingcost.ScCategory"
+    table="T_SCCATEGORY"
+>
+    <meta attribute="class-description" inherit="false">
+       @hibernate.class
+        table="T_SCCATEGORY"
+    </meta>
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+
+    <id
+        name="typeCode"
+        type="java.lang.String"
+        column="SCCATEGORY"
+    >
+        <meta attribute="field-description">
+           @hibernate.id
+            generator-class="assigned"
+            type="java.lang.String"
+            column="SCCATEGORY"
+
+
+        </meta>
+        <generator class="native" />
+    </id>
+
+    <property
+        name="description"
+        type="java.lang.String"
+        column="description"
+        length="80"
+    >
+        <meta attribute="field-description">
+           @hibernate.property
+            column="description"
+            length="80"
+        </meta>    
+    </property>
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to State -->
+    <set
+        name="closingCostLineItems"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+    >
+        <meta attribute="field-description">
+           @hibernate.set
+            lazy="true"
+            inverse="true"
+            cascade="none"
+
+           @hibernate.collection-key
+            column="scCategory"
+
+           @hibernate.collection-one-to-many
+            class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostLineItem"
+        </meta>
+        <key>
+            <column name="scCategory" />
+        </key>
+        <one-to-many 
+            class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostLineItem"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

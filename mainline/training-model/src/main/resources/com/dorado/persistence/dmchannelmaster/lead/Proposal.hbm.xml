@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.lead.Proposal"
+		table="T_PROPOSAL" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_PROPOSAL">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		
+		
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="name" type="java.lang.String" column="name"
+			length="64" not-null="false" unique="false" />
+
+		<property name="type" type="java.lang.String" column="type"
+			length="64" not-null="false" unique="false" />
+
+		<property name="description" type="java.lang.String"
+			column="description" length="128" not-null="false" unique="false" />
+
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="true"
+			cascade="none"
+			index="Proposal_Loan_Indx"
+			column="loanApplicationId"
+			>
+			<meta attribute="do-not-generate-transferobject-property"/>
+			</many-to-one>
+
+		<set name="scenarios" table="T_SCENARIO" lazy="true"
+			cascade="save-update">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="proposalId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.lead.Scenario" />
+		</set>
+
+		<!-- One-to-many association with ProposalField -->
+		<set name="proposalFields" table="T_ProposalField"
+			inverse="true" cascade="all-delete-orphan">
+
+			<key column="proposalId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.lead.ProposalField" />
+		</set>
+
+
+	</class>
+
+</hibernate-mapping>

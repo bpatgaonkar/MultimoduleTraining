@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,DISPLAYORDER,SESSIONID,TIMESTAMP,VERSION
+'New','Order New Credit Report','1','0',sysdate,'0'
+'Reissue','Reissue Credit Report from Credit Vendor','2','0',sysdate,'0'
+'Resubmit','Obtain Credit Report from Submitted Case File','3','0',sysdate,'0'

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.PageSubjectItem"
+		table="T_PAGESUBJECTITEM" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_PAGESUBJECTITEM"
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="pageSubjectItemId"
+			type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="pageSubjectItemId"
+			</meta>
+
+			<generator class="native"></generator>
+		</id>
+
+		<property name="selected" type="java.lang.String"
+			column="selected" length="3" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="selected" length="3"
+			</meta>
+
+		</property>
+
+		<property name="parameterText" type="java.lang.String"
+			column="parameterText1" length="2024" not-null="false"
+			unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="parameterText1"
+				length="2024"
+			</meta>
+
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to SubjectItem -->
+
+		<many-to-one name="subjectItem"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectItem"
+			not-null="true" cascade="all" column="subjectItemId">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="subjectItemId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to WebPage -->
+
+		<many-to-one name="webPage"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.WebPage"
+			not-null="true" cascade="all" column="webPageId">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="webPageId"/>
+			</meta>
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+

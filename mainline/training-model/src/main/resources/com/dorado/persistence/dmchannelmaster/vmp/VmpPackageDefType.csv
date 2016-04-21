@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'CLOS','Close Docs','0',sysdate,'0'
+'OPEN','Open Docs','0',sysdate,'0'

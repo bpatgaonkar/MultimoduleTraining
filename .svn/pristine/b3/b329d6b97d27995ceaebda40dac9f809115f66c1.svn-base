@@ -1,0 +1,82 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpPackageDef"
+ table="T_VMPPACKAGEDEF" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_VMPPACKAGEDEF"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="vmpPackageDefId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="vmpPackageDefId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="externalVmpId" 
+type="java.lang.String" 
+column="externalVmpId" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="externalVmpId" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="name" 
+type="java.lang.String" 
+column="name" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="name" 
+length="40" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to VmpPackageDefType -->
+<many-to-one name="vmpPackageDefType" 
+class="com.dorado.generated.persistence.dmchannelmaster.vmp.VmpPackageDefType" 
+not-null="true"
+cascade="none"
+column="vmpPackageDefTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="vmpPackageDefTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

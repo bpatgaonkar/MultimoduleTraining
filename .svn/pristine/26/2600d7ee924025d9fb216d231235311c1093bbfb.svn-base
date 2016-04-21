@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class      
+		name="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAReport"
+		table="T_HMDAREPORT" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_HMDAREPORT">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="id" column="hmdaReportId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="hmdaReportId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property column="fiLoanId" name="fiLoanId" type="java.lang.String">
+			<meta attribute="field-description" inherit="true">
+				@hibernate.property column="fiLoanId" length="24"
+			</meta>
+		</property>
+
+		<property name="applicationDateTime"
+			type="java.sql.Timestamp" column="applicationDateTime"
+			length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property	column="applicationDateTime" length="7"
+			</meta>
+		</property>
+
+		<property name="loanAmount" type="java.lang.Double"
+			column="loanAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanAmount" length="22"
+			</meta>
+		</property>
+
+		<property name="actionTakenDate"
+			type="java.sql.Timestamp" column="actionTakenDate"
+			length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="actionTakenDate" length="7"
+			</meta>
+		</property>
+	
+		<!-- Value will be calculated and then populated at the time of record creation -->
+		<property name="totalMonthlyIncome" type="java.lang.Double" 
+			column="TOTALMONTHLYINCOME" length="22">
+			<meta attribute="field-description">
+				@hibernate.property column="TOTALMONTHLYINCOME" length="22"
+			</meta>
+		</property>
+
+		<property name="lockDate" type="java.sql.Timestamp"
+			column="lockDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockDate" length="7"
+			</meta>
+		</property>		
+
+        <property
+            name="propertyCounty"
+            type="java.lang.String"
+            column="propertyCounty"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+				@hibernate.property 
+				column="propertyCounty" 
+				length="40"
+            </meta>
+            <meta attribute="scope-set">public</meta>
+        </property>
+
+		<property 
+			name="stateCountyCode" 
+			type="java.lang.String" 
+			column="stateCountyCode" 
+			length="10" 
+			not-null="false" 
+			unique="false"  
+		> 
+			<meta attribute="field-description"> 
+				@hibernate.property 
+				column="stateCountyCode" 
+				length="10" 
+			</meta> 
+		</property> 
+
+		<property name="metropolitanAreaCode" type="java.lang.String"
+			column="metropolitanAreaCode" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="metropolitanAreaCode"
+				length="40"
+			</meta>
+		</property>
+
+<property 
+name="censusTractNumber" 
+type="java.lang.String" 
+column="censusTractNumber" 
+length="80"
+not-null="false" 
+unique="false"  
+ > 
+  <meta attribute="field-Description"> 
+  @hibernate.property 
+  column="censusTractNumber" 
+  length="80" 
+  </meta> 
+</property>   
+  
+
+		<property name="rateSpread" type="java.lang.Double" column="rateSpread"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rateSpread" length="22"
+			</meta>
+		</property>
+
+
+		<property name="rate" type="java.lang.Double" column="rate"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rate" length="22"
+			</meta>
+		</property>
+
+		<property name="qualifyingRate" type="java.lang.Double"
+			column="qualifyingRate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="qualifyingRate" length="22"
+			</meta>
+		</property>
+		
+		<property name="apr" type="java.lang.Double" column="apr"
+			length="22" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="apr" length="22"
+			</meta>
+		</property>
+
+		<property name="pmRate" type="java.lang.Double" column="pmRate"
+			not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="pmRate"
+			</meta>
+		</property>
+		
+		<property name="pmPoints" type="java.lang.Double"
+			column="pmPoints" not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="pmPoints"
+			</meta>
+		</property>
+		
+									
+		<!-- Associations -->
+
+		<!-- bi-directional one-to-one association to LoanApplication -->
+		<one-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			property-ref="hmdaReport">
+			<meta attribute="field-description">
+				name="loanApplication"
+				class="com.dorado.generated.persistence.model.loan.LoanApplication"
+				property-ref="hmdaReport" />
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</one-to-one>
+		
+		<!-- uni-directional many-to-one association to Address-->
+		<many-to-one cascade="all" class="com.dorado.generated.persistence.dmcommon.contact.Address" 
+			insert="true" name="address" update="true">
+			<meta attribute="field-description" inherit="true">
+				@hibernate.many-to-one not-null="false"
+				@hibernate.column name="addrId"
+			</meta>
+			<column name="addrId"/>
+		</many-to-one>	
+
+		<!-- uni-directional many-to-one association to LoanType -->
+		<many-to-one name="hmdaLoanType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDALoanType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaLoanTypeCode"/>
+			</meta>
+			<column name="hmdaLoanTypeCode" />
+		</many-to-one>
+
+        <!-- uni-directional many-to-one association to FnmaPropertyType -->
+        <many-to-one name="hmdaPropertyType"
+            class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAPropertyType"
+            not-null="false"
+            column="hmdaPropertyTypeCode"
+            cascade="none"
+            >
+            <meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="false"
+				cascade="none"
+				@hibernate.column name="hmdaPropertyTypeCode"/>
+            </meta>
+        </many-to-one>
+        
+		<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="hmdaLoanPurposeType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDALoanPurposeType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaLoanPurposeTypeCode"/>
+			</meta>
+			<column name="hmdaLoanPurposeTypeCode" />
+		</many-to-one>
+
+        <!-- uni-directional many-to-one association to Residencetype -->
+       	<many-to-one name="hmdaOccupancyType"
+            class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAOccupancyType"
+       	    not-null="false" cascade="none">
+            <meta attribute="field-description">
+			@hibernate.many-to-one not-null="true" cascade="none"
+			@hibernate.column name="hmdaOccupancyTypeCode"/>
+            </meta>
+       	    <column name="hmdaOccupancyTypeCode"/>
+        </many-to-one>
+	        
+		<!-- uni-directional many-to-one association to HMDAActionType -->
+		<many-to-one name="actionTypeCode"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAActionType"
+			not-null="false" cascade="none" column="actionTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="actionTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to DecisionStatusType -->
+		<many-to-one name="decisionStatusType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DecisionStatusType"
+			not-null="false" cascade="none" column="decisionStatusTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="decisionStatusTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- Leaving cascades alone for this for now, could be investigated in the future -->
+		<!-- uni-directional many-to-one association to LoanProduct-->
+		<many-to-one cascade="none" class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProduct" 
+			insert="true" name="loanProduct" unique="false" update="true">
+			<meta attribute="field-description" inherit="true">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="loanProductId"
+			</meta>
+			<column name="loanProductId"/>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to LienType -->
+		<many-to-one name="hmdaLienType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDALienType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaLienTypeCode"/>
+			</meta>
+			<column name="hmdaLienTypeCode" />
+		</many-to-one>
+
+		<!-- Leaving cascades alone for this for now, could be investigated in the future -->
+		<!-- bi-directional many-to-one association to Interviewer -->
+		<many-to-one name="interviewer"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Interviewer"
+			not-null="false" column="interviewerId" cascade="all" index="LoanApp_Interviewer_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="interviewerId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to HMDABorrower -->
+		<set name="hmdaBorrowers" table="T_HMDABORROWER" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="hmdaReportId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDABorrower" />
+			</meta>
+			<key column="hmdaReportId" />
+			<one-to-many
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDABorrower" />
+		</set>
+
+		<!-- uni-directional many-to-one association to HMDADenialReasonType -->
+		<many-to-one name="hmdaDenialReasonTypeA"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDADenialReasonType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaDenialReasonTypeCodeA"/>
+			</meta>
+			<column name="hmdaDenialReasonTypeCodeA" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to HMDADenialReasonType -->
+		<many-to-one name="hmdaDenialReasonTypeB"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDADenialReasonType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaDenialReasonTypeCodeB"/>
+			</meta>
+			<column name="hmdaDenialReasonTypeCodeB" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to HMDADenialReasonType -->
+		<many-to-one name="hmdaDenialReasonTypeC"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDADenialReasonType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaDenialReasonTypeCodeC"/>
+			</meta>
+			<column name="hmdaDenialReasonTypeCodeC" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to HoepaStatus -->
+		<many-to-one name="hmdaHoepaStatusType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAHoepaStatusType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaHoepaStatusTypeCode"/>
+			</meta>
+			<column name="hmdaHoepaStatusTypeCode" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to HoepaStatus -->
+		<many-to-one name="hmdaPreapprovalType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAPreapprovalType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaPreapprovalTypeCode"/>
+			</meta>
+			<column name="hmdaPreapprovalTypeCode" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to HoepaStatus -->
+		<many-to-one name="hmdaPurchaserType"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAPurchaserType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="hmdaPurchaserTypeCode"/>
+			</meta>
+			<column name="hmdaPurchaserTypeCode" />
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+

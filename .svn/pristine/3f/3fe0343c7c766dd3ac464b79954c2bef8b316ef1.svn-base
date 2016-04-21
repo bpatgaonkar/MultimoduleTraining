@@ -1,0 +1,8 @@
+TYPECODE,GROUPCODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'ORIG','Responsibilities','Originator','0',sysdate,'0'
+'TPOR','Responsibilities','Third Party Orgination','0',sysdate,'0'
+'OWNR','System','Owner','0',sysdate,'0'
+'PROC','Responsibilities','Processor','0',sysdate,'0'
+'TRCD','Responsibilities','Transaction Coordination','0',sysdate,'0'
+'UW','Responsibilities','Underwriter','0',sysdate,'0'
+'WKGP','System','Workgroup','0',sysdate,'0'

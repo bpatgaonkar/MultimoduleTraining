@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.WebPage"
+		table="T_WEBPAGE" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_WEBPAGE"
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		
+		<meta attribute="root_region"/>
+
+		<id name="Id" column="webPageId" type="java.lang.Long">
+
+			<meta attribute="field-description">
+				Primary key for the web page.
+
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="webPageId"
+			</meta>
+
+			<generator class="native"></generator>
+
+		</id>
+
+		<property name="aliasUrl" type="java.lang.String"
+			column="aliasurl" length="255" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				"Alias" url (vanity web domain) that, when present, can
+				be used to uniquely select this particular website
+				instance.
+
+				@hibernate.property column="aliasurl" length="255"
+			</meta>
+
+		</property>
+
+		<property name="webPageUrl" type="java.lang.String"
+			column="webpageurl" length="255" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="webpageurl" length="255"
+			</meta>
+
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+
+		<many-to-one name="rootOrgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" column="CORPID" cascade="none">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="CORPID"/>
+			</meta>
+
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" column="orgEntityId" cascade="none">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to WebPageType -->
+		<many-to-one name="webPageType"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.WebPageType"
+			not-null="true" column="webPageTypeCode" cascade="all" update="true" insert="true">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="webpageTypeCode"/>
+			</meta>
+
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to PageSubjectItem -->
+
+		<set name="PageSubjectItem" table="T_PageSubjectItem"
+			lazy="true" inverse="true" cascade="all">
+
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="webPageId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.PageSubjectItem"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+
+			<key column="webPageId" />
+
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.PageSubjectItem" />
+
+		</set>
+
+	</class>
+
+</hibernate-mapping>
+

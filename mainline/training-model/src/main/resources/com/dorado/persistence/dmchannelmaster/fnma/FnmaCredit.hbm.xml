@@ -1,0 +1,210 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaCredit"
+ table="T_FNMACREDIT" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_FNMACREDIT"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+<id 
+name="Id"  
+column="creditResponseId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="creditResponseId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="creditReportId" 
+type="java.lang.Integer" 
+column="creditReportId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="creditReportId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="docGroupId" 
+type="java.lang.Integer" 
+column="docGroupId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="docGroupId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="omOrderId" 
+type="java.lang.Integer" 
+column="omOrderId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="omOrderId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="statusCode" 
+type="java.lang.String" 
+column="statusCode" 
+length="4" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="statusCode" 
+length="4" 
+</meta> 
+</property> 
+
+<property 
+name="uwRequestNumber" 
+type="java.lang.String" 
+column="uwRequestNumber" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="uwRequestNumber" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="errorMessage" 
+type="java.lang.String" 
+column="errorMessage" 
+length="4000" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="errorMessage" 
+length="4000" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Person -->
+<many-to-one name="coapplicantpersonid" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="false"
+cascade="all"
+column="COAPPLICANTpersonId"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="COAPPLICANTpersonId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to LoanApplication -->
+<many-to-one name="loanApplication" 
+class="com.dorado.generated.persistence.model.loan.LoanApplication" 
+not-null="true"
+cascade="none"
+column="loanApplicationId"
+index="FnmaCredit_Loan_Indx">
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="loanApplicationId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Person -->
+<many-to-one name="person" 
+class="com.dorado.generated.persistence.dmcommon.organization.Person" 
+not-null="true"
+cascade="all"
+column="personId"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="personId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to CreditBureauName -->
+<many-to-one name="creditBureauName" 
+class="com.dorado.generated.persistence.dmchannelmaster.credit.CreditBureauName" 
+not-null="true"
+cascade="all"
+column="creditBureauCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="creditBureauCode"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to UnderWritingType -->
+<many-to-one name="underWritingType" 
+class="com.dorado.generated.persistence.dmchannelmaster.integration.UnderWritingType" 
+not-null="true"
+cascade="none"
+column="underwritingTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="underwritingTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

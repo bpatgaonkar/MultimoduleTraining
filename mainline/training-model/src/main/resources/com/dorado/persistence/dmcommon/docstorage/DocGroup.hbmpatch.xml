@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup">
+
+		<__meta attribute="root_region" />
+
+	</class>
+</hibernate-mapping>
+

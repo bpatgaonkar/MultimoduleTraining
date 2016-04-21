@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'F','Face-to-Face','0',sysdate,'0'
+'I','Internet','0',sysdate,'0'
+'M','Mail','0',sysdate,'0'
+'T','Telephone','0',sysdate,'0'

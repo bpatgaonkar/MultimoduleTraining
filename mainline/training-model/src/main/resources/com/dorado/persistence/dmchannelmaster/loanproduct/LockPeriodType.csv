@@ -1,0 +1,10 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'FIFTEEN_DAY','1','15','15 day lock','0',sysdate,'0'
+'TWENTYONE_DAY','2','21','21 day lock','0',sysdate,'0'
+'THIRTY_DAY','3','30','30 day lock','0',sysdate,'0'
+'FOURTYFIVE_DAY','4','45','45 day lock','0',sysdate,'0'
+'SIXTY_DAY','5','60','60 day lock','0',sysdate,'0'
+'NINETY_DAY','6','90','90 day lock','0',sysdate,'0'
+'ONETWENTY_DAY','7','120','120 day lock','0',sysdate,'0'
+'ONEFIFTY_DAY','8','150','150 day lock','0',sysdate,'0'
+'ONEEIGHTY_DAY','9','180','180 day lock','0',sysdate,'0'

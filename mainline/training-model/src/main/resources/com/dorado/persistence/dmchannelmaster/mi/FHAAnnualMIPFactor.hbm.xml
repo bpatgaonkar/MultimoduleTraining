@@ -1,0 +1,152 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+
+  <class name="com.dorado.generated.persistence.dmchannelmaster.mi.FHAAnnualMIPFactor"
+    table="T_FHAANNUALMIPFACTOR" 
+    lazy="true" > 
+  
+    <meta attribute="class-description" inherit="false"> 
+      @hibernate.class table="T_FHAANNUALMIPFACTOR" 
+    </meta>
+    
+    <meta attribute="implements">
+      com.dorado.persistence.Identifiable
+    </meta>
+  
+    <id 
+      name="Id"  
+      column="annualMIPFactorId"  
+      type="java.lang.Long"
+      > 
+      <meta attribute="field-description">
+        @hibernate.id
+        generator-class="native"
+        type="java.lang.Long" 
+        column="annualMIPFactorId"  
+      </meta>
+      <generator class="native"> 
+      </generator> 
+    </id> 
+  
+    <property 
+      name="startDate" 
+      type="java.sql.Timestamp" 
+      column="startDate" 
+      length="7" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Earliest date the FHA Case Number was issued.
+        @hibernate.property 
+        column="startDate" 
+        length="7" 
+      </meta> 
+    </property>
+  
+    <property 
+      name="endDate" 
+      type="java.sql.Timestamp" 
+      column="endDate" 
+      length="7" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Latest date the FHA Case Number was issued.
+        @hibernate.property 
+        column="endDate" 
+        length="7" 
+      </meta> 
+    </property> 
+
+		<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmomcmshared.loan.LoanPurposeType"
+			not-null="true" column="loanPurposeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="loanPurposeCode"/>
+			</meta>
+		</many-to-one>
+    
+    <!-- uni-directional many-to-one association to TypeOfRefinance -->
+    <many-to-one name="typeOfRefinance"
+      class="com.dorado.generated.persistence.dmchannelmaster.borrower.type.TypeOfRefinance"
+      not-null="false" cascade="none">
+      <column name="TypeOfRefinanceCode" />
+    </many-to-one>
+    
+    <property name="minLtv" type="java.lang.Double" column="minLtv"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="minLtv" length="22"
+			</meta>
+		</property>
+    
+    <property name="maxLtv" type="java.lang.Double" column="maxLtv"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="maxLtv" length="22"
+			</meta>
+		</property>
+        
+    <property name="minLoanTerm" type="java.lang.Double" column="minLoanTerm"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="minLoanTerm" length="22"
+			</meta>
+		</property>
+    
+    <property name="maxLoanTerm" type="java.lang.Double" column="maxLoanTerm"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="maxLoanTerm" length="22"
+			</meta>
+		</property>
+
+    <!-- factor by which the loan amount is multiplied to get the annual MIP -->
+    <property 
+      name="annualMIPFactor" 
+      type="java.lang.Double" 
+      column="annualMIPFactor" 
+      length="22" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Factor by which the loan amount is multiplied to get the annual MIP
+        @hibernate.property 
+        column="annualMIPFactor" 
+        length="22" 
+      </meta> 
+    </property> 
+  
+  </class> 
+
+
+	<query name="dmchannelmaster.mi.getAnnualMIPFactor" cacheable="false">
+       FROM FHAAnnualMIPFactor annMIPFactor 
+      WHERE annMIPFactor.loanPurposeType  =  :loanPurposeType  AND 
+             (annMIPFactor.typeOfRefinance  =  :typeOfRefinance  OR
+              annMIPFactor.typeOfRefinance is null )           AND 
+                  	( annMIPFactor.minLtv &lt; :ltv             OR
+                  	annMIPFactor.minLtv is null )              AND 
+                  ( annMIPFactor.maxLtv &gt;= :ltv              OR
+                  	annMIPFactor.maxLtv is null )              AND  
+             ( annMIPFactor.minLoanTerm &lt; :loanTerm          OR
+                  	annMIPFactor.minLoanTerm is null )         AND  
+             ( annMIPFactor.maxLoanTerm &gt;= :loanTerm         OR
+                  	annMIPFactor.maxLoanTerm is null )         AND   
+                annMIPFactor.startDate  &lt;= :caseNoIssuedDate AND 
+                  ( annMIPFactor.endDate  &gt;= :caseNoIssuedDate OR
+                    annMIPFactor.endDate  is null) 
+	</query>
+
+
+
+</hibernate-mapping> 

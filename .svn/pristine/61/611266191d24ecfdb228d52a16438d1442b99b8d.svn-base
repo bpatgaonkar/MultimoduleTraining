@@ -1,0 +1,100 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.borrower.Tax"
+ table="T_TAX" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_TAX"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="taxId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="taxId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="taxAmount" 
+type="java.lang.Double" 
+column="taxAmount" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="taxAmount" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="otherTaxDescription" 
+type="java.lang.String" 
+column="otherTaxDescription" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="otherTaxDescription" 
+length="80" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Borrower -->
+<many-to-one name="borrower" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+not-null="true"
+cascade="all"
+column="borrowerId"
+index="Tax_Borrower_Indx"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="borrowerId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to TaxType -->
+<many-to-one name="taxType" 
+class="com.dorado.generated.persistence.dmchannelmaster.borrower.TaxType" 
+not-null="true"
+cascade="none"
+column="taxTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="taxTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

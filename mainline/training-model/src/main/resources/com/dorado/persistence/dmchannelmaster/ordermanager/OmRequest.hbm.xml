@@ -1,0 +1,136 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.ordermanager.OmRequest"
+ table="T_OMREQUEST" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_OMREQUEST"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<!-- TODO this is sharing the pk column with ClientOrder and OmOrderData should it be a one-to-one pk or fk relationship -->
+
+<id 
+name="Id"  
+column="omOrderDataId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="omOrderDataId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="snapshot" 
+type="com.dorado.persistence.type.OracleBlob"
+column="snapshot" 
+length="4000" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="snapshot" 
+length="4000" 
+</meta> 
+</property> 
+
+<property 
+name="snapshotDateTime" 
+type="java.sql.Timestamp" 
+column="snapshotDateTime" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="snapshotDateTime" 
+length="7" 
+</meta> 
+</property> 
+
+<property 
+name="transactionId" 
+type="java.lang.Integer" 
+column="transactionId" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="transactionId" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="serviceTypeCode" 
+type="java.lang.String" 
+column="serviceTypeCode" 
+length="32" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="serviceTypeCode" 
+length="32" 
+</meta> 
+</property> 
+
+<property 
+name="status" 
+type="java.lang.String" 
+column="Status" 
+length="32" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="Status" 
+length="32" 
+</meta> 
+</property> 
+
+
+ <!-- bi-directional one-to-many association to OmResponse -->
+<set  
+name="OmResponses"
+table="T_OmResponse"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="omOrderId"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmasterl.ordermanager.OmResponse" />
+</meta>
+<key column="omOrderId" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.ordermanager.OmResponse" />
+</set> 
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+

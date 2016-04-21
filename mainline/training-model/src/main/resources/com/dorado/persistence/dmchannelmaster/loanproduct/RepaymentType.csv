@@ -1,0 +1,6 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'SCHEDULED_AMORTIZING','1','F1','Scheduled Armortizing','0',sysdate,'0'
+'INTEREST_ONLY','2','F2','Interest Only','0',sysdate,'0'
+'NO_NEGATIVE_AMORT','3','N','No Negative Amortization - Fully Amortizing','0',sysdate,'0'
+'POSSIBLE_NEGATIVE_AMORT','4','P','Possible Negative Armortizing','0',sysdate,'0'
+'SCHEDULED_NEGATIVE_AMORT','5','S','Scheduled Negative Armortizing','0',sysdate,'0'

@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'NotRefundable','Not Refundable','0',sysdate,'0'
+'Refundable','Refundable','0',sysdate,'0'
+'RefundableWithLimits','Refundable with limits','0',sysdate,'0'

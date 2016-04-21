@@ -1,0 +1,7 @@
+ID,DISPLAYORDER,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','1','Fitch','0',sysdate,'0'
+'2','2','Standards & Poors','0',sysdate,'0'
+'3','3','Duff Phelps','0',sysdate,'0'
+'4','4','Demotech','0',sysdate,'0'
+'5','5','Lace','0',sysdate,'0'
+'6','6','Moody's','0',sysdate,'0'

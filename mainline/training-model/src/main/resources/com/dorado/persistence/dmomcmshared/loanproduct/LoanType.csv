@@ -1,0 +1,6 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+CONVENTIONAL,'1','01','Conventional','0',sysdate,'0'
+FEDERAL_HOUSING_ADMIN,'2','03','Federal Housing Administration','0',sysdate,'0'
+VETERANS,'-1','02','Veterans Administration','0',sysdate,'0'
+FARMERS_HOME_ADMIN,'-1','04','Farmers Home Administration','0',sysdate,'0'
+OTHER,'-1','07','Other Real Estate Loan','0',sysdate,'0'

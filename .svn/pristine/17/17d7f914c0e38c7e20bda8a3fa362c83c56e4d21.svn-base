@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.Employment"
+		table="T_EMPLOYMENT" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_EMPLOYMENT">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+		
+		<id name="Id" column="employmentId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="employmentId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="fromDate" type="java.sql.Timestamp"
+			column="fromDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fromDate" length="7"
+			</meta>
+		</property>
+
+		<property name="toDate" type="java.sql.Timestamp"
+			column="toDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="toDate" length="7"
+			</meta>
+		</property>
+
+		<property name="monthlyIncome" type="java.lang.Double"
+			column="monthlyIncome" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="monthlyIncome" length="22"
+			</meta>
+		</property>
+
+		<property name="percentBusinessOwn" type="java.lang.Double"
+			column="percentBusinessOwn" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="percentBusinessOwn"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="monthsOnJob" type="java.lang.Integer"
+			column="monthsOnJob" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="monthsOnJob" length="22"
+			</meta>
+		</property>
+
+		<property name="yearsInProfession" type="java.lang.Integer"
+			column="yearsInProfession" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="yearsInProfession"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="yearsOnJob" type="java.lang.Integer"
+			column="yearsOnJob" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="yearsOnJob" length="22"
+			</meta>
+		</property>
+
+		<property name="currentJobFlag" type="java.lang.Boolean"
+			column="currentJobFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="currentJobFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="primaryEmployerFlag" type="java.lang.Boolean"
+			column="primaryEmployerFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="primaryEmployerFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="selfEmployedFlag" type="java.lang.Boolean"
+			column="selfEmployedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="selfEmployedFlag" length="1"
+			</meta>
+		</property>
+
+
+		<property name="name" type="java.lang.String" column="name"
+			length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="40"
+			</meta>
+		</property>
+
+		<property name="position" type="java.lang.String"
+			column="position" length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="position" length="40"
+			</meta>
+		</property>
+
+		<property name="title" type="java.lang.String" column="title"
+			length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="title" length="40"
+			</meta>
+		</property>
+
+		<property name="typeOfBusiness" type="java.lang.String"
+			column="typeOfBusiness" length="80" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="typeOfBusiness" length="40"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Addr -->
+		<many-to-one name="address"
+			class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			not-null="false" cascade="all" column="ADDRID" index="employment_Address_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="ADDRID"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" column="borrowerId" cascade="all" index="employmentId_Borrower_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="borrowerId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Phone -->
+		<many-to-one name="phone"
+			class="com.dorado.generated.persistence.dmcommon.contact.Phone"
+			cascade="all" index="Employm_phone_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="all" @hibernate.column
+				name="phoneId"/>
+			</meta>
+			<column name="phoneId" />
+		</many-to-one>
+
+
+		<!-- bi-directional one-to-many association to Interviewer -->
+		<set name="Interviewer" table="T_Interviewer" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="employmentId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Interviewer"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />			
+			<key column="employmentId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.borrower.Interviewer" />
+		</set>
+
+		<!-- uni-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true"
+			table="T_CONDITION" cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="EMPLOYMENTID" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+		
+	</class>
+
+</hibernate-mapping>
+
+

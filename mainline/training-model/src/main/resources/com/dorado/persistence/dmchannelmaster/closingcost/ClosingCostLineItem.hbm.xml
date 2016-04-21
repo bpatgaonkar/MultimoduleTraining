@@ -1,0 +1,245 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.closingcost.ClosingCostLineItem"
+        table="T_CLOSINGCOSTLINEITEM"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+  @hibernate.class
+  table="T_CLOSINGCOSTLINEITEM">
+        </meta>
+
+        <meta attribute="implement-equals">true</meta>
+        <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+        <meta attribute="implements">com.dorado.persistence.Described</meta>
+        <meta attribute="generate-unidentifiable-transferobject"/>
+
+
+        <id
+            name="typeCode"
+            type="java.lang.String"
+            column="code"
+            length="16"
+            >
+            <meta attribute="use-in-equals">true</meta>
+
+            <generator class="assigned">
+            </generator>
+        </id>
+
+
+        <property
+            name="hudLine"
+            type="java.lang.String"
+            column="hudLine"
+            length="16"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="hudLine"
+                length="16"
+            </meta>
+        </property>
+
+
+        <property
+            name="displayType"
+            type="java.lang.String"
+            column="displaytype"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="displaytype"
+                length="1"
+            </meta>
+        </property>
+
+        <property
+            name="section"
+            type="java.lang.String"
+            column="section"
+            length="4"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="section"
+                length="4"
+            </meta>
+        </property>
+
+        <property
+            name="mismoType"
+            type="java.lang.String"
+            column="mismoType"
+            length="40"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="mismoType"
+                length="40"
+            </meta>
+        </property>
+
+        <property
+            name="calculated"
+            type="java.lang.Boolean"
+            column="calculated"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="calculated"
+                length="1"
+            </meta>
+        </property>
+
+        <property
+            name="brokerComp"
+            type="java.lang.Boolean"
+            column="brokerComp"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="brokerComp"
+                length="1"
+            </meta>
+        </property>
+
+        <property
+            name="description"
+            type="java.lang.String"
+            column="description"
+            length="255"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="description"
+                length="255"
+            </meta>
+        </property>
+        
+		<property
+            name="payeeNameEditFlag"
+            type="java.lang.Boolean"
+            column="payeeNameEditFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-description">
+@hibernate.property
+column="payeeNameEditFlag"
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="editableDebit"
+            type="java.lang.Boolean"
+            column="editableDebit"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="editableDebit"
+                length="1"
+            </meta>
+        </property>
+        
+        <property
+            name="editableCredit"
+            type="java.lang.Boolean"
+            column="editableCredit"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="editableCredit"
+                length="1"
+            </meta>
+        </property>
+        
+        <property
+            name="isDebit"
+            type="java.lang.Boolean"
+            column="isDebit"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="isDebit"
+                length="1"
+            </meta>
+        </property>
+        
+        <property
+            name="isCredit"
+            type="java.lang.Boolean"
+            column="isCredit"
+            length="1"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="isCredit"
+                length="1"
+            </meta>
+        </property>
+       
+	<!-- determines box assignment -->
+	 <many-to-one
+        name="scCategory"
+        class="com.dorado.generated.persistence.dmchannelmaster.closingcost.ScCategory"
+    >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+           @hibernate.column name="scCategory"         
+        </meta>
+        <column name="scCategory" />
+    </many-to-one>
+	<!--<property
+		name="scCategory"
+		type="java.lang.String"
+		column="scCategory"
+		length="6"
+		not-null="false"
+		unique="false"
+		>
+		<meta attribute="field-description">
+	                @hibernate.property
+        	        column="scCategory"
+                	length="6"
+		</meta>
+	</property>
+	-->
+    </class>
+
+</hibernate-mapping>

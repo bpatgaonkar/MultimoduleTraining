@@ -1,0 +1,70 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.model.loan.relationship.LoanCustRel"
+ table="T_LOANCUSTREL" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOANCUSTREL"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="loanCustRelId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="loanCustRelId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Customer -->
+<many-to-one name="customer" 
+class="com.dorado.generated.persistence.dmchannelmaster.organization.Customer" 
+not-null="true"
+cascade="all"
+column="customerId"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="customerId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to LoanApplication -->
+<many-to-one name="loanApplication" 
+class="com.dorado.generated.persistence.model.loan.LoanApplication" 
+not-null="true"
+cascade="all"
+index="LoanCustRel_Loan_Indx"
+column="loanApplicationId"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="loanApplicationId"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

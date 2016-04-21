@@ -1,0 +1,5 @@
+TYPECODE,DISPLAYORDER,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'0','1','Assumptions','0',sysdate,'0'
+'1','2','Divorce','0',sysdate,'0'
+'2','3','Bankruptcy','0',sysdate,'0'
+'3','4','Seller','0',sysdate,'0'

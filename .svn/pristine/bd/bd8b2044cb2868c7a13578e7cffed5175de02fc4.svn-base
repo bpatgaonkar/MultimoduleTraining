@@ -1,0 +1,3 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'Buyer','Buyer','0',sysdate,'0'
+'Seller','Seller','0',sysdate,'0' 

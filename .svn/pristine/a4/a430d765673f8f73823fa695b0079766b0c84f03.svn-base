@@ -1,0 +1,21 @@
+#NAME#,TYPECODE,STATUSGROUP,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+NEW,'NEW','NEW','New','0',sysdate,'0'
+APPROVE,'APPROVE','APPROVE','Approved','0',sysdate,'0'
+PREAPPROVE,'PREAPPROVE','APPROVE','Pre-Approval','0',sysdate,'0'
+CREDITAPPROVE,'CREDITAPPROVE','APPROVE','Credit Approval','0',sysdate,'0'
+SUSPEND,'SUSPEND','SUSPEND','Suspend Loan','0',sysdate,'0'
+SUSPENDREMOVE,'SUSPENDREMOVE','SUSPEND','Suspend Removed','0',sysdate,'0'
+CANCEL,'CANCEL','CANCEL','Cancel / Borrower Withdrew','0',sysdate,'0'
+REINSTATE,'REINSTATE','CANCEL','Loan Reinstated','0',sysdate,'0'
+COUNTERSTART,'COUNTERSTART','COUNTER','CounterOffer Started','0',sysdate,'0'
+COUNTERPRESENT,'COUNTERPRESENT','COUNTER','CounterOffer Presented','0',sysdate,'0'
+FIRSTDENYFINAL,'FIRSTDENYFINAL','DENY','1st Review/Denial - Final','0',sysdate,'0'
+FIRSTDENY,'FIRSTDENY','DENY','1st Review/Denial','0',sysdate,'0'
+SECONDDENY,'SECONDDENY','DENY','2nd Look/Denial - Final','0',sysdate,'0'
+NOTICEOFINCOMPLETE,'NOTICEOFINCOMPLETE','NOTICEOFINCOMPLETE','Notice of Incompleteness','0',sysdate,'0'
+INCOMPLETEREMOVE,'INCOMPLETEREMOVE','INCOMPLETEREMOVE','Incomplete Removed','0',sysdate,'0'
+COUNTERACCEPTED,'COUNTERACCEPTED','COUNTER','CounterOffer Accepted','0',sysdate,'0'
+COUNTERREJECTED,'COUNTERREJECTED','COUNTER','CounterOffer Rejected','0',sysdate,'0'
+
+
+

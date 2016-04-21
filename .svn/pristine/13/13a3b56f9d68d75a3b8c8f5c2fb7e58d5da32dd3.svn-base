@@ -1,0 +1,3 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+BORROWER,'BW','Applicant','0',sysdate,'0'
+COBORROWER,'QZ','Co-Applicant','0',sysdate,'0'

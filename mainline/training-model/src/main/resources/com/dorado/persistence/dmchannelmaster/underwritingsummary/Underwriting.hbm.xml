@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+		table="T_UNDERWRITING" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_UNDERWRITING">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="underwritingId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="underwritingId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<!-- properties related to APPROVE -->
+
+		<property 
+		    name="preApprovalDate" 
+		    type="java.sql.Timestamp" 
+		    column="preApprovalDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description">  
+	                @hibernate.property 
+	   	        column="preApprovalDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+		
+		<property 
+		    name="preApprovalExpirationDate" 
+		    type="java.sql.Timestamp" 
+		    column="preApprovalExpirationDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="preApprovalExpirationDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+		
+		<property 
+		    name="creditApprovalDate" 
+		    type="java.sql.Timestamp" 
+		    column="creditApprovalDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="creditApprovalDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+		
+		<property 
+		    name="creditApprovalExpirationDate" 
+		    type="java.sql.Timestamp" 
+		    column="creditApprovalExpirationDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="creditApprovalExpirationDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+
+		<property 
+		    name="approvalDate" 
+		    type="java.sql.Timestamp" 
+		    column="approvalDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="approvalDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+				
+		<property 
+		    name="approvalExpirationDate" 
+		    type="java.sql.Timestamp" 
+		    column="approvalExpirationDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="approvalExpirationDate" 
+		        length="7" 
+		    </meta> 
+		</property>
+
+		<property 
+			name="preApprovalUwOrderId" type="java.lang.Integer"
+			column="preApprovalUwOrderId" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="preApprovalUwOrderId"
+				length="22"
+			</meta>
+		</property>
+
+		<property 
+			name="creditApprovalUwOrderId" type="java.lang.Integer"
+			column="creditApprovalUwOrderId" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="creditApprovalUwOrderId"
+				length="22"
+			</meta>
+		</property>
+
+		<property 
+			name="approvalUwOrderId" type="java.lang.Integer"
+			column="approvalUwOrderId" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="approvalUwOrderId"
+				length="22"
+			</meta>
+		</property>
+
+		<!-- properties related to DENY -->
+
+		<property 
+		    name="firstDenialDate" 
+		    type="java.sql.Timestamp" 
+		    column="firstDenialDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="firstDenialDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+
+		<property 
+		    name="secondDenialDate" 
+		    type="java.sql.Timestamp" 
+		    column="secondDenialDate" 
+		    length="7" 
+		    not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="secondDenialDate" 
+		        length="7" 
+		    </meta> 
+		</property>
+
+		<property 
+			name="denialUwOrderId" type="java.lang.Integer"
+			column="denialUwOrderId" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="denialUwOrderId"
+				length="22"
+			</meta>
+		</property>
+
+	    <property
+	        name="infoByOutsideSource"
+	        type="java.lang.Boolean"
+	        column="infoByOutsideSource"
+	        length="1"
+	        not-null="false"
+	        unique="false">
+	        <meta attribute="field-description">
+	            @hibernate.property 
+	            column="infoByOutsideSource"
+	            length="1"
+	        </meta>
+	    </property>
+	    
+	    <property
+	        name="infoByCreditReportAgency"
+	        type="java.lang.Boolean"
+	        column="infoByCreditReportAgency"
+	        length="1"
+	        not-null="false"
+	        unique="false">
+	        <meta attribute="field-description">
+	            @hibernate.property 
+	            column="infoByCreditReportAgency"
+	            length="1"
+	        </meta>
+	    </property> 
+	    
+	    <property 
+	        name="fcAgencyName" 
+	        type="java.lang.String" 
+	        column="fcAgencyName"
+			    length="80" 
+	        not-null="false" 
+	        unique="false">
+		    <meta attribute="field-description">
+				    @hibernate.property 
+			column="fcAgencyName" 
+			length="80"
+		    </meta>
+		</property>
+
+		<!-- properties related to CANCEL-->
+
+		<property 
+		    name="cancellationDate" 
+		    type="java.sql.Timestamp" 
+		    column="cancellationDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="cancellationDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+	
+		<property 
+		    name="reinstatementDate" 
+		    type="java.sql.Timestamp" 
+		    column="reinstatementDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="reinstatementDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+
+		<property 
+			name="isCancelled" 
+			type="java.lang.Boolean"
+			column="isCancelled" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="isCancelled"
+				length="1"
+			</meta>
+		</property>
+
+		<!-- properties related to NOI-->
+
+		<property 
+		    name="noiNotificationDate" 
+		    type="java.sql.Timestamp" 
+		    column="noiNotificationDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="noiNotificationDatee" 
+		        length="7" 
+		    </meta> 
+		</property> 
+	
+		<property 
+		    name="noiExpirationDate" 
+		    type="java.sql.Timestamp" 
+		    column="noiExpirationDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="noiExpirationDate" 
+		        length="7" 
+		    </meta> 
+		</property>
+		
+		<property 
+			name="isIncomplete" 
+			type="java.lang.Boolean"
+			column="isIncomplete" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="isIncomplete"
+				length="1"
+			</meta>
+		</property>		
+
+		<!-- Properties related to Suspend -->
+		<property 
+		    name="suspendedDate" 
+		    type="java.sql.Timestamp" 
+		    column="suspendedDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="suspendedDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+	
+		<property 
+		    name="unSuspendedDate" 
+		    type="java.sql.Timestamp" 
+		    column="unSuspendedDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="unSuspendedDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+		
+		<property 
+			name="isSuspended" 
+			type="java.lang.Boolean"
+			column="isSuspended" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="isSuspended"
+				length="1"
+			</meta>
+		</property>
+
+		<!-- Properties related to Counter Offer -->
+<!-- PENDING need to change name of column -->
+		<property 
+		    name="counterAcceptedDate" 
+		    type="java.sql.Timestamp" 
+		    column="counterPresentedDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="counterAcceptedDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+
+		<property 
+		    name="counterRejectedDate" 
+		    type="java.sql.Timestamp" 
+		    column="counterRejectedDate" 
+		    length="7" 
+	            not-null="false" 
+		    unique="false"  
+		    > 
+		    <meta attribute="field-description"> 
+	                @hibernate.property 
+	   	        column="counterRejectedDate" 
+		        length="7" 
+		    </meta> 
+		</property> 
+
+
+		  <property name="monthlyPaymentAmount" type="java.lang.Double"
+		   column="monthlyPaymentAmount" length="22" not-null="false" unique="false">
+		   <meta attribute="field-description">
+		    @hibernate.property column="monthlyPaymentAmount" length="22"
+		   </meta>
+		  </property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional one-to-one association to LoanApplication -->
+		<one-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			property-ref="underwriting">
+			<meta attribute="field-description">
+				name="loanApplication"
+				class="com.dorado.generated.persistence.model.loan.LoanApplication"
+				property-ref="underwriting" />
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</one-to-one>
+	 
+		<!-- bi-directional one-to-many association to DecisionLog -->
+		<set name="decisionLogEntries" table="T_DECISIONLOG" lazy="true"
+			inverse="true" cascade="all"
+			sort="com.dorado.persistence.dmchannelmaster.underwritingsummary.DecisionLogComparator">
+			<meta attribute="property-type">java.util.SortedSet</meta>
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="underwritingId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DecisionLog" />
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="underwritingId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DecisionLog" />
+		</set>
+
+ 		<!-- bi-directional one-to-many association to UnderwritingNotes -->
+		<set name="underwritingNotes" table="T_UNDERWRITINGNOTE" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set
+				lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="underwritingId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UnderwritingNote" />
+			</meta>
+			<key column="underwritingId"/>
+			<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UnderwritingNote"/>
+		</set>
+
+		<!-- APPROVE-related Associations -->
+
+
+		<!-- uni-directional many-to-one association to UwModelType -->
+		<many-to-one name="preAppUwModelType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UwModelType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="preAppUwModelTypeCode"/>
+			</meta>
+			<column name="preAppUwModelTypeCode" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to UwModelType -->
+		<many-to-one name="creAppUwModelType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UwModelType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="creAppUwModelTypeCode"/>
+			</meta>
+			<column name="creAppUwModelTypeCode" />
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to UwModelType -->
+		<many-to-one name="approvalUwModelType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UwModelType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="approvalUwModelTypeCode"/>
+			</meta>
+			<column name="approvalUwModelTypeCode" />
+		</many-to-one>
+
+		<!-- DENY-related Associations -->
+
+		<!-- bi-directional one-to-many association to DenialReason -->
+		<set name="denialReasonEntries" table="T_DENIALREASON" lazy="true"
+			inverse="true" cascade="all"
+			order-by="denialReasonId desc">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="underwritingId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DenialReason" />
+			</meta>
+			<key column="underwritingId" />
+			<one-to-many
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DenialReason" />
+		</set>
+
+	    <!-- uni-directional many-to-one association to federal Compliance Agency Address -->
+		<many-to-one name="fcAgencyAddr"
+		    class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			not-null="false" 
+        	cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="fcAgencyAddrId"
+			</meta>
+			<column name="fcAgencyAddrId"/>
+		</many-to-one>
+
+	    <!-- uni-directional many-to-one association to Credit Report Agency -->
+		<many-to-one name="crAgency"
+		    class="com.dorado.generated.persistence.dmchannelmaster.credit.CreditReportAgency"
+			not-null="false" 
+        	cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="crAgencyId"
+			</meta>
+			<column name="crAgencyId"/>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to UwModelType -->
+		<many-to-one name="denialUwModelType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.UwModelType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="denialUwModelTypeCode"/>
+			</meta>
+			<column name="denialUwModelTypeCode" />
+		</many-to-one>
+		
+		<!-- CANCEL-related Associations -->
+		
+		<!-- uni-directional many-to-one association to CancellationReason -->
+		<many-to-one name="cancellationReason"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingcancel.CancellationReason"
+			not-null="false" cascade="none" column="cancellationReasonCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="cancellationReasonCode"
+			</meta>
+		</many-to-one>
+		
+
+		<!-- NOI-related Associations -->
+
+		<!-- bi-directional many-to-one association to IncompleteItem -->
+		<set name="incompleteItems" table="T_INCOMPLETEITEM" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="underwritingId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteItem"
+				/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-collection" />			
+			<key column="underwritingId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteItem" />
+		</set>
+		
+	</class>
+
+</hibernate-mapping>
+
+
+
+

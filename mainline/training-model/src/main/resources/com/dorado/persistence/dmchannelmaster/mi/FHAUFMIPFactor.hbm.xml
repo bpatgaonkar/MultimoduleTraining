@@ -1,0 +1,122 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+
+  <class name="com.dorado.generated.persistence.dmchannelmaster.mi.FHAUFMIPFactor"
+    table="T_FHAUFMIPFACTOR" 
+    lazy="true" > 
+  
+    <meta attribute="class-description" inherit="false"> 
+      @hibernate.class table="T_FHAUFMIPFACTOR
+    </meta>
+    
+    
+    <meta attribute="implement-equals">true</meta>
+    
+    <meta attribute="implements">
+      com.dorado.persistence.Identifiable
+    </meta>
+  
+
+    <id 
+      name="Id"  
+      column="ufmipFactorId"  
+      type="java.lang.Long"
+      > 
+      <meta attribute="field-description">
+        @hibernate.id
+        generator-class="native"
+        type="java.lang.Long" 
+        column="ufmipFactorId"  
+      </meta>
+      <generator class="native"> 
+      </generator> 
+    </id> 
+  
+    <property 
+      name="startDate" 
+      type="java.sql.Timestamp" 
+      column="startDate" 
+      length="7" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Earliest date the FHA Case Number was issued.
+        @hibernate.property 
+        column="startDate" 
+        length="7" 
+      </meta> 
+    </property>
+  
+    <property 
+      name="endDate" 
+      type="java.sql.Timestamp" 
+      column="endDate" 
+      length="7" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Latest date the FHA Case Number was issued.
+        @hibernate.property 
+        column="endDate" 
+        length="7" 
+      </meta> 
+    </property> 
+  
+  	<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmomcmshared.loan.LoanPurposeType"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="loanPurposeCode"/>
+			</meta>
+			<column name="loanPurposeCode" />
+		</many-to-one>
+
+    <many-to-one name="typeOfRefinance"
+      class="com.dorado.generated.persistence.dmchannelmaster.borrower.type.TypeOfRefinance"
+      not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="typeOfRefinance"/>
+			</meta>
+      <column name="TypeOfRefinanceCode" />
+    </many-to-one>
+
+    <!-- factor by which the loan amount is multiplied to get the Upfront MIP -->
+    <property 
+      name="ufmipFactor" 
+      type="java.lang.Double" 
+      column="ufmipFactor" 
+      length="22" 
+      not-null="false" 
+      unique="false"  
+      > 
+      <meta attribute="field-description"> 
+        Factor by which the loan amount is multiplied to get the Upfront MIP.
+        @hibernate.property 
+        column="ufmipFactor" 
+        length="22" 
+      </meta> 
+    </property> 
+  
+  </class> 
+  
+  <query name="dmchannelmaster.mi.getUFMIPFactor" cacheable="false">
+	   FROM FHAUFMIPFactor ufmipFactor 
+      WHERE ufmipFactor.loanPurposeType  =  :loanPurposeType   AND
+             (ufmipFactor.typeOfRefinance  =  :typeOfRefinance   OR
+      		   ufmipFactor.typeOfRefinance is null )           AND 
+                ufmipFactor.startDate  &lt;= :caseNoIssuedDate  AND 
+                   ( ufmipFactor.endDate &gt;= :caseNoIssuedDate  OR
+                     ufmipFactor.endDate is null ) 
+		
+	</query>
+
+</hibernate-mapping> 

@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'EXTENSION', 'Lock Extension' ,'0',sysdate,'0'
+'RELOCK','Relock', '0',sysdate,'0'
+'LOCKCHANGE','Lock (Term) Change','0',sysdate,'0'
+'FLOATDOWN','Float Down','0',sysdate,'0'
+'CHANGEPRODUCT','Change Product','0',sysdate,'0'

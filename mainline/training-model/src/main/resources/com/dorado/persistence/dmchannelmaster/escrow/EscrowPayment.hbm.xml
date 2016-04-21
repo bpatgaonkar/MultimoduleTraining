@@ -1,0 +1,102 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.escrow.EscrowPayment"
+ table="T_EscrowPayment" 
+ lazy="true" > 
+
+ <meta attribute="class-Description" inherit="false"> 
+  @hibernate.class
+  table="T_EscrowPayment"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+<id 
+name="Id"  
+column="EscrowPaymentId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="EscrowPaymentId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="amount" 
+type="java.lang.Double" 
+column="amount" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="amount" 
+length="22" 
+</meta> 
+</property> 
+
+
+<property 
+name="dueDate" 
+type="java.sql.Timestamp" 
+column="dueDate" 
+length="7" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-Description"> 
+@hibernate.property 
+column="dueDate" 
+length="7" 
+</meta> 
+</property> 
+
+ <property
+    name="sequenceIdentifier"
+    type="java.lang.Integer"
+    column="sequenceIdentifier"
+    length="22"
+    not-null="false"
+    unique="false"
+            >
+    <meta attribute="field-description">
+     @hibernate.property 
+     column="sequenceIdentifier" 
+     length="22"
+      </meta>
+      <meta attribute="do-not-generate-transferobject-property"/>                        
+      </property>
+
+
+ <!-- Associations --> 
+
+ <!-- uni-directional one-to-one association to Escrow-->
+
+    <many-to-one
+        name="escrow"
+        class="com.dorado.generated.persistence.dmchannelmaster.escrow.Escrow"
+        not-null="false"
+        cascade="all" >
+        <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all" 
+           @hibernate.column name="escrowId"         
+        </meta>
+        <meta attribute="do-not-generate-transferobject-property"/>                        
+        <column name="escrowId" />
+    </many-to-one>
+
+  
+</class> 
+ 
+ </hibernate-mapping> 
+

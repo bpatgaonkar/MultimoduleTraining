@@ -1,0 +1,3 @@
+TYPECODE,SESSIONID,TIMESTAMP,VERSION
+'INT','0',sysdate,'0'
+'FNL','0',sysdate,'0'

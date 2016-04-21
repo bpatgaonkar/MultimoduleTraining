@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DecisionLog"
+		table="T_DECISIONLOG" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_DECISIONLOG">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="id" column="decisionLogId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="decisionLogId"
+			</meta>
+
+			<generator class="native"></generator>
+		</id>
+
+		<property name="decisionStatusChangeDateTime"
+			type="java.sql.Timestamp" column="decisionStatusChangeDateTime"
+			length="7" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property
+				column="decisionStatusChangeDateTime" length="7"
+			</meta>
+		</property>
+
+		<property name="comments" type="java.lang.String"
+			column="comments" length="2000" not-null="false" unique="false">
+
+			<meta attribute="field-Description">
+				@hibernate.property column="comments" length="2000"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to DecisionStatusType -->
+		<many-to-one name="decisionStatusType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DecisionStatusType"
+			not-null="true" cascade="none" column="decisionStatusTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="decisionStatusTypeCode"
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to OrgEntity -->
+		<many-to-one name="underwriter"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="broker"/>
+			</meta>
+			<column name="underwriter" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Underwriting -->
+		<many-to-one name="underwriting"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+			not-null="true" column="underwritingId" cascade="save-update"
+			index="DecisionLog_Underwriting_Indx">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column
+				name="underwritingId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- uni-directional many-to-one association to DocGroup -->
+		<many-to-one name="docGroup"
+			class="com.dorado.generated.persistence.dmcommon.docstorage.DocGroup"
+			cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one cascade="all" @hibernate.column
+				name="docGroupId"/>
+			</meta>
+			<column name="docGroupId" />
+		</many-to-one>
+
+
+		<!-- uni-directional many-to-one association to omclientorderid
+			<many-to-one name="uwOrderId"
+			class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+			not-null="false" cascade="all" column="uwOrderId">
+			<meta attribute="field-description">
+			@hibernate.many-to-one not-null="false" cascade="all"
+			@hibernate.column name="uwOrderId"
+			</meta>
+			</many-to-one>
+		-->
+
+	</class>
+
+</hibernate-mapping>
+

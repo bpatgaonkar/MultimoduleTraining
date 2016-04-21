@@ -1,0 +1,5 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+TOTAL_NON_TAXABLE_INCOME_OTHER,'NTXO','Total Non Taxable Income - Other','0',sysdate,'0'
+TOTAL_NON_TAXABLE_INCOME_PRIMARY,'NTXP','Total Non Taxable Income - Primary','0',sysdate,'0'
+TOTAL_TAXABLE_INCOME_OTHER,'TAXO','Total Taxable Income - Other','0',sysdate,'0'
+TOTAL_TAXABLE_INCOME_PRIMARY,'TAXP','Total Taxable Income - Primary','0',sysdate,'0'

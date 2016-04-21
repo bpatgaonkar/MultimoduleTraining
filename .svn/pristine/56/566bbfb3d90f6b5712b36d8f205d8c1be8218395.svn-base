@@ -1,0 +1,102 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.transaction.DownPayment"
+ table="T_DOWNPAYMENT" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_DOWNPAYMENT"> 
+ </meta>
+        <meta attribute="implements">com.dorado.persistence.RegionRoot</meta>
+
+<id 
+name="Id"  
+column="downPaymentId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="downPaymentId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="amount" 
+type="java.lang.Double" 
+column="amount" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="amount" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="downPaymentExplanation" 
+type="java.lang.String" 
+column="downPaymentExplanation" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="downPaymentExplanation" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Transaction -->
+<many-to-one name="transaction" 
+class="com.dorado.generated.persistence.dmchannelmaster.transaction.Transaction" 
+not-null="true"
+cascade="all"
+column="transactionId"
+index="DownPaym_Transaction_Indx"
+>
+    <meta attribute="do-not-generate-transferobject-property"/>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="transactionId"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to DownPaymentSourceType -->
+<many-to-one name="downPaymentSourceType" 
+class="com.dorado.generated.persistence.dmchannelmaster.transaction.DownPaymentSourceType" 
+not-null="false"
+cascade="none"
+column="downPaymentSourceCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="downPaymentSourceCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

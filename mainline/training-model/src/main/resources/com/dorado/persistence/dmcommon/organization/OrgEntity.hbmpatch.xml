@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmcommon.organization.OrgEntity">
+		
+		<!-- NMLS loan officer originator ID -  min 4, max 12 chars -->
+		<property column="loanOriginatorId" length="12"
+			name="loanOriginatorId" type="java.lang.String">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="loanOriginatorId"
+				length="12"
+            </meta>
+		</property>
+		
+      <property
+            name="nmlsid"
+            type="java.lang.String"
+            length="12"
+            column="nmlsid"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="nmlsid"
+            length="12"
+            </meta>
+        </property>
+
+        <property
+            name="nickname"
+            type="java.lang.String"
+            length="20"
+            column="nickname"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="nickname"
+            length="20"
+            </meta>
+        </property>      
+		
+		
+        <!-- Associations -->
+
+        <!-- bi-directional one-to-one association to OrgMinData -->
+		<many-to-one name="orgMinData"
+			class="com.dorado.generated.persistence.dmchannelmaster.organization.OrgMinData"
+			column="orgMinDataId" cascade="all" unique="true"
+			index="OrgEntity_OrgMinData_Indx">
+			<meta attribute="field-description"> 
+				@hibernate.many-to-one 
+				@hibernate.column name="orgMinData"
+			</meta>
+		</many-to-one>
+		
+		<subclass
+			name="com.dorado.generated.persistence.dmcommon.organization.OrganizationUnit">
+			
+			<!-- NMLS company originator ID -  min 4, max 12 chars -->
+			<property column="compLoanOriginatorId" length="12"
+				name="compLoanOriginatorId" type="java.lang.String">
+				<meta attribute="field-description">
+					@hibernate.property
+					column="compLoanOriginatorId"
+					length="12"
+	            </meta>
+			</property>
+		
+			<!-- NMLS branch originator ID -  min 4, max 12 chars -->
+			<property column="branchLoanOriginatorId" length="12"
+				name="branchLoanOriginatorId" type="java.lang.String">
+				<meta attribute="field-description">
+					@hibernate.property
+					column="branchLoanOriginatorId"
+					length="12"
+	            </meta>
+			</property>
+			
+			<!-- list of underwritingAuthorities - this exists to get ownership to generate correctly -->
+			<set cascade="all-delete-orphan" inverse="true" lazy="true" name="underwritingAuthorities" >
+				<meta attribute="do-not-generate-transferobject-property" inherit="true"/>
+				<key column="orgEntityId" /> 
+				<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingAuthority" />
+			</set>
+		</subclass>
+		<subclass
+			name="com.dorado.generated.persistence.dmcommon.organization.Employee">
+			
+      
+        <!-- Computerized Homes Underwriting Management System (CHUMS) ID -  min 4, max 8 digits -->
+        <property
+            name="chumsId"
+            type="java.lang.String"
+            length="8"
+            column="CHUMSID"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="CHUMSID"
+            length="8"
+            </meta>
+        </property>
+        
+        <property
+            name="deAuthority"
+            type="java.lang.Boolean"
+            length="1"
+            column="DEAUTHORITY"            
+            >
+            <meta attribute="field-description">
+           @hibernate.property
+            column="DEAUTHORITY"
+            length="1"
+            </meta>
+        </property>
+
+      <!--
+				uni-directional many-to-one association to UnderwritingAuthority
+			-->
+			<many-to-one name="underwritingAuthority"
+				class="com.dorado.generated.persistence.dmchannelmaster.organization.UnderwritingAuthority"
+				cascade="none">
+				<meta attribute="field-description"> 
+					@hibernate.many-to-one cascade="none"
+					@hibernate.column name="UnderwritingAuthorityId"
+				</meta>
+				<column name="UnderwritingAuthorityId" />
+			</many-to-one>
+		</subclass>
+		
+	</class>
+</hibernate-mapping>

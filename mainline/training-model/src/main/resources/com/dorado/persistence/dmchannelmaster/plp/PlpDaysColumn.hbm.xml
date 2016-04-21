@@ -1,0 +1,87 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.plp.PlpDaysColumn"
+ table="T_PLPdaysColumn" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_PLPdaysColumn"> 
+ </meta>
+
+<id 
+name="daysColumn"  
+column="daysColumn"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="daysColumn"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="lockDays" 
+type="java.lang.Integer" 
+column="lockDays" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="lockDays" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="80" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="80" 
+</meta> 
+</property> 
+
+
+ <!-- bi-directional one-to-many association to Plp -->
+<set  
+name="Plps"
+table="T_Plp"
+lazy="true"
+inverse="true"
+cascade="all"
+>
+<meta attribute="field-description">
+@hibernate.set
+lazy="true"
+inverse="true"
+cascade="all"
+@hibernate.collection-key
+column="daysColumn"
+@hibernate.collection-one-to-many
+ class="com.dorado.generated.persistence.dmchannelmaster.plp.Plp" />
+</meta>
+<key column="daysColumn" /> 
+<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.plp.Plp" />
+</set> 
+</class> 
+ 
+ </hibernate-mapping> 
+

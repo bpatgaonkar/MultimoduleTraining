@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+  
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDABorrower"
+		table="T_HMDABORROWER" lazy="true">
+		<meta attribute="class-description" inherit="false"> @hibernate.class
+			table="T_HMDABORROWER"> </meta>
+		<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAReport</meta>
+
+		<id name="id" column="hmdaBorrowerId" type="java.lang.Long">
+			<meta attribute="field-description"> @hibernate.id generator-class="native"
+				type="java.lang.Long" column="hmdaBorrowerId" </meta>
+			<generator class="native"></generator>
+		</id>
+					
+	    <property
+	        name="firstName"
+	        type="java.lang.String"
+	        column="FIRSTNAME"
+	        length="64">
+	        <meta attribute="field-description">
+			   The borrower's first name.
+			   
+	           @hibernate.property
+	            column="FIRSTNAME"
+	            length="64"
+	        </meta>    
+	    </property>
+	    
+	    <property
+	        name="lastName"
+	        type="java.lang.String"
+	        column="LASTNAME"
+	        length="64">
+	        <meta attribute="field-description">
+			   The borrower's last name.
+	           @hibernate.property
+	            column="LASTNAME"
+	            length="64"
+	        </meta>    
+	    </property>
+	    
+	    <property
+	        name="middleName"
+	        type="java.lang.String"
+	        column="MIDDLENAME"
+	        length="64">
+	        <meta attribute="field-description">
+			   The borrower's middle name.
+	           @hibernate.property
+	            column="MIDDLENAME"
+	            length="64"
+	        </meta>    
+	    </property>
+			    
+		<property name="furnishRaceSexFlag" type="java.lang.Boolean"
+			column="furnishRaceSexFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="furnishRaceSexFlag"
+				length="1"
+			</meta>
+		</property>
+		
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Raceethnicitytype -->
+		<many-to-one name="raceEthnicityType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.RaceEthnicityType"
+			not-null="false" cascade="none" column="raceEthnicityTypeCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="raceEthnicityTypeCode"/>
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional many-to-one association to Race -->
+		 <many-to-one name="races"
+ 		  class="com.dorado.generated.persistence.dmchannelmaster.borrower.Race"
+ 		  not-null="false" cascade="all" index="Borrower_RACE_Indx" unique="true">
+  		 <meta attribute="field-description">
+   		 @hibernate.many-to-one not-null="true" cascade="all"
+    		@hibernate.column name="raceId"/>
+   		</meta>
+   		<column name="raceId" />
+  		</many-to-one>
+  		
+	    <many-to-one
+	        name="hmdaGender"
+	        class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAGenderType"
+	        cascade="none">
+	        <meta attribute="field-description">
+			   Person's gender.
+	
+	           @hibernate.many-to-one
+	            cascade="none" 
+	           @hibernate.column name="hmdaGenderTypeCode"
+	        </meta>
+	        <column name="hmdaGenderTypeCode" />
+	    </many-to-one>
+
+		<!-- bi-directional many-to-one association to HMDAReport -->
+		<many-to-one name="hmdaReport"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDAReport"
+			not-null="true" cascade="save-update" index="HMDABorrower_HMDAReport_Indx"
+			column="hmdaReportId">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column name="hmdaReportId"/> 
+			</meta>
+		</many-to-one>
+		
+		<!-- uni-directional one-to-one association to CoBorrower -->
+		<!-- need to model this similarly to regular borrower/cob object to simplify the UI -->
+		<many-to-one name="referencedCoborrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.hmda.HMDABorrower"
+			cascade="all" index="HMDABorrower_cob_Indx">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="coBrBorrowerId"/>
+			</meta>
+			<column name="coBrBorrowerId" />
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to FnmaApplCoAppl -->
+		<many-to-one name="applCoAppl"
+			class="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaApplCoAppl"
+			not-null="true" cascade="none"
+			column="applcoapplCode">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="applcoapplCode"/>
+			</meta>
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>  		

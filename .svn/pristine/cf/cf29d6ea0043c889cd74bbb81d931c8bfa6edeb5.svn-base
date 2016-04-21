@@ -1,0 +1,5 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'H','Will Remain or Become Primary or Additional Residence Retained','0',sysdate,'0'
+'P','Pending Sale','0',sysdate,'0'
+'R','Rental Being Held for Income Rental','0',sysdate,'0'
+'S','Already Sold','0',sysdate,'0'

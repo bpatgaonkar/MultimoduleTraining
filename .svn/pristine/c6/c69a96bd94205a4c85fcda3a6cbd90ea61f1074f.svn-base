@@ -1,0 +1,1032 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingDetail"
+		table="T_CLOSINGDETAIL" lazy="true">
+
+		<meta attribute="class-Description" inherit="false">
+			@hibernate.class table="T_CLOSINGDETAIL">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.model.loan.LoanApplication</meta>
+		
+		<id name="Id" column="closingDetailId" type="java.lang.Long">
+			<meta attribute="field-Description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="closingDetailId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="commitmentPaidByDate" type="java.sql.Timestamp"
+			column="commitmentPaidByDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="commitmentPaidByDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="lockinPaidByDate" type="java.sql.Timestamp"
+			column="lockinPaidByDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="lockinPaidByDate" length="7"
+			</meta>
+		</property>
+
+		<property name="loanRescissionDate" type="java.sql.Timestamp"
+			column="loanRescissionDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="loanRescissionDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="clearToCloseDate" type="java.sql.Timestamp"
+			column="clearToCloseDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="clearToCloseDate" length="7"
+			</meta>
+		</property>
+
+		<property name="noteDate" type="java.sql.Timestamp"
+			column="noteDate" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="noteDate"
+			</meta>
+		</property>
+
+		<property name="closingTime" type="java.lang.String" length="11"
+			column="closingTime" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="closingTime" length="11"
+			</meta>
+		</property>
+
+		<property name="confirm" type="java.lang.Boolean"
+			column="confirm" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="confirm"
+			</meta>
+		</property>
+
+		<property name="commitmentCondRepairAmt" type="java.lang.Double"
+			column="commitmentCondRepairAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="commitmentCondRepairAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="creditLifeInsuredestAmt" type="java.lang.Double"
+			column="creditLifeInsuredestAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="creditLifeInsuredestAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="disAbilityInsuredestAmt" type="java.lang.Double"
+			column="disAbilityInsuredestAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="disAbilityInsuredestAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="intPaidPerEscrowDep" type="java.lang.Double"
+			column="intPaidPerEscrowdep" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="intPaidPerEscrowdep"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="unEmpInsuredestAmt" type="java.lang.Double"
+			column="unEmpInsuredestAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="unEmpInsuredestAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="constructionTerm" type="java.lang.Integer"
+			column="constructionTerm" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="constructionTerm"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="loanProcessingTime" type="java.lang.Integer"
+			column="loanProcessingTime" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="loanProcessingTime"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="prePaymentPenaltyTerm" type="java.lang.Integer"
+			column="prePaymentPenaltyTerm" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="prePaymentPenaltyTerm"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="commitFeeIncludeOrigFeeFlag"
+			type="java.lang.Boolean" column="commitFeeIncludeOrigFeeFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="commitFeeIncludeOrigFeeFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="condCommitmentFlag" type="java.lang.Boolean"
+			column="condCommitmentFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="condCommitmentFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="consolidatedLoanFlag" type="java.lang.Boolean"
+			column="consolidatedloanFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="consolidatedloanFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="copyOfAppraisalFlag" type="java.lang.Boolean"
+			column="copyofappraisalFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="copyofappraisalFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="escrowAccountSetupFlag" type="java.lang.Boolean"
+			column="escrowaccountsetupFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="escrowaccountsetupFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="feesLockGuaranteedFlag" type="java.lang.Boolean"
+			column="feesLockguaranteedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="feesLockguaranteedFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="highRatePointFlag" type="java.lang.Boolean"
+			column="highratepointFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="highratepointFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="knownleadPaintMaterialFlag"
+			type="java.lang.Boolean" column="knownleadpaintmaterialFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="knownleadpaintmaterialFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="lockInAdditionalChargeFlag"
+			type="java.lang.Boolean" column="lockinadditionalchargeFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="lockinadditionalchargeFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="lockinFeeIncludeOrigFeeFlag"
+			type="java.lang.Boolean" column="lockinfeeincludeorigfeeFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="lockinfeeincludeorigfeeFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="otherLockguaranteedFlag"
+			type="java.lang.Boolean" column="otherLockGuaranteedFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="otherLockguaranteedFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="otherWithHomeSteadFlag" type="java.lang.Boolean"
+			column="otherwithhomesteadFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="otherwithhomesteadFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="pointsLockGuaranteedFlag"
+			type="java.lang.Boolean" column="pointsLockguaranteedFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="pointsLockguaranteedFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="rateAvailableFlag" type="java.lang.Boolean"
+			column="rateavailableFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="rateavailableFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="sellerLeadMaterialDocsFlag"
+			type="java.lang.Boolean" column="sellerleadmaterialdocsFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="sellerleadmaterialdocsFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="waiveRightClosingagentFlag"
+			type="java.lang.Boolean" column="waiverightclosingagentFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="waiverightclosingagentFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="waiveRightSelectAttorneyFlag"
+			type="java.lang.Boolean" column="waiverightselectattorneyFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property
+				column="waiverightselectattorneyFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="titleInTrustFlag" type="java.lang.Boolean"
+			column="titleInTrustFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="titleInTrustFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="assignedBrokerServices" type="java.lang.String"
+			column="assignedbrokerservices" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="assignedbrokerservices"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="commitCondOtherTypeDesc" type="java.lang.String"
+			column="commitcondotherTypeDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="commitcondothertypeDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="demandFeatureDesc" type="java.lang.String"
+			column="demandfeatureDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="demandfeatureDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="feesLockDesc" type="java.lang.String"
+			column="feesLockDesc" length="256" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="feesLockDesc" length="256"
+			</meta>
+		</property>
+
+		<property name="nyClosingCondOtherDesc" type="java.lang.String"
+			column="nyclosingcondotherDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="nyclosingcondotherDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="otherLockDesc" type="java.lang.String"
+			column="otherLockDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="otherLockDesc" length="256"
+			</meta>
+		</property>
+
+		<property name="prePaymentPenaltyDesc" type="java.lang.String"
+			column="prePaymentPenaltyDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="prePaymentPenaltyDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="homesteadInterestOwner" type="java.lang.String"
+			column="homesteadInterestOwner" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="homesteadInterestOwner"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="mersMinIdentifier" type="java.lang.String"
+			column="mersMinIdentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="mersMinIdentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="disclosedAPR" type="java.lang.Double"
+			column="disclosedAPR" length="22" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="disclosedAPR" length="22"
+			</meta>
+		</property>
+
+		<property name="disclosedFinancedCharge" type="java.lang.Double"
+			column="disclosedFinancedCharge" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="disclosedFinancedCharge"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="verifyAppraisalValueFlag"
+			type="java.lang.Boolean" column="verifyAppraisalValueFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="verifyAppraisalValueFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="borrLockInDaysB4Closing"
+			type="java.lang.Integer" column="borrLockInDaysB4Closing" length="22"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="borrLockInDaysB4Closing"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="lenderLockInDaysB4Closing"
+			type="java.lang.Integer" column="lenderLockInDaysB4Closing"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="lenderLockInDaysB4Closing"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="prelimTitleReportDate" type="java.sql.Timestamp"
+			column="prelimTitleReportDate" length="7" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="prelimTitleReportDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="consolClosingCondDesc" type="java.lang.String"
+			column="consolClosingCondDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="consolClosingCondDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="titleReportItemsDesc" type="java.lang.String"
+			column="titleReportItemsDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="titleReportItemsDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="titleReportReqEndorDesc" type="java.lang.String"
+			column="titleReportReqEndorDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="titleReportReqEndorDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="enclosedDocOtherDesc" type="java.lang.String"
+			column="enclosedDocOtherDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="enclosedDocOtherDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="cosignerName" type="java.lang.String"
+			column="cosignerName" length="256" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="cosignerName" length="256"
+			</meta>
+		</property>
+
+		<property name="mersSubmitDate" type="java.sql.Timestamp"
+			column="mersSubmitDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="mersSubmitDate" length="7"
+			</meta>
+		</property>
+
+		<property name="momOfRecordFlag" type="java.lang.Boolean"
+			column="momOfRecordFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="momOfRecordFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="closingWithPOAFlag" type="java.lang.Boolean"
+			column="closingWithPOAFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="closingWithPOAFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="escrowHoldBackFlag" type="java.lang.Boolean"
+			column="escrowHoldBackFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="escrowHoldBackFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="rePairAgreementExpDate"
+			type="java.sql.Timestamp" column="rePairAgreementExpDate" length="7"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="rePairAgreementExpDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="escrowFundsHeldAmt" type="java.lang.Double"
+			column="escrowFundsHeldAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="escrowFundsHeldAmt"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="mersAsMortgateSecurityInstFlag"
+			type="java.lang.Boolean" column="mersAsMortgateSecurityInstFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property
+				column="mersAsMortgateSecurityInstFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="finalBrokerCompResult" type="java.lang.Boolean"
+			column="finalBrokerCompResult" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="finalBrokerCompResult"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="upfrontBrokerCompResult"
+			type="java.lang.Boolean" column="upfrontBrokerCompResult" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="upfrontBrokerCompResult"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="ownerTitleInsuranceFlag"
+			type="java.lang.Boolean" column="ownerTitleInsuranceFlag" length="1"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="ownerTitleInsuranceFlag"
+				length="1"
+			</meta>
+		</property>
+		<property name="lastEscrowAnalysisDate"
+			type="java.sql.Timestamp" column="lastEscrowAnalysisDate" length="7"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="lastEscrowAnalysisDate"
+				length="7"
+			</meta>
+		</property>
+		<property name="escHoldbkRepairFundAmt" type="java.lang.Double"
+			column="escHoldbkRepairFundAmt" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="escHoldbkRepairFundAmt"
+				length="22"
+			</meta>
+		</property>
+		<property name="escHoldbkRepairExpDate"
+			type="java.sql.Timestamp" column="escHoldbkRepairExpDate" length="7"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="escHoldbkRepairExpDate"
+				length="7"
+			</meta>
+		</property>
+		<property name="floodZone" type="java.lang.String"
+			column="floodZone" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="floodZone"
+			</meta>
+		</property>
+		<property name="titleHeldClause" type="java.lang.String"
+			column="titleHeldClause" length="1200" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="titleHeldClause"
+				length="1200"
+			</meta>
+		</property>
+		<property name="fnmaPropertyRights" type="java.lang.String"
+			column="fnmaPropertyRights" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="fnmaPropertyRights"
+				length="40"
+			</meta>
+		</property>
+		<property name="disbursementNetProceeds" type="java.lang.Double"
+		  column="disbursementNetProceeds" length="22" not-null="false" 
+                  unique="false">
+		  <meta attribute="field-description">
+		  @hibernate.property column="disbursementNetProceeds" length="22"
+		</meta>
+		</property>
+
+                <property name="repairsDescription" type="java.lang.String" length="80"
+			column="repairsDescription" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="repairsDescription" length="80"
+			</meta>
+		</property>
+
+		<property name="waiveTimelyDisclosures" type="java.lang.Boolean"
+			column="waiveTimelyDisclosures" not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="waiveTimelyDisclosures"
+			</meta>
+		</property>
+		
+		<property name="hudApprovedFlag" type="java.lang.Boolean"
+			column="hudApprovedFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="hudApprovedFlag" length="1"
+			</meta>
+		</property>
+		
+		<property name="hudCureDate"
+			type="java.sql.Timestamp" column="hudCureDate" length="7"
+			not-null="false" unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="hudCureDate"
+				length="7"
+			</meta>
+		</property>
+
+		<property name="hudCurePaymentIdentifier" type="java.lang.String"
+			column="hudCurePaymentIdentifier" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-Description">
+				@hibernate.property column="hudCurePaymentIdentifier"
+				length="40"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to BrokerComp-->
+		<many-to-one name="brokerComp"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.BrokerComp"
+			not-null="false" cascade="all">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="brokerCompId"/>
+			</meta>
+			<column name="brokerCompId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to HoldbkRepairPaidByType-->
+		<many-to-one name="holdbkRepairPaidByType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.HoldbkRepairPaidByType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="holdbkRepairPaidByTypeCode"/>
+			</meta>
+			<column name="holdbkRepairPaidByTypeCode" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to HoldbkRepairHeldByType-->
+		<many-to-one name="holdbkRepairHeldByType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.HoldbkRepairHeldByType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="holdbkRepairHeldByTypeCode"/>
+			</meta>
+			<column name="holdbkRepairHeldByTypeCode" />
+		</many-to-one>
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to EscrowFundsSuppliedType-->
+		<many-to-one name="escrowFundsSuppliedType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.EscrowFundsSuppliedType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="escrowFundsSuppliedTypeCode"/>
+			</meta>
+			<column name="escrowFundsSuppliedTypeCode" />
+		</many-to-one>
+
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to EscrowFundsHeldTypeCode-->
+		<many-to-one name="escrowFundsHeldType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.EscrowFundsHeldType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="escrowFundsHeldTypeCode"/>
+			</meta>
+			<column name="escrowFundsHeldTypeCode" />
+		</many-to-one>
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to EnclosedDocType-->
+		<many-to-one name="enclosedDocType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.EnclosedDocType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="enclosedDocTypeCode"/>
+			</meta>
+			<column name="enclosedDocTypeCode" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to DocOrderClassType  -->
+		<many-to-one name="docOrderClassType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.DocOrderClassType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="docOrderClassTypeCode"/>
+			</meta>
+			<column name="docOrderClassTypeCode" />
+		</many-to-one>
+
+
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Person -->
+		<many-to-one name="servicerPerson"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="servicerPersonId"/>
+			</meta>
+			<column name="servicerPersonId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Person -->
+		<many-to-one name="brokerPerson"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="brokerPersonId"/>
+			</meta>
+			<column name="brokerPersonId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Person -->
+		<many-to-one name="sellerPerson"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="sellerPersonId"/>
+			</meta>
+			<column name="sellerPersonId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to ClosingAgent-->
+		<many-to-one name="closingAgent"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingAgent"
+			not-null="false" cascade="all">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="closingAgentId"/>
+			</meta>
+			<column name="closingAgentId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to RecordableDocument-->
+		<many-to-one name="recordableDocument"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.RecordableDocument"
+			not-null="false" column="recordableDocumentId" cascade="all">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="recordableDocumentId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to CreditDenialReason -->
+		<many-to-one name="creditDenialReason"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.CreditDenialReason"
+			not-null="false" column="creditDenialReasonId" cascade="all">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="creditDenialReasonId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to ChoiceRateLockType -->
+		<many-to-one name="ChoiceRateLockType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.ChoiceRateLockType"
+			not-null="false" column="choiceRateLockTypeCode" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="choiceRateLockTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to CommitmentCondType -->
+		<many-to-one name="commitmentCondType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.CommitmentCondType"
+			not-null="false" column="commitmentCondTypeCode" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="commitmentCondTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to CompEvidenceTitleType -->
+		<many-to-one name="compEvidenceTitleType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.CompEvidenceTitleType"
+			not-null="false" column="compEvidenceTitleTypeCode" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="compEvidenceTitleTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to NyClosingCondType -->
+		<many-to-one name="nyClosingCondType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.NyClosingCondType"
+			not-null="false" column="nyClosingCondTypeCode" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="nyClosingCondTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to OptOpenEscrowAcctType-->
+		<many-to-one name="optOpenEscrowAcctType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.OptOpenEscrowAcctType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="OptOpenEscrowAcctTypeCode"/>
+			</meta>
+			<column name="OptOpenEscrowAcctTypeCode" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to taxEscrowOptionType-->
+		<many-to-one name="taxEscrowOptionType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.TaxEscrowOptionType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="taxEscrowOptionTypeCode"/>
+			</meta>
+			<column name="taxEscrowOptionTypeCode" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to OrgEntity -->
+		<many-to-one name="mersSubmitter"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="mersSubmitter"/>
+			</meta>
+			<column name="mersSubmitter" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to DocDrawnInNameType-->
+		<many-to-one name="docDrawnInNameType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.DocDrawnInNameType"
+			not-null="false" column="docDrawnInNameTypeCode" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="docDrawnInNameTypeCode"/>
+			</meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</many-to-one>
+
+		<!--  many-to-one association to Address -->
+		<many-to-one name="closingAddress"
+			class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			not-null="false" cascade="all" index="closingDetail_addr_Indx">
+			<meta attribute="field-description">
+				Location at which closing occurs. Only City, state, and
+				County used.
+
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="CLOSINGADDRID"
+			</meta>
+			<column name="CLOSINGADDRID" />
+		</many-to-one>
+
+
+		<!-- bi-directional one-to-many association to LoanApplication 
+			<set  
+			name="LoanApplications"
+			table="T_LoanApplication"
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			>
+			<meta attribute="field-Description">
+			@hibernate.set
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			@hibernate.collection-key
+			column="closingDetailId"
+			@hibernate.collection-one-to-many
+			class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</meta>
+			<key column="closingDetailId" /> 
+			<one-to-many class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</set> 
+		-->
+
+		<!--  many-to-one association to WarehouseSeller -->
+		<many-to-one name="warehouseSeller"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.WarehouseSeller"
+			not-null="false" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="WAREHOUSESELLERID"
+			</meta>
+			<column name="WAREHOUSESELLERID" />
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to EnclosedDoc-->
+		<set name="EnclosedDoc" table="T_EnclosedDoc" lazy="true"
+			inverse="true" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.set lazy="true" inverse="true" cascade="all"
+				@hibernate.collection-key column="closingDetailId"
+				@hibernate.collection-one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.docstart.EnclosedDoc"
+				/>
+			</meta>
+			<key column="closingDetailId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.docstart.EnclosedDoc" />
+		</set>
+
+		<!-- bi-directional one-to-many association to ClosingAgent -->
+		<set name="settlementAgents" table="T_ClosingAgent" lazy="true"
+			cascade="all" inverse="true" order-by="closingAgentId asc">
+			<key column="closingDetailId" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingAgent" />
+		</set>
+
+		<!-- uni-directional many-to-one association to taxEscrowOptionType-->
+		<many-to-one name="hudCureMethodType"
+			class="com.dorado.generated.persistence.dmchannelmaster.docstart.HudCureMethodType"
+			not-null="false" cascade="none">
+			<meta attribute="field-Description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="hudCureMethodTypeCode"/>
+			</meta>
+			<column name="hudCureMethodTypeCode" />
+		</many-to-one>
+
+
+	</class>
+
+</hibernate-mapping>
+
+
+
+

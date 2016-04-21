@@ -1,0 +1,9 @@
+TYPECODE,CODE,ACTION,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'ORIGINATED','1','APPROVE','Loan originated','0',sysdate,'0'
+'NOT_ACCEPTED','2','CANCEL','Application approved but not accepted by applicant(s)','0',sysdate,'0'
+'DENIED','3','DENY','Application Denied','0',sysdate,'0'
+'WITHDRAWN','4','CANCEL','Application withdrawn by applicant','0',sysdate,'0'
+'NOTICE_OF_INCOMPLETE','5','NOTICE_OF_INCOMPLETE','Closed for Incompleteness','0',sysdate,'0'
+'PURCHASED','6','APPROVE','Loan purchased','0',sysdate,'0'
+'PA_DENIED','7','DENY','Preapproval denied','0',sysdate,'0'
+'PA_NOT_ACCEPTED','8','CANCEL','Preapproval approved but not accepted by applicant(s)','0',sysdate,'0'

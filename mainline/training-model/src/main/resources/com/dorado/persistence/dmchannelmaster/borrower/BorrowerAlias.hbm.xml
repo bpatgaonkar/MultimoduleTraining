@@ -1,0 +1,67 @@
+<?xml version="1.0"?> 
+	<!DOCTYPE hibernate-mapping 
+		PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+	<class 
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.BorrowerAlias"
+ 		table="T_BORROWERALIAS" 
+ 		lazy="true" > 
+
+		<meta attribute="class-description" inherit="false"> 
+			@hibernate.class
+			table="T_BORROWERALIAS"> 
+		</meta>
+
+		<meta attribute="implements" inherit="true">com.dorado.persistence.Identifiable</meta> 
+
+		<id name="Id" column="borrowerAliasId" type="java.lang.Long"> 
+			<meta attribute="field-description">
+				@hibernate.id
+				generator-class="native"
+				type="java.lang.Long" 
+				column="borrowerAliasId"  
+			</meta>
+			<generator class="native"> 
+			</generator> 
+		</id> 
+
+		<property 
+			name="aliasName" 
+			type="java.lang.String" 
+			column="aliasName" 
+			length="128" 
+			not-null="false" 
+			unique="false"> 
+			<meta attribute="field-description"> 
+				@hibernate.property 
+				column="aliasName" 
+				length="128" 
+			</meta> 
+		</property> 
+
+		<!-- Associations --> 
+
+		<!-- bi-directional many-to-one association to BorrowerID -->
+		<many-to-one name="borrower" 
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower" 
+			not-null="true"
+			cascade="none"
+			column="borrowerId"
+			index="BorrowerAlias_BorrowerId_Indx">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one
+				not-null="true"
+				cascade="none"
+				@hibernate.column name="borrowerId"/> 
+			</meta>
+		</many-to-one>
+
+	</class> 
+
+</hibernate-mapping> 
+
+

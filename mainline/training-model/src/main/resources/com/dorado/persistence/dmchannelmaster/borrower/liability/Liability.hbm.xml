@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class 
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.Liability"
+		table="T_LIABILITY" lazy="true" discriminator-value="LIAB">
+		<meta attribute="class-description" inherit="false"> @hibernate.class
+			table="T_LIABILITY"> </meta>
+		<meta attribute="implements"> com.dorado.persistence.RegionRoot </meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower</meta>
+		<id name="Id" column="liabilityId" type="java.lang.Long">
+			<meta attribute="field-description"> @hibernate.id generator-class="native"
+				type="java.lang.Long" column="liabilityId" </meta>
+			<generator class="native"></generator>
+		</id>
+		<discriminator column="liabilityDiscriminator" type="string" length="6"/>
+		<property name="accountOpenedDate" type="java.sql.Timestamp"
+			column="accountOpenedDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="accountOpenedDate"
+				length="7" </meta>
+		</property>
+		<property name="lastActivityDate" type="java.sql.Timestamp"
+			column="lastActivityDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="lastActivityDate"
+				length="7" </meta>
+		</property>
+		<property name="creditLimit" type="java.lang.Double" column="creditLimit"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="creditLimit"
+				length="22" </meta>
+		</property>
+		<property name="currentOutsBalance" type="java.lang.Double"
+			column="currentOutsBalance" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="currentOutsBalance"
+				length="22" </meta>
+		</property>
+		<property name="monthlyPayment" type="java.lang.Double"
+			column="monthlyPayment" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="monthlyPayment"
+				length="22" </meta>
+		</property>
+		<property name="monthsLeftToPay" type="java.lang.Integer"
+			column="monthsLeftTopPay" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="monthsLeftTopPay"
+				length="22" </meta>
+		</property>
+		<property name="jointFlag" type="java.lang.Boolean" column="jointFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="jointFlag"
+				length="1" </meta>
+			<meta attribute="do-not-generate-transferobject-property" />
+		</property>
+		<property name="omittedFlag" type="java.lang.Boolean" column="omittedFlag"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="omittedFlag"
+				length="1" </meta>
+		</property>
+		<property name="reSubordinatedFlag" type="java.lang.Boolean"
+			column="reSubordinatedFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="reSubordinatedFlag"
+				length="1" </meta>
+		</property>
+		<!-- On UI field width should be 30. Since it is encrypted it takes more space! -->
+		<property name="encryptedAccountNum" type="java.lang.String"
+			column="accountNumber" length="80" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="accountNumber"
+				length="80" </meta>
+			<meta attribute="do-not-generate-transferobject-property" />				
+		</property>
+		<property name="liabilityResolutionPartyType" type="java.lang.String"
+			column="liabilityResolutionPartyType" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="liabilityResolutionPartyType" length="40" </meta>
+		</property>
+		<property name="lienHolder" type="java.lang.String" column="lienHolder"
+			length="40" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="lienHolder"
+				length="40" </meta>
+		</property>
+		<property name="description" type="java.lang.String" column="description"
+			length="255" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="description"
+				length="255" </meta>
+		</property>
+		<property name="daysLate90" type="java.lang.Integer" column="daysLate90"
+			length="4" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="daysLate90"
+				length="4" </meta>
+		</property>
+		<property name="daysLate60" type="java.lang.Integer" column="daysLate60"
+			length="4" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="daysLate60"
+				length="4" </meta>
+		</property>
+		<property name="daysLate30" type="java.lang.Integer" column="daysLate30"
+			length="4" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="daysLate30"
+				length="4" </meta>
+		</property>
+		<property name="derogatoryIndicator" type="java.lang.String"
+			column="derogatoryIndicator" length="64" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="derogatoryIndicator" length="64" </meta>
+		</property>
+		<!--
+			position of liability in the combined list of borrower and
+			co-borrower liability. It is a bug if the liability has the same
+			position for the same borrower.
+		-->
+		<property name="position" type="java.lang.Integer" column="position"
+			not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="position" </meta>
+		</property>
+		<property name="accountStatusType" type="java.lang.String"
+			column="accountStatusType" length="50" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="description"
+				length="50" </meta>
+		</property>
+		<property name="highCreditAmount" type="java.lang.Double"
+			column="highCreditAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="highCreditAmount"
+				length="22" </meta>
+		</property>
+		<property name="accountClosedDate" type="java.sql.Timestamp"
+			column="accountClosedDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="accountClosedDate"
+				length="7" </meta>
+		</property>
+		<property name="pastDueAmount" type="java.lang.Double"
+			column="pastDueAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="pastDueAmount"
+				length="22" </meta>
+		</property>
+		<property name="unpaidBalanceAmount" type="java.lang.Double"
+			column="unpaidBalanceAmount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property
+				column="unpaidBalanceAmount" length="22" </meta>
+		</property>
+		<property name="termsMonthsCount" type="java.lang.Integer"
+			column="termsMonthsCount" length="22" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="termsMonthsCount"
+				length="22" </meta>
+		</property>
+		<property name="paymentPattern" type="java.lang.String"
+			column="paymentPattern" length="255" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="paymentPattern"
+				length="255" </meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!--  many-to-one association to accountType-->
+		<many-to-one name="accountType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.type.AccountType"
+			not-null="false" cascade="none" column="accountTypeCode">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="none" @hibernate.column name="accountTypeCode"/> </meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!--  many-to-one association to payOffType-->
+		<many-to-one name="payOffType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.DebtPayOffType"
+			not-null="false" cascade="none" column="payOffType">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="none" @hibernate.column name="payOffType"/> </meta>
+		</many-to-one>
+
+
+		<!--  many-to-one association to Address-->
+		<many-to-one name="address"
+			class="com.dorado.generated.persistence.dmcommon.contact.Address"
+			not-null="false" cascade="all" index="Li_Ad"
+			column="addrId">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="all" @hibernate.column name="addrId"/> </meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Asset -->
+		<many-to-one name="assetInternal"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Asset" index="Li_As">
+			<meta attribute="field-description"> @hibernate.many-to-one
+				@hibernate.column name="assetId"/> </meta>
+			<meta attribute="do-not-generate-transferobject-property" />				
+			<column name="assetId" />
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Borrower -->
+		<many-to-one name="borrower"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Borrower"
+			not-null="false" cascade="save-update" index="Li_Bo"
+			column="borrowerId">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column name="borrowerId"/> </meta>
+			<meta attribute="runtime" inherit="false">copy-from-transfer-object-first</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Liabilitytype -->
+		<many-to-one name="liabilityType"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.liability.LiabilityType"
+			not-null="false" cascade="none"
+			column="LiabilityTypeCode">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="none" @hibernate.column name="LiabilityTypeCode"/> </meta>
+		</many-to-one>
+		
+		<!-- Associations -->
+
+		<!-- bi-directional one-to-many association to ConditionValue -->
+		<set name="conditions" lazy="true" inverse="true" table="T_CONDITION"
+			cascade="none">
+			<meta attribute="do-not-generate-transferobject-collection" />
+			<key column="LIABILITYID" />
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.conditions.ConditionValue" />
+		</set>
+        <!-- uni-directional many-to-one association to omclientorderid-->
+		<many-to-one name="orderId"
+			class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+			not-null="false" cascade="none" column="omClientOrderId">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="false"
+				cascade="all" @hibernate.column name="omClientOrderId" </meta>
+		</many-to-one>
+
+   <!-- bi-directional many-to-one association to Phone -->
+		<many-to-one name="LienHolderPhone"
+			class="com.dorado.generated.persistence.dmcommon.contact.Phone"
+			cascade="all" index="Li_Ph">
+			<meta attribute="field-description"> @hibernate.many-to-one cascade="all"
+				@hibernate.column name="lienHolderPhone"/> </meta>				
+			<column name="lienHolderPhone" />
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>

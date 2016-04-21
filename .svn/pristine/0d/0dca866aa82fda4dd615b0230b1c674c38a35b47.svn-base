@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'TaxReturnTranscripts','Tax Return Transcripts','0',sysdate,'0'
+'VerificationOfNonfiling','Verification Of Nonfiling','0',sysdate,'0'
+'W-2s','W-2s','0',sysdate,'0'
+'CopyOfTaxReturnOnly','Copy Of Tax Return Only','0',sysdate,'0'
+'All','All','0',sysdate,'0'

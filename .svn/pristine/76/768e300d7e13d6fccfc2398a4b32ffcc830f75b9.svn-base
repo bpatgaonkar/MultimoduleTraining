@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.underwritingincomplete.IncompleteNote"
+        table="T_INCOMPLETENOTE"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+              @hibernate.class
+              table="T_INCOMPLETENOTE"
+        </meta>
+
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>        
+
+        <id
+            name="id"
+            column="incompleteNoteId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-description">
+                @hibernate.id
+                generator-class="native"
+                type="java.lang.Long"
+                column="incompleteNoteId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="createdDate"
+            type="java.sql.Timestamp"
+            column="createdDate"
+            length="7"
+            not-null="true"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="createdDate"
+                length="7"
+            </meta>
+        </property>
+
+        <property
+            name="body"
+            type="java.lang.String"
+            column="body"
+            length="4000"
+            not-null="false"
+            >
+            <meta attribute="field-description">
+                @hibernate.property
+                column="body"
+                length="4000"
+            </meta>
+        </property>
+
+
+    </class>
+
+</hibernate-mapping>
+

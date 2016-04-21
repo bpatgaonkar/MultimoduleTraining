@@ -1,0 +1,115 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.loan.DocType"
+ table="T_docType" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_docType"> 
+ </meta>
+    <meta attribute="implement-equals">true</meta>
+    <meta attribute="implements">com.dorado.persistence.EnumeratedType</meta>
+    <meta attribute="implements">com.dorado.persistence.Described</meta>
+<id 
+name="typeCode"  
+column="docType"  
+type="java.lang.String" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.String" 
+column="docType"  
+</meta>
+<meta attribute="use-in-equals">true</meta>
+<generator class="native">
+</generator> 
+</id> 
+
+<property 
+name="displayOrder" 
+type="java.lang.Integer" 
+column="displayOrder" 
+length="22" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="displayOrder" 
+length="22" 
+</meta> 
+</property> 
+
+<property 
+name="requiresassetsFlag" 
+type="java.lang.Boolean" 
+column="requiresassetsFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="requiresassetsFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="requiresemploymentFlag" 
+type="java.lang.Boolean" 
+column="requiresemploymentFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="requiresemploymentFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="requiresincomeFlag" 
+type="java.lang.Boolean" 
+column="requiresincomeFlag" 
+length="1" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="requiresincomeFlag" 
+length="1" 
+</meta> 
+</property> 
+
+<property 
+name="description" 
+type="java.lang.String" 
+column="description" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="description" 
+length="255" 
+</meta> 
+</property> 
+
+
+</class> 
+ 
+ </hibernate-mapping> 
+
+

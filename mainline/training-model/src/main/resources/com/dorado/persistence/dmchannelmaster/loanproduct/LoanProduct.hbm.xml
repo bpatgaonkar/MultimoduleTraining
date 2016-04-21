@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProduct"
+		table="T_LOANPRODUCT" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_LOANPRODUCT">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="loanProductId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="loanProductId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="effectiveDate" type="java.sql.Timestamp"
+			column="effectiveDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="effectiveDate" length="7"
+			</meta>
+		</property>
+
+		<property name="expirationDate" type="java.sql.Timestamp"
+			column="expirationDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="expirationDate" length="7"
+			</meta>
+		</property>
+
+		<property name="cltv" type="java.lang.Double" column="cltv"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="cltv" length="22"
+			</meta>
+		</property>
+		<property name="firstAdjustmentCap" type="java.lang.Double"
+			column="firstAdjustmentCap" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstAdjustmentCap"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="firstAdjustmentFloor" type="java.lang.Double"
+			column="firstAdjustmentFloor" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstAdjustmentFloor"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="hazardInsAvaThruLenderCost"
+			type="java.lang.Double" column="hazardInsAvaThruLenderCost"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hazardInsAvaThruLenderCost"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="helocMaxBalanceAmount" type="java.lang.Double"
+			column="helocMaxBalanceAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="helocMaxBalanceAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="homeEquityInitialAmount" type="java.lang.Double"
+			column="homeEquityInitialAmount" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="homeEquityInitialAmount"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="indexMargin" type="java.lang.Double"
+			column="indexMargin" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="indexMargin" length="22"
+			</meta>
+		</property>
+
+		<property name="indexValue" type="java.lang.Double"
+			column="indexValue" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="indexValue" length="22"
+			</meta>
+		</property>
+
+		<property name="lateChargeRate" type="java.lang.Double"
+			column="lateChargeRate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lateChargeRate" length="22"
+			</meta>
+		</property>
+
+		<property name="lifeFloor" type="java.lang.Double"
+			column="lifeFloor" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lifeFloor" length="22"
+			</meta>
+		</property>
+
+		<property name="lifeTimeCap" type="java.lang.Double"
+			column="lifeTimeCap" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lifeTimeCap" length="22"
+			</meta>
+		</property>
+
+		<property name="ltv" type="java.lang.Double" column="ltv"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="ltv" length="22"
+			</meta>
+		</property>
+
+		<property name="negativeArmLimit" type="java.lang.Double"
+			column="negativeArmLimit" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="negativeArmLimit"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="periodicCap" type="java.lang.Double"
+			column="periodicCap" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodicCap" length="22"
+			</meta>
+		</property>
+
+		<property name="periodicFloor" type="java.lang.Double"
+			column="periodicFloor" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodicFloor" length="22"
+			</meta>
+		</property>
+
+		<property name="periodPaymentCap" type="java.lang.Double"
+			column="periodPaymentCap" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="periodPaymentCap"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="points" type="java.lang.Double" column="points"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="points" length="22"
+			</meta>
+		</property>
+
+		<property name="qualifyingRate" type="java.lang.Double"
+			column="qualifyingRate" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="qualifyingRate" length="22"
+			</meta>
+		</property>
+
+		<property name="rate" type="java.lang.Double" column="rate"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rate" length="22"
+			</meta>
+		</property>
+
+		<property name="rateCapBase" type="java.lang.Double"
+			column="rateCapBase" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rateCapBase" length="22"
+			</meta>
+		</property>
+
+		<property name="servicingValue" type="java.lang.Double"
+			column="servicingValue" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="servicingValue" length="22"
+			</meta>
+		</property>
+
+		<property name="srpValue" type="java.lang.Double"
+			column="srpValue" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="srpValue" length="22"
+			</meta>
+		</property>
+
+		<property name="adjustmentPeriod" type="java.lang.Integer"
+			column="adjustmentPeriod" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="adjustmentPeriod"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="balloonPeriod" type="java.lang.Integer"
+			column="balloonPeriod" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="balloonPeriod" length="22"
+			</meta>
+		</property>
+
+		<property name="firstAdjustmentPeriod" type="java.lang.Integer"
+			column="firstAdjustmentPeriod" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="firstAdjustmentPeriod"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="hazardAvaThruLenderTermYear"
+			type="java.lang.Integer" column="hazardAvaThruLenderTermYear"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hazardAvaThruLenderTermYear"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="lateChargeGracePeriodDays"
+			type="java.lang.Integer" column="lateChargeGracePeriodDays"
+			length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lateChargeGracePeriodDays"
+				length="22"
+			</meta>
+		</property>
+
+		<property name="loanProgramId" type="java.lang.Integer"
+			column="loanProgramId" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanProgramId" length="22"
+			</meta>
+		</property>
+
+		<property name="loanTerm" type="java.lang.Integer"
+			column="loanTerm" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="loanTerm" length="22"
+			</meta>
+		</property>
+
+		<property name="lockPeriodDays" type="java.lang.Integer"
+			column="lockPeriodDays" length="22" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lockPeriodDays" length="22"
+			</meta>
+		</property>
+
+		<property name="assumabilityIndicator" type="java.lang.Boolean"
+			column="assumabilityIndicator" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="assumabilityIndicator"
+				length="1"
+			</meta>
+			<meta attribute="scope-get">public</meta>
+			<meta attribute="scope-set">public</meta>
+		</property>
+
+		<property name="balloonIndicator" type="java.lang.Boolean"
+			column="balloonIndicator" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="balloonIndicator" length="1"
+			</meta>
+		</property>
+
+		<property name="interestOnlyFlag" type="java.lang.Boolean"
+			column="interestOnlyFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="interestOnlyFlag" length="1"
+			</meta>
+		</property>
+
+
+		<property name="demandFeatureIndicator" type="java.lang.Boolean"
+			column="demandFeatureIndicator" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="demandFeatureIndicator"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="duAcceptProgramFlag" type="java.lang.Boolean"
+			column="duAcceptProgramFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="duAcceptProgramFlag"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="fixedConvertFlag" type="java.lang.Boolean"
+			column="fixedConvertFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fixedConvertFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="hazardInsAvaThruLenderInd"
+			type="java.lang.Boolean" column="hazardInsAvaThruLenderInd"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="hazardInsAvaThruLenderInd"
+				length="1"
+			</meta>
+		</property>
+
+		<property name="impoundsFlag" type="java.lang.Boolean"
+			column="impoundsFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="impoundsFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="negativeArmFlag" type="java.lang.Boolean"
+			column="negativeArmFlag" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="negativeArmFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="pmiFlag" type="java.lang.Boolean"
+			column="pmiFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="pmiFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="prePayFinanceChargeRefundInd"
+			type="java.lang.Boolean" column="prePayFinanceChargeRefundInd"
+			length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="prePayFinanceChargeRefundInd" length="1"
+			</meta>
+		</property>
+
+		<property name="planCode" type="java.lang.String"
+			column="planCode" length="4" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="planCode" length="4"
+			</meta>
+		</property>
+
+		<property name="subordinateLienTypeCode" type="java.lang.String"
+			column="subordinateLienTypeCode" length="4" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="subordinateLienTypeCode"
+				length="4"
+			</meta>
+		</property>
+
+		<property name="rateSheetNo" type="java.lang.String"
+			column="rateSheetNo" length="24" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="rateSheetNo" length="24"
+			</meta>
+		</property>
+
+		<property name="caseNumber" type="java.lang.String"
+			column="caseNumber" length="32" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="caseNumber" length="32"
+			</meta>
+		</property>
+
+		<property name="fiProgramCode" type="java.lang.String"
+			column="fiProgramCode" length="32" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fiProgramCode" length="32"
+			</meta>
+		</property>
+
+		<property name="fnmaProgramId" type="java.lang.String"
+			column="fnmaProgramId" length="40" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="fnmaProgramId" length="40"
+			</meta>
+		</property>
+
+		<property name="lpAcceptProgramFlag" type="java.lang.String"
+			column="lpAcceptProgramFlag" length="40" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="lpAcceptProgramFlag"
+				length="40"
+			</meta>
+		</property>
+
+		<property name="agencyCaseNumber" type="java.lang.String"
+			column="agencyCaseNumber" length="64" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="agencyCaseNumber"
+				length="64"
+			</meta>
+		</property>
+
+		<property name="otherAmortTypeDescription"
+			type="java.lang.String" column="otherAmortTypeDescription"
+			length="80" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherAmortTypeDescription"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="otherMortgageDescription"
+			type="java.lang.String" column="otherMortgageDescription" length="80"
+			not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="otherMortgageDescription"
+				length="80"
+			</meta>
+		</property>
+
+		<property name="programDesc" type="java.lang.String"
+			column="programDesc" length="255" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="programDesc" length="255"
+			</meta>
+		</property>
+
+		<property name="programIdentifier" type="java.lang.String"
+			column="programIdentifier" length="255" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="programIdentifier"
+				length="255"
+			</meta>
+		</property>
+		<property name="aprSpread" type="java.lang.Double"
+			column="aprSpread" length="22" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="aprSpread" length="22"
+			</meta>
+		</property>
+
+		<property name="demandFeatureDesc" type="java.lang.String"
+			column="demandFeatureDesc" length="256" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="demandFeatureDesc"
+				length="256"
+			</meta>
+		</property>
+
+		<property name="highCostFlag" type="java.lang.Boolean"
+			column="highCostFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="highCostFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="dataChangeFlag" type="java.lang.Boolean"
+			column="dataChangeFlag" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="dataChangeFlag" length="1"
+			</meta>
+		</property>
+
+		<property name="validityStatus" type="java.lang.String"
+			column="validityStatus" length="1" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="validityStatus" length="1"
+			</meta>
+		</property>
+
+		<property name="pmResponseDate" type="java.sql.Timestamp"
+			column="pmresponseDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="pmresponseDate" length="7"
+			</meta>
+		</property>
+
+		<property name="actionDate" type="java.sql.Timestamp"
+			column="actionDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="actionDate" length="7"
+			</meta>
+		</property>
+
+
+		<property name="payment" type="java.lang.Double" column="payment"
+			length="22" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="payment" length="22"
+			</meta>
+		</property>
+
+		<property name="apr" type="java.lang.Double" column="apr"
+			length="22" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="apr" length="22"
+			</meta>
+		</property>
+
+		<property name="lockActionTypeCount" type="java.lang.Integer"
+			column="lockActionTypeCount" length="5" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibername.property column="lockActionTypeCount"
+				length="5"
+			</meta>
+		</property>
+
+		<property name="pmRate" type="java.lang.Double" column="pmRate"
+			not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="pmRate"
+			</meta>
+		</property>
+		<property name="pmPoints" type="java.lang.Double"
+			column="pmPoints" not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="pmPoints"
+			</meta>
+		</property>
+
+		<property name="branchDiscretionaryAdjPoints"
+			type="java.lang.Double" column="branchDiscretionaryAdjPoints"
+			not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property
+				column="branchDiscretionaryAdjPoints"
+			</meta>
+		</property>
+
+		<property name="discretionaryOveragePoints"
+			type="java.lang.Double" column="discretionaryOveragePoints"
+			not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="discretionaryOveragePoints"
+			</meta>
+		</property>
+		<property name="borrowerCost" type="java.lang.Double"
+			column="borrowerCost" not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="borrowerCost"
+			</meta>
+		</property>
+		<property name="branchIncome" type="java.lang.Double"
+			column="branchIncome" not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="branchIncome"
+			</meta>
+		</property>
+
+		<property name="overage" type="java.lang.Double" column="overage"
+			not-null="false" unique="false">
+			<meta attribute="field-descriptor">
+				@hibernate.property column="overage"
+			</meta>
+		</property>
+		<property name="rateOverwritten" type="java.lang.Boolean"
+		  column="rateOverwritten" length="1" not-null="false"
+		  unique="false">
+		  <meta attribute="field-description">
+		  @hibernate.property column="rateOverwritten" length="1"
+		  </meta>
+		</property>
+
+		<property name="overwrittenQualifyingRate" type="java.lang.Double"
+		column="overwrittenQualifyingRate" length="22" not-null="false"
+		unique="false">
+		<meta attribute="field-description">
+		@hibernate.property column="overwrittenQualifyingRate" length="22"
+		</meta>
+		</property>
+
+		<property name="isOverride" type="java.lang.Boolean"
+			column="ISOVERRIDE" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="ISOVERRIDE"
+				length="1"
+				This indicates whether the program was selected via the override functionality and therefor
+				eligibility rules were skipped.
+			</meta>
+			<meta attribute="scope-get">public</meta>
+			<meta attribute="scope-set">public</meta>
+		</property>
+		
+		<property name="isPricingCurrent" type="java.lang.Boolean"
+			column="isPricingCurrent" length="1" not-null="false"
+			unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="isPricingCurrent"
+				length="1"
+				This indicates whether pricing is current when this loan program was returned by PriceMaster. 
+				It is mapped to HasBaseRatesForEffectiveDateIndicator in PM response.
+			</meta>
+		</property>
+		
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Orgentity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="false" column="orgEntityId" cascade="all">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+		<!-- uni directional many-to-one association -->
+		<many-to-one name="lockActionType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockActionType"
+			not-null="false" column="lockActionType" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column.name="lockActionType"
+			</meta>
+		</many-to-one>
+		<!-- uni-directional many-to-one association to indexType-->
+		<many-to-one name="indexTypeCode"
+			class="com.dorado.generated.persistence.dmchannelmaster.fnma.FnmaIndexType"
+			not-null="false" column="indexTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="indexTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to AffordableLoanType -->
+		<many-to-one name="affordableLoanType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.AffordableLoanType"
+			not-null="false" column="affordableLoanTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="affordableLoanTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Amortizationtype -->
+		<many-to-one name="amortizationType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.AmortizationType"
+			not-null="false" column="amortizationTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="amortizationTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to Doctype -->
+		<many-to-one name="docType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loan.DocType"
+			not-null="false" column="docType" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="docType"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LienType -->
+		<many-to-one name="lienType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LienType"
+			not-null="false" column="lienTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="lienTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LoanProductType -->
+		<many-to-one name="loanProductType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProductType"
+			not-null="true" column="loanProductTypeCode" cascade="none">
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LoanPurposeType -->
+		<many-to-one name="loanPurposeType"
+			class="com.dorado.generated.persistence.dmomcmshared.loan.LoanPurposeType"
+			not-null="false" column="loanPurposeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="loanPurposeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LoanType -->
+		<many-to-one name="loanType"
+			class="com.dorado.generated.persistence.dmomcmshared.loanproduct.LoanType"
+			not-null="false" column="loanTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="loanTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LockPreference-->
+		<many-to-one name="lockPreference"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockPreference"
+			not-null="false" column="lockPreference" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="lockPreference"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LockType -->
+		<many-to-one name="lockType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockType"
+			not-null="false" column="lockTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="all"
+				@hibernate.column name="lockTypeCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to PaymentFrequency -->
+		<many-to-one name="PaymentFrequency"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.PaymentFrequency"
+			not-null="false" column="paymentFrequencyCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="paymentFrequencyCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to PurposeRefinanceType -->
+		<many-to-one name="purposeRefinanceType"
+			class="com.dorado.generated.persistence.model.loan.type.PurposeRefinanceType"
+			not-null="false" column="purposeRefinanceCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="purposeRefinanceCode"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to RepaymentType -->
+		<many-to-one name="RepaymentType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.RepaymentType"
+			not-null="false" column="repaymentTypeCode" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="repaymentTypeCode"/>
+			</meta>
+		</many-to-one>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to LoanApplication-->
+		<many-to-one name="loanApplication"
+			class="com.dorado.generated.persistence.model.loan.LoanApplication"
+			not-null="false" column="loanApplicationId" cascade="save-update"
+			index="LoanProd_LoanApp_Indx">
+			<meta attribute="do-not-generate-transferobject-property" />
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="save-update"
+				@hibernate.column name="loanApplicationId"/>
+			</meta>
+		</many-to-one>
+
+         <!-- Associations -->
+
+		<!-- uni-directional many-to-one association to LockExtensionDaysType-->
+		<many-to-one name="lockExtensionDaysType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LockExtensionDaysType"
+			not-null="false" column="lockExtensionDaysType" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="lockExtensionDaysType"/>
+			</meta>
+		</many-to-one>
+
+
+		<!-- one-to-many association to LoanProductAttributeValue -->
+		<!-- This is to be replaced with new table called T_LoanProductAttribute 
+			which will have either blob or varchar.
+		-->
+		<!--  <set
+			name="LoanProductAttributeValues"
+			table="T_LoanProductAttriValue"
+			lazy="true"
+			inverse="true"
+			cascade="all-delete-orphan"
+			>
+			<key column="loanProductid"/>        
+			<one-to-many class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProductAttributeValue"/>
+			</set>
+		-->
+		<!-- this is one to one relationship to T_LoanProductAttribute -->
+		<many-to-one name="productAttribute"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProductAttribute"
+			column="loanProductAttributeId" cascade="save-update" unique="true"
+			index="LP_Attribute_Indx">
+
+			<meta attribute="do-not-generate-transferobject-property" />
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one unique="true" />
+			</meta>
+		</many-to-one>
+
+	      <!-- uni-directional many-to-one association to FreddieMacOffering-->
+		<many-to-one name="freOfferingIdentifier"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.FreOfferingIdentifier"
+			not-null="false" cascade="none">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="false" cascade="none"
+				@hibernate.column name="freOfferingIdentifier"/>
+			</meta>
+			<column name="freOfferingIdentifier" />
+		</many-to-one>
+
+
+
+
+		<!-- one-to-many association to PricingOverride -->
+		<set name="pricingOverrides" table="T_PRICINGOVERRIDE"
+			lazy="true" cascade="all-delete-orphan">
+			<key>
+				<column name="loanProductId"
+					index="LP_PricingOverride_Indx" />
+			</key>
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.PricingOverride" />
+		</set>
+		<!--  one-to-many association to ProductAppliedRule -->
+		<set name="ProductAppliedRules" table="T_ProductAppliedRule"
+			lazy="true" cascade="all-delete-orphan">
+
+			<meta attribute="do-not-generate-transferobject-property" />
+
+			<key>
+				<column name="loanProductid"
+					index="LoanProdAppRule_Indx" />
+			</key>
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.ProductAppliedRule" />
+		</set>
+
+		<!--  one-to-many association to ProductAppliedRule -->
+		<set name="productSubsidies" table="T_PRODUCTSUBSIDY"
+			lazy="true" cascade="all-delete-orphan">
+
+			<meta attribute="do-not-generate-transferobject-property" />
+
+			<key>
+				<column name="loanProductId"
+					index="prodSub_Loanprod_Indx" />
+			</key>
+			<one-to-many
+				class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.ProductSubsidy" />
+		</set>
+
+		<!-- uni-directional many-to-one association to LoanProductType. This is for a history of all used loan products. -->
+		<many-to-one name="originalActionType"
+			class="com.dorado.generated.persistence.dmchannelmaster.loanproduct.LoanProductType"
+			not-null="false" cascade="none">
+
+			<column name="originalActionType" />
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>

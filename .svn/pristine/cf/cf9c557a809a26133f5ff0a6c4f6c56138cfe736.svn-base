@@ -1,0 +1,99 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.TaxPayment"
+        table="T_TAXPAYMENT"
+        lazy="true">
+
+        <meta attribute="class-description" inherit="false">
+	  @hibernate.class
+	  table="T_TAXPAYMENT">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+
+        <id
+            name="Id"
+            type="java.lang.Long"
+            column="TAXPAYMENTID"
+            >
+            <meta attribute="field-description">
+	@hibernate.id
+	generator-class="native"
+	type="java.lang.Long" 
+	column="TAXPAYMENTID"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="dateSequence"
+            type="java.lang.Integer"
+            column="DATESEQUENCE"
+            length="10"
+            not-null="true"
+            unique="false"
+            update="false"
+            >
+            <meta attribute="field-description">
+	@hibernate.property 
+	column="DATESEQUENCE" 
+	length="10"
+            </meta>
+        </property>
+
+
+        <property
+            name="disbursementDateDay"
+            type="java.lang.Integer"
+            column="DUEDATEDAY"
+            length="10"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+	@hibernate.property
+	column="DISBURSEMENTDATEDAY"
+	length="10"
+            </meta>
+        </property>
+
+        <property
+            name="disbursementDateMonth"
+            type="java.lang.Integer"
+            column="DUEDATEMONTH"
+            length="10"
+            not-null="true"
+            unique="false"
+            >
+            <meta attribute="field-description">
+	@hibernate.property
+	column="DISBURSEMENTDATEMONTH"
+	length="10"
+            </meta>
+        </property>
+
+        <!-- bi-directional many-to-one association to TaxPayee -->
+        <many-to-one name="taxPayee"
+            class="com.dorado.generated.persistence.dmchannelmaster.escrow.lookup.TaxPayee"
+            not-null="true"
+            column="taxpayeeId"
+            cascade="none"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="taxpayeeId"/>
+            </meta>
+            <meta attribute="do-not-generate-transferobject-property"/>
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>
+
+

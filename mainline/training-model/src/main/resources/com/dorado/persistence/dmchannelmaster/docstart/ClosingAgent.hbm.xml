@@ -1,0 +1,326 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingAgent"
+        table="T_ClosingAgent"
+        lazy="true">
+
+        <meta attribute="class-Description" inherit="false">
+  @hibernate.class
+  table="T_ClosingAgent">
+        </meta>
+        <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+        <id
+            name="Id"
+            column="closingAgentId"
+            type="java.lang.Long"
+            >
+            <meta attribute="field-Description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long"
+column="closingAgentId"
+            </meta>
+            <generator class="native">
+            </generator>
+        </id>
+
+        <property
+            name="closingAgentName"
+            type="java.lang.String"
+            column="closingAgentName"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="closingAgentName"
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="closingAgentTypeOtherDesc"
+            type="java.lang.String"
+            column="closingAgentTypeOtherDesc"
+            length="256"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="closingAgentTypeOtherDesc"
+length="256"
+            </meta>
+        </property>
+
+        <property
+            name="orderNumIdentifier"
+            type="java.lang.String"
+            column="orderNumIdentifier"
+            length="80"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="orderNumIdentifier"
+length="80"
+            </meta>
+        </property>
+
+        <property
+            name="CATaxIdentification"
+            type="java.lang.String"
+            column="CATaxIdentification"
+            length="256"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="CATaxIdentification"
+length="256"
+            </meta>
+        </property>
+
+        <property
+            name="feeExceedsLimitFlag"
+            type="java.lang.Boolean"
+            column="feeExceedsLimitFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="feeExceedsLimitFlag"
+length="1"
+            </meta>
+        </property>
+
+        
+        <property
+            name="confirmed"
+            type="java.lang.Boolean"
+            column="confirmed"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+    @hibernate.property
+    column="confirmed"
+    length="1"
+            </meta>
+        </property>
+
+        <property
+            name="interimInterestCredit"
+            type="java.lang.Boolean"
+            column="interimInterestCredit"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+    @hibernate.property
+    column="interimInterestCredit"
+    length="1"
+            </meta>
+        </property>
+
+         
+        <property
+            name="notes"
+            type="java.lang.String"
+            column="notes"
+            length="4000"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="notes"
+length="80"
+            </meta>
+        </property>
+
+
+        <property
+            name="nonPersonEntityFlag"
+            type="java.lang.Boolean"
+            column="nonPersonEntityFlag"
+            length="1"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="nonPersonEntityFlag"
+length="1"
+            </meta>
+        </property>
+
+        <property
+            name="lenderTitleCoverPremAmt"
+            type="java.lang.Double"
+            column="lenderTitleCoverPremAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="lenderTitleCoverPremAmt"
+length="22"
+            </meta>
+        </property>
+
+        <property
+            name="ownerTitleCoverPremAmt"
+            type="java.lang.Double"
+            column="ownerTitleCoverPremAmt"
+            length="22"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="ownerTitleCoverPremAmt"
+length="22"
+            </meta>
+        </property>
+   
+        <property
+            name="url"
+            type="java.lang.String"
+            column="url"
+            length="2000"
+            not-null="false"
+            unique="false"
+            >
+            <meta attribute="field-Description">
+@hibernate.property
+column="url"
+length="80"
+            </meta>
+        </property>
+
+
+        <!-- Associations -->
+
+
+        <!-- uni-directional one-to-one association to Address -->
+
+        <many-to-one
+            name="closingAgentAddr"
+            class="com.dorado.generated.persistence.dmcommon.contact.Address"
+            not-null="false"
+            cascade="all"
+            index="closingAgent_addr_Indx"
+           >
+            <meta attribute="field-description">
+           @hibernate.many-to-one
+            not-null="false" cascade="all"
+           @hibernate.column name="closingAgentAddrId"
+            </meta>
+            <column name="closingAgentAddrId"/>
+        </many-to-one>
+
+        <!-- Associations -->
+
+
+        <!-- uni-directional many-to-one association to Person -->
+        <many-to-one name="closingAgentContact"
+            class="com.dorado.generated.persistence.dmcommon.organization.Person"
+            not-null="false"
+            cascade="all"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="all"
+@hibernate.column name="closingAgentContact"/>
+            </meta>
+            <column name="closingAgentContact"/>
+        </many-to-one>
+
+        <!-- Associations -->
+
+        <!-- uni-directional many-to-one association to closingAgentType-->
+        <many-to-one name="closingAgentType"
+            class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingAgentType"
+            not-null="false"
+            cascade="none"
+            >
+            <meta attribute="field-description">
+@hibernate.many-to-one
+not-null="false"
+cascade="none"
+@hibernate.column name="closingAgentTypeCode"/>
+            </meta>
+            <column name="closingAgentTypeCode"/>
+        </many-to-one>
+
+	<!-- uni-directional one-to-one association to InsRatingCompany-->
+	<many-to-one
+		name="insRatingCompany"
+		class="com.dorado.generated.persistence.dmchannelmaster.settlement.InsRatingCompany"
+		not-null="false"
+		cascade="none"
+		update="false" 
+		insert="false">
+		<meta attribute="field-description">
+			@hibernate.many-to-one
+			not-null="false"
+			cascade="none" 
+			@hibernate.column name="insRatingCompanyId"
+		</meta>
+		<column name="insRatingCompanyId"/>
+	</many-to-one>
+
+	<!-- uni-directional one-to-one association to InsRating-->
+	<many-to-one
+		name="insRating"
+		class="com.dorado.generated.persistence.dmchannelmaster.settlement.InsRating"
+		not-null="false"
+		cascade="none"
+		update="false" 
+		insert="false">
+		<meta attribute="field-description">
+			@hibernate.many-to-one
+			not-null="false" 
+			cascade="none" 
+			@hibernate.column name="insRatingId"
+		</meta>
+		<column name="insRatingId"/>
+	</many-to-one>
+
+    <!-- uni-directional many-to-one association to ClosingDetail-->
+   <many-to-one name="closingDetail"
+    class="com.dorado.generated.persistence.dmchannelmaster.docstart.ClosingDetail"
+    not-null="false"
+    cascade="all"
+     >
+   <meta attribute="field-description">
+   @hibernate.many-to-one
+   not-null="false"
+   cascade="all"
+   @hibernate.column name="closingDetailId"/>
+    </meta>
+      <column name="closingDetailId"/>
+   </many-to-one>
+
+    </class>
+
+</hibernate-mapping>
+
+
+
+

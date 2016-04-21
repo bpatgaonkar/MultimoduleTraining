@@ -1,0 +1,4 @@
+#NAME#,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+UWD, 'UWD','UW','0',sysdate,'0'
+BROKER, 'FFD','Broker Office','0',sysdate,'0'
+LENDER_PROD, 'LENDER_PROD','Lender Production','0',sysdate,'0'

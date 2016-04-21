@@ -1,0 +1,91 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.model.loan.relationship.LoanOeRel"
+ table="T_LOANOEREL" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOANOEREL"> 
+ </meta>
+    <meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+    <meta attribute="implement-equals">true</meta>
+<id 
+name="Id"  
+column="loanOeRelId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="loanOeRelId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to LoanApplication -->
+<many-to-one name="loanApplication" 
+class="com.dorado.generated.persistence.model.loan.LoanApplication" 
+not-null="false"
+column="loanApplicationId"
+cascade="none"
+index="LoanOeRel_LoanApp_Indx"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="loanApplicationId"/> 
+</meta>
+</many-to-one>
+
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to OrgEntity -->
+<many-to-one name="orgEntity" 
+class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity" 
+not-null="true"
+column="orgEntityId"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="orgEntityId"/> 
+</meta>
+<meta attribute="use-in-equals">true</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- uni-directional many-to-one association to LoanOeRelType -->
+<many-to-one name="loanOeRelType" 
+class="com.dorado.generated.persistence.model.loan.relationship.LoanOeRelType" 
+not-null="true"
+column="loanoerelTypeCode"
+cascade="none"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="none"
+@hibernate.column name="loanoerelTypeCode"/> 
+</meta>
+<meta attribute="use-in-equals">true</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+

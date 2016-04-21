@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.borrower.Interviewer"
+		table="T_INTERVIEWER" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_INTERVIEWER">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="interviewerId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="interviewerId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="interviewDate" type="java.sql.Timestamp"
+			column="interviewDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="interviewDate" length="7"
+			</meta>
+		</property>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to ContactMethodType -->
+		<many-to-one name="contactMethodType"
+			class="com.dorado.generated.persistence.model.loan.ContactMethodType"
+			not-null="false" cascade="none" column="contactMethod">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="contactMethod"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Employment -->
+		<many-to-one name="employment"
+			class="com.dorado.generated.persistence.dmchannelmaster.borrower.Employment"
+			not-null="true" cascade="all" index="Interviewer_Employment_Indx"
+			column="employmentId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="employmentId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Person -->
+		<many-to-one name="person"
+			class="com.dorado.generated.persistence.dmcommon.organization.Person"
+			not-null="true" cascade="all" index="Interviewer_Person_Indx"
+			column="personId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="personId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- bi-directional one-to-many association to LoanApplication 
+			<set  
+			name="LoanApplications"
+			table="T_LoanApplication"
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			>
+			<meta attribute="field-description">
+			@hibernate.set
+			lazy="true"
+			inverse="true"
+			cascade="all"
+			@hibernate.collection-key
+			column="interviewerId"
+			@hibernate.collection-one-to-many
+			class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</meta>
+			<key column="interviewerId" /> 
+			<one-to-many class="com.dorado.generated.persistence.model.loan.LoanApplication" />
+			</set> 
+		-->
+	</class>
+
+</hibernate-mapping>
+

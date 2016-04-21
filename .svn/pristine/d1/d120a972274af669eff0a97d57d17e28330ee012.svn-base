@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.plp.PlpOrder"
+		table="T_PLPORDER" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_PLPORDER">
+		</meta>
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+		<id name="Id" column="plpOrderId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="plpOrderId"
+			</meta>
+			<generator class="native"></generator>
+		</id>
+
+		<property name="orderDate" type="java.sql.Timestamp"
+			column="orderDate" length="7" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="orderDate" length="7"
+			</meta>
+		</property>
+
+		<property name="orderType" type="java.lang.String"
+			column="orderType" length="20" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="orderType" length="20"
+			</meta>
+		</property>
+
+		<property name="plpStatus" type="java.lang.String"
+			column="plpStatus" length="20" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="plpStatus" length="20"
+			</meta>
+		</property>
+
+		<property name="errorMessage" type="java.lang.String"
+			column="errorMessage" length="500" not-null="false" unique="false">
+			<meta attribute="field-description">
+				@hibernate.property column="errorMessage" length="500"
+			</meta>
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="createdby"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="all" column="createdBy">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="createdBy"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to ClientOrder -->
+		<many-to-one name="OmclientOrder"
+			class="com.dorado.generated.persistence.dmorder.ordermanager.OmClientOrder"
+			not-null="true" cascade="all" column="omClientOrderId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="omClientOrderId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to Plp -->
+		<many-to-one name="plp"
+			class="com.dorado.generated.persistence.dmchannelmaster.plp.Plp"
+			not-null="true" cascade="all" column="plpId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="plpId"/>
+			</meta>
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to PlpOrderType -->
+		<many-to-one name="plpOrderType"
+			class="com.dorado.generated.persistence.dmchannelmaster.plp.PlpOrderType"
+			not-null="true" cascade="none" column="plpOrderType">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="none"
+				@hibernate.column name="PLPorderType"/>
+			</meta>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

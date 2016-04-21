@@ -1,0 +1,6 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'A','Author','0',sysdate,'0'
+'E','Edit','0',sysdate,'0'
+'L','Live','0',sysdate,'0'
+'P','Publish','0',sysdate,'0'
+'S','null','0',sysdate,'0'

@@ -1,0 +1,15 @@
+TYPECODE,DISPLAYORDER,DESCRIPTION,ADJUSTMENTTYPE,ADJUSTMENTDETAILTYPE,SESSIONID,TIMESTAMP,VERSION
+'RTA1','1','True Discretionary Adj Rate','RATE','TRUE-ADJUSTMENT','0',sysdate,'0'
+'RAT2','2','True Discretionary Adj-2 Rate','RATE','TRUE-ADJUSTMENT','0',sysdate,'0'
+'RNFSA1','1','Non-Featured Discretionary adj Rate','RATE','NON-FEATUREDSUBSIDY','0',sysdate,'0'
+'RNFSA2','2','Non-Featured Discretionary adj-2 Rate' ,'RATE','NON-FEATUREDSUBSIDY','0',sysdate,'0'
+'RFSA1','1','Featured Discretionary adj Rate','RATE','FEATUREDSUBSIDY','0',sysdate,'0'
+'RFSA2','2','Featured Discretionary adj-2 Rate' ,'RATE','FEATUREDSUBSIDY','0',sysdate,'0'
+'PTA1','1','True Discretionary Adj Points','POINTS','TRUE-ADJUSTMENT','0',sysdate,'0'
+'PT2','2','True Discretionary Adj-2 Points','POINTS','TRUE-ADJUSTMENT','0',sysdate,'0'
+'PNFSA1','1','Non-Featured Discretionary adj Points','POINTS','NON-FEATUREDSUBSIDY','0',sysdate,'0'
+'PNFSA2','2','Non-Featured Discretionary adj-2 Points','POINTS','NON-FEATUREDSUBSIDY','0',sysdate,'0'
+'PFSA1','1','Featured Discretionary adj Rate Points','POINTS','FEATUREDSUBSIDY','0',sysdate,'0'
+'PFSA2','2','Featured Discretionary adj-2 Points','POINTS','FEATUREDSUBSIDY','0',sysdate,'0'
+
+

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectItem"
+		table="T_SUBJECTITEM" lazy="true">
+
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class table="T_SUBJECTITEM">
+		</meta>
+
+		<meta attribute="implements">
+			com.dorado.persistence.RegionRoot
+		</meta>
+
+		<id name="Id" column="subjectItemId" type="java.lang.Long">
+			<meta attribute="field-description">
+				@hibernate.id generator-class="native"
+				type="java.lang.Long" column="subjectItemId"
+			</meta>
+
+			<generator class="native"></generator>
+
+		</id>
+
+		<property name="name" type="java.lang.String" column="name"
+			length="40" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="name" length="40"
+			</meta>
+
+		</property>
+
+		<property name="text" type="java.lang.String" column="itemText"
+			length="255" not-null="false" unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="itemText" length="255"
+			</meta>
+
+		</property>
+
+		<property name="description" type="java.lang.String"
+			column="itemDescription" length="2024" not-null="false"
+			unique="false">
+
+			<meta attribute="field-description">
+				@hibernate.property column="itemDescription"
+				length="2024"
+			</meta>
+
+		</property>
+
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to OrgEntity -->
+		<many-to-one name="orgEntity"
+			class="com.dorado.generated.persistence.dmcommon.organization.OrgEntity"
+			not-null="true" cascade="all" column="orgEntityId">
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="orgEntityId"/>
+			</meta>
+
+		</many-to-one>
+
+		<!-- Associations -->
+
+		<!-- bi-directional many-to-one association to SubjectArea -->
+		<many-to-one name="subjectArea"
+			class="com.dorado.generated.persistence.dmchannelmaster.contentmgmt.SubjectArea"
+			not-null="true" cascade="all"
+			column="subjectAreaId">
+
+			<meta attribute="field-description">
+				@hibernate.many-to-one not-null="true" cascade="all"
+				@hibernate.column name="subjectAreaId"/>
+			</meta>
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>
+

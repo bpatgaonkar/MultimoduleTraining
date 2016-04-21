@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+<hibernate-mapping>
+	<class
+		name="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DenialReason"
+		table="T_DenialReason" lazy="true">
+		<meta attribute="class-description" inherit="false"> @hibernate.class
+			table="T_DenialReason"> </meta>
+		<meta attribute="implements">com.dorado.persistence.Identifiable</meta>
+		<meta attribute="owner_region" inherit="false">com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting</meta>
+			
+		<id name="id" column="DenialReasonId" type="java.lang.Long">
+			<meta attribute="field-description"> @hibernate.id generator-class="native"
+				type="java.lang.Long" column="DenialReasonId" </meta>
+			<generator class="native"></generator>
+		</id>
+		<property name="otherDescription" type="java.lang.String"
+			column="otherDescription" length="400" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="otherDescription"
+				length="400" </meta>
+		</property>
+		<property name="otherDisplayId" type="java.lang.String"
+			column="otherDisplayId" length="4" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="otherDisplayId"
+				length="4" </meta>
+		</property>
+		<property name="otherGroupType" type="java.lang.String"
+			column="otherGroupType" length="40" not-null="false" unique="false">
+			<meta attribute="field-description"> @hibernate.property column="otherGroupType"
+				length="40" </meta>
+		</property> 
+		
+		<!-- Associations -->
+
+		<!-- uni-directional many-to-one association to DenialReasonType -->
+		<many-to-one name="denialReasonType"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.DenialReasonType"
+			not-null="false" cascade="none" column="denialReasonTypeId">
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="false"
+				cascade="none" @hibernate.column name="denialReasonTypeId" </meta>
+		</many-to-one>
+
+		<!-- bi-directional many-to-one association to Underwriting -->
+		<many-to-one name="underwriting"
+			class="com.dorado.generated.persistence.dmchannelmaster.underwritingsummary.Underwriting"
+			not-null="true" column="underwritingId" cascade="save-update" index="DenialReason_Underwriting_Indx">
+			<meta attribute="do-not-generate-transferobject-property" />
+			<meta attribute="field-description"> @hibernate.many-to-one not-null="true"
+				cascade="save-update" @hibernate.column name="underwritingId"/> 
+			</meta>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

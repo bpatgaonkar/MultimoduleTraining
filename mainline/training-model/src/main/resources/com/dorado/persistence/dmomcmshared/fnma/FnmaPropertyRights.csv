@@ -1,0 +1,5 @@
+#NAME#,DISPLAYORDER,TYPECODE,DESCRIPTION,PROPERTYINFOFLAG,SESSIONID,TIMESTAMP,VERSION
+FEE_SIMPLE,'1','1','Fee Simple','1','0',sysdate,'0'
+LEASE_HOLD,'2','2','LeaseHold','1','0',sysdate,'0'
+DEFEASIBLE_FEE,'3','3','Defeasible Fee','0','0',sysdate,'0'
+LIFE_ESTATE,'4','4','Life Estate','0','0',sysdate,'0'

@@ -1,0 +1,121 @@
+<?xml version="1.0"?> 
+ <!DOCTYPE hibernate-mapping 
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd"> 
+
+<hibernate-mapping> 
+
+<class name="com.dorado.generated.persistence.dmchannelmaster.translation.LoanAttributeTypeMap"
+ table="T_LOANATTRIBUTETYPEMAP" 
+ lazy="true" > 
+
+ <meta attribute="class-description" inherit="false"> 
+  @hibernate.class
+  table="T_LOANATTRIBUTETYPEMAP"> 
+ </meta>
+
+<id 
+name="loanAttributeTypeMapId"  
+column="loanAttributeTypeMapId"  
+type="java.lang.Long" 
+> 
+<meta attribute="field-description">
+@hibernate.id
+generator-class="native"
+type="java.lang.Long" 
+column="loanAttributeTypeMapId"  
+</meta>
+<generator class="native"> 
+</generator> 
+</id> 
+
+<property 
+name="baseCode" 
+type="java.lang.String" 
+column="baseCode" 
+length="40" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="baseCode" 
+length="40" 
+</meta> 
+</property> 
+
+<property 
+name="serviceCode" 
+type="java.lang.String" 
+column="serviceCode" 
+length="120" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="serviceCode" 
+length="120" 
+</meta> 
+</property> 
+
+<property 
+name="serviceCodeDescription" 
+type="java.lang.String" 
+column="serviceCodeDescription" 
+length="255" 
+not-null="false" 
+unique="false"  
+> 
+<meta attribute="field-description"> 
+@hibernate.property 
+column="serviceCodeDescription" 
+length="255" 
+</meta> 
+</property> 
+
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to Servicetype -->
+<many-to-one name="servicetype" 
+class="com.dorado.generated.persistence.dmchannelmaster.translation.ServiceType" 
+not-null="true"
+cascade="all"
+column="serviceTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="serviceTypeCode"/> 
+</meta>
+</many-to-one>
+
+ <!-- Associations --> 
+
+<!-- bi-directional many-to-one association to LoanAttributeType -->
+<many-to-one name="loanAttributeType" 
+class="com.dorado.generated.persistence.dmchannelmaster.translation.LoanAttributeType" 
+not-null="true"
+cascade="all"
+column="loanAttributeTypeCode"
+>
+<meta attribute="field-description">
+@hibernate.many-to-one
+not-null="true"
+cascade="all"
+@hibernate.column name="loanAttributeTypeCode"/> 
+</meta>
+</many-to-one>
+</class> 
+ 
+ </hibernate-mapping> 
+
+
+<!-- 
+  select  '''' || LOANATTRIBUTETYPEMAPID|| ''',''' ||BASECODE|| ''',''' ||SERVICECODE|| ''',''' 
+ ||SERVICECODEDESCRIPTION|| ''',''' ||SERVICETYPECode|| ''',''' ||LOANATTRIBUTETYPECode ||''',''0'',sysdate,''0'''
+ from   t_LOANATTRIBUTETYPEMAP order by LOANATTRIBUTETYPEMAPID
+--> 
+

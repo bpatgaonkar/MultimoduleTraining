@@ -1,0 +1,6 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','FirstRealtyMortgage','First Realty Mortgage','0',sysdate,'0'
+'2','SecondRealtyMortgage','Second Realty Mortgage','0',sysdate,'0'
+'3','FirstChattelMortgage','First Chattel Mortgage','0',sysdate,'0'
+'4','Unsecured','Unsecured','0',sysdate,'0'
+'5','Other','Other','0',sysdate,'0'

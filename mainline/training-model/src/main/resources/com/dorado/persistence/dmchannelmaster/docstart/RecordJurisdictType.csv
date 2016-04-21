@@ -1,0 +1,4 @@
+TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'County','County','0',sysdate,'0'
+'Parish','Parish','0',sysdate,'0'
+'Other','Other','0',sysdate,'0'

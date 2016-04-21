@@ -1,0 +1,9 @@
+DISPLAYORDER,TYPECODE,DESCRIPTION,SESSIONID,TIMESTAMP,VERSION
+'1','01','Employee ID Card','0',sysdate,'0'
+'2','03','IRS W2 Form','0',sysdate,'0'
+'3','04','Recent Pay Stub','0',sysdate,'0'
+'4','05','Uniformed Services ID & Privilege Card','0',sysdate,'0'
+'5','06','Other Document','0',sysdate,'0'
+'6','02','SSAN Card','0',sysdate,'0'
+'7','07','Military ID Card','0',sysdate,'0'
+'8','08','Alien Registration Card','0',sysdate,'0'
